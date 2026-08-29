@@ -13,6 +13,9 @@
   - bun run dev يُقلع على http://localhost:1420 ✅ (تأكدنا بفحص المنفذ PORT_1420_OPEN=True)
   - توثيق خطة ميزة HTML-tags + خريطة الملفات في projects/OPENPENCIL_FEATURE.md
   - تأكيد كفاءة Ollama بعد إعادة التشغيل: qwen2.5-coder:14b يبقى في VRAM (KEEP_ALIVE=-1 → تحميل ساخن 0.01s لا 27s)، إنتاجية 9.3 tok/s ساخن / 4.1 بارد، offload كامل على RTX3060 (11.4GB/12GB، 99% util). الضبط فعّال ✅
+  - ربط المصنع بـ OpenPencil: المحرّك يحوي خادم MCP مدمج (127.0.0.1:7600) + وكيل ذكاء داخلي يستخدم أدوات المحرّك. أضفنا مزوّد «Ollama (local)» (OpenAI-compatible → http://localhost:11434/v1) داخل OpenPencil (commit b31f587) ليُستدعى نموذج Ollama داخل المحرّك مباشرة. خادم الأتمتة يُشغَّل تلقائياً عند إقلاع dev بفضل إضافة bun إلى PATH.
+
+ملاحظة الربط: أدوات `pencil` MCP عند الوكيل تتصل بطبقة نقل «desktop» (تطبيق Tauri)؛ نسخة المتصفح (dev) تعرض خادم الأتمتة على 7600 لكن لا توصل طبقة desktop. لذا الربط العملي الحالي = وكيل Ollama الداخلي في المحرّك. الربط المباشر للوكيل (opencode) بـ OpenPencil يتطلب بناء Tauri (Rust — مؤجّل حالياً).
 
 تحذيرات طفيفة (غير حاجبة):
   - [MCP] Failed to spawn automation server: spawn bun ENOENT — bun ليس على PATH لعمليات Vite الفرعية؛ لا يؤثر على تشغيل المحرّك نفسه. يُحل بإعادة فتح الترمينال بعد إضافة PATH.
