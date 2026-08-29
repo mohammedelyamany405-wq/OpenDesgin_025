@@ -5,12 +5,14 @@
 المنجز:
   - الاتفاق على الاستراتيجية والمصنع (4 طبقات: عتاد/فهم/تنفيذ/تنسيق)
   - ضبط متغيرات Ollama: KEEP_ALIVE=-1 ، FLASH_ATTENTION=1 ، KV_CACHE_TYPE=q8_0 ، GPU_OVERHEAD=2GB
-  - إنشاء سقالة المصنع (AGENTS.md + STATE.md + templates)
+  - إنشاء سقالة المصنع + أول commit (90f4cb0)
+  - استنساخ OpenPencil (depth 1) في projects/openpencil
+  - تثبيت Bun 1.4.0
 
 التالي:
-  - استنساخ OpenPencil في projects/openpencil
-  - تشغيل النسخة الويب (bun install ثم bun run dev) للتأكد من البيئة
-  - اختبار ثبات معرّفات العناصر (id) قبل بناء ميزة HTML-tags
+  - bun install داخل projects/openpencil (التحقق من البيئة)
+  - bun run dev وتشغيل المحرّك الويب + اختبار ثبات معرّفات العناصر (id) قبل بناء ميزة HTML-tags
+  - كتابة مواصفات ميزة HTML-tags (المصمم)
 
 أوامر الاستئناف:
   cd G:\ForWork\ExProject\projects\openpencil
