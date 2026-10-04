@@ -26,9 +26,19 @@
   "childFlexGrow": 1,
   "childFlexShrink": 0,
   "childFlexBasis": "auto",
-  "childAlignSelf": "center"
+  "childAlignSelf": "center",
+  "tabletDirection": "inherit|row|column (optional, flex/grid only)",
+  "mobileDirection": "inherit|row|column (optional, flex/grid only)"
 }
 ```
+
+**Breakpoints model (per page):** pluginData key `web-builder-breakpoints` on the page node:
+```json
+{ "tablet": 768, "mobile": 375 }
+```
+Edited in PagesTab (Tablet/Mobile inputs for current page, defaults 768/375).
+Panel export emits `@media (max-width: Npx)` overrides only for explicitly set
+directions — no guessing, inherit = no output.
 
 ## 3. Export Engine Logic
 
