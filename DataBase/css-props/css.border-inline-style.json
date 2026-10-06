@@ -1,0 +1,67 @@
+{
+  "property": "border-inline-style",
+  "page": "https://www.w3schools.com/cssref/css_pr_border-inline-style.php",
+  "function": "The border-inline-style property sets the style of an element's borders in the inline direction.",
+  "category": "border",
+  "syntax": "border-inline-style: none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.borderInlineStyle=\"dotted\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "Default value. Specifies no border"
+    },
+    {
+      "value": "hidden",
+      "function": "The same as \"none\", except in border conflict resolution for table elements"
+    },
+    {
+      "value": "dotted",
+      "function": "Specifies a dotted border"
+    },
+    {
+      "value": "dashed",
+      "function": "Specifies a dashed border"
+    },
+    {
+      "value": "solid",
+      "function": "Specifies a solid border"
+    },
+    {
+      "value": "double",
+      "function": "Specifies a double border"
+    },
+    {
+      "value": "groove",
+      "function": "Specifies a 3D grooved border. The effect depends on the border-color value"
+    },
+    {
+      "value": "rigde",
+      "function": "Specifies a 3D ridged border. The effect depends on the border-color value"
+    },
+    {
+      "value": "inset",
+      "function": "Specifies a 3D inset border. The effect depends on the border-color value"
+    },
+    {
+      "value": "outset",
+      "function": "Specifies a 3D outset border. The effect depends on the border-color value"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 12,
+  "shorthandFor": [],
+  "partOf": []
+}

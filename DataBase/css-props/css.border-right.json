@@ -1,0 +1,43 @@
+{
+  "property": "border-right",
+  "page": "https://www.w3schools.com/cssref/pr_border-right.php",
+  "function": "The border-right property is a shorthand property for (in the following order):",
+  "category": "border",
+  "syntax": "border-right: border-width border-style border-color|initial|inherit;",
+  "defaults": {
+    "Default value": "medium none color",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.borderRight=\"5px dotted blue\" Try it"
+  },
+  "values": [
+    {
+      "value": "border-right-width",
+      "function": "Required. Specifies the width of the right border. Default value is \"medium\""
+    },
+    {
+      "value": "border-right-style",
+      "function": "Required. Specifies the style of the right border. Default value is \"none\""
+    },
+    {
+      "value": "border-right-color",
+      "function": "Optional. Specifies the color of the right border. Default value is the color of the text"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [
+    "border-right-width",
+    "border-right-style",
+    "border-right-color"
+  ],
+  "partOf": []
+}

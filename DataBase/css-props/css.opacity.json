@@ -1,0 +1,31 @@
+{
+  "property": "opacity",
+  "page": "https://www.w3schools.com/cssref/css3_pr_opacity.php",
+  "function": "The opacity property sets the opacity level for an element.",
+  "category": "color",
+  "syntax": "opacity: number|initial|inherit;",
+  "defaults": {
+    "Default value": "1",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.opacity=\"0.5\" Try it"
+  },
+  "values": [
+    {
+      "value": "number",
+      "function": "Specifies the opacity. From 0.0 (fully transparent) to 1.0 (fully opaque)"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": []
+}

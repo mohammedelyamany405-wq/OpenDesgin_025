@@ -1,0 +1,35 @@
+{
+  "property": "min-height",
+  "page": "https://www.w3schools.com/cssref/pr_dim_min-height.php",
+  "function": "The min-height property defines the minimum height of an element.",
+  "category": "box",
+  "syntax": "min-height: length|initial|inherit;",
+  "defaults": {
+    "Default value": "0",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.minHeight=\"400px\" Try it"
+  },
+  "values": [
+    {
+      "value": "length",
+      "function": "Default value is 0. Defines the minimum height in px, cm, etc. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Defines the minimum height in percent of the containing block"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

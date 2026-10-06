@@ -1,0 +1,6 @@
+@echo off
+echo Syncing OpenPencil MCP token...
+powershell -ExecutionPolicy Bypass -File "G:\ForWork\ExProject\scripts\sync-mcp-token.ps1"
+echo.
+echo Press any key to exit...
+pause >nul

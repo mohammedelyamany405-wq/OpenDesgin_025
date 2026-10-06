@@ -1,0 +1,14 @@
+{
+  "tag": "wbr",
+  "page": "https://www.w3schools.com/tags/tag_wbr.asp",
+  "function": "The <wbr> (Word Break Opportunity) tag specifies where in a text it would be ok to add a line-break.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

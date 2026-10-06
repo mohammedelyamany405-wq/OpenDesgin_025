@@ -1,0 +1,43 @@
+{
+  "property": "border-image-width",
+  "page": "https://www.w3schools.com/cssref/css3_pr_border-image-width.php",
+  "function": "The border-image-width property specifies the width of the border image.",
+  "category": "border",
+  "syntax": "border-image-width: number|%|auto|initial|inherit;",
+  "defaults": {
+    "Default value": "1",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.borderImageWidth=\"20px\" Try it"
+  },
+  "values": [
+    {
+      "value": "length",
+      "function": "A length unit (px) specifying the size of the border-width"
+    },
+    {
+      "value": "number",
+      "function": "Default value 1. Represents multiples of the corresponding border-width"
+    },
+    {
+      "value": "%",
+      "function": "Refers to the size of the border image area: the width of the area for horizontal offsets, the height for vertical offsets"
+    },
+    {
+      "value": "auto",
+      "function": "If specified, the width is the intrinsic width or height of the corresponding image slice"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,43 @@
+{
+  "property": "offset-rotate",
+  "page": "https://www.w3schools.com/cssref/css_pr_offset-rotate.php",
+  "function": "The offset-rotate property sets the rotation of an animated element moving along a path.",
+  "category": "position",
+  "syntax": "offset-rotate: auto|value|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.offsetRotate=\"45deg\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "The element is facing the direction it moving along a path. This is default."
+    },
+    {
+      "value": "<angle>",
+      "function": "Specifies how much to rotate an element with an constant angle."
+    },
+    {
+      "value": "auto <angle>",
+      "function": "With both auto and <angle> given, the angle is added to the default rotation, in the clockwise direction."
+    },
+    {
+      "value": "reverse",
+      "function": "The element is rotated in the opposite direction of the default rotation."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [],
+  "partOf": []
+}

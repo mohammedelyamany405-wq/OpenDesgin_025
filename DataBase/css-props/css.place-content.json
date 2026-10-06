@@ -1,0 +1,66 @@
+{
+  "property": "place-content",
+  "page": "https://www.w3schools.com/cssref/css_pr_place-content.php",
+  "function": "The place-content property is used in flexbox and grid layouts, and is a shorthand property for the following properties:",
+  "category": "flexbox",
+  "syntax": "place-content: normal|value|initial|inherit;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.placeContent=\"end space-around\" Try it"
+  },
+  "values": [
+    {
+      "value": "normal",
+      "function": "Default value. Dependant on layout context. The same as setting no property value for align-content and justify-content."
+    },
+    {
+      "value": "stretch",
+      "function": "Grid: Stretches grid items to fill the grid container if size is not set. Flexbox: Stretches flex items on the cross axis to fill the flex container if flex items have no specified size on the cross axis."
+    },
+    {
+      "value": "start",
+      "function": "Align items at the start of the container"
+    },
+    {
+      "value": "end",
+      "function": "Align items at the end of the container"
+    },
+    {
+      "value": "center",
+      "function": "Align items to the center of the container"
+    },
+    {
+      "value": "space-between",
+      "function": "Distribute available extra space evenly between the elements inside the container on both axis."
+    },
+    {
+      "value": "space-around",
+      "function": "Distribute available extra space evenly around each element inside the container on both axis."
+    },
+    {
+      "value": "space-evenly",
+      "function": "Distribute elements inside the container evenly on both axis."
+    },
+    {
+      "value": "overflow-alignment",
+      "function": "'safe' sets alignment of the item to 'start' if the content overflows 'unsafe' keeps the alignment value regardless of wether or not the item content overflows"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 11,
+  "shorthandFor": [
+    "align-content",
+    "justify-content"
+  ],
+  "partOf": []
+}

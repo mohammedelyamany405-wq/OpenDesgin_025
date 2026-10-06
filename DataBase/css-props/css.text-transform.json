@@ -1,0 +1,42 @@
+{
+  "property": "text-transform",
+  "page": "https://www.w3schools.com/cssref/pr_text_text-transform.php",
+  "function": "The text-transform property controls the capitalization of text.",
+  "category": "text",
+  "syntax": "text-transform: none|capitalize|uppercase|lowercase|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "yes",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.textTransform=\"uppercase\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "No capitalization. The text renders as it is. This is default"
+    },
+    {
+      "value": "capitalize",
+      "function": "Transforms the first character of each word to uppercase"
+    },
+    {
+      "value": "uppercase",
+      "function": "Transforms all characters to uppercase"
+    },
+    {
+      "value": "lowercase",
+      "function": "Transforms all characters to lowercase"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [],
+  "partOf": []
+}

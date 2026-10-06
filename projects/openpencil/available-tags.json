@@ -1,0 +1,110 @@
+{
+  "version": "1.0",
+  "description": "Available HTML tags by element type - Web Builder Classifier",
+  "tags": {
+    "SECTION": {
+      "description": "Section/area containers",
+      "available": [
+        {"tag": "header", "name": "Header", "description": "Page header section"},
+        {"tag": "footer", "name": "Footer", "description": "Page footer section"},
+        {"tag": "nav", "name": "Navigation", "description": "Navigation section"},
+        {"tag": "main", "name": "Main", "description": "Main content section"},
+        {"tag": "article", "name": "Article", "description": "Article content"},
+        {"tag": "aside", "name": "Aside", "description": "Sidebar content"},
+        {"tag": "figure", "name": "Figure", "description": "Figure with caption"},
+        {"tag": "figcaption", "name": "Figcaption", "description": "Figure caption"},
+        {"tag": "section", "name": "Section", "description": "Generic section"},
+        {"tag": "div", "name": "Div", "description": "Generic container"}
+      ]
+    },
+    "FRAME": {
+      "description": "Frame/group containers",
+      "available": [
+        {"tag": "div", "name": "Div", "description": "Generic container"},
+        {"tag": "row", "name": "Row", "description": "Horizontal layout"},
+        {"tag": "column", "name": "Column", "description": "Vertical layout"},
+        {"tag": "form", "name": "Form", "description": "Form container"},
+        {"tag": "fieldset", "name": "Fieldset", "description": "Form field group"},
+        {"tag": "ul", "name": "Unordered List", "description": "Bullet list"},
+        {"tag": "ol", "name": "Ordered List", "description": "Numbered list"},
+        {"tag": "table", "name": "Table", "description": "Table container"},
+        {"tag": "card", "name": "Card", "description": "Card component"},
+        {"tag": "header", "name": "Header", "description": "Header section"},
+        {"tag": "footer", "name": "Footer", "description": "Footer section"},
+        {"tag": "nav", "name": "Navigation", "description": "Navigation section"},
+        {"tag": "main", "name": "Main", "description": "Main content"},
+        {"tag": "section", "name": "Section", "description": "Generic section"}
+      ]
+    },
+    "TEXT": {
+      "description": "Text elements",
+      "available": [
+        {"tag": "h1", "name": "Heading 1", "description": "Main heading"},
+        {"tag": "h2", "name": "Heading 2", "description": "Section heading"},
+        {"tag": "h3", "name": "Heading 3", "description": "Subsection heading"},
+        {"tag": "h4", "name": "Heading 4", "description": "Minor heading"},
+        {"tag": "h5", "name": "Heading 5", "description": "Small heading"},
+        {"tag": "h6", "name": "Heading 6", "description": "Smallest heading"},
+        {"tag": "p", "name": "Paragraph", "description": "Text paragraph"},
+        {"tag": "span", "name": "Span", "description": "Inline text"},
+        {"tag": "a", "name": "Link", "description": "Hyperlink"},
+        {"tag": "strong", "name": "Strong", "description": "Important text"},
+        {"tag": "em", "name": "Emphasis", "description": "Emphasized text"},
+        {"tag": "blockquote", "name": "Blockquote", "description": "Quoted text"},
+        {"tag": "label", "name": "Label", "description": "Form label"},
+        {"tag": "button", "name": "Button", "description": "Clickable button"}
+      ]
+    },
+    "RECTANGLE": {
+      "description": "Rectangle/shape elements",
+      "available": [
+        {"tag": "div", "name": "Div", "description": "Generic container"},
+        {"tag": "button", "name": "Button", "description": "Clickable button"},
+        {"tag": "a", "name": "Link", "description": "Hyperlink"},
+        {"tag": "span", "name": "Span", "description": "Inline element"},
+        {"tag": "header", "name": "Header", "description": "Header section"},
+        {"tag": "footer", "name": "Footer", "description": "Footer section"},
+        {"tag": "nav", "name": "Navigation", "description": "Navigation section"}
+      ]
+    },
+    "ELLIPSE": {
+      "description": "Circle/ellipse elements",
+      "available": [
+        {"tag": "div", "name": "Div", "description": "Generic container"},
+        {"tag": "button", "name": "Button", "description": "Clickable button"},
+        {"tag": "a", "name": "Link", "description": "Hyperlink"},
+        {"tag": "span", "name": "Span", "description": "Inline element"},
+        {"tag": "avatar", "name": "Avatar", "description": "User avatar"}
+      ]
+    },
+    "VECTOR": {
+      "description": "Vector/SVG elements",
+      "available": [
+        {"tag": "svg", "name": "SVG", "description": "SVG container"},
+        {"tag": "img", "name": "Image", "description": "Image element"},
+        {"tag": "icon", "name": "Icon", "description": "Icon element"}
+      ]
+    },
+    "IMAGE": {
+      "description": "Image elements",
+      "available": [
+        {"tag": "img", "name": "Image", "description": "Image element"},
+        {"tag": "figure", "name": "Figure", "description": "Figure with caption"},
+        {"tag": "picture", "name": "Picture", "description": "Responsive image"},
+        {"tag": "div", "name": "Div", "description": "Generic container"}
+      ]
+    }
+  },
+  "behaviors": {
+    "sticky": {"name": "Sticky", "description": "Sticky positioning"},
+    "fixed": {"name": "Fixed", "description": "Fixed positioning"},
+    "scrollable": {"name": "Scrollable", "description": "Scrollable container"},
+    "collapsible": {"name": "Collapsible", "description": "Can be collapsed"},
+    "modal": {"name": "Modal", "description": "Modal dialog"},
+    "dropdown": {"name": "Dropdown", "description": "Dropdown menu"},
+    "tabs": {"name": "Tabs", "description": "Tabbed interface"},
+    "accordion": {"name": "Accordion", "description": "Accordion component"},
+    "carousel": {"name": "Carousel", "description": "Image/content carousel"},
+    "none": {"name": "None", "description": "No special behavior"}
+  }
+}

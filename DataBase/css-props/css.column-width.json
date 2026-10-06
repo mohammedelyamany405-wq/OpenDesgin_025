@@ -1,0 +1,37 @@
+{
+  "property": "column-width",
+  "page": "https://www.w3schools.com/cssref/css3_pr_column-width.php",
+  "function": "The column-width property specifies the column width.",
+  "category": "box",
+  "syntax": "column-width: auto|length|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.columnWidth=\"100px\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default value. The column width will be determined by the browser"
+    },
+    {
+      "value": "length",
+      "function": "A length that specifies the width of the columns. The number of columns will be the minimum number of columns needed to show all the content across the element. Read about length units"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": [
+    "columns"
+  ]
+}

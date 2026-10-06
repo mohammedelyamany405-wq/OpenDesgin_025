@@ -1,0 +1,35 @@
+{
+  "property": "transform-style",
+  "page": "https://www.w3schools.com/cssref/css3_pr_transform-style.php",
+  "function": "The transform-style property specifies how nested elements are rendered in 3D space.",
+  "category": "transform",
+  "syntax": "transform-style: flat|preserve-3d|initial|inherit;",
+  "defaults": {
+    "Default value": "flat",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.transformStyle=\"preserve-3d\" Try it"
+  },
+  "values": [
+    {
+      "value": "flat",
+      "function": "Specifies that child elements will NOT preserve its 3D position. This is default"
+    },
+    {
+      "value": "preserve-3d",
+      "function": "Specifies that child elements will preserve its 3D position"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,37 @@
+{
+  "property": "animation-iteration-count",
+  "page": "https://www.w3schools.com/cssref/css3_pr_animation-iteration-count.php",
+  "function": "The animation-iteration-count property specifies the number of times an animation should be played.",
+  "category": "animation",
+  "syntax": "animation-iteration-count: number|infinite|initial|inherit;",
+  "defaults": {
+    "Default value": "1",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.animationIterationCount=\"infinite\" Try it"
+  },
+  "values": [
+    {
+      "value": "number",
+      "function": "A number that defines how many times an animation should be played. Default value is 1"
+    },
+    {
+      "value": "infinite",
+      "function": "Specifies that the animation should be played infinite times (for ever)"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": [
+    "animation"
+  ]
+}

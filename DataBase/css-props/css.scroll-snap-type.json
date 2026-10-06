@@ -1,0 +1,59 @@
+{
+  "property": "scroll-snap-type",
+  "page": "https://www.w3schools.com/cssref/css_pr_scroll-snap-type.php",
+  "function": "The scroll-snap-type specifies how the elements will snap into focus when you stop scrolling, and in what direction.",
+  "category": "scroll",
+  "syntax": "scroll-snap-type: none|x|y|block|inline|both|mandatory|proximity|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.scrollSnapType=\"x mandatory\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "No scroll snap effect. This is default"
+    },
+    {
+      "value": "x",
+      "function": "Scroll snap effect is set on x-axis"
+    },
+    {
+      "value": "y",
+      "function": "Scroll snap effect is set on y-axis"
+    },
+    {
+      "value": "block",
+      "function": "Scroll snap effect is set on block direction"
+    },
+    {
+      "value": "inline",
+      "function": "Scroll snap effect is set on inline direction"
+    },
+    {
+      "value": "both",
+      "function": "Scroll snap effect is set on both x- and y-axis"
+    },
+    {
+      "value": "mandatory",
+      "function": "Scroll will automatically move to snap point after scroll action is finished"
+    },
+    {
+      "value": "proximity",
+      "function": "Similar to mandatory, but not as strict. Scroll will automatically move to snap point after scroll action is finished, but inbetween snap points there is an area without the snap effect. Depends on browser parameters."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 10,
+  "shorthandFor": [],
+  "partOf": []
+}

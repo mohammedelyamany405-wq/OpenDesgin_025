@@ -1,0 +1,35 @@
+{
+  "property": "direction",
+  "page": "https://www.w3schools.com/cssref/pr_text_direction.php",
+  "function": "The direction property specifies the text direction/writing direction within a block-level element.",
+  "category": "text",
+  "syntax": "direction: ltr|rtl|initial|inherit;",
+  "defaults": {
+    "Default value": "ltr",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.direction=\"rtl\" Try it"
+  },
+  "values": [
+    {
+      "value": "ltr",
+      "function": "Text direction goes from left-to-right. This is default"
+    },
+    {
+      "value": "rtl",
+      "function": "Text direction goes from right-to-left"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

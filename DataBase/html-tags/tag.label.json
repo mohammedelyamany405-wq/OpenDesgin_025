@@ -1,0 +1,27 @@
+{
+  "tag": "label",
+  "page": "https://www.w3schools.com/tags/tag_label.asp",
+  "function": "The <label> tag defines a label for several elements.",
+  "category": "forms",
+  "attributes": [
+    {
+      "name": "for",
+      "values": "element_id",
+      "function": "Specifies the id of the form element the label should be bound to"
+    },
+    {
+      "name": "form",
+      "values": "form_id",
+      "function": "Specifies which form the label belongs to"
+    }
+  ],
+  "attributeCount": 2,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "form"
+    ],
+    "children": []
+  }
+}

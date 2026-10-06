@@ -1,0 +1,19 @@
+{
+  "tag": "section",
+  "page": "https://www.w3schools.com/tags/tag_section.asp",
+  "function": "The <section> tag defines a section in a document.",
+  "category": "sectioning",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "body"
+    ],
+    "children": [
+      "h1",
+      "p"
+    ]
+  }
+}

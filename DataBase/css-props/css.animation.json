@@ -1,0 +1,68 @@
+{
+  "property": "animation",
+  "page": "https://www.w3schools.com/cssref/css3_pr_animation.php",
+  "function": "The animation property is a shorthand property for:",
+  "category": "animation",
+  "syntax": "animation: name duration timing-function delay iteration-count direction fill-mode play-state;",
+  "defaults": {
+    "Default value": "none 0 ease 0 1 normal none running",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.animation=\"mymove 5s infinite\" Try it"
+  },
+  "values": [
+    {
+      "value": "animation-name",
+      "function": "Specifies the name of the keyframe you want to bind to the selector"
+    },
+    {
+      "value": "animation-duration",
+      "function": "Specifies how many seconds or milliseconds an animation takes to complete"
+    },
+    {
+      "value": "animation-timing-function",
+      "function": "Specifies the speed curve of the animation"
+    },
+    {
+      "value": "animation-delay",
+      "function": "Specifies a delay before the animation will start"
+    },
+    {
+      "value": "animation-iteration-count",
+      "function": "Specifies how many times an animation should be played"
+    },
+    {
+      "value": "animation-direction",
+      "function": "Specifies whether or not the animation should play in reverse on alternate cycles"
+    },
+    {
+      "value": "animation-fill-mode",
+      "function": "Specifies what values are applied by the animation outside the time it is executing"
+    },
+    {
+      "value": "animation-play-state",
+      "function": "Specifies whether the animation is running or paused"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 10,
+  "shorthandFor": [
+    "animation-name",
+    "animation-duration",
+    "animation-timing-function",
+    "animation-delay",
+    "animation-iteration-count",
+    "animation-direction",
+    "animation-fill-mode",
+    "animation-play-state"
+  ],
+  "partOf": []
+}

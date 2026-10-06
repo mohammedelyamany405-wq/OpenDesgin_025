@@ -1,0 +1,43 @@
+{
+  "tag": "track",
+  "page": "https://www.w3schools.com/tags/tag_track.asp",
+  "function": "A video with subtitle tracks for two languages.",
+  "category": "media",
+  "attributes": [
+    {
+      "name": "default",
+      "values": "default",
+      "function": "Specifies that the track is to be enabled if the user's preferences do not indicate that another track would be more appropriate"
+    },
+    {
+      "name": "kind",
+      "values": "captions | chapters | descriptions | metadata | subtitles",
+      "function": "Specifies the kind of text track"
+    },
+    {
+      "name": "label",
+      "values": "text",
+      "function": "Specifies the title of the text track"
+    },
+    {
+      "name": "src",
+      "values": "URL",
+      "function": "Required. Specifies the URL of the track file"
+    },
+    {
+      "name": "srclang",
+      "values": "language_code",
+      "function": "Specifies the language of the track text data (required if kind=\"subtitles\")"
+    }
+  ],
+  "attributeCount": 5,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "video",
+      "audio"
+    ],
+    "children": []
+  }
+}

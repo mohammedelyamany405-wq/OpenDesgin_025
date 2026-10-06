@@ -1,0 +1,72 @@
+{
+  "tag": "area",
+  "page": "https://www.w3schools.com/tags/tag_area.asp",
+  "function": "The <area> tag defines an area inside an image map (an image map is an image with clickable areas).",
+  "category": "media",
+  "attributes": [
+    {
+      "name": "alt",
+      "values": "text",
+      "function": "Specifies an alternate text for the area. Required if the href attribute is present"
+    },
+    {
+      "name": "coords",
+      "values": "coordinates",
+      "function": "Specifies the coordinates of the area"
+    },
+    {
+      "name": "download",
+      "values": "filename",
+      "function": "Specifies that the target will be downloaded when a user clicks on the hyperlink"
+    },
+    {
+      "name": "href",
+      "values": "URL",
+      "function": "Specifies the hyperlink target for the area"
+    },
+    {
+      "name": "hreflang",
+      "values": "language_code",
+      "function": "Specifies the language of the target URL"
+    },
+    {
+      "name": "media",
+      "values": "media query",
+      "function": "Specifies what media/device the target URL is optimized for"
+    },
+    {
+      "name": "referrerpolicy",
+      "values": "no-referrer | no-referrer-when-downgrade | origin | origin-when-cross-origin | same-origin | strict-origin-when-cross-origin | unsafe-url",
+      "function": "Specifies which referrer information to send with the link"
+    },
+    {
+      "name": "rel",
+      "values": "alternate | author | bookmark | help | license | next | nofollow | noreferrer | prefetch | prev | search | tag",
+      "function": "Specifies the relationship between the current document and the target URL"
+    },
+    {
+      "name": "shape",
+      "values": "default | rect | circle | poly",
+      "function": "Specifies the shape of the area"
+    },
+    {
+      "name": "target",
+      "values": "_blank | _parent | _self | _top | framename",
+      "function": "Specifies where to open the target URL"
+    },
+    {
+      "name": "type",
+      "values": "media_type",
+      "function": "Specifies the media type of the target URL"
+    }
+  ],
+  "attributeCount": 11,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "map"
+    ],
+    "children": []
+  }
+}

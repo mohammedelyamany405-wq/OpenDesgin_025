@@ -1,0 +1,16 @@
+{
+  "tag": "div",
+  "page": "https://www.w3schools.com/tags/tag_div.asp",
+  "function": "A <div> section in a document that is styled with CSS.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "body"
+    ],
+    "children": []
+  }
+}

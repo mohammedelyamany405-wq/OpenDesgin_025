@@ -1,0 +1,39 @@
+{
+  "property": "mask-position",
+  "page": "https://www.w3schools.com/cssref/css3_pr_mask-position.php",
+  "function": "The mask-position property sets the starting position of a mask image (relative to the mask position area).",
+  "category": "background",
+  "syntax": "mask-position: value;",
+  "defaults": {
+    "Default value": "0% 0%",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS Masking Module Level 1",
+    "JavaScript syntax": "object.style.maskPosition=\"100px center\""
+  },
+  "values": [
+    {
+      "value": "left top | left center | left bottom | right top | right center | right bottom | center top | center center | center bottom",
+      "function": "If you only specify one keyword, the other value will be \"center\""
+    },
+    {
+      "value": "x% y%",
+      "function": "The first value is the horizontal position and the second value is the vertical. The top left corner is 0% 0%. The right bottom corner is 100% 100%. If you only specify one value, the other value will be 50%. Default value is: 0% 0%"
+    },
+    {
+      "value": "xpos ypos",
+      "function": "The first value is the horizontal position and the second value is the vertical. The top left corner is 0 0. Units can be pixels (0px 0px) or any other CSS units. If you only specify one value, the other value will be 50%. You can mix % and positions"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

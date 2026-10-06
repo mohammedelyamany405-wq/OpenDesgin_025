@@ -1,0 +1,35 @@
+{
+  "property": "backdrop-filter",
+  "page": "https://www.w3schools.com/cssref/css3_pr_backdrop-filter.php",
+  "function": "The backdrop-filter property is used to apply a graphical effect to the area behind an element.",
+  "category": "color",
+  "syntax": "backdrop-filter: none|filter|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.backdropFilter=\"grayscale(100%)\""
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "Default value. No filter is applied to the backdrop"
+    },
+    {
+      "value": "filter",
+      "function": "A space-separated list of filter-functions like: blur() brightness() contrast() drop-shadow() grayscale() hue-rotate() invert() opacity() sepia() saturate() or an url to an SVG filter that will be applied to the backdrop"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

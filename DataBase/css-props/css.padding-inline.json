@@ -1,0 +1,39 @@
+{
+  "property": "padding-inline",
+  "page": "https://www.w3schools.com/cssref/css_pr_padding-inline.php",
+  "function": "An element's padding-inline is the space from its border to its content in the inline direction, and it is a shorthand property for the following properties:",
+  "category": "box",
+  "syntax": "padding-inline: auto|value|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.paddingInline=\"100px 20px\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default. The element's default padding-inline distance."
+    },
+    {
+      "value": "length",
+      "function": "Specifies distance in px, pt, cm, etc. Negative values are not allowed. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Specifies distance in percent relative to size of parent element in the inline direction."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

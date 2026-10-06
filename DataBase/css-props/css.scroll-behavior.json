@@ -1,0 +1,35 @@
+{
+  "property": "scroll-behavior",
+  "page": "https://www.w3schools.com/cssref/pr_scroll-behavior.php",
+  "function": "The scroll-behavior property specifies whether to smoothly animate the scroll position, instead of a straight jump, when the user clicks on a link within a scrollable box.",
+  "category": "scroll",
+  "syntax": "scroll-behavior: auto|smooth|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSSOM View Module (Working Draft)",
+    "JavaScript syntax": "object.style.scrollBehavior=\"smooth\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Allows a straight jump \"scroll effect\" between elements within the scrolling box. This is default"
+    },
+    {
+      "value": "smooth",
+      "function": "Allows a smooth animated \"scroll effect\" between elements within the scrolling box."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

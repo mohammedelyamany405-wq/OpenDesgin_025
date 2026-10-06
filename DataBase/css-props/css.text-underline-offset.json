@@ -1,0 +1,39 @@
+{
+  "property": "text-underline-offset",
+  "page": "https://www.w3schools.com/cssref/css3_pr_text-underline-offset.php",
+  "function": "The text-underline-offset property specifies the offset distance of underline text decorations.",
+  "category": "text",
+  "syntax": "text-underline-offset: auto|length|percentage|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS4",
+    "JavaScript syntax": "object.style.textUnderlineOffset=\"1em\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default value. The browser sets the appropriate offset for the underline"
+    },
+    {
+      "value": "length",
+      "function": "Specifies the offset as a length value"
+    },
+    {
+      "value": "percentage",
+      "function": "Specifies the offset as a percentage value"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

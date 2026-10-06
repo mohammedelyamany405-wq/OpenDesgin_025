@@ -1,0 +1,67 @@
+{
+  "property": "clip-path",
+  "page": "https://www.w3schools.com/cssref/css3_pr_clip-path.php",
+  "function": "The clip-path property lets you clip an element to a basic shape or to an SVG source.",
+  "category": "position",
+  "syntax": "clip-path: clip-source|basic-shape|margin-box|border-box|padding-box|content-box|fill-box|stroke-box|view-box|none|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "yes for basic-shape. Read about animatable Try it",
+    "Version": "CSS Masking Module Level 1",
+    "JavaScript syntax": "object.style.clipPath=\"circle(50%)\" Try it"
+  },
+  "values": [
+    {
+      "value": "clip-source",
+      "function": "Defines a URL to an SVG <clipPath> element"
+    },
+    {
+      "value": "basic-shape",
+      "function": "Clips an element to a basic shape: circle(), ellipse(), polygon() or inset()"
+    },
+    {
+      "value": "margin-box",
+      "function": "Uses the margin box as the reference box"
+    },
+    {
+      "value": "border-box",
+      "function": "Uses the border box as the reference box"
+    },
+    {
+      "value": "padding-box",
+      "function": "Uses the padding box as the reference box"
+    },
+    {
+      "value": "content-box",
+      "function": "Uses the content box as the reference box"
+    },
+    {
+      "value": "fill-box",
+      "function": "Uses the object bounding box as reference box"
+    },
+    {
+      "value": "stroke-box",
+      "function": "Uses the stroke bounding box as reference box"
+    },
+    {
+      "value": "view-box",
+      "function": "Uses the SVG viewport as reference box"
+    },
+    {
+      "value": "none",
+      "function": "This is default. No clipping is done"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 12,
+  "shorthandFor": [],
+  "partOf": []
+}

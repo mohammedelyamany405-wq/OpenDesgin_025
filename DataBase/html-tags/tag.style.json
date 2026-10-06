@@ -1,0 +1,27 @@
+{
+  "tag": "style",
+  "page": "https://www.w3schools.com/tags/tag_style.asp",
+  "function": "Use of the <style> element to apply a simple style sheet to an HTML document.",
+  "category": "document",
+  "attributes": [
+    {
+      "name": "media",
+      "values": "media_query",
+      "function": "Specifies what media/device the media resource is optimized for"
+    },
+    {
+      "name": "type",
+      "values": "text/css",
+      "function": "Specifies the media type of the <style> tag"
+    }
+  ],
+  "attributeCount": 2,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "head"
+    ],
+    "children": []
+  }
+}

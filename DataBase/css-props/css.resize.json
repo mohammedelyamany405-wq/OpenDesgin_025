@@ -1,0 +1,43 @@
+{
+  "property": "resize",
+  "page": "https://www.w3schools.com/cssref/css3_pr_resize.php",
+  "function": "The resize property defines if (and how) an element is resizable by the user.",
+  "category": "box",
+  "syntax": "resize: none|both|horizontal|vertical|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.resize=\"both\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "Default value. The user cannot resize the element"
+    },
+    {
+      "value": "both",
+      "function": "The user can resize both the height and width of the element"
+    },
+    {
+      "value": "horizontal",
+      "function": "The user can resize the width of the element"
+    },
+    {
+      "value": "vertical",
+      "function": "The user can resize the height of the element"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [],
+  "partOf": []
+}

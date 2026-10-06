@@ -1,0 +1,35 @@
+{
+  "property": "table-layout",
+  "page": "https://www.w3schools.com/cssref/pr_tab_table-layout.php",
+  "function": "The table-layout property defines the algorithm used to lay out table cells, rows, and columns.",
+  "category": "tables",
+  "syntax": "table-layout: auto|fixed|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.tableLayout=\"fixed\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Browsers use an automatic table layout algorithm. The column width is set by the widest unbreakable content in the cells. The content will dictate the layout"
+    },
+    {
+      "value": "fixed",
+      "function": "Sets a fixed table layout algorithm. The table and column widths are set by the widths of table and col or by the width of the first row of cells. Cells in other rows do not affect column widths. If no widths are present on the first row, the column widths are divided equally across the table, regardless of content inside the cells"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

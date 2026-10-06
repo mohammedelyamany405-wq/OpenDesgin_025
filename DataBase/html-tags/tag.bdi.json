@@ -1,0 +1,14 @@
+{
+  "tag": "bdi",
+  "page": "https://www.w3schools.com/tags/tag_bdi.asp",
+  "function": "Isolate the usernames from the surrounding text-direction settings.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

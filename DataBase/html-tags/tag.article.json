@@ -1,0 +1,19 @@
+{
+  "tag": "article",
+  "page": "https://www.w3schools.com/tags/tag_article.asp",
+  "function": "Three articles with independent, self-contained content.",
+  "category": "sectioning",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "body"
+    ],
+    "children": [
+      "h1",
+      "p"
+    ]
+  }
+}

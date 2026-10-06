@@ -1,0 +1,39 @@
+{
+  "property": "max-inline-size",
+  "page": "https://www.w3schools.com/cssref/css_pr_max-inline-size.php",
+  "function": "The max-inline-size property specifies the maximum size of an element in the inline direction.",
+  "category": "box",
+  "syntax": "max-inline-size: auto|value|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.maxInlineSize=\"60px\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default. The element's default max-inline-size value."
+    },
+    {
+      "value": "length",
+      "function": "Specifies max-inline-size in px, pt, cm, etc. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Specifies max-inline-size in percent relative to size of parent element on the corresponding axis."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

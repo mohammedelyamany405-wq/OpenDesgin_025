@@ -1,0 +1,12 @@
+{
+  "property": "@font-face",
+  "page": "https://www.w3schools.com/cssref/atrule_font-face.php",
+  "function": "With the CSS @font-face rule, web designers do not have to use one of the \"web-safe\" fonts anymore.",
+  "category": "at-rules",
+  "syntax": "",
+  "defaults": {},
+  "values": [],
+  "valueCount": 0,
+  "shorthandFor": [],
+  "partOf": []
+}

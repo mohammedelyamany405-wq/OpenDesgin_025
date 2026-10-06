@@ -1,0 +1,35 @@
+{
+  "property": "caption-side",
+  "page": "https://www.w3schools.com/cssref/pr_tab_caption-side.php",
+  "function": "The caption-side property specifies the placement of a table caption.",
+  "category": "tables",
+  "syntax": "caption-side: top|bottom|initial|inherit;",
+  "defaults": {
+    "Default value": "top",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.captionSide=\"bottom\" Try it"
+  },
+  "values": [
+    {
+      "value": "top",
+      "function": "Puts the caption above the table. This is default"
+    },
+    {
+      "value": "bottom",
+      "function": "Puts the caption below the table"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

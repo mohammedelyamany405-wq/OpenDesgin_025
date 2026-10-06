@@ -1,0 +1,42 @@
+{
+  "property": "border-color",
+  "page": "https://www.w3schools.com/cssref/pr_border-color.php",
+  "function": "The border-color property sets the color of an element's four borders. This property can have from one to four values.",
+  "category": "border",
+  "syntax": "border-color: color|transparent|initial|inherit;",
+  "defaults": {
+    "Default value": "The current color of the element",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.borderColor=\"#FF0000 blue\" Try it"
+  },
+  "values": [
+    {
+      "value": "color",
+      "function": "Specifies the border color. Look at CSS Color Values for a complete list of possible color values. Default color is the current color of the element"
+    },
+    {
+      "value": "transparent",
+      "function": "Specifies that the border color should be transparent"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [
+    "border-top-color",
+    "border-right-color",
+    "border-bottom-color",
+    "border-left-color"
+  ],
+  "partOf": [
+    "border"
+  ]
+}

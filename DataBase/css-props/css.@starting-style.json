@@ -1,0 +1,12 @@
+{
+  "property": "@starting-style",
+  "page": "https://www.w3schools.com/cssref/atrule_starting-style.php",
+  "function": "The CSS @starting-style rule is used to define an element's starting styles before the element gets its first style update.",
+  "category": "at-rules",
+  "syntax": "@starting-style { css declarations; }",
+  "defaults": {},
+  "values": [],
+  "valueCount": 0,
+  "shorthandFor": [],
+  "partOf": []
+}

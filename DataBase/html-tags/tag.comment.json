@@ -1,0 +1,14 @@
+{
+  "tag": "comment",
+  "page": "https://www.w3schools.com/tags/tag_comment.asp",
+  "function": "The comment tag is used to insert comments in the source code. Comments are not displayed in the browsers.",
+  "category": "other",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

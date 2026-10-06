@@ -1,0 +1,35 @@
+{
+  "property": "clip",
+  "page": "https://www.w3schools.com/cssref/pr_pos_clip.php",
+  "function": "Note: The clip property is deprecated and is replaced by the clip-path property.",
+  "category": "position",
+  "syntax": "clip: auto|shape|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.clip=\"rect(0px,50px,50px,0px)\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "No clipping will be applied. This is default"
+    },
+    {
+      "value": "shape",
+      "function": "Clips an element. The only valid value is: rect (top, right, bottom, left)"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

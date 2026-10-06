@@ -1,0 +1,30 @@
+{
+  "property": "text-emphasis-color",
+  "page": "https://www.w3schools.com/cssref/css3_pr_text-emphasis-color.php",
+  "function": "The text-emphasis-color property sets the color of emphasis marks.",
+  "category": "text",
+  "syntax": "text-emphasis-color: color|inherit|initial;",
+  "defaults": {
+    "Default value": "currentcolor",
+    "Inherited": "yes",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.textEmphasisColor=\"blue\""
+  },
+  "values": [
+    {
+      "value": "color",
+      "function": "Sets the color of the emphasis marks. If no color is specified, it uses the currentcolor"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": []
+}

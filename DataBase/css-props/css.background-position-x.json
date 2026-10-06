@@ -1,0 +1,51 @@
+{
+  "property": "background-position-x",
+  "page": "https://www.w3schools.com/cssref/css_pr_background-position-x.php",
+  "function": "The background-position-x property sets the position of a background image on the x-axis.",
+  "category": "background",
+  "syntax": "background-position-x: value;",
+  "defaults": {
+    "Default value": "0%",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.backgroundPositionX=\"center\" Try it"
+  },
+  "values": [
+    {
+      "value": "left",
+      "function": "Positions background left side on x-axis."
+    },
+    {
+      "value": "right",
+      "function": "Positions background right side on x-axis."
+    },
+    {
+      "value": "center",
+      "function": "Positions background center on x-axis."
+    },
+    {
+      "value": "x%",
+      "function": "Left side is 0% on x-axis, and right side is 100%. Percentage value refers to width of background positioning area minus width of background image."
+    },
+    {
+      "value": "xpos",
+      "function": "Horizontal distance from left side. Units can be pixels (0px) or any other CSS units."
+    },
+    {
+      "value": "xpos offset",
+      "function": "Two value syntax, only supported in Firefox and Safari. - xpos is set either to \"left\" or \"right\". - offset is horizontal distance from background image and \"left\" or \"right\" side set with xpos. Units can be pixels or any other CSS units."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 8,
+  "shorthandFor": [],
+  "partOf": []
+}

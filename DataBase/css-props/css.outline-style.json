@@ -1,0 +1,69 @@
+{
+  "property": "outline-style",
+  "page": "https://www.w3schools.com/cssref/pr_outline-style.php",
+  "function": "An outline is a line that is drawn around elements, outside the borders, to make the element \"stand out\".",
+  "category": "border",
+  "syntax": "outline-style: none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.outlineStyle=\"dashed\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "Specifies no outline. This is default"
+    },
+    {
+      "value": "hidden",
+      "function": "Specifies a hidden outline"
+    },
+    {
+      "value": "dotted",
+      "function": "Specifies a dotted outline"
+    },
+    {
+      "value": "dashed",
+      "function": "Specifies a dashed outline"
+    },
+    {
+      "value": "solid",
+      "function": "Specifies a solid outline"
+    },
+    {
+      "value": "double",
+      "function": "Specifies a double outliner"
+    },
+    {
+      "value": "groove",
+      "function": "Specifies a 3D grooved outline. The effect depends on the outline-color value"
+    },
+    {
+      "value": "ridge",
+      "function": "Specifies a 3D ridged outline. The effect depends on the outline-color value"
+    },
+    {
+      "value": "inset",
+      "function": "Specifies a 3D inset outline. The effect depends on the outline-color value"
+    },
+    {
+      "value": "outset",
+      "function": "Specifies a 3D outset outline. The effect depends on the outline-color value"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 12,
+  "shorthandFor": [],
+  "partOf": [
+    "outline"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "tag": "fieldset",
+  "page": "https://www.w3schools.com/tags/tag_fieldset.asp",
+  "function": "The <fieldset> tag is used to group related elements in a form.",
+  "category": "forms",
+  "attributes": [
+    {
+      "name": "disabled",
+      "values": "disabled",
+      "function": "Specifies that a group of related form elements should be disabled"
+    },
+    {
+      "name": "form",
+      "values": "form_id",
+      "function": "Specifies which form the fieldset belongs to"
+    },
+    {
+      "name": "name",
+      "values": "text",
+      "function": "Specifies a name for the fieldset"
+    }
+  ],
+  "attributeCount": 3,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "form"
+    ],
+    "children": [
+      "legend",
+      "input"
+    ]
+  }
+}

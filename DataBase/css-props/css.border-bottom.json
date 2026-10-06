@@ -1,0 +1,43 @@
+{
+  "property": "border-bottom",
+  "page": "https://www.w3schools.com/cssref/pr_border-bottom.php",
+  "function": "The border-bottom property is a shorthand property for (in the following order):",
+  "category": "border",
+  "syntax": "border-bottom: border-width border-style border-color|initial|inherit;",
+  "defaults": {
+    "Default value": "medium none color",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.borderBottom=\"15px dotted lightblue\" Try it"
+  },
+  "values": [
+    {
+      "value": "border-bottom-width",
+      "function": "Required. Specifies the width of the bottom border. Default value is \"medium\""
+    },
+    {
+      "value": "border-bottom-style",
+      "function": "Required. Specifies the style of the bottom border. Default value is \"none\""
+    },
+    {
+      "value": "border-bottom-color",
+      "function": "Optional. Specifies the color of the bottom border. Default value is the color of the text"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [
+    "border-bottom-width",
+    "border-bottom-style",
+    "border-bottom-color"
+  ],
+  "partOf": []
+}

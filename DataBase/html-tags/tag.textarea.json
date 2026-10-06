@@ -1,0 +1,77 @@
+{
+  "tag": "textarea",
+  "page": "https://www.w3schools.com/tags/tag_textarea.asp",
+  "function": "A multi-line text input control (text area).",
+  "category": "forms",
+  "attributes": [
+    {
+      "name": "autofocus",
+      "values": "autofocus",
+      "function": "Specifies that a text area should automatically get focus when the page loads"
+    },
+    {
+      "name": "cols",
+      "values": "number",
+      "function": "Specifies the visible width of a text area"
+    },
+    {
+      "name": "dirname",
+      "values": "textareaname.dir",
+      "function": "Specifies that the text direction of the textarea will be submitted"
+    },
+    {
+      "name": "disabled",
+      "values": "disabled",
+      "function": "Specifies that a text area should be disabled"
+    },
+    {
+      "name": "form",
+      "values": "form_id",
+      "function": "Specifies which form the text area belongs to"
+    },
+    {
+      "name": "maxlength",
+      "values": "number",
+      "function": "Specifies the maximum number of characters allowed in the text area"
+    },
+    {
+      "name": "name",
+      "values": "text",
+      "function": "Specifies a name for a text area"
+    },
+    {
+      "name": "placeholder",
+      "values": "text",
+      "function": "Specifies a short hint that describes the expected value of a text area"
+    },
+    {
+      "name": "readonly",
+      "values": "readonly",
+      "function": "Specifies that a text area should be read-only"
+    },
+    {
+      "name": "required",
+      "values": "required",
+      "function": "Specifies that a text area is required/must be filled out"
+    },
+    {
+      "name": "rows",
+      "values": "number",
+      "function": "Specifies the visible number of lines in a text area"
+    },
+    {
+      "name": "wrap",
+      "values": "hard | soft",
+      "function": "Specifies how the text in a text area is to be wrapped when submitted in a form"
+    }
+  ],
+  "attributeCount": 12,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "form"
+    ],
+    "children": []
+  }
+}

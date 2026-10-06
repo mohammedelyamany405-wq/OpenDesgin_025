@@ -1,0 +1,30 @@
+{
+  "property": "grid-column",
+  "page": "https://www.w3schools.com/cssref/pr_grid-column.php",
+  "function": "The grid-column property specifies a grid item's size and location in a grid layout, and is a shorthand property for the following properties:",
+  "category": "grid",
+  "syntax": "grid-column: grid-column-start / grid-column-end;",
+  "defaults": {
+    "Default value": "auto / auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS Grid Layout Module Level 1",
+    "JavaScript syntax": "object.style.gridColumn=\"2 / span 2\" Try it"
+  },
+  "values": [
+    {
+      "value": "grid-column-start",
+      "function": "Specifies on which column to start displaying the item."
+    },
+    {
+      "value": "grid-column-end",
+      "function": "Specifies on which column-line to stop displaying the item, or how many columns to span."
+    }
+  ],
+  "valueCount": 2,
+  "shorthandFor": [
+    "grid-column-start",
+    "grid-column-end"
+  ],
+  "partOf": []
+}

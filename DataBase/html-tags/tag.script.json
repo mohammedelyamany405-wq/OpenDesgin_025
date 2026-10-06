@@ -1,0 +1,58 @@
+{
+  "tag": "script",
+  "page": "https://www.w3schools.com/tags/tag_script.asp",
+  "function": "Write \"Hello JavaScript!\" with JavaScript.",
+  "category": "scripting",
+  "attributes": [
+    {
+      "name": "async",
+      "values": "async",
+      "function": "Specifies that the script is downloaded in parallel to parsing the page, and executed as soon as it is available (before parsing completes) (only for external scripts)"
+    },
+    {
+      "name": "crossorigin",
+      "values": "anonymous | use-credentials",
+      "function": "Sets the mode of the request to an HTTP CORS Request"
+    },
+    {
+      "name": "defer",
+      "values": "defer",
+      "function": "Specifies that the script is downloaded in parallel to parsing the page, and executed after the page has finished parsing (only for external scripts)"
+    },
+    {
+      "name": "integrity",
+      "values": "filehash",
+      "function": "Allows a browser to check the fetched script to ensure that the code is never loaded if the source has been manipulated"
+    },
+    {
+      "name": "nomodule",
+      "values": "True | False",
+      "function": "Specifies that the script should not be executed in browsers supporting ES2015 modules"
+    },
+    {
+      "name": "referrerpolicy",
+      "values": "no-referrer | no-referrer-when-downgrade | origin | origin-when-cross-origin | same-origin | strict-origin | strict-origin-when-cross-origin | unsafe-url",
+      "function": "Specifies which referrer information to send when fetching a script"
+    },
+    {
+      "name": "src",
+      "values": "URL",
+      "function": "Specifies the URL of an external script file"
+    },
+    {
+      "name": "type",
+      "values": "scripttype",
+      "function": "Specifies the media type of the script"
+    }
+  ],
+  "attributeCount": 8,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "head",
+      "body"
+    ],
+    "children": []
+  }
+}

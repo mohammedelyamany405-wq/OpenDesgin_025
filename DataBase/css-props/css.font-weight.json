@@ -1,0 +1,49 @@
+{
+  "property": "font-weight",
+  "page": "https://www.w3schools.com/cssref/pr_font_weight.php",
+  "function": "The font-weight property sets how thick or thin characters in text should be displayed.",
+  "category": "text",
+  "syntax": "font-weight: normal|bold|bolder|lighter|number|initial|inherit;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "yes",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.fontWeight=\"bold\" Try it"
+  },
+  "values": [
+    {
+      "value": "normal",
+      "function": "Defines normal characters. This is default"
+    },
+    {
+      "value": "bold",
+      "function": "Defines thick characters"
+    },
+    {
+      "value": "bolder",
+      "function": "Defines thicker characters"
+    },
+    {
+      "value": "lighter",
+      "function": "Defines lighter characters"
+    },
+    {
+      "value": "100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900",
+      "function": "Defines from thin to thick characters. 400 is the same as normal, and 700 is the same as bold"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 7,
+  "shorthandFor": [],
+  "partOf": [
+    "font"
+  ]
+}

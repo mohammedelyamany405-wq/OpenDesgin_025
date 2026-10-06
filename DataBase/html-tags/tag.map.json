@@ -1,0 +1,22 @@
+{
+  "tag": "map",
+  "page": "https://www.w3schools.com/tags/tag_map.asp",
+  "function": "The <map> tag is used to define an image map. An image map is an image with clickable areas.",
+  "category": "media",
+  "attributes": [
+    {
+      "name": "name",
+      "values": "mapname",
+      "function": "Required. Specifies the name of the image map"
+    }
+  ],
+  "attributeCount": 1,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": [
+      "area"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "tag": "tr",
+  "page": "https://www.w3schools.com/tags/tag_tr.asp",
+  "function": "A simple HTML table with three rows; one header row and two data rows.",
+  "category": "tables",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "table",
+      "thead",
+      "tbody",
+      "tfoot"
+    ],
+    "children": [
+      "td",
+      "th"
+    ]
+  }
+}

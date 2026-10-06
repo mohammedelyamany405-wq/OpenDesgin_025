@@ -1,0 +1,35 @@
+{
+  "property": "border-image-source",
+  "page": "https://www.w3schools.com/cssref/css3_pr_border-image-source.php",
+  "function": "The border-image-source property specifies the path to the image to be used as a border (instead of the normal border around an element).",
+  "category": "border",
+  "syntax": "border-image-source: none|url()|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.borderImageSource=\"url(border.png)\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "No image will be used"
+    },
+    {
+      "value": "url()",
+      "function": "The URL to the image to be used as a border"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,38 @@
+{
+  "property": "flex-flow",
+  "page": "https://www.w3schools.com/cssref/css3_pr_flex-flow.php",
+  "function": "The flex-flow property is a shorthand property for:",
+  "category": "flexbox",
+  "syntax": "flex-flow: flex-direction flex-wrap|initial|inherit;",
+  "defaults": {
+    "Default value": "row nowrap",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.flexFlow=\"column nowrap\" Try it"
+  },
+  "values": [
+    {
+      "value": "flex-direction",
+      "function": "Possible values:rowrow-reversecolumncolumn-reverseinitialinherit Default value is \"row\". Specifying the direction of the flexible items"
+    },
+    {
+      "value": "flex-wrap",
+      "function": "Possible values:nowrapwrapwrap-reverseinitialinherit Default value is \"nowrap\". Specifying whether the flexible items should wrap or not"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [
+    "flex-direction",
+    "flex-wrap"
+  ],
+  "partOf": []
+}

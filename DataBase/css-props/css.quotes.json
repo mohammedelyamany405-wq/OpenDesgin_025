@@ -1,0 +1,35 @@
+{
+  "property": "quotes",
+  "page": "https://www.w3schools.com/cssref/pr_gen_quotes.php",
+  "function": "The quotes property sets the type of quotation marks for quotations.",
+  "category": "text",
+  "syntax": "quotes: none|string|initial|inherit;",
+  "defaults": {
+    "Default value": "not specified",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.quotes=\"'\\253' '\\273'\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "Specifies that the \"open-quote\" and \"close-quote\" values of the \"content\" property will not produce any quotation marks"
+    },
+    {
+      "value": "string string string string",
+      "function": "Specifies which quotation marks to use. The first two values specifies the first level of quotation embedding, the next two values specifies the next level of quote embedding, etc"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

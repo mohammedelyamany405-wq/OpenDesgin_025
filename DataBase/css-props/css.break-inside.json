@@ -1,0 +1,47 @@
+{
+  "property": "break-inside",
+  "page": "https://www.w3schools.com/cssref/pr_break-inside.php",
+  "function": "The break-inside property specifies whether or not a page break, column break, or region break should occur inside the specified element.",
+  "category": "box",
+  "syntax": "break-inside: auto|all|always|avoid|avoid-column|avoid-page|avoid-region|column|left|page|recto|region|right|verso|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.breakInside=\"always\""
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default. Automatic page/column/region break inside the element"
+    },
+    {
+      "value": "avoid",
+      "function": "Avoid a page/column/region break inside the element"
+    },
+    {
+      "value": "avoid-column",
+      "function": "Avoid a column-break inside the element"
+    },
+    {
+      "value": "avoid-page",
+      "function": "Avoid a page-break inside the element"
+    },
+    {
+      "value": "avoid-region",
+      "function": "Avoid a region-break inside the element"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 7,
+  "shorthandFor": [],
+  "partOf": []
+}

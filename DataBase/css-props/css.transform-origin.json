@@ -1,0 +1,39 @@
+{
+  "property": "transform-origin",
+  "page": "https://www.w3schools.com/cssref/css3_pr_transform-origin.php",
+  "function": "The transform-origin property allows you to change the position of transformed elements.",
+  "category": "transform",
+  "syntax": "transform-origin: x-axis y-axis z-axis|initial|inherit;",
+  "defaults": {
+    "Default value": "50% 50% 0",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.transformOrigin=\"0 0\" Try it"
+  },
+  "values": [
+    {
+      "value": "x-axis",
+      "function": "Defines where the view is placed at the x-axis. Possible values: left center right length %"
+    },
+    {
+      "value": "y-axis",
+      "function": "Defines where the view is placed at the y-axis. Possible values: top center bottom length %"
+    },
+    {
+      "value": "z-axis",
+      "function": "Defines where the view is placed at the z-axis (for 3D transformations). Possible values: length"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

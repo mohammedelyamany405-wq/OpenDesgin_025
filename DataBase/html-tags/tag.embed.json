@@ -1,0 +1,35 @@
+{
+  "tag": "embed",
+  "page": "https://www.w3schools.com/tags/tag_embed.asp",
+  "function": "The <embed> tag defines a container for an external resource, such as a web page, a picture, a media player, or a plug-in application.",
+  "category": "media",
+  "attributes": [
+    {
+      "name": "height",
+      "values": "pixels",
+      "function": "Specifies the height of the embedded content"
+    },
+    {
+      "name": "src",
+      "values": "URL",
+      "function": "Specifies the address of the external file to embed"
+    },
+    {
+      "name": "type",
+      "values": "media_type",
+      "function": "Specifies the media type of the embedded content"
+    },
+    {
+      "name": "width",
+      "values": "pixels",
+      "function": "Specifies the width of the embedded content"
+    }
+  ],
+  "attributeCount": 4,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

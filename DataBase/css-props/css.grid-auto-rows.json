@@ -1,0 +1,59 @@
+{
+  "property": "grid-auto-rows",
+  "page": "https://www.w3schools.com/cssref/pr_grid-auto-rows.php",
+  "function": "The grid-auto-rows property sets a size for the rows in a grid container.",
+  "category": "grid",
+  "syntax": "grid-auto-rows: auto|fit-content()|max-content|min-content|minmax()|length|%|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS Grid Layout Module Level 1",
+    "JavaScript syntax": "object.style.gridAutoRows=\"60px\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default value. The size of the rows is determined by the size of the largest item in the row"
+    },
+    {
+      "value": "fit-content()",
+      "function": "Sets the size of the rows in length or %, and works like the rows will use the available space, but it will never expand the max-content size"
+    },
+    {
+      "value": "max-content",
+      "function": "Sets the size of each row to depend on the largest item in the row"
+    },
+    {
+      "value": "min-content",
+      "function": "Sets the size of each row to depend on the smallest item in the row"
+    },
+    {
+      "value": "minmax()",
+      "function": "Defines a size range greater than or equal to a min value and less than or equal to a max value"
+    },
+    {
+      "value": "length",
+      "function": "Sets the size of the rows, by using a legal length value. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Sets the size of the rows, by using a percent value"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    },
+    {
+      "value": "",
+      "function": ""
+    }
+  ],
+  "valueCount": 10,
+  "shorthandFor": [],
+  "partOf": []
+}

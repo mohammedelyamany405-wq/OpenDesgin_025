@@ -1,0 +1,35 @@
+{
+  "property": "user-select",
+  "page": "https://www.w3schools.com/cssref/css3_pr_user-select.php",
+  "function": "The user-select property specifies whether the text of an element can be selected.",
+  "category": "ui",
+  "syntax": "user-select: auto|none|text|all;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.userSelect=\"none\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default. Text can be selected if the browser allows it"
+    },
+    {
+      "value": "none",
+      "function": "Prevent text selection"
+    },
+    {
+      "value": "text",
+      "function": "The text can be selected by the user"
+    },
+    {
+      "value": "all",
+      "function": "Text selection is made with one click instead of a double-click"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

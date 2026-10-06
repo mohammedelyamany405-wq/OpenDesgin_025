@@ -1,0 +1,49 @@
+{
+  "property": "text-decoration-style",
+  "page": "https://www.w3schools.com/cssref/css3_pr_text-decoration-style.php",
+  "function": "The text-decoration-style property sets the style of the text decoration (like solid, wavy, dotted, dashed, double).",
+  "category": "text",
+  "syntax": "text-decoration-style: solid|double|dotted|dashed|wavy|initial|inherit;",
+  "defaults": {
+    "Default value": "solid",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.textDecorationStyle=\"wavy\" Try it"
+  },
+  "values": [
+    {
+      "value": "solid",
+      "function": "Default value. The line will display as a single line"
+    },
+    {
+      "value": "double",
+      "function": "The line will display as a double line"
+    },
+    {
+      "value": "dotted",
+      "function": "The line will display as a dotted line"
+    },
+    {
+      "value": "dashed",
+      "function": "The line will display as a dashed line"
+    },
+    {
+      "value": "wavy",
+      "function": "The line will display as a wavy line"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 7,
+  "shorthandFor": [],
+  "partOf": [
+    "text-decoration"
+  ]
+}

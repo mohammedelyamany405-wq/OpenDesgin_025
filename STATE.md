@@ -1,9 +1,18 @@
 # STATE — مصنع التعديلات المحلية
 آخر تحديث: 2026-10-03
-المرحلة الحالية: v0.0 محفوظة كنقطة رجوع — بانتظار نقاط المصمم من التجربة
+المرحلة الحالية: تطوير Tags الجذري — تم (بانتظار اختبار المصمم)
 
-نقطة الرجوع: tag `web-builder-v0.0` على commit `6faba6e` في projects/openpencil
+نقطة الرجوع السابقة: tag `web-builder-v0.0` على commit `6faba6e` في projects/openpencil
 التسجيل الكامل: snapshots/web-builder-v0.0/RESTORE.md
+
+  ── تطوير Tags (النقطة 1 من ورقة المصمم) ──
+  ✓ صندوق الاسم: تسمية Layers بصيغة Name-Tag + إعادة تسمية تلقائية مع الوسم
+  ✓ كتالوج خصائص لكل وسم (tag-attrs.ts) + Link مضاف + id/title عامة
+  ✓ صور محلية: Browse + معاينة + حد 1.5MB + بديل URL
+  ✓ التصدير يشمل الخصائص (لوحة + dom-css) مع هروب سليم
+  ✓ تحذير img بلا src في Validate وحوار التصدير
+  ✓ استخراج TagsTab.vue + أرشفة Tags_Tab_Architecture.md
+  ✓ bun run check:vue ✅ + tsc dom-css ✅ + build:packages ✅
 
 ## مرحلة المناقشة الحالية
 الموضوع: Web Builder Classifier — تحويل Prototypes ← HTML5/CSS3

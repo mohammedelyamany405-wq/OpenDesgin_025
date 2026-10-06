@@ -1,0 +1,18 @@
+{
+  "tag": "thead",
+  "page": "https://www.w3schools.com/tags/tag_thead.asp",
+  "function": "An HTML table with a <thead>, <tbody>, and a <tfoot> element.",
+  "category": "tables",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "table"
+    ],
+    "children": [
+      "tr"
+    ]
+  }
+}

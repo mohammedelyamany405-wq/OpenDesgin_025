@@ -1,0 +1,35 @@
+{
+  "property": "scroll-padding-block-start",
+  "page": "https://www.w3schools.com/cssref/css_pr_scroll-margin-top.php",
+  "function": "The scroll-margin-top property specifies the distance between the snap position and the container.",
+  "category": "scroll",
+  "syntax": "scroll-margin-top: 0|value|initial|inherit;",
+  "defaults": {
+    "Default value": "0",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.scrollMarginTop=\"20px\" Try it"
+  },
+  "values": [
+    {
+      "value": "0",
+      "function": "Scroll-margin-top is zero. This is default"
+    },
+    {
+      "value": "length",
+      "function": "Specifies scroll-margin-top in px, pt, cm, etc. Negative values are allowed. Read about length units"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

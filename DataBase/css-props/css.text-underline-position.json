@@ -1,0 +1,47 @@
+{
+  "property": "text-underline-position",
+  "page": "https://www.w3schools.com/cssref/css3_pr_text-underline-position.php",
+  "function": "The text-underline-position property specifies the position of underline text decorations.",
+  "category": "text",
+  "syntax": "text-underline-position: auto|under|from-font|left|right|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.textUnderlinePosition=\"under\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default value. The browser sets the position of the underline"
+    },
+    {
+      "value": "under",
+      "function": "Sets the underline below the alphabetic baseline"
+    },
+    {
+      "value": "from-font",
+      "function": "If the font file includes information about underline position, use that value. If not, use auto"
+    },
+    {
+      "value": "left",
+      "function": "In vertical writing mode the underline will be placed to the left of the text. In horizontal writing mode the underline will be placed as auto"
+    },
+    {
+      "value": "right",
+      "function": "In vertical writing mode the underline will be placed to the right of the text. In horizontal writing mode the underline will be placed as auto"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 7,
+  "shorthandFor": [],
+  "partOf": []
+}

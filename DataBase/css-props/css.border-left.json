@@ -1,0 +1,43 @@
+{
+  "property": "border-left",
+  "page": "https://www.w3schools.com/cssref/pr_border-left.php",
+  "function": "The border-left property is a shorthand property for (in the following order):",
+  "category": "border",
+  "syntax": "border-left: border-width border-style border-color|initial|inherit;",
+  "defaults": {
+    "Default value": "medium none color",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.borderLeft=\"3px dotted blue\" Try it"
+  },
+  "values": [
+    {
+      "value": "border-left-width",
+      "function": "Optional. Specifies the width of the left border. Default value is \"medium\""
+    },
+    {
+      "value": "border-left-style",
+      "function": "Required. Specifies the style of the left border. Default value is \"none\""
+    },
+    {
+      "value": "border-left-color",
+      "function": "Optional. Specifies the color of the left border. Default value is the color of the text"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [
+    "border-left-width",
+    "border-left-style",
+    "border-left-color"
+  ],
+  "partOf": []
+}

@@ -1,0 +1,47 @@
+{
+  "property": "text-orientation",
+  "page": "https://www.w3schools.com/cssref/css_pr_text-orientation.php",
+  "function": "The text-orientation property specifies the orientation of characters.",
+  "category": "text",
+  "syntax": "text-orientation: mixed|upright|sideways|sideways-right|use-glyph-orientation|initial|inherit;",
+  "defaults": {
+    "Default value": "mixed",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.textOrientation=\"upright\" Try it"
+  },
+  "values": [
+    {
+      "value": "mixed",
+      "function": "Deafult value. Characters are rotated 90 degrees clockwise."
+    },
+    {
+      "value": "upright",
+      "function": "Characters are not rotated, but standing upright."
+    },
+    {
+      "value": "sideways",
+      "function": "Characters are orientated the same as the text lines are oriented with writing-mode vertical, 90 degrees clockwise."
+    },
+    {
+      "value": "sideways-right",
+      "function": "Equal to property value sideways. Kept for compatibility purposes."
+    },
+    {
+      "value": "use-glyph-orientation",
+      "function": "For use in SVG elements, so that text inherits deprecated SVG properties glyph-orientation-vertical and glyph-orientation-horizontal."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 7,
+  "shorthandFor": [],
+  "partOf": []
+}

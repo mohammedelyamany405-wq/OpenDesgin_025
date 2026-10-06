@@ -1,0 +1,14 @@
+{
+  "tag": "kbd",
+  "page": "https://www.w3schools.com/tags/tag_kbd.asp",
+  "function": "Define some text as keyboard input in a document.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

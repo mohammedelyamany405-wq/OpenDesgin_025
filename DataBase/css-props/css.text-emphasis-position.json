@@ -1,0 +1,42 @@
+{
+  "property": "text-emphasis-position",
+  "page": "https://www.w3schools.com/cssref/css3_pr_text-emphasis-position.php",
+  "function": "The text-emphasis-position property specifies the position of the emphasis marks (over, under, left, right).",
+  "category": "text",
+  "syntax": "text-emphasis-position: over|under|left|right|initial|inherit;",
+  "defaults": {
+    "Default value": "over right",
+    "Inherited": "yes",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.textEmphasisPosition=\"under\""
+  },
+  "values": [
+    {
+      "value": "over",
+      "function": "The emphasis marks are applied over the text (in horizontal writing mode)"
+    },
+    {
+      "value": "under",
+      "function": "The emphasis marks are applied under the text (in horizontal writing mode)"
+    },
+    {
+      "value": "left",
+      "function": "The emphasis marks are applied to the left of the text (in vertical writing mode)"
+    },
+    {
+      "value": "right",
+      "function": "The emphasis marks are applied to the right of the text (in vertical writing mode)"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [],
+  "partOf": []
+}

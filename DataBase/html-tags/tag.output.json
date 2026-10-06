@@ -1,0 +1,30 @@
+{
+  "tag": "output",
+  "page": "https://www.w3schools.com/tags/tag_output.asp",
+  "function": "Perform a calculation and show the result in an <output> element.",
+  "category": "forms",
+  "attributes": [
+    {
+      "name": "for",
+      "values": "element_id",
+      "function": "Specifies the relationship between the result of the calculation, and the elements used in the calculation"
+    },
+    {
+      "name": "form",
+      "values": "form_id",
+      "function": "Specifies which form the output element belongs to"
+    },
+    {
+      "name": "name",
+      "values": "name",
+      "function": "Specifies a name for the output element"
+    }
+  ],
+  "attributeCount": 3,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

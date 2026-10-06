@@ -1,0 +1,35 @@
+{
+  "property": "pointer-events",
+  "page": "https://www.w3schools.com/cssref/css3_pr_pointer-events.php",
+  "function": "The pointer-events property defines whether or not an element reacts to pointer events.",
+  "category": "ui",
+  "syntax": "pointer-events: auto|none;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "yes",
+    "Animatable": "No. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.pointerEvents=\"none\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "The element reacts to pointer events, like :hover and click. This is default"
+    },
+    {
+      "value": "none",
+      "function": "The element does not react to pointer events"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

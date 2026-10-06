@@ -1,0 +1,51 @@
+{
+  "property": "mask-origin",
+  "page": "https://www.w3schools.com/cssref/css3_pr_mask-origin.php",
+  "function": "The mask-origin property specifies the origin position (the mask position area) of a mask layer image.",
+  "category": "background",
+  "syntax": "mask-origin: border-box|content-box|padding-box|fill-box|stroke-box|view-box|initial|inherit;",
+  "defaults": {
+    "Default value": "border-box",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS Masking Module Level 1",
+    "JavaScript syntax": "object.style.maskOrigin=\"padding-box\""
+  },
+  "values": [
+    {
+      "value": "border-box",
+      "function": "The position is relative to the border box. This is default"
+    },
+    {
+      "value": "content-box",
+      "function": "The position is relative to the content box"
+    },
+    {
+      "value": "padding-box",
+      "function": "The position is relative to the padding box"
+    },
+    {
+      "value": "fill-box",
+      "function": "The position is relative to the object bounding box"
+    },
+    {
+      "value": "stroke-box",
+      "function": "The position is relative to the stroke bounding box"
+    },
+    {
+      "value": "view-box",
+      "function": "Use the nearest SVG viewport as reference box"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 8,
+  "shorthandFor": [],
+  "partOf": []
+}

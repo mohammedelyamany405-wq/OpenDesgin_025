@@ -1,0 +1,35 @@
+{
+  "property": "tab-size",
+  "page": "https://www.w3schools.com/cssref/css3_pr_tab-size.php",
+  "function": "The tab-size property specifies the width of a tab character.",
+  "category": "text",
+  "syntax": "tab-size: number|length|initial|inherit;",
+  "defaults": {
+    "Default value": "8",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.tabSize=\"16\" Try it"
+  },
+  "values": [
+    {
+      "value": "number",
+      "function": "The number of space-characters to be displayed for each tab-character. Default value is 8"
+    },
+    {
+      "value": "length",
+      "function": "The length of a tab-character"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

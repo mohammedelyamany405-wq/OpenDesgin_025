@@ -1,0 +1,14 @@
+{
+  "tag": "u",
+  "page": "https://www.w3schools.com/tags/tag_u.asp",
+  "function": "Mark up a misspelled word with the <u> tag.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "property": "border-block-width",
+  "page": "https://www.w3schools.com/cssref/css_pr_border-block-width.php",
+  "function": "The border-block-width property sets the width of an element's borders in the block direction.",
+  "category": "border",
+  "syntax": "border-block-width: medium|thin|thick|length|initial|inherit;",
+  "defaults": {
+    "Default value": "medium",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.borderBlockWidth=\"3px 10px\" Try it"
+  },
+  "values": [
+    {
+      "value": "medium",
+      "function": "Specifies a medium border. This is default"
+    },
+    {
+      "value": "thin",
+      "function": "Specifies a thin border"
+    },
+    {
+      "value": "thick",
+      "function": "Specifies a thick border"
+    },
+    {
+      "value": "length",
+      "function": "Allows you to define the thickness of the border. Read about length units"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [],
+  "partOf": []
+}

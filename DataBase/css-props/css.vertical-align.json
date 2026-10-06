@@ -1,0 +1,67 @@
+{
+  "property": "vertical-align",
+  "page": "https://www.w3schools.com/cssref/pr_pos_vertical-align.php",
+  "function": "The vertical-align property sets the vertical alignment of an element.",
+  "category": "text",
+  "syntax": "vertical-align: baseline|length|sub|super|top|text-top|middle|bottom|text-bottom|initial|inherit;",
+  "defaults": {
+    "Default value": "baseline",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.verticalAlign=\"top\" Try it"
+  },
+  "values": [
+    {
+      "value": "baseline",
+      "function": "The element is aligned with the baseline of the parent. This is default"
+    },
+    {
+      "value": "length",
+      "function": "Raises or lower an element by the specified length. Negative values are allowed. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Raises or lower an element by a percent of the \"line-height\" property. Negative values are allowed"
+    },
+    {
+      "value": "sub",
+      "function": "The element is aligned with the subscript baseline of the parent"
+    },
+    {
+      "value": "super",
+      "function": "The element is aligned with the superscript baseline of the parent"
+    },
+    {
+      "value": "top",
+      "function": "The element is aligned with the top of the tallest element on the line"
+    },
+    {
+      "value": "text-top",
+      "function": "The element is aligned with the top of the parent element's font"
+    },
+    {
+      "value": "middle",
+      "function": "The element is placed in the middle of the parent element"
+    },
+    {
+      "value": "bottom",
+      "function": "The element is aligned with the lowest element on the line"
+    },
+    {
+      "value": "text-bottom",
+      "function": "The element is aligned with the bottom of the parent element's font"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 12,
+  "shorthandFor": [],
+  "partOf": []
+}

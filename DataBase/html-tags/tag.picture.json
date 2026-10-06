@@ -1,0 +1,17 @@
+{
+  "tag": "picture",
+  "page": "https://www.w3schools.com/tags/tag_picture.asp",
+  "function": "The <picture> tag gives web developers more flexibility in specifying image resources.",
+  "category": "media",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": [
+      "source",
+      "img"
+    ]
+  }
+}

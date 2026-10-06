@@ -1,0 +1,45 @@
+{
+  "property": "line-height",
+  "page": "https://www.w3schools.com/cssref/pr_dim_line-height.php",
+  "function": "The line-height property specifies the height of a line.",
+  "category": "text",
+  "syntax": "line-height: normal|number|length|initial|inherit;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "yes",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.lineHeight=\"30px\" Try it"
+  },
+  "values": [
+    {
+      "value": "normal",
+      "function": "A normal line height. This is default"
+    },
+    {
+      "value": "number",
+      "function": "A number that will be multiplied with the current font-size to set the line height"
+    },
+    {
+      "value": "length",
+      "function": "A fixed line height in px, pt, cm, etc."
+    },
+    {
+      "value": "%",
+      "function": "A line height in percent of the current font size"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [],
+  "partOf": [
+    "font"
+  ]
+}

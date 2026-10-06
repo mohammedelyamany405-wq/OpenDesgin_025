@@ -1,0 +1,39 @@
+{
+  "property": "hyphens",
+  "page": "https://www.w3schools.com/cssref/css3_pr_hyphens.php",
+  "function": "The hyphens property defines whether hyphenation is allowed to create more soft wrap opportunities within a line of text.",
+  "category": "text",
+  "syntax": "hyphens: none|manual|auto|initial|inherit;",
+  "defaults": {
+    "Default value": "manual",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.hyphens=\"none\""
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "Words are not hyphenated"
+    },
+    {
+      "value": "manual",
+      "function": "Default. Words are only hyphenated at &hyphen; or &shy; (if needed)"
+    },
+    {
+      "value": "auto",
+      "function": "Words are hyphenated where the algorithm is deciding (if needed)"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

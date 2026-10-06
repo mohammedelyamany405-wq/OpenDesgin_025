@@ -1,0 +1,39 @@
+{
+  "property": "column-rule",
+  "page": "https://www.w3schools.com/cssref/css3_pr_column-rule.php",
+  "function": "The column-rule property sets the width, style, and color of the rule between columns.",
+  "category": "box",
+  "syntax": "column-rule: column-rule-width column-rule-style column-rule-color|initial|inherit;",
+  "defaults": {
+    "Default value": "medium none color",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.columnRule=\"3px outset blue\" Try it"
+  },
+  "values": [
+    {
+      "value": "column-rule-width",
+      "function": "Sets the width of the rule between columns. Default value is medium"
+    },
+    {
+      "value": "column-rule-style",
+      "function": "Sets the style of the rule between columns. Default value is none"
+    },
+    {
+      "value": "column-rule-color",
+      "function": "Sets the color of the rule between columns. Default value is the color of the element"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,47 @@
+{
+  "property": "page-break-before",
+  "page": "https://www.w3schools.com/cssref/pr_print_pagebb.php",
+  "function": "The page-break-before property adds a page-break before a specified element.",
+  "category": "print",
+  "syntax": "page-break-before: auto|always|avoid|left|right|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.pageBreakBefore=\"always\""
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default. Automatic page-breaks"
+    },
+    {
+      "value": "always",
+      "function": "Always insert a page-break before the element"
+    },
+    {
+      "value": "avoid",
+      "function": "Avoid page-break before the element (if possible)"
+    },
+    {
+      "value": "left",
+      "function": "Insert page-break before the element so that the next page is formatted as a left page"
+    },
+    {
+      "value": "right",
+      "function": "Insert page-break before the element so that the next page is formatted as a right page"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 7,
+  "shorthandFor": [],
+  "partOf": []
+}

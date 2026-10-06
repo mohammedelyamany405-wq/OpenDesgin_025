@@ -1,0 +1,14 @@
+{
+  "tag": "i",
+  "page": "https://www.w3schools.com/tags/tag_i.asp",
+  "function": "Mark up text that is set off from the normal prose in a document.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

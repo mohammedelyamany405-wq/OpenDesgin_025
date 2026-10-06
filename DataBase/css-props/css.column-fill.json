@@ -1,0 +1,35 @@
+{
+  "property": "column-fill",
+  "page": "https://www.w3schools.com/cssref/css3_pr_column-fill.php",
+  "function": "The column-fill property specifies how to fill columns, balanced or not.",
+  "category": "box",
+  "syntax": "column-fill: balance|auto|initial|inherit;",
+  "defaults": {
+    "Default value": "balance",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.columnFill=\"auto\" Try it"
+  },
+  "values": [
+    {
+      "value": "balance",
+      "function": "Default value. Fills each column with about the same amount of content, but will not allow the columns to be taller than the height (so, columns might be shorter than the height as the browser distributes the content evenly horizontally)"
+    },
+    {
+      "value": "auto",
+      "function": "Fills each column until it reaches the height, and do this until it runs out of content (so, this value will not necessarily fill all the columns nor fill them evenly)"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

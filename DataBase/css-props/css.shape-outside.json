@@ -1,0 +1,55 @@
+{
+  "property": "shape-outside",
+  "page": "https://www.w3schools.com/cssref/css_pr_shape-outside.php",
+  "function": "The shape-outside property lets you define a shape for wrapping for the inline content. By default, inline content wraps around its margin box, with shape-outside you can customize this wrapping.",
+  "category": "box",
+  "syntax": "shape-outside: none|margin-box|border-box|padding-box|content-box|basic-shape|url(image)|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "yes for basic-shape. Read about animatable",
+    "Version": "CSS Shapes Module Level 1",
+    "JavaScript syntax": "object.style.shapeOutside=\"circle(50%)\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "This is default. The float area is unaffected. Inline content wraps around the element's margin box"
+    },
+    {
+      "value": "margin-box",
+      "function": "Defines the shape enclosed by the outside margin edge"
+    },
+    {
+      "value": "border-box",
+      "function": "Defines the shape enclosed by the outside border edge"
+    },
+    {
+      "value": "padding-box",
+      "function": "Defines the shape enclosed by the outside padding edge"
+    },
+    {
+      "value": "content-box",
+      "function": "Defines the shape enclosed by the outside content edge. Each corner radius of this box is the larger of 0 or border-radius - border-width - padding"
+    },
+    {
+      "value": "basic-shape",
+      "function": "The float area is based on the shape of an inset(), circle(), ellipse(), or a polygon() function"
+    },
+    {
+      "value": "url(image)",
+      "function": "The float area is based on the alpha channel of the specified image as defined by shape-image-threshold"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 9,
+  "shorthandFor": [],
+  "partOf": []
+}

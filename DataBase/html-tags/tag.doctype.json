@@ -1,0 +1,14 @@
+{
+  "tag": "doctype",
+  "page": "https://www.w3schools.com/tags/tag_doctype.asp",
+  "function": "All HTML documents must start with a <!DOCTYPE> declaration.",
+  "category": "other",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

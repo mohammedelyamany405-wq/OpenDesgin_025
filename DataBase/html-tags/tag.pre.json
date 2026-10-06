@@ -1,0 +1,14 @@
+{
+  "tag": "pre",
+  "page": "https://www.w3schools.com/tags/tag_pre.asp",
+  "function": "The <pre> tag defines preformatted text.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

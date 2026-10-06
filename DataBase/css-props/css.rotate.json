@@ -1,0 +1,39 @@
+{
+  "property": "rotate",
+  "page": "https://www.w3schools.com/cssref/css_pr_rotate.php",
+  "function": "The rotate property allows you to rotate elements.",
+  "category": "transform",
+  "syntax": "rotate: axis angle|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.rotate=\"-120deg\" Try it"
+  },
+  "values": [
+    {
+      "value": "axis",
+      "function": "Optional. If not set, z-axis is default. Defines axis to rotate element around. Possible values: x y z"
+    },
+    {
+      "value": "angle",
+      "function": "Defines how much an element is rotated. Possible units: deg rad turn"
+    },
+    {
+      "value": "vector angle",
+      "function": "Three numbers define a vector for the element to be rotated around. The numbers are x-, y- and z-coordinates for the vector, respectively. The last value is the angle for how much to rotate. Possible values: number number number angle"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

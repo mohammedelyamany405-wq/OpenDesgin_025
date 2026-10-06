@@ -1,0 +1,39 @@
+{
+  "property": "border-end-start-radius",
+  "page": "https://www.w3schools.com/cssref/css_pr_border-end-start-radius.php",
+  "function": "The border-end-start-radius property defines the radius of the corner between the block-end and the inline-start sides of the element.",
+  "category": "border",
+  "syntax": "border-end-start-radius: 0|length|initial|inherit;",
+  "defaults": {
+    "Default value": "0",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.borderEndStartRadius=\"50px\" Try it"
+  },
+  "values": [
+    {
+      "value": "0",
+      "function": "Default value."
+    },
+    {
+      "value": "length",
+      "function": "Defines the shape of the corner at block-end and inline-start. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Defines the shape of the corner at block-end and inline-start in percentange of length of element on corresponding axis."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

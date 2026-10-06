@@ -1,0 +1,16 @@
+{
+  "tag": "legend",
+  "page": "https://www.w3schools.com/tags/tag_legend.asp",
+  "function": "The <legend> tag defines a caption for the <fieldset> element.",
+  "category": "forms",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "fieldset"
+    ],
+    "children": []
+  }
+}

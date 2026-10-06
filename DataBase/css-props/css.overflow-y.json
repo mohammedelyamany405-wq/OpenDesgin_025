@@ -1,0 +1,45 @@
+{
+  "property": "overflow-y",
+  "page": "https://www.w3schools.com/cssref/css3_pr_overflow-y.php",
+  "function": "The overflow-y property specifies whether to clip the content, add a scroll bar, or display overflow content of a block-level element, when it overflows at the top and bottom edges.",
+  "category": "box",
+  "syntax": "overflow-y: visible|hidden|scroll|auto|initial|inherit;",
+  "defaults": {
+    "Default value": "visible",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.overflowY=\"scroll\" Try it"
+  },
+  "values": [
+    {
+      "value": "visible",
+      "function": "The content is not clipped, and it may be rendered outside the content box. This is default"
+    },
+    {
+      "value": "hidden",
+      "function": "The content is clipped - and no scrolling mechanism is provided"
+    },
+    {
+      "value": "scroll",
+      "function": "The content is clipped and a scrolling mechanism is provided"
+    },
+    {
+      "value": "auto",
+      "function": "Should cause a scrolling mechanism to be provided for overflowing boxes"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [],
+  "partOf": [
+    "overflow"
+  ]
+}

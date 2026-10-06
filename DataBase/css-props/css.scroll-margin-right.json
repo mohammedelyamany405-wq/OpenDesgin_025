@@ -1,0 +1,35 @@
+{
+  "property": "scroll-margin-right",
+  "page": "https://www.w3schools.com/cssref/css_pr_scroll-margin-right.php",
+  "function": "The scroll-margin-right property specifies the distance between the snap position and the container.",
+  "category": "scroll",
+  "syntax": "scroll-margin-right: 0|value|initial|inherit;",
+  "defaults": {
+    "Default value": "0",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.scrollMarginRight=\"20px\" Try it"
+  },
+  "values": [
+    {
+      "value": "0",
+      "function": "Scroll-margin-right is zero. This is default"
+    },
+    {
+      "value": "length",
+      "function": "Specifies scroll-margin-right in px, pt, cm, etc. Negative values are allowed. Read about length units"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

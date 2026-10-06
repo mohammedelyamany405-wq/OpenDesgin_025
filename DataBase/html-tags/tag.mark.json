@@ -1,0 +1,14 @@
+{
+  "tag": "mark",
+  "page": "https://www.w3schools.com/tags/tag_mark.asp",
+  "function": "The <mark> tag defines text that should be marked or highlighted.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

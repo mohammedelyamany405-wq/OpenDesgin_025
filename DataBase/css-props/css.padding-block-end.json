@@ -1,0 +1,39 @@
+{
+  "property": "padding-block-end",
+  "page": "https://www.w3schools.com/cssref/css_pr_padding-block-end.php",
+  "function": "An element's padding-block-end is the space from its border to its content, at the end in the block direction.",
+  "category": "box",
+  "syntax": "padding-block-end: auto|value|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.paddingBlockEnd=\"100px\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default. The element's default padding-block-end value."
+    },
+    {
+      "value": "length",
+      "function": "Specifies padding-block-end in px, pt, cm, etc. Negative values are not allowed. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Specifies padding-block-end in percent relative to size of parent element in the inline direction."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

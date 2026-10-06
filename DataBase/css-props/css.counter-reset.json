@@ -1,0 +1,35 @@
+{
+  "property": "counter-reset",
+  "page": "https://www.w3schools.com/cssref/pr_gen_counter-reset.php",
+  "function": "The counter-reset property creates or resets one or more CSS counters.",
+  "category": "text",
+  "syntax": "counter-reset: none|name number|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.counterReset=\"section\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "Default value. No counters will be reset"
+    },
+    {
+      "value": "id number",
+      "function": "The id defines which counter to reset. The number sets the value the counter is reset to on each occurrence of the selector. The default number value is 0"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

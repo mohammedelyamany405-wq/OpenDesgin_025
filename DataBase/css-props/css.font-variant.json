@@ -1,0 +1,37 @@
+{
+  "property": "font-variant",
+  "page": "https://www.w3schools.com/cssref/pr_font_font-variant.php",
+  "function": "In a small-caps font, all lowercase letters are converted to uppercase letters. However, the converted uppercase letters appears in a smaller font size than the original uppercase letters in the text.",
+  "category": "text",
+  "syntax": "font-variant: normal|small-caps|initial|inherit;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.fontVariant=\"small-caps\" Try it"
+  },
+  "values": [
+    {
+      "value": "normal",
+      "function": "The browser displays a normal font. This is default"
+    },
+    {
+      "value": "small-caps",
+      "function": "The browser displays a small-caps font"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": [
+    "font"
+  ]
+}

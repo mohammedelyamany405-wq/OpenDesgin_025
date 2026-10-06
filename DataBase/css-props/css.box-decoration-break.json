@@ -1,0 +1,34 @@
+{
+  "property": "box-decoration-break",
+  "page": "https://www.w3schools.com/cssref/css3_pr_box-decoration-break.php",
+  "function": "The box-decoration-break property specifies how the background, padding, border, border-image, box-shadow, margin, and clip-path of an element is applied when the box for the element is fragmented.",
+  "category": "box",
+  "syntax": "box-decoration-break: slice|clone|initial|inherit|unset;",
+  "defaults": {
+    "Default value": "slice",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3"
+  },
+  "values": [
+    {
+      "value": "slice",
+      "function": "Default. Box decorations are applied to the element as a whole and break at the edges of the element fragments"
+    },
+    {
+      "value": "clone",
+      "function": "Box decorations apply to each fragment of the element as if the fragments were individual elements. Borders wrap the four edges of each fragment of the element, and backgrounds are redrawn in full for each fragment"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

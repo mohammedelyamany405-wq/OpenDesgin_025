@@ -1,0 +1,31 @@
+{
+  "property": "writing-mode",
+  "page": "https://www.w3schools.com/cssref/css3_pr_writing-mode.php",
+  "function": "The writing-mode property specifies whether lines of text are laid out horizontally or vertically.",
+  "category": "text",
+  "syntax": "writing-mode: horizontal-tb|vertical-rl|vertical-lr;",
+  "defaults": {
+    "Default value": "horizontal-tb",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.writingMode=\"vertical-rl\""
+  },
+  "values": [
+    {
+      "value": "horizontal-tb",
+      "function": "Let the text flow horizontally from left to right, vertically from top to bottom"
+    },
+    {
+      "value": "vertical-rl",
+      "function": "Let the text flow vertically from top to bottom, horizontally from right to left"
+    },
+    {
+      "value": "vertical-lr",
+      "function": "Let the text flow vertically from top to bottom, horizontally from left to right"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": []
+}

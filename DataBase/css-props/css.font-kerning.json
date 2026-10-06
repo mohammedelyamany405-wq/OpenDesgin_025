@@ -1,0 +1,31 @@
+{
+  "property": "font-kerning",
+  "page": "https://www.w3schools.com/cssref/css3_pr_font-kerning.php",
+  "function": "The font-kerning property controls the usage of the kerning information stored in a font.",
+  "category": "text",
+  "syntax": "font-kerning: auto|normal|none;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.fontKerning=\"normal\""
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default. The browser determines whether font kerning should be applied or not"
+    },
+    {
+      "value": "normal",
+      "function": "Specifies that font kerning is applied"
+    },
+    {
+      "value": "none",
+      "function": "Specifies that font kerning is not applied"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": []
+}

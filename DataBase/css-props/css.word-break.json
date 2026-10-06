@@ -1,0 +1,43 @@
+{
+  "property": "word-break",
+  "page": "https://www.w3schools.com/cssref/css3_pr_word-break.php",
+  "function": "The word-break property specifies how words should break when reaching the end of a line.",
+  "category": "text",
+  "syntax": "word-break: normal|break-all|keep-all|break-word|initial|inherit;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.wordBreak=\"break-all\" Try it"
+  },
+  "values": [
+    {
+      "value": "normal",
+      "function": "Default value. Uses default line breaking rules"
+    },
+    {
+      "value": "break-all",
+      "function": "To prevent overflow, word may be broken at any character"
+    },
+    {
+      "value": "keep-all",
+      "function": "Prevents words from breaking, except for CJK (Chinese, Japanese, Korean) text, where it behaves like normal"
+    },
+    {
+      "value": "break-word",
+      "function": "Deprecated. Replaced by overflow-wrap: break-word;"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [],
+  "partOf": []
+}

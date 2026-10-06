@@ -1,0 +1,39 @@
+{
+  "property": "scale",
+  "page": "https://www.w3schools.com/cssref/css_pr_scale.php",
+  "function": "The scale property allows you to change the size of elements.",
+  "category": "transform",
+  "syntax": "scale: x-axis y-axis z-axis|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.scale=\"2 0.7\" Try it"
+  },
+  "values": [
+    {
+      "value": "x-axis",
+      "function": "Defines scale factor at the x-axis. Possible values: number %"
+    },
+    {
+      "value": "y-axis",
+      "function": "Defines scale factor at the y-axis. Possible values: number %"
+    },
+    {
+      "value": "z-axis",
+      "function": "Defines scale factor at the z-axis. Possible values: number %"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

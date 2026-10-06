@@ -1,0 +1,44 @@
+{
+  "property": "grid-area",
+  "page": "https://www.w3schools.com/cssref/pr_grid-area.php",
+  "function": "The grid-area property specifies a grid item's size and location in a grid layout, and is a shorthand property for the following properties:",
+  "category": "grid",
+  "syntax": "grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end | itemname;",
+  "defaults": {
+    "Default value": "auto / auto / auto / auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS Grid Layout Module Level 1",
+    "JavaScript syntax": "object.style.gridArea=\"1 / 2 / span 2 / span 3\" Try it"
+  },
+  "values": [
+    {
+      "value": "grid-row-start",
+      "function": "Specifies on which row to start displaying the item."
+    },
+    {
+      "value": "grid-column-start",
+      "function": "Specifies on which column to start displaying the item."
+    },
+    {
+      "value": "grid-row-end",
+      "function": "Specifies on which row-line to stop displaying the item, or how many rows to span."
+    },
+    {
+      "value": "grid-column-end",
+      "function": "Specifies on which column-line to stop displaying the item, or how many columns to span."
+    },
+    {
+      "value": "itemname",
+      "function": "Specifies a name for the grid item"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [
+    "grid-row-start",
+    "grid-column-start",
+    "grid-row-end",
+    "grid-column-end"
+  ],
+  "partOf": []
+}

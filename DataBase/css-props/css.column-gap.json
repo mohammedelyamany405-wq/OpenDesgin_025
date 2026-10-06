@@ -1,0 +1,37 @@
+{
+  "property": "column-gap",
+  "page": "https://www.w3schools.com/cssref/css3_pr_column-gap.php",
+  "function": "The column-gap property specifies the gap between the columns in grid, flexbox or multi-column layout.",
+  "category": "flexbox",
+  "syntax": "column-gap: length|normal|initial|inherit;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS Box Alignment Module Level 3",
+    "JavaScript syntax": "object.style.columnGap=\"50px\" Try it"
+  },
+  "values": [
+    {
+      "value": "length",
+      "function": "A specified length that will set the gap between the columns"
+    },
+    {
+      "value": "normal",
+      "function": "Default value. Specifies a normal gap between the columns. W3C suggests a value of 1em"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": [
+    "gap"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "property": "grid-row",
+  "page": "https://www.w3schools.com/cssref/pr_grid-row.php",
+  "function": "The grid-row property specifies a grid item's size and location in a grid layout, and is a shorthand property for the following properties:",
+  "category": "grid",
+  "syntax": "grid-row: grid-row-start / grid-row-end;",
+  "defaults": {
+    "Default value": "auto / auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS Grid Layout Module Level 1",
+    "JavaScript syntax": "object.style.gridRow=\"2 / span 2\" Try it"
+  },
+  "values": [
+    {
+      "value": "grid-row-start",
+      "function": "Specifies on which row to start displaying the item."
+    },
+    {
+      "value": "grid-row-end",
+      "function": "Specifies on which row-line to stop displaying the item, or how many rows to span."
+    }
+  ],
+  "valueCount": 2,
+  "shorthandFor": [
+    "grid-row-start",
+    "grid-row-end"
+  ],
+  "partOf": []
+}

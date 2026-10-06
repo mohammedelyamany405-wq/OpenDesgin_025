@@ -1,0 +1,33 @@
+{
+  "property": "font-family",
+  "page": "https://www.w3schools.com/cssref/pr_font_font-family.php",
+  "function": "The font-family property specifies the font for an element.",
+  "category": "text",
+  "syntax": "font-family: family-name|generic-family|initial|inherit;",
+  "defaults": {
+    "Default value": "depends on the browser",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.fontFamily=\"Verdana,sans-serif\" Try it"
+  },
+  "values": [
+    {
+      "value": "family-name / generic-family",
+      "function": "A prioritized list of font family names and/or generic family names"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": [
+    "font"
+  ]
+}

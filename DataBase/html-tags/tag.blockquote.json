@@ -1,0 +1,20 @@
+{
+  "tag": "blockquote",
+  "page": "https://www.w3schools.com/tags/tag_blockquote.asp",
+  "function": "A section that is quoted from another source.",
+  "category": "text",
+  "attributes": [
+    {
+      "name": "cite",
+      "values": "URL",
+      "function": "Specifies the source of the quotation"
+    }
+  ],
+  "attributeCount": 1,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

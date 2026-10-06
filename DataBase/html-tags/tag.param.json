@@ -1,0 +1,27 @@
+{
+  "tag": "param",
+  "page": "https://www.w3schools.com/tags/tag_param.asp",
+  "function": "Set the \"autoplay\" parameter to \"true\", so the sound will start playing as soon as the page loads.",
+  "category": "other",
+  "attributes": [
+    {
+      "name": "name",
+      "values": "name",
+      "function": "Specifies the name of a parameter"
+    },
+    {
+      "name": "value",
+      "values": "value",
+      "function": "Specifies the value of the parameter"
+    }
+  ],
+  "attributeCount": 2,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "object"
+    ],
+    "children": []
+  }
+}

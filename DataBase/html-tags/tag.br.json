@@ -1,0 +1,14 @@
+{
+  "tag": "br",
+  "page": "https://www.w3schools.com/tags/tag_br.asp",
+  "function": "The <br> tag inserts a single line break.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

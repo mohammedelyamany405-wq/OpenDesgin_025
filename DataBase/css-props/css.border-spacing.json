@@ -1,0 +1,31 @@
+{
+  "property": "border-spacing",
+  "page": "https://www.w3schools.com/cssref/pr_border-spacing.php",
+  "function": "The border-spacing property sets the distance between the borders of adjacent cells.",
+  "category": "tables",
+  "syntax": "border-spacing: length|initial|inherit;",
+  "defaults": {
+    "Default value": "2px",
+    "Inherited": "yes",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.borderSpacing=\"15px\" Try it"
+  },
+  "values": [
+    {
+      "value": "length length",
+      "function": "Specifies the distance between the borders of adjacent cells in px, cm, etc. Negative values are not allowed. If one value is specified, it defines both the horizontal and vertical spacing between cells If two values are specified, the first sets the horizontal spacing and the second sets the vertical spacing"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": []
+}

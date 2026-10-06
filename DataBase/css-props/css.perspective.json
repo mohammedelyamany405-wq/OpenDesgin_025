@@ -1,0 +1,35 @@
+{
+  "property": "perspective",
+  "page": "https://www.w3schools.com/cssref/css3_pr_perspective.php",
+  "function": "The perspective property defines the distance between the user's viewpoint and the object.",
+  "category": "transform",
+  "syntax": "perspective: length|none;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.perspective=\"50px\" Try it"
+  },
+  "values": [
+    {
+      "value": "length",
+      "function": "How far the element is placed from the view"
+    },
+    {
+      "value": "none",
+      "function": "Default value. Same as 0. The perspective is not set"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

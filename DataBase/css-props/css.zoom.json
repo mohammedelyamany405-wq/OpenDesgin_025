@@ -1,0 +1,43 @@
+{
+  "property": "zoom",
+  "page": "https://www.w3schools.com/cssref/css3_pr_zoom.php",
+  "function": "The zoom property specifies the zoom factor for an element. An element can be zoomed in and out.",
+  "category": "box",
+  "syntax": "zoom: normal|%|number|unset|initial|inherit;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "no",
+    "Animatable": "Yes. Read about animatable",
+    "Version": "CSS Viewport Module Level 1",
+    "JavaScript syntax": "object.style.zoom = \"3\" Try it"
+  },
+  "values": [
+    {
+      "value": "normal",
+      "function": "Default value. The element is rendered as normal"
+    },
+    {
+      "value": "%",
+      "function": "Specifies the zoom factor in percent. 100% = normal. To zoom in, use values larger than 100%. To zoom out, use values smaller than 100%"
+    },
+    {
+      "value": "number",
+      "function": "Specifies the zoom factor as a number percent. 1.0 = normal. To zoom in, use values larger than 1.0 To zoom out, use values smaller than 1.0"
+    },
+    {
+      "value": "unset",
+      "function": "Unsets the zoom factor (goes back to normal)"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [],
+  "partOf": []
+}

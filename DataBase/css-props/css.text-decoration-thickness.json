@@ -1,0 +1,41 @@
+{
+  "property": "text-decoration-thickness",
+  "page": "https://www.w3schools.com/cssref/pr_text_text-decoration-thickness.php",
+  "function": "The text-decoration-thickness property specifies the thickness of the decoration line.",
+  "category": "text",
+  "syntax": "text-decoration-thickness: auto|from-font|length/percentage|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "no, see individual properties. Read about animatable",
+    "Version": "CSS4",
+    "JavaScript syntax": "object.style.textDecorationThickness=\"5px\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "The browser chooses the thickness of the decoration line"
+    },
+    {
+      "value": "from-font",
+      "function": "If a font file contains information about a preferred thickness, use that value. If not, behave as auto"
+    },
+    {
+      "value": "length/percentage",
+      "function": "Specifies the thickness as a length or %"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": [
+    "text-decoration"
+  ]
+}

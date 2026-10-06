@@ -1,0 +1,454 @@
+﻿{
+    "groups":  {
+                   "other":  [
+                                 "comment",
+                                 "doctype",
+                                 "param"
+                             ],
+                   "text":  [
+                                "abbr",
+                                "b",
+                                "bdi",
+                                "bdo",
+                                "blockquote",
+                                "br",
+                                "cite",
+                                "code",
+                                "data",
+                                "dd",
+                                "dfn",
+                                "ul",
+                                "dl",
+                                "dt",
+                                "em",
+                                "figcaption",
+                                "figure",
+                                "hr",
+                                "i",
+                                "kbd",
+                                "li",
+                                "mark",
+                                "menu",
+                                "ol",
+                                "p",
+                                "pre",
+                                "q",
+                                "rp",
+                                "rt",
+                                "ruby",
+                                "s",
+                                "samp",
+                                "small",
+                                "span",
+                                "sub",
+                                "sup",
+                                "time",
+                                "u",
+                                "var",
+                                "wbr"
+                            ],
+                   "media":  [
+                                 "embed",
+                                 "audio",
+                                 "iframe",
+                                 "img",
+                                 "map",
+                                 "object",
+                                 "picture",
+                                 "source",
+                                 "track",
+                                 "video",
+                                 "svg"
+                             ],
+                   "sectioning":  [
+                                      "article",
+                                      "aside",
+                                      "footer",
+                                      "header",
+                                      "hgroup",
+                                      "main",
+                                      "nav",
+                                      "search",
+                                      "section"
+                                  ],
+                   "document":  [
+                                    "base",
+                                    "body",
+                                    "head",
+                                    "html",
+                                    "link",
+                                    "meta",
+                                    "style",
+                                    "title"
+                                ],
+                   "forms":  [
+                                 "button",
+                                 "datalist",
+                                 "fieldset",
+                                 "form",
+                                 "input",
+                                 "label",
+                                 "legend",
+                                 "meter",
+                                 "optgroup",
+                                 "option",
+                                 "output",
+                                 "progress",
+                                 "select",
+                                 "textarea"
+                             ],
+                   "scripting":  [
+                                     "canvas",
+                                     "noscript",
+                                     "script",
+                                     "template"
+                                 ],
+                   "tables":  [
+                                  "caption",
+                                  "col",
+                                  "colgroup",
+                                  "table",
+                                  "tbody",
+                                  "td",
+                                  "tfoot",
+                                  "th",
+                                  "thead",
+                                  "tr"
+                              ],
+                   "edits":  [
+                                 "del",
+                                 "ins"
+                             ],
+                   "interactive":  [
+                                       "details",
+                                       "dialog",
+                                       "summary"
+                                   ]
+               },
+    "parentChild":  {
+                        "html":  [
+                                     "head",
+                                     "body"
+                                 ],
+                        "head":  [
+                                     "title",
+                                     "base",
+                                     "link",
+                                     "meta",
+                                     "style",
+                                     "script"
+                                 ],
+                        "body":  [
+                                     "header",
+                                     "main",
+                                     "footer",
+                                     "section",
+                                     "article",
+                                     "nav",
+                                     "aside",
+                                     "div",
+                                     "p",
+                                     "form",
+                                     "table",
+                                     "script"
+                                 ],
+                        "ul":  [
+                                   "li"
+                               ],
+                        "ol":  [
+                                   "li"
+                               ],
+                        "menu":  [
+                                     "li"
+                                 ],
+                        "dl":  [
+                                   "dt",
+                                   "dd"
+                               ],
+                        "figure":  [
+                                       "img",
+                                       "figcaption"
+                                   ],
+                        "picture":  [
+                                        "source",
+                                        "img"
+                                    ],
+                        "table":  [
+                                      "caption",
+                                      "colgroup",
+                                      "thead",
+                                      "tbody",
+                                      "tfoot",
+                                      "tr"
+                                  ],
+                        "colgroup":  [
+                                         "col"
+                                     ],
+                        "thead":  [
+                                      "tr"
+                                  ],
+                        "tbody":  [
+                                      "tr"
+                                  ],
+                        "tfoot":  [
+                                      "tr"
+                                  ],
+                        "tr":  [
+                                   "td",
+                                   "th"
+                               ],
+                        "form":  [
+                                     "input",
+                                     "label",
+                                     "button",
+                                     "select",
+                                     "textarea",
+                                     "fieldset"
+                                 ],
+                        "fieldset":  [
+                                         "legend",
+                                         "input"
+                                     ],
+                        "select":  [
+                                       "option",
+                                       "optgroup"
+                                   ],
+                        "optgroup":  [
+                                         "option"
+                                     ],
+                        "datalist":  [
+                                         "option"
+                                     ],
+                        "map":  [
+                                    "area"
+                                ],
+                        "video":  [
+                                      "source",
+                                      "track"
+                                  ],
+                        "audio":  [
+                                      "source",
+                                      "track"
+                                  ],
+                        "details":  [
+                                        "summary"
+                                    ],
+                        "ruby":  [
+                                     "rt",
+                                     "rp"
+                                 ],
+                        "object":  [
+                                       "param"
+                                   ],
+                        "header":  [
+                                       "nav",
+                                       "h1"
+                                   ],
+                        "footer":  [
+                                       "nav",
+                                       "p"
+                                   ],
+                        "section":  [
+                                        "h1",
+                                        "p"
+                                    ],
+                        "article":  [
+                                        "h1",
+                                        "p"
+                                    ]
+                    },
+    "sharedAttributes":  [
+                             {
+                                 "attribute":  "name",
+                                 "tags":  [
+                                              "button",
+                                              "details",
+                                              "fieldset",
+                                              "form",
+                                              "iframe",
+                                              "input",
+                                              "map",
+                                              "meta",
+                                              "object",
+                                              "output",
+                                              "param",
+                                              "select",
+                                              "textarea"
+                                          ]
+                             },
+                             {
+                                 "attribute":  "src",
+                                 "tags":  [
+                                              "embed",
+                                              "audio",
+                                              "iframe",
+                                              "img",
+                                              "input",
+                                              "script",
+                                              "source",
+                                              "track",
+                                              "video"
+                                          ]
+                             },
+                             {
+                                 "attribute":  "type",
+                                 "tags":  [
+                                              "embed",
+                                              "button",
+                                              "input",
+                                              "link",
+                                              "object",
+                                              "ol",
+                                              "script",
+                                              "source",
+                                              "style"
+                                          ]
+                             },
+                             {
+                                 "attribute":  "form",
+                                 "tags":  [
+                                              "button",
+                                              "fieldset",
+                                              "input",
+                                              "label",
+                                              "meter",
+                                              "object",
+                                              "output",
+                                              "select",
+                                              "textarea"
+                                          ]
+                             },
+                             {
+                                 "attribute":  "value",
+                                 "tags":  [
+                                              "button",
+                                              "data",
+                                              "input",
+                                              "li",
+                                              "meter",
+                                              "option",
+                                              "param",
+                                              "progress"
+                                          ]
+                             },
+                             {
+                                 "attribute":  "height",
+                                 "tags":  [
+                                              "embed",
+                                              "canvas",
+                                              "iframe",
+                                              "img",
+                                              "input",
+                                              "object",
+                                              "video"
+                                          ]
+                             },
+                             {
+                                 "attribute":  "width",
+                                 "tags":  [
+                                              "embed",
+                                              "canvas",
+                                              "iframe",
+                                              "img",
+                                              "input",
+                                              "object",
+                                              "video"
+                                          ]
+                             },
+                             {
+                                 "attribute":  "disabled",
+                                 "tags":  [
+                                              "button",
+                                              "fieldset",
+                                              "input",
+                                              "optgroup",
+                                              "option",
+                                              "select",
+                                              "textarea"
+                                          ]
+                             },
+                             {
+                                 "attribute":  "cite",
+                                 "tags":  [
+                                              "blockquote",
+                                              "del",
+                                              "ins",
+                                              "q"
+                                          ]
+                             },
+                             {
+                                 "attribute":  "autofocus",
+                                 "tags":  [
+                                              "button",
+                                              "input",
+                                              "select",
+                                              "textarea"
+                                          ]
+                             },
+                             {
+                                 "attribute":  "referrerpolicy",
+                                 "tags":  [
+                                              "iframe",
+                                              "img",
+                                              "link",
+                                              "script"
+                                          ]
+                             },
+                             {
+                                 "attribute":  "datetime",
+                                 "tags":  [
+                                              "del",
+                                              "ins",
+                                              "time"
+                                          ]
+                             },
+                             {
+                                 "attribute":  "crossorigin",
+                                 "tags":  [
+                                              "img",
+                                              "link",
+                                              "script"
+                                          ]
+                             },
+                             {
+                                 "attribute":  "sizes",
+                                 "tags":  [
+                                              "img",
+                                              "link",
+                                              "source"
+                                          ]
+                             },
+                             {
+                                 "attribute":  "max",
+                                 "tags":  [
+                                              "input",
+                                              "meter",
+                                              "progress"
+                                          ]
+                             },
+                             {
+                                 "attribute":  "required",
+                                 "tags":  [
+                                              "input",
+                                              "select",
+                                              "textarea"
+                                          ]
+                             },
+                             {
+                                 "attribute":  "media",
+                                 "tags":  [
+                                              "link",
+                                              "source",
+                                              "style"
+                                          ]
+                             },
+                             {
+                                 "attribute":  "label",
+                                 "tags":  [
+                                              "optgroup",
+                                              "option",
+                                              "track"
+                                          ]
+                             }
+                         ]
+}

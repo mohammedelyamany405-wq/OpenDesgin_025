@@ -1,0 +1,32 @@
+{
+  "tag": "td",
+  "page": "https://www.w3schools.com/tags/tag_td.asp",
+  "function": "A simple HTML table, with two rows and four table cells.",
+  "category": "tables",
+  "attributes": [
+    {
+      "name": "colspan",
+      "values": "number",
+      "function": "Specifies the number of columns a cell should span"
+    },
+    {
+      "name": "headers",
+      "values": "header_id",
+      "function": "Specifies one or more header cells a cell is related to"
+    },
+    {
+      "name": "rowspan",
+      "values": "number",
+      "function": "Sets the number of rows a cell should span"
+    }
+  ],
+  "attributeCount": 3,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "tr"
+    ],
+    "children": []
+  }
+}

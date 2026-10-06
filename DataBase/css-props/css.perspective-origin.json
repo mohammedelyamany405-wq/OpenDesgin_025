@@ -1,0 +1,35 @@
+{
+  "property": "perspective-origin",
+  "page": "https://www.w3schools.com/cssref/css3_pr_perspective-origin.php",
+  "function": "The perspective-origin property defines at from which position the user is looking at the 3D-positioned element.",
+  "category": "transform",
+  "syntax": "perspective-origin: x-axis y-axis|initial|inherit;",
+  "defaults": {
+    "Default value": "50% 50%",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.perspectiveOrigin=\"10px 50%\" Try it"
+  },
+  "values": [
+    {
+      "value": "x-axis",
+      "function": "Defining where the view is placed at the x-axisPossible values: left center right length % Default value: 50%"
+    },
+    {
+      "value": "y-axis",
+      "function": "Defining where the view is placed at the y-axisPossible values: top center bottom length % Default value: 50%"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

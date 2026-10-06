@@ -1,0 +1,39 @@
+{
+  "property": "top",
+  "page": "https://www.w3schools.com/cssref/pr_pos_top.php",
+  "function": "The top property affects the vertical position of a positioned element. This property has no effect on non-positioned elements.",
+  "category": "position",
+  "syntax": "top: auto|length|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.top=\"100px\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Lets the browser calculate the top edge position. This is default"
+    },
+    {
+      "value": "length",
+      "function": "Sets the top edge position in px, cm, etc. Negative values are allowed. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Sets the top edge position in % of containing element. Negative values are allowed"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

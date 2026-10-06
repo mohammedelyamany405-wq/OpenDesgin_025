@@ -1,0 +1,16 @@
+{
+  "tag": "ul",
+  "page": "https://www.w3schools.com/tags/tag_ul.asp",
+  "function": "The <ul> tag defines an unordered (bulleted) list.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": [
+      "li"
+    ]
+  }
+}

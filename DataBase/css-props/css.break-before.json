@@ -1,0 +1,83 @@
+{
+  "property": "break-before",
+  "page": "https://www.w3schools.com/cssref/pr_break-before.php",
+  "function": "The break-before property specifies whether or not a page break, column break, or region break should occur before the specified element.",
+  "category": "box",
+  "syntax": "break-before: auto|all|always|avoid|avoid-column|avoid-page|avoid-region|column|left|page|recto|region|right|verso|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.breakBefore=\"always\""
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default. Automatic page/column/region break before the element"
+    },
+    {
+      "value": "all",
+      "function": "Always insert a page-break right before the principal box"
+    },
+    {
+      "value": "always",
+      "function": "Always insert a page-break before the element"
+    },
+    {
+      "value": "avoid",
+      "function": "Avoid a page/column/region break before the element"
+    },
+    {
+      "value": "avoid-column",
+      "function": "Avoid a column-break before the element"
+    },
+    {
+      "value": "avoid-page",
+      "function": "Avoid a page-break before the element"
+    },
+    {
+      "value": "avoid-region",
+      "function": "Avoid a region-break before the element"
+    },
+    {
+      "value": "column",
+      "function": "Always insert a column-break before the element"
+    },
+    {
+      "value": "left",
+      "function": "Insert one or two page-breaks before the element so that the next page is formatted as a left page"
+    },
+    {
+      "value": "page",
+      "function": "Always insert a page-break before the element"
+    },
+    {
+      "value": "recto",
+      "function": "Insert one or two page-breaks before the principal box so that the next page is formatted as a recto page"
+    },
+    {
+      "value": "region",
+      "function": "Always insert a region-break before the element"
+    },
+    {
+      "value": "right",
+      "function": "Insert one or two page-breaks before the element so that the next page is formatted as a right page"
+    },
+    {
+      "value": "verso",
+      "function": "Insert one or two page-breaks before the principal box so that the next page is formatted as a verso page"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 16,
+  "shorthandFor": [],
+  "partOf": []
+}

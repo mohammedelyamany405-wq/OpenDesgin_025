@@ -1,0 +1,38 @@
+{
+  "property": "border-left-color",
+  "page": "https://www.w3schools.com/cssref/pr_border-left_color.php",
+  "function": "The border-left-color property sets the color of an element's left border.",
+  "category": "border",
+  "syntax": "border-left-color: color|transparent|initial|inherit;",
+  "defaults": {
+    "Default value": "The current color of the element",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.borderLeftColor=\"blue\" Try it"
+  },
+  "values": [
+    {
+      "value": "color",
+      "function": "Specifies the color of the left border. Look at CSS Color Values for a complete list of possible color values. Default color is the current color of the element"
+    },
+    {
+      "value": "transparent",
+      "function": "Specifies that the border color should be transparent"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": [
+    "border-left",
+    "border-color"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "tag": "audio",
+  "page": "https://www.w3schools.com/tags/tag_audio.asp",
+  "function": "The <audio> tag is used to embed sound content in a document, such as music or other audio streams.",
+  "category": "media",
+  "attributes": [
+    {
+      "name": "autoplay",
+      "values": "autoplay",
+      "function": "Specifies that the audio will start playing as soon as it is ready"
+    },
+    {
+      "name": "controls",
+      "values": "controls",
+      "function": "Specifies that audio controls should be displayed (such as a play/pause button etc)"
+    },
+    {
+      "name": "loop",
+      "values": "loop",
+      "function": "Specifies that the audio will start over again, every time it is finished"
+    },
+    {
+      "name": "muted",
+      "values": "muted",
+      "function": "Specifies that the audio output should be muted"
+    },
+    {
+      "name": "preload",
+      "values": "auto | metadata | none",
+      "function": "Specifies if and how the author thinks the audio should be loaded when the page loads"
+    },
+    {
+      "name": "src",
+      "values": "URL",
+      "function": "Specifies the URL of the audio file"
+    }
+  ],
+  "attributeCount": 6,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": [
+      "source",
+      "track"
+    ]
+  }
+}

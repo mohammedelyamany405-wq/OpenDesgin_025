@@ -1,0 +1,55 @@
+{
+  "tag": "select",
+  "page": "https://www.w3schools.com/tags/tag_select.asp",
+  "function": "Create a drop-down list with four options.",
+  "category": "forms",
+  "attributes": [
+    {
+      "name": "autofocus",
+      "values": "autofocus",
+      "function": "Specifies that the drop-down list should automatically get focus when the page loads"
+    },
+    {
+      "name": "disabled",
+      "values": "disabled",
+      "function": "Specifies that a drop-down list should be disabled"
+    },
+    {
+      "name": "form",
+      "values": "form_id",
+      "function": "Defines which form the drop-down list belongs to"
+    },
+    {
+      "name": "multiple",
+      "values": "multiple",
+      "function": "Specifies that multiple options can be selected at once"
+    },
+    {
+      "name": "name",
+      "values": "name",
+      "function": "Defines a name for the drop-down list"
+    },
+    {
+      "name": "required",
+      "values": "required",
+      "function": "Specifies that the user is required to select a value before submitting the form"
+    },
+    {
+      "name": "size",
+      "values": "number",
+      "function": "Defines the number of visible options in a drop-down list"
+    }
+  ],
+  "attributeCount": 7,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "form"
+    ],
+    "children": [
+      "option",
+      "optgroup"
+    ]
+  }
+}

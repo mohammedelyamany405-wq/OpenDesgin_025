@@ -1,0 +1,43 @@
+{
+  "property": "column-rule-width",
+  "page": "https://www.w3schools.com/cssref/css3_pr_column-rule-width.php",
+  "function": "The column-rule-width property specifies the width of the rule between columns.",
+  "category": "box",
+  "syntax": "column-rule-width: medium|thin|thick|length|initial|inherit;",
+  "defaults": {
+    "Default value": "medium",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.columnRuleWidth=\"10px\" Try it"
+  },
+  "values": [
+    {
+      "value": "medium",
+      "function": "Default value. Defines a medium rule"
+    },
+    {
+      "value": "thin",
+      "function": "Defines a thin rule"
+    },
+    {
+      "value": "thick",
+      "function": "Defines a thick rule"
+    },
+    {
+      "value": "length",
+      "function": "Specifies the width of the rule"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [],
+  "partOf": []
+}

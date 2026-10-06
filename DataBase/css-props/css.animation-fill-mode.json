@@ -1,0 +1,45 @@
+{
+  "property": "animation-fill-mode",
+  "page": "https://www.w3schools.com/cssref/css3_pr_animation-fill-mode.php",
+  "function": "The animation-fill-mode property specifies a style for the element when the animation is not playing (before it starts, after it ends, or both).",
+  "category": "animation",
+  "syntax": "animation-fill-mode: none|forwards|backwards|both|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.animationFillMode=\"forwards\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "Default value. Animation will not apply any styles to the element before or after it is executing"
+    },
+    {
+      "value": "forwards",
+      "function": "The element will retain the style values that is set by the last keyframe (depends on animation-direction and animation-iteration-count)"
+    },
+    {
+      "value": "backwards",
+      "function": "The element will get the style values that is set by the first keyframe (depends on animation-direction), and retain this during the animation-delay period"
+    },
+    {
+      "value": "both",
+      "function": "The animation will follow the rules for both forwards and backwards, extending the animation properties in both directions"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [],
+  "partOf": [
+    "animation"
+  ]
+}

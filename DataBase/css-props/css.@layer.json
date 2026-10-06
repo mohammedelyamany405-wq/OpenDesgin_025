@@ -1,0 +1,17 @@
+{
+  "property": "@layer",
+  "page": "https://www.w3schools.com/cssref/atrule_layer.php",
+  "function": "The CSS @layer rule can be used to control how the CSS cascade layers evaluates the order of styles.",
+  "category": "at-rules",
+  "syntax": "@layer name { css declarations; }",
+  "defaults": {},
+  "values": [
+    {
+      "value": "name",
+      "function": "Optional. Defines a name for the cascade layer"
+    }
+  ],
+  "valueCount": 1,
+  "shorthandFor": [],
+  "partOf": []
+}

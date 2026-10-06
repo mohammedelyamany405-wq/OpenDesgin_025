@@ -1,0 +1,39 @@
+{
+  "property": "width",
+  "page": "https://www.w3schools.com/cssref/pr_dim_width.php",
+  "function": "The width property sets the width of an element.",
+  "category": "box",
+  "syntax": "width: auto|value|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.width=\"500px\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default value. The browser calculates the width"
+    },
+    {
+      "value": "length",
+      "function": "Defines the width in px, cm, etc. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Defines the width in percent of the containing block"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

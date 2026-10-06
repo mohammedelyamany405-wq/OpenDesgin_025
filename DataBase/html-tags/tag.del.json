@@ -1,0 +1,25 @@
+{
+  "tag": "del",
+  "page": "https://www.w3schools.com/tags/tag_del.asp",
+  "function": "A text with a deleted part, and a new, inserted part.",
+  "category": "edits",
+  "attributes": [
+    {
+      "name": "cite",
+      "values": "URL",
+      "function": "Specifies a URL to a document that explains the reason why the text was deleted/changed"
+    },
+    {
+      "name": "datetime",
+      "values": "YYYY-MM-DDThh:mm:ssTZD",
+      "function": "Specifies the date and time of when the text was deleted/changed"
+    }
+  ],
+  "attributeCount": 2,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "tag": "ruby",
+  "page": "https://www.w3schools.com/tags/tag_ruby.asp",
+  "function": "The <ruby> tag specifies a ruby annotation.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": [
+      "rt",
+      "rp"
+    ]
+  }
+}

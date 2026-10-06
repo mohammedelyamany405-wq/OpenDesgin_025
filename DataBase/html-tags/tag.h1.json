@@ -1,0 +1,18 @@
+{
+  "tag": "h1",
+  "page": "https://www.w3schools.com/tags/tag_hn.asp",
+  "function": "The <h1> to <h6> tags are used to define HTML headings.",
+  "category": "sectioning",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "header",
+      "section",
+      "article"
+    ],
+    "children": []
+  }
+}

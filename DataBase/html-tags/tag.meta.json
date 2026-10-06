@@ -1,0 +1,37 @@
+{
+  "tag": "meta",
+  "page": "https://www.w3schools.com/tags/tag_meta.asp",
+  "function": "Describe metadata within an HTML document.",
+  "category": "document",
+  "attributes": [
+    {
+      "name": "charset",
+      "values": "character_set",
+      "function": "Specifies the character encoding for the HTML document"
+    },
+    {
+      "name": "content",
+      "values": "text",
+      "function": "Specifies the value associated with the http-equiv or name attribute"
+    },
+    {
+      "name": "http-equiv",
+      "values": "content-security-policy | content-type | default-style | refresh",
+      "function": "Provides an HTTP header for the information/value of the content attribute"
+    },
+    {
+      "name": "name",
+      "values": "application-name | author | description | generator | keywords | viewport",
+      "function": "Specifies a name for the metadata"
+    }
+  ],
+  "attributeCount": 4,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "head"
+    ],
+    "children": []
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "property": "background",
+  "page": "https://www.w3schools.com/cssref/css3_pr_background.php",
+  "function": "The background property is a shorthand property for:",
+  "category": "background",
+  "syntax": "background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit;",
+  "defaults": {
+    "Default value": "see individual properties",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS1 + new properties in CSS3",
+    "JavaScript syntax": "object.style.background=\"red url(smiley.gif) top left no-repeat\" Try it"
+  },
+  "values": [
+    {
+      "value": "background-color",
+      "function": "Specifies the background color to be used"
+    },
+    {
+      "value": "background-image",
+      "function": "Specifies ONE or MORE background images to be used"
+    },
+    {
+      "value": "background-position",
+      "function": "Specifies the position of the background images"
+    },
+    {
+      "value": "background-size",
+      "function": "Specifies the size of the background images"
+    },
+    {
+      "value": "background-repeat",
+      "function": "Specifies how to repeat the background images"
+    },
+    {
+      "value": "background-origin",
+      "function": "Specifies the positioning area of the background images"
+    },
+    {
+      "value": "background-clip",
+      "function": "Specifies the painting area of the background images"
+    },
+    {
+      "value": "background-attachment",
+      "function": "Specifies whether the background images are fixed or scrolls with the rest of the page"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 10,
+  "shorthandFor": [
+    "background-color",
+    "background-image",
+    "background-repeat",
+    "background-position",
+    "background-size",
+    "background-attachment",
+    "background-clip",
+    "background-origin"
+  ],
+  "partOf": []
+}

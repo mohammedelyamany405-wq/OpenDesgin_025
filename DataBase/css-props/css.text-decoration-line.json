@@ -1,0 +1,45 @@
+{
+  "property": "text-decoration-line",
+  "page": "https://www.w3schools.com/cssref/css3_pr_text-decoration-line.php",
+  "function": "The text-decoration-line property sets the kind of text decoration to use (like underline, overline, line-through).",
+  "category": "text",
+  "syntax": "text-decoration-line: none|underline|overline|line-through|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.textDecorationLine=\"overline\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "Default value. Specifies no line for the text-decoration"
+    },
+    {
+      "value": "underline",
+      "function": "Specifies that a line will be displayed under the text"
+    },
+    {
+      "value": "overline",
+      "function": "Specifies that a line will be displayed over the text"
+    },
+    {
+      "value": "line-through",
+      "function": "Specifies that a line will be displayed through the text"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [],
+  "partOf": [
+    "text-decoration"
+  ]
+}

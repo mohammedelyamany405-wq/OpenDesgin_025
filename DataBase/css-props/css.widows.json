@@ -1,0 +1,31 @@
+{
+  "property": "widows",
+  "page": "https://www.w3schools.com/cssref/css3_pr_widows.php",
+  "function": "The widows property specifies the minimum number of lines that must be left at the top of a page or column.",
+  "category": "box",
+  "syntax": "widows: integer|initial|inherit;",
+  "defaults": {
+    "Default value": "2",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.widows = \"3\""
+  },
+  "values": [
+    {
+      "value": "integer",
+      "function": "Specifies the minimum number of lines that must be left at the top of a page or column. Negative values are not allowed"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": []
+}

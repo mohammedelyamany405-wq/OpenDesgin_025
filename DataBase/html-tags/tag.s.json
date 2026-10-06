@@ -1,0 +1,14 @@
+{
+  "tag": "s",
+  "page": "https://www.w3schools.com/tags/tag_s.asp",
+  "function": "The <s> tag specifies text that is no longer correct, accurate or relevant. The text will be displayed with a line through it.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

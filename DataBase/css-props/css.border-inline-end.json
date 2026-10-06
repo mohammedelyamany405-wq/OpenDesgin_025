@@ -1,0 +1,39 @@
+{
+  "property": "border-inline-end",
+  "page": "https://www.w3schools.com/cssref/css_pr_border-inline-end.php",
+  "function": "The border-inline-end property is a shorthand property for these properties:",
+  "category": "border",
+  "syntax": "border-inline-end: border-inline-end-width border-inline-end-style border-inline-end-color|initial|inherit;",
+  "defaults": {
+    "Default value": "medium none currentcolor",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.borderInlineEnd=\"pink dotted 5px\" Try it"
+  },
+  "values": [
+    {
+      "value": "border-inline-end-width",
+      "function": "Specifies the width of an element's border at the end of the inline direction. Default value is \"medium\""
+    },
+    {
+      "value": "border-inline-end-style",
+      "function": "Specifies the style of an element's border at the end of the inline direction. Default value is \"none\""
+    },
+    {
+      "value": "border-inline-end-color",
+      "function": "Specifies the color of an element's border at the end of the inline direction. Default value is the current color of the border"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

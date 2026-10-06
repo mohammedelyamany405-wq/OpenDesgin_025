@@ -1,0 +1,20 @@
+﻿{
+    "version":  "1.0",
+    "layouts":  {
+                    "0:5":  {
+                                "align":  "center",
+                                "justify":  "space-between",
+                                "type":  "flexbox",
+                                "gap":  16,
+                                "timestamp":  "2026-09-01T03:39:15.8765799+03:00",
+                                "direction":  "row",
+                                "wrap":  "nowrap"
+                            },
+                    "0:6":  {
+                                "timestamp":  "2026-09-01T03:39:49.4100933+03:00",
+                                "columns":  3,
+                                "type":  "grid",
+                                "gap":  20
+                            }
+                }
+}

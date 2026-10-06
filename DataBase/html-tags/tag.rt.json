@@ -1,0 +1,16 @@
+{
+  "tag": "rt",
+  "page": "https://www.w3schools.com/tags/tag_rt.asp",
+  "function": "The <rt> tag defines an explanation or pronunciation of characters (for East Asian typography) in a ruby annotation.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "ruby"
+    ],
+    "children": []
+  }
+}

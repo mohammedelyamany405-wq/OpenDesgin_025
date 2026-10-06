@@ -1,0 +1,115 @@
+{
+  "property": "transform",
+  "page": "https://www.w3schools.com/cssref/css3_pr_transform.php",
+  "function": "The transform property applies a 2D or 3D transformation to an element. This property allows you to rotate, scale, move, skew, etc., elements.",
+  "category": "transform",
+  "syntax": "",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.transform=\"rotate(7deg)\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "Defines that there should be no transformation"
+    },
+    {
+      "value": "matrix(n,n,n,n,n,n)",
+      "function": "Defines a 2D transformation, using a matrix of six values"
+    },
+    {
+      "value": "matrix3d | (n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)",
+      "function": "Defines a 3D transformation, using a 4x4 matrix of 16 values"
+    },
+    {
+      "value": "translate(x,y)",
+      "function": "Defines a 2D translation"
+    },
+    {
+      "value": "translate3d(x,y,z)",
+      "function": "Defines a 3D translation"
+    },
+    {
+      "value": "translateX(x)",
+      "function": "Defines a translation, using only the value for the X-axis"
+    },
+    {
+      "value": "translateY(y)",
+      "function": "Defines a translation, using only the value for the Y-axis"
+    },
+    {
+      "value": "translateZ(z)",
+      "function": "Defines a 3D translation, using only the value for the Z-axis"
+    },
+    {
+      "value": "scale(x,y)",
+      "function": "Scales an element horizontally and vertically (width and height)"
+    },
+    {
+      "value": "scale3d(x,y,z)",
+      "function": "Defines a 3D scale transformation"
+    },
+    {
+      "value": "scaleX(x)",
+      "function": "Scales an element horizontally (the width)"
+    },
+    {
+      "value": "scaleY(y)",
+      "function": "Scales an element vertically (the height)"
+    },
+    {
+      "value": "scaleZ(z)",
+      "function": "Defines a 3D scale transformation by giving a value for the Z-axis"
+    },
+    {
+      "value": "rotate(angle)",
+      "function": "Defines a 2D rotation, the angle is specified in the parameter"
+    },
+    {
+      "value": "rotate3d(x,y,z,angle)",
+      "function": "Defines a 3D rotation"
+    },
+    {
+      "value": "rotateX(angle)",
+      "function": "Defines a 3D rotation along the X-axis"
+    },
+    {
+      "value": "rotateY(angle)",
+      "function": "Defines a 3D rotation along the Y-axis"
+    },
+    {
+      "value": "rotateZ(angle)",
+      "function": "Defines a 3D rotation along the Z-axis"
+    },
+    {
+      "value": "skew(ax,ay)",
+      "function": "Defines a 2D skew transformation along the X- and the Y-axis"
+    },
+    {
+      "value": "skewX(a)",
+      "function": "Defines a 2D skew transformation along the X-axis"
+    },
+    {
+      "value": "skewY(a)",
+      "function": "Defines a 2D skew transformation along the Y-axis"
+    },
+    {
+      "value": "perspective(n)",
+      "function": "Defines a perspective view for a 3D transformed element"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 24,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,35 @@
+{
+  "property": "hyphenate-character",
+  "page": "https://www.w3schools.com/cssref/css3_pr_hyphenate-character.php",
+  "function": "The hyphenate-character property defines the character used at the end of line, before a hyphenation break.",
+  "category": "text",
+  "syntax": "hyphenate-character: auto|string|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS4",
+    "JavaScript syntax": "object.style.hyphenateCharacter=\"/\""
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default. The browser selects an appropriate character based on the current typographic conventions"
+    },
+    {
+      "value": "string",
+      "function": "The character used at the end of line, before a hyphenation break"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

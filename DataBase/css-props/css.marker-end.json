@@ -1,0 +1,29 @@
+{
+  "property": "marker-end",
+  "page": "https://www.w3schools.com/cssref/css3_pr_marker-end.php",
+  "function": "The marker-end property points to a marker that will be drawn on the last vertex of an element's path.",
+  "category": "svg",
+  "syntax": "marker-end: none|url|initial|inherit;",
+  "defaults": {},
+  "values": [
+    {
+      "value": "none",
+      "function": "Default. No marker will be drawn at the path"
+    },
+    {
+      "value": "url",
+      "function": "An url reference to a marker defined by an SVG <marker> element"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

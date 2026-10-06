@@ -1,0 +1,53 @@
+{
+  "property": "background-repeat",
+  "page": "https://www.w3schools.com/cssref/pr_background-repeat.php",
+  "function": "The background-repeat property sets if/how a background image will be repeated.",
+  "category": "background",
+  "syntax": "background-repeat: repeat|repeat-x|repeat-y|no-repeat|initial|inherit;",
+  "defaults": {
+    "Default value": "repeat",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.backgroundRepeat=\"repeat-x\" Try it"
+  },
+  "values": [
+    {
+      "value": "repeat",
+      "function": "The background image is repeated both vertically and horizontally. The last image will be clipped if it does not fit. This is default"
+    },
+    {
+      "value": "repeat-x",
+      "function": "The background image is repeated only horizontally"
+    },
+    {
+      "value": "repeat-y",
+      "function": "The background image is repeated only vertically"
+    },
+    {
+      "value": "no-repeat",
+      "function": "The background-image is not repeated. The image will only be shown once"
+    },
+    {
+      "value": "space",
+      "function": "The background-image is repeated as much as possible without clipping. The first and last image is pinned to either side of the element, and whitespace is distributed evenly between the images"
+    },
+    {
+      "value": "round",
+      "function": "The background-image is repeated and squished or stretched to fill the space (no gaps)"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 8,
+  "shorthandFor": [],
+  "partOf": [
+    "background"
+  ]
+}

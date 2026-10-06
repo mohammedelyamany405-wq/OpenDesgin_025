@@ -1,0 +1,41 @@
+﻿{
+    "page":  "Page 1",
+    "elements":  [
+                     {
+                         "width":  1200,
+                         "height":  800,
+                         "id":  "0:5",
+                         "type":  "FRAME",
+                         "behavior":  "none",
+                         "name":  "Desktop",
+                         "classes":  {
+
+                                     },
+                         "htmlTag":  "header"
+                     },
+                     {
+                         "width":  768,
+                         "height":  1024,
+                         "id":  "0:6",
+                         "type":  "FRAME",
+                         "behavior":  "none",
+                         "name":  "Tablet",
+                         "classes":  {
+
+                                     },
+                         "htmlTag":  "main"
+                     },
+                     {
+                         "width":  375,
+                         "height":  812,
+                         "id":  "0:7",
+                         "type":  "FRAME",
+                         "behavior":  "none",
+                         "name":  "Mobile",
+                         "classes":  [
+
+                                     ],
+                         "htmlTag":  null
+                     }
+                 ]
+}

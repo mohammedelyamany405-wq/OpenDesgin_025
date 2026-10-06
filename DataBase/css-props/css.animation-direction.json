@@ -1,0 +1,45 @@
+{
+  "property": "animation-direction",
+  "page": "https://www.w3schools.com/cssref/css3_pr_animation-direction.php",
+  "function": "The animation-direction property defines whether an animation should be played forward, backward or in alternate cycles.",
+  "category": "animation",
+  "syntax": "animation-direction: normal|reverse|alternate|alternate-reverse|initial|inherit;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.animationDirection=\"reverse\" Try it"
+  },
+  "values": [
+    {
+      "value": "normal",
+      "function": "Default value. The animation is played as normal (forwards)"
+    },
+    {
+      "value": "reverse",
+      "function": "The animation is played in reverse direction (backwards)"
+    },
+    {
+      "value": "alternate",
+      "function": "The animation is played forwards first, then backwards"
+    },
+    {
+      "value": "alternate-reverse",
+      "function": "The animation is played backwards first, then forwards"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [],
+  "partOf": [
+    "animation"
+  ]
+}

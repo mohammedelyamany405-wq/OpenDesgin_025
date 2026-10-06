@@ -1,0 +1,35 @@
+{
+  "property": "z-index",
+  "page": "https://www.w3schools.com/cssref/pr_pos_z-index.php",
+  "function": "The z-index property specifies the stack order of an element.",
+  "category": "position",
+  "syntax": "z-index: auto|number|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.zIndex=\"-1\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Sets the stack order equal to its parents. This is default"
+    },
+    {
+      "value": "number",
+      "function": "Sets the stack order of the element. Negative numbers are allowed"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

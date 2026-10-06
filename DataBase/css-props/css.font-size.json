@@ -1,0 +1,73 @@
+{
+  "property": "font-size",
+  "page": "https://www.w3schools.com/cssref/pr_font_font-size.php",
+  "function": "The font-size property sets the size of a font.",
+  "category": "text",
+  "syntax": "font-size:medium|xx-small|x-small|small|large|x-large|xx-large|smaller|larger|length|initial|inherit;",
+  "defaults": {
+    "Default value": "medium",
+    "Inherited": "yes",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.fontSize=\"14px\" Try it"
+  },
+  "values": [
+    {
+      "value": "medium",
+      "function": "Sets the font-size to a medium size. This is default"
+    },
+    {
+      "value": "xx-small",
+      "function": "Sets the font-size to an xx-small size"
+    },
+    {
+      "value": "x-small",
+      "function": "Sets the font-size to an extra small size"
+    },
+    {
+      "value": "small",
+      "function": "Sets the font-size to a small size"
+    },
+    {
+      "value": "large",
+      "function": "Sets the font-size to a large size"
+    },
+    {
+      "value": "x-large",
+      "function": "Sets the font-size to an extra large size"
+    },
+    {
+      "value": "xx-large",
+      "function": "Sets the font-size to an xx-large size"
+    },
+    {
+      "value": "smaller",
+      "function": "Sets the font-size to a smaller size than the parent element"
+    },
+    {
+      "value": "larger",
+      "function": "Sets the font-size to a larger size than the parent element"
+    },
+    {
+      "value": "length",
+      "function": "Sets the font-size to a fixed size in px, cm, etc. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Sets the font-size to a percent of the parent element's font size"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 13,
+  "shorthandFor": [],
+  "partOf": [
+    "font"
+  ]
+}

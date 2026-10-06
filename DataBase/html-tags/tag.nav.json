@@ -1,0 +1,18 @@
+{
+  "tag": "nav",
+  "page": "https://www.w3schools.com/tags/tag_nav.asp",
+  "function": "The <nav> tag defines a set of navigation links.",
+  "category": "sectioning",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "body",
+      "header",
+      "footer"
+    ],
+    "children": []
+  }
+}

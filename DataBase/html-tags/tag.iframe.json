@@ -1,0 +1,70 @@
+{
+  "tag": "iframe",
+  "page": "https://www.w3schools.com/tags/tag_iframe.asp",
+  "function": "An inline frame is marked up as follows.",
+  "category": "media",
+  "attributes": [
+    {
+      "name": "allow",
+      "values": "",
+      "function": "Specifies a feature policy for the <iframe>"
+    },
+    {
+      "name": "allowfullscreen",
+      "values": "true | false",
+      "function": "Set to true if the <iframe> can activate fullscreen mode by calling the requestFullscreen() method"
+    },
+    {
+      "name": "allowpaymentrequest",
+      "values": "true | false",
+      "function": "Set to true if a cross-origin <iframe> should be allowed to invoke the Payment Request API"
+    },
+    {
+      "name": "height",
+      "values": "pixels",
+      "function": "Specifies the height of an <iframe>. Default height is 150 pixels"
+    },
+    {
+      "name": "loading",
+      "values": "eager | lazy",
+      "function": "Specifies whether a browser should load an iframe immediately or to defer loading of iframes until some conditions are met"
+    },
+    {
+      "name": "name",
+      "values": "text",
+      "function": "Specifies the name of an <iframe>"
+    },
+    {
+      "name": "referrerpolicy",
+      "values": "no-referrer | no-referrer-when-downgrade | origin | origin-when-cross-origin | same-origin | strict-origin-when-cross-origin | unsafe-url",
+      "function": "Specifies which referrer information to send when fetching the iframe"
+    },
+    {
+      "name": "sandbox",
+      "values": "allow-forms | allow-pointer-lock | allow-popups | allow-same-origin | allow-scripts | allow-top-navigation",
+      "function": "Enables an extra set of restrictions for the content in an <iframe>"
+    },
+    {
+      "name": "src",
+      "values": "URL",
+      "function": "Specifies the address of the document to embed in the <iframe>"
+    },
+    {
+      "name": "srcdoc",
+      "values": "HTML_code",
+      "function": "Specifies the HTML content of the page to show in the <iframe>"
+    },
+    {
+      "name": "width",
+      "values": "pixels",
+      "function": "Specifies the width of an <iframe>. Default width is 300 pixels"
+    }
+  ],
+  "attributeCount": 11,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

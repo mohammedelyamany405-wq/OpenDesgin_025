@@ -1,0 +1,25 @@
+{
+  "property": "@page",
+  "page": "https://www.w3schools.com/cssref/atrule_page.php",
+  "function": "The CSS @page rule is used to customize the dimension, orientation, and margins of printed pages.",
+  "category": "at-rules",
+  "syntax": "@page { margin: value; page-orientation: value; size: value; }",
+  "defaults": {},
+  "values": [
+    {
+      "value": "margin",
+      "function": "Specifies the page margins"
+    },
+    {
+      "value": "page-orientation",
+      "function": "Specifies the orientation of the page"
+    },
+    {
+      "value": "size",
+      "function": "Specifies the target size and orientation of the page box's containing block"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,17 @@
+{
+  "property": "@charset",
+  "page": "https://www.w3schools.com/cssref/atrule_charset.php",
+  "function": "The CSS @charset rule specifies the character encoding used in the style sheet.",
+  "category": "at-rules",
+  "syntax": "@charset \"charset\";",
+  "defaults": {},
+  "values": [
+    {
+      "value": "charset",
+      "function": "Specifies the character encoding to use"
+    }
+  ],
+  "valueCount": 1,
+  "shorthandFor": [],
+  "partOf": []
+}

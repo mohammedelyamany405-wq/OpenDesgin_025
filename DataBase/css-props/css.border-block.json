@@ -1,0 +1,39 @@
+{
+  "property": "border-block",
+  "page": "https://www.w3schools.com/cssref/css_pr_border-block.php",
+  "function": "The border-block property is a shorthand property for these properties:",
+  "category": "border",
+  "syntax": "border-block: border-block-width border-block-style border-block-color |initial|inherit;",
+  "defaults": {
+    "Default value": "medium none color",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.borderBlock=\"dashed hotpink 10px\" Try it"
+  },
+  "values": [
+    {
+      "value": "border-block-width",
+      "function": "Specifies the width of the border in the block direction. Default value is \"medium\""
+    },
+    {
+      "value": "border-block-style",
+      "function": "Specifies the style of the border in the block direction. Default value is \"none\""
+    },
+    {
+      "value": "border-block-color",
+      "function": "Specifies the color of the border in the block direction. Default value is the color of the text"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,43 @@
+{
+  "property": "text-justify",
+  "page": "https://www.w3schools.com/cssref/css3_pr_text-justify.php",
+  "function": "The text-justify property specifies the justification method of text when text-align is set to \"justify\".",
+  "category": "text",
+  "syntax": "text-justify: auto|inter-word|inter-character|none|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.textJustify=\"inter-word\""
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "The browser determines the justification algorithm"
+    },
+    {
+      "value": "inter-word",
+      "function": "Increases/Decreases the space between words"
+    },
+    {
+      "value": "inter-character",
+      "function": "Increases/Decreases the space between characters"
+    },
+    {
+      "value": "none",
+      "function": "Disables justification methods"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [],
+  "partOf": []
+}

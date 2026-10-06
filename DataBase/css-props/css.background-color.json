@@ -1,0 +1,37 @@
+{
+  "property": "background-color",
+  "page": "https://www.w3schools.com/cssref/pr_background-color.php",
+  "function": "The background-color property sets the background color of an element.",
+  "category": "background",
+  "syntax": "background-color: color|transparent|initial|inherit;",
+  "defaults": {
+    "Default value": "transparent",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.backgroundColor=\"#00FF00\" Try it"
+  },
+  "values": [
+    {
+      "value": "color",
+      "function": "Specifies the background color. Look at CSS Color Values for a complete list of possible color values."
+    },
+    {
+      "value": "transparent",
+      "function": "Specifies that the background color should be transparent. This is default"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": [
+    "background"
+  ]
+}

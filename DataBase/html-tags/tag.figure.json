@@ -1,0 +1,17 @@
+{
+  "tag": "figure",
+  "page": "https://www.w3schools.com/tags/tag_figure.asp",
+  "function": "Use a <figure> element to mark up a photo in a document, and a <figcaption> element to define a caption for the photo.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": [
+      "img",
+      "figcaption"
+    ]
+  }
+}

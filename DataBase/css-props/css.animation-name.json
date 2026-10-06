@@ -1,0 +1,37 @@
+{
+  "property": "animation-name",
+  "page": "https://www.w3schools.com/cssref/css3_pr_animation-name.php",
+  "function": "The animation-name property specifies a name for the @keyframes animation.",
+  "category": "animation",
+  "syntax": "animation-name: keyframename|none|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.animationName=\"myNEWmove\" Try it"
+  },
+  "values": [
+    {
+      "value": "keyframename",
+      "function": "Specifies the name of the keyframe you want to bind to the selector"
+    },
+    {
+      "value": "none",
+      "function": "Default value. Specifies that there will be no animation (can be used to override animations coming from the cascade)"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": [
+    "animation"
+  ]
+}

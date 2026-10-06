@@ -1,0 +1,31 @@
+{
+  "property": "outline-offset",
+  "page": "https://www.w3schools.com/cssref/css3_pr_outline-offset.php",
+  "function": "The outline-offset property adds space between the outline and the edge or border of an element.",
+  "category": "border",
+  "syntax": "outline-offset: length|initial|inherit;",
+  "defaults": {
+    "Default value": "0",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.outlineOffset=\"15px\" Try it"
+  },
+  "values": [
+    {
+      "value": "length",
+      "function": "The distance the outline is outset from the border edge. Default value is 0"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": []
+}

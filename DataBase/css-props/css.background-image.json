@@ -1,0 +1,61 @@
+{
+  "property": "background-image",
+  "page": "https://www.w3schools.com/cssref/pr_background-image.php",
+  "function": "The background-image property sets one or more background images for an element.",
+  "category": "background",
+  "syntax": "background-image: url|none|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS1 + new values in CSS3",
+    "JavaScript syntax": "object.style.backgroundImage=\"url(img_tree.gif)\" Try it"
+  },
+  "values": [
+    {
+      "value": "url()",
+      "function": "The URL to the image. To specify more than one image, separate the URLs with a comma"
+    },
+    {
+      "value": "none",
+      "function": "No background image will be displayed. This is default"
+    },
+    {
+      "value": "conic-gradient()",
+      "function": "Sets a conic gradient as the background image. Define at least two colors"
+    },
+    {
+      "value": "linear-gradient()",
+      "function": "Sets a linear gradient as the background image. Define at least two colors (top to bottom)"
+    },
+    {
+      "value": "radial-gradient()",
+      "function": "Sets a radial gradient as the background image. Define at least two colors (center to edges)"
+    },
+    {
+      "value": "repeating-conic-gradient()",
+      "function": "Repeats a conic gradient"
+    },
+    {
+      "value": "repeating-linear-gradient()",
+      "function": "Repeats a linear gradient"
+    },
+    {
+      "value": "repeating-radial-gradient()",
+      "function": "Repeats a radial gradient"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 10,
+  "shorthandFor": [],
+  "partOf": [
+    "background"
+  ]
+}

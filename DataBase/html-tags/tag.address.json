@@ -1,0 +1,14 @@
+{
+  "tag": "address",
+  "page": "https://www.w3schools.com/tags/tag_address.asp",
+  "function": "The <address> tag defines the contact information for the author/owner of a document or an article.",
+  "category": "sectioning",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

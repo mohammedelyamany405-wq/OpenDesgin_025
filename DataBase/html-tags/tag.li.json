@@ -1,0 +1,24 @@
+{
+  "tag": "li",
+  "page": "https://www.w3schools.com/tags/tag_li.asp",
+  "function": "One ordered (<ol>) and one unordered (<ul>) HTML list.",
+  "category": "text",
+  "attributes": [
+    {
+      "name": "value",
+      "values": "number",
+      "function": "Only for <ol> lists. Specifies the start value of a list item. The following list items will increment from that number"
+    }
+  ],
+  "attributeCount": 1,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "ul",
+      "ol",
+      "menu"
+    ],
+    "children": []
+  }
+}

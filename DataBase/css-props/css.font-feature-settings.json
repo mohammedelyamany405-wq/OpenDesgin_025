@@ -1,0 +1,27 @@
+{
+  "property": "font-feature-settings",
+  "page": "https://www.w3schools.com/cssref/css3_pr_font-feature-settings.php",
+  "function": "The font-feature-settings property allows control over advanced typographic features in OpenType fonts.",
+  "category": "text",
+  "syntax": "font-feature-settings: normal|feature-value;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.fontFeatureSettings=\"normal\""
+  },
+  "values": [
+    {
+      "value": "normal",
+      "function": "Default. Use the default settings to lay out text"
+    },
+    {
+      "value": "feature-value",
+      "function": "Format: string [1|0|on|off] Always a string of 4 ASCII characters."
+    }
+  ],
+  "valueCount": 2,
+  "shorthandFor": [],
+  "partOf": []
+}

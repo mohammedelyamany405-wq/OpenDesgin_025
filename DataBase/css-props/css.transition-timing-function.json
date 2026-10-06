@@ -1,0 +1,65 @@
+{
+  "property": "transition-timing-function",
+  "page": "https://www.w3schools.com/cssref/css3_pr_transition-timing-function.php",
+  "function": "The transition-timing-function property specifies the speed curve of the transition effect.",
+  "category": "transition",
+  "syntax": "transition-timing-function: linear|ease|ease-in|ease-out|ease-in-out|step-start|step-end|steps(int,start|end)|cubic-bezier(n,n,n,n)|initial|inherit;",
+  "defaults": {
+    "Default value": "ease",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.transitionTimingFunction=\"linear\" Try it"
+  },
+  "values": [
+    {
+      "value": "ease",
+      "function": "Default value. Specifies a transition effect with a slow start, then fast, then end slowly (equivalent to cubic-bezier(0.25,0.1,0.25,1))"
+    },
+    {
+      "value": "linear",
+      "function": "Specifies a transition effect with the same speed from start to end (equivalent to cubic-bezier(0,0,1,1))"
+    },
+    {
+      "value": "ease-in",
+      "function": "Specifies a transition effect with a slow start (equivalent to cubic-bezier(0.42,0,1,1))"
+    },
+    {
+      "value": "ease-out",
+      "function": "Specifies a transition effect with a slow end (equivalent to cubic-bezier(0,0,0.58,1))"
+    },
+    {
+      "value": "ease-in-out",
+      "function": "Specifies a transition effect with a slow start and end (equivalent to cubic-bezier(0.42,0,0.58,1))"
+    },
+    {
+      "value": "step-start",
+      "function": "Equivalent to steps(1, start)"
+    },
+    {
+      "value": "step-end",
+      "function": "Equivalent to steps(1, end)"
+    },
+    {
+      "value": "steps(int,start|end)",
+      "function": "Specifies a stepping function, with two parameters. The first parameter specifies the number of intervals in the function. It must be a positive integer (greater than 0). The second parameter, which is optional, is either the value \"start\" or \"end\", and specifies the point at which the change of values occur within the interval. If the second parameter is omitted, it is given the value \"end\""
+    },
+    {
+      "value": "cubic-bezier(n,n,n,n)",
+      "function": "Define your own values in the cubic-bezier function. Possible values are numeric values from 0 to 1"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 11,
+  "shorthandFor": [],
+  "partOf": [
+    "transition"
+  ]
+}

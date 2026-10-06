@@ -1,0 +1,55 @@
+{
+  "property": "text-align-last",
+  "page": "https://www.w3schools.com/cssref/css3_pr_text-align-last.php",
+  "function": "The text-align-last property specifies how to align the last line of a text.",
+  "category": "text",
+  "syntax": "text-align-last: auto|left|right|center|justify|start|end|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.textAlignLast=\"right\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default value. The last line is justified and aligned left"
+    },
+    {
+      "value": "left",
+      "function": "The last line is aligned to the left"
+    },
+    {
+      "value": "right",
+      "function": "The last line is aligned to the right"
+    },
+    {
+      "value": "center",
+      "function": "The last line is center-aligned"
+    },
+    {
+      "value": "justify",
+      "function": "The last line is justified as the rest of the lines"
+    },
+    {
+      "value": "start",
+      "function": "The last line is aligned at the beginning of the line (left if the text-direction is left-to-right, and right is the text-direction is right-to-left)"
+    },
+    {
+      "value": "end",
+      "function": "The last line is aligned at the end of the line (right if the text-direction is left-to-right, and left is the text-direction is right-to-left)"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 9,
+  "shorthandFor": [],
+  "partOf": []
+}

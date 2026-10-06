@@ -1,0 +1,78 @@
+{
+  "property": "font",
+  "page": "https://www.w3schools.com/cssref/pr_font_font.php",
+  "function": "The font property is a shorthand property for:",
+  "category": "text",
+  "syntax": "font: font-style font-variant font-weight font-size/line-height font-family|caption|icon|menu|message-box|small-caption|status-bar|initial|inherit;",
+  "defaults": {
+    "Default value": "The default value of the font properties",
+    "Inherited": "yes",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.font=\"italic small-caps bold 12px arial,sans-serif\" Try it"
+  },
+  "values": [
+    {
+      "value": "font-style",
+      "function": "Specifies the font style. Default value is \"normal\""
+    },
+    {
+      "value": "font-variant",
+      "function": "Specifies the font variant. Default value is \"normal\""
+    },
+    {
+      "value": "font-weight",
+      "function": "Specifies the font weight. Default value is \"normal\""
+    },
+    {
+      "value": "font-size/line-height",
+      "function": "Specifies the font size and the line-height. Default value is \"normal\""
+    },
+    {
+      "value": "font-family",
+      "function": "Specifies the font family. Default value depends on the browser"
+    },
+    {
+      "value": "caption",
+      "function": "Uses the font that are used by captioned controls (like buttons, drop-downs, etc.)"
+    },
+    {
+      "value": "icon",
+      "function": "Uses the font that are used by icon labels"
+    },
+    {
+      "value": "menu",
+      "function": "Uses the fonts that are used by dropdown menus"
+    },
+    {
+      "value": "message-box",
+      "function": "Uses the fonts that are used by dialog boxes"
+    },
+    {
+      "value": "small-caption",
+      "function": "A smaller version of the caption font"
+    },
+    {
+      "value": "status-bar",
+      "function": "Uses the fonts that are used by the status bar"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 13,
+  "shorthandFor": [
+    "font-style",
+    "font-variant",
+    "font-weight",
+    "font-size",
+    "line-height",
+    "font-family"
+  ],
+  "partOf": []
+}

@@ -1,0 +1,35 @@
+{
+  "property": "font-size-adjust",
+  "page": "https://www.w3schools.com/cssref/css3_pr_font-size-adjust.php",
+  "function": "The font-size-adjust property is used to preserve the readability and size of text, when fallback font occurs.",
+  "category": "text",
+  "syntax": "",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "yes",
+    "Animatable": "yes. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.fontSizeAdjust=\"0.545\" Try it"
+  },
+  "values": [
+    {
+      "value": "number",
+      "function": "Defines the aspect value to use"
+    },
+    {
+      "value": "none",
+      "function": "Default value. No font size adjustment"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

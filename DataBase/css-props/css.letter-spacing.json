@@ -1,0 +1,35 @@
+{
+  "property": "letter-spacing",
+  "page": "https://www.w3schools.com/cssref/pr_text_letter-spacing.php",
+  "function": "The letter-spacing property increases or decreases the space between characters in a text.",
+  "category": "text",
+  "syntax": "letter-spacing: normal|length|initial|inherit;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "yes",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.letterSpacing=\"3px\" Try it"
+  },
+  "values": [
+    {
+      "value": "normal",
+      "function": "Defines normal space between characters. This is default"
+    },
+    {
+      "value": "length",
+      "function": "Defines a length that is used as the space between characters (negative values are also allowed). Read about length units"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

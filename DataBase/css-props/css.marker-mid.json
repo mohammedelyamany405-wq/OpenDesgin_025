@@ -1,0 +1,29 @@
+{
+  "property": "marker-mid",
+  "page": "https://www.w3schools.com/cssref/css3_pr_marker-mid.php",
+  "function": "The marker-mid property points to a marker that will be drawn on all the middle vertices of an element's path.",
+  "category": "svg",
+  "syntax": "marker-mid: none|url|initial|inherit;",
+  "defaults": {},
+  "values": [
+    {
+      "value": "none",
+      "function": "Default. No marker will be drawn at the path"
+    },
+    {
+      "value": "url",
+      "function": "An url reference to a marker defined by an SVG <marker> element"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,39 @@
+{
+  "property": "inset-inline-start",
+  "page": "https://www.w3schools.com/cssref/css_pr_inset-inline-start.php",
+  "function": "The inset-inline-start property sets the distance between the start of an element and the parent element in the inline direction.",
+  "category": "position",
+  "syntax": "inset-inline-start: auto|value|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.insetInlineStart=\"30%\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default. The element's default inset distance."
+    },
+    {
+      "value": "length",
+      "function": "Specifies distance in px, pt, cm, etc. Negative values are allowed. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Specifies distance in percent relative to size of parent element on the corresponding axis."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

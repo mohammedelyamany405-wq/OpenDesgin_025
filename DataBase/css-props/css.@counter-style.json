@@ -1,0 +1,57 @@
+{
+  "property": "@counter-style",
+  "page": "https://www.w3schools.com/cssref/atrule_counter-style.php",
+  "function": "The CSS @counter-style rule is used to define custom counter styles.",
+  "category": "at-rules",
+  "syntax": "@counter-style countername { one or more descriptors }",
+  "defaults": {},
+  "values": [
+    {
+      "value": "countername",
+      "function": "Defines a case-sensitive name for the counter style. Note: The name of the counter cannot be: none, decimal, disc, square, circle, disclosure-open, or disclosure-closed"
+    },
+    {
+      "value": "system",
+      "function": "Defines the algorithm used to convert the integer value of the counter to a string. If system is set to: cyclic, numeric, alphabetic, symbolic, or fixed, the symbols descriptor is required. If system is set to: additive, the additive-symbols descriptor is required"
+    },
+    {
+      "value": "symbols",
+      "function": "Required if the system descriptor is set to cyclic, numeric, alphabetic, symbolic, or fixed. Defines the symbols used for the marker (can be strings, images, or custom identifiers). HTML UTF-8 signs"
+    },
+    {
+      "value": "additive-symbols",
+      "function": "Required if the system descriptor is set to additive. Defines the additive tuples for additive systems. Additive counter systems, such as Roman numerals, consist of a series of weighted symbols. The descriptors is a list of counter symbol along with their non-negative integer weights, listed by weight in descending order"
+    },
+    {
+      "value": "negative",
+      "function": "Defines the symbol to be appended/prepended to the marker representation if the value is negative"
+    },
+    {
+      "value": "prefix",
+      "function": "Defines a symbol that should be prepended to the marker representation"
+    },
+    {
+      "value": "suffix",
+      "function": "Defines a symbol that should be appended to the marker representation"
+    },
+    {
+      "value": "range",
+      "function": "Defines the range of the values for the counter style. If the counter value is outside of the range, it will drop back to its fallback style"
+    },
+    {
+      "value": "pad",
+      "function": "Used if the marker representations must be of a minimum length. For example if you want the counters to start at 01 and go through 02, 03, 04, etc., then use the pad descriptor. For counters larger than the specified pad value, the marker is constructed as normal"
+    },
+    {
+      "value": "speak-as",
+      "function": "Defines how speech synthesizers should read out the counter style (e.g. read out as numbers or alphabets for ordered lists or as audio cues for unordered lists)"
+    },
+    {
+      "value": "fallback",
+      "function": "Defines the counter name of the system to fall back to if the system is unable to construct the marker or if it is outside the specified range. If there are no fallback counters described or if the fallback system is unable to represent a counter value, then it will fall back to the decimal style"
+    }
+  ],
+  "valueCount": 11,
+  "shorthandFor": [],
+  "partOf": []
+}

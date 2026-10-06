@@ -1,0 +1,29 @@
+{
+  "property": "@property",
+  "page": "https://www.w3schools.com/cssref/atrule_property.php",
+  "function": "The CSS @property rule is used to define custom CSS properties directly in the stylesheet without having to run any JavaScript.",
+  "category": "at-rules",
+  "syntax": "@property --propertyname { syntax: \"<color>\"; initial-value: red; inherits: false; }",
+  "defaults": {},
+  "values": [
+    {
+      "value": "--propertyname",
+      "function": "Required. The name of the custom property"
+    },
+    {
+      "value": "syntax",
+      "function": "Required. Can be a <length>, <number>, <percentage>, <length-percentage>, <color>, <image>, <url>, <integer>, <angle>, <time>, <resolution>, <transform-function>, or <custom-ident>, or a list of data type and keyword values. The + (space-separated) and # (comma-separated) multipliers indicate that a list of values is expected, for example <color># means a comma-separated list of <color> values is the expected syntax. Vertical lines (|) can create \"or\" conditions for the expected syntax, for example <length> | auto accepts a <length> or auto, and <color># | <integer># expects a comma-separated list of <color> values or a comma-separated list of <integer> values."
+    },
+    {
+      "value": "initial-value",
+      "function": "Sets the initial value for the property"
+    },
+    {
+      "value": "inherits",
+      "function": "Required. True or false. Controls whether the custom property registration specified by @property inherits by default"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

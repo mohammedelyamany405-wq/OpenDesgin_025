@@ -1,0 +1,31 @@
+{
+  "property": "all",
+  "page": "https://www.w3schools.com/cssref/css3_pr_all.php",
+  "function": "The all property resets all properties, apart from unicode-bidi and direction, to their initial or inherited value.",
+  "category": "ui",
+  "syntax": "all: initial|inherit|unset;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.all=\"initial\""
+  },
+  "values": [
+    {
+      "value": "initial",
+      "function": "Changes all the properties applied to the element or the element's parent to their initial value"
+    },
+    {
+      "value": "inherit",
+      "function": "Changes all the properties applied to the element or the element's parent to their parent value"
+    },
+    {
+      "value": "unset",
+      "function": "Changes all the properties applied to the element or the element's parent to their parent value if they are inheritable or to their initial value if not"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": []
+}

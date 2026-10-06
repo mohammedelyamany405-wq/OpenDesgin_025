@@ -1,0 +1,35 @@
+{
+  "property": "border-collapse",
+  "page": "https://www.w3schools.com/cssref/pr_border-collapse.php",
+  "function": "The border-collapse property sets whether table borders should collapse into a single border or be separated as in standard HTML.",
+  "category": "tables",
+  "syntax": "border-collapse: separate|collapse|initial|inherit;",
+  "defaults": {
+    "Default value": "separate",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.borderCollapse=\"collapse\" Try it"
+  },
+  "values": [
+    {
+      "value": "separate",
+      "function": "Borders are separated; each cell will display its own borders. This is default."
+    },
+    {
+      "value": "collapse",
+      "function": "Borders are collapsed into a single border when possible (border-spacing and empty-cells properties have no effect)"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

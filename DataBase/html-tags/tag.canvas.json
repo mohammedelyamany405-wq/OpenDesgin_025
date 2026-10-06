@@ -1,0 +1,25 @@
+{
+  "tag": "canvas",
+  "page": "https://www.w3schools.com/tags/tag_canvas.asp",
+  "function": "Draw a red rectangle on the fly, and show it inside the <canvas> element.",
+  "category": "scripting",
+  "attributes": [
+    {
+      "name": "height",
+      "values": "pixels",
+      "function": "Specifies the height of the canvas. Default value is 150"
+    },
+    {
+      "name": "width",
+      "values": "pixels",
+      "function": "Specifies the width of the canvas Default value is 300"
+    }
+  ],
+  "attributeCount": 2,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

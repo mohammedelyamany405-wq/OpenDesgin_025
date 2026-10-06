@@ -1,0 +1,37 @@
+{
+  "property": "row-gap",
+  "page": "https://www.w3schools.com/cssref/css3_pr_row-gap.php",
+  "function": "The row-gap property specifies the gap between the rows in a flexbox or grid layout.",
+  "category": "flexbox",
+  "syntax": "row-gap: length|normal|initial|inherit;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS Box Alignment Module Level 3",
+    "JavaScript syntax": "object.style.rowGap=\"50px\" Try it"
+  },
+  "values": [
+    {
+      "value": "length",
+      "function": "A specified length or % that will set the gap between the rows"
+    },
+    {
+      "value": "normal",
+      "function": "Default value. Specifies a normal gap between the rows"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": [
+    "gap"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "property": "aspect-ratio",
+  "page": "https://www.w3schools.com/cssref/css_pr_aspect-ratio.php",
+  "function": "The aspect-ratio property allows you to define the ratio between width and height of an element.",
+  "category": "box",
+  "syntax": "aspect-ratio: number/number|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.aspectRatio=\"16/9\" Try it"
+  },
+  "values": [
+    {
+      "value": "number",
+      "function": "First number specifies the number for width in aspect ratio."
+    },
+    {
+      "value": "number",
+      "function": "Second number specifies the number for height in aspect ratio. Optional. If not set, number for height is 1 as default."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

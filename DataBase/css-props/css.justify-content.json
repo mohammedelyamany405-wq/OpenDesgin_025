@@ -1,0 +1,53 @@
+{
+  "property": "justify-content",
+  "page": "https://www.w3schools.com/cssref/css3_pr_justify-content.php",
+  "function": "The justify-content property aligns the flexible container's items when the items do not use all available space on the main-axis (horizontally).",
+  "category": "flexbox",
+  "syntax": "justify-content: flex-start|flex-end|center|space-between|space-around|space-evenly|initial|inherit;",
+  "defaults": {
+    "Default value": "flex-start",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.justifyContent=\"space-between\" Try it"
+  },
+  "values": [
+    {
+      "value": "flex-start",
+      "function": "Default value. Items are positioned at the beginning of the container"
+    },
+    {
+      "value": "flex-end",
+      "function": "Items are positioned at the end of the container"
+    },
+    {
+      "value": "center",
+      "function": "Items are positioned in the center of the container"
+    },
+    {
+      "value": "space-between",
+      "function": "Items will have space between them"
+    },
+    {
+      "value": "space-around",
+      "function": "Items will have space before, between, and after them"
+    },
+    {
+      "value": "space-evenly",
+      "function": "Items will have equal space around them"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 8,
+  "shorthandFor": [],
+  "partOf": [
+    "place-content"
+  ]
+}

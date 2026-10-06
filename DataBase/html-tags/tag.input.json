@@ -1,0 +1,183 @@
+{
+  "tag": "input",
+  "page": "https://www.w3schools.com/tags/tag_input.asp",
+  "function": "An HTML form with three input fields; two text fields and one submit button.",
+  "category": "forms",
+  "attributes": [
+    {
+      "name": "accept",
+      "values": "file_extension | audio/* | video/* | image/* | media_type",
+      "function": "Specifies a filter for what file types the user can pick from the file input dialog box (only for type=\"file\")"
+    },
+    {
+      "name": "alt",
+      "values": "text",
+      "function": "Specifies an alternate text for images (only for type=\"image\")"
+    },
+    {
+      "name": "autocomplete",
+      "values": "on | off",
+      "function": "Specifies whether an <input> element should have autocomplete enabled"
+    },
+    {
+      "name": "autofocus",
+      "values": "autofocus",
+      "function": "Specifies that an <input> element should automatically get focus when the page loads"
+    },
+    {
+      "name": "checked",
+      "values": "checked",
+      "function": "Specifies that an <input> element should be pre-selected when the page loads (for type=\"checkbox\" or type=\"radio\")"
+    },
+    {
+      "name": "dirname",
+      "values": "inputname.dir",
+      "function": "Specifies that the text direction will be submitted"
+    },
+    {
+      "name": "disabled",
+      "values": "disabled",
+      "function": "Specifies that an <input> element should be disabled"
+    },
+    {
+      "name": "form",
+      "values": "form_id",
+      "function": "Specifies the form the <input> element belongs to"
+    },
+    {
+      "name": "formaction",
+      "values": "URL",
+      "function": "Specifies the URL of the file that will process the input control when the form is submitted (for type=\"submit\" and type=\"image\")"
+    },
+    {
+      "name": "formenctype",
+      "values": "application/x-www-form-urlencoded | multipart/form-data | text/plain",
+      "function": "Specifies how the form-data should be encoded when submitting it to the server (for type=\"submit\" and type=\"image\")"
+    },
+    {
+      "name": "formmethod",
+      "values": "get | post",
+      "function": "Defines the HTTP method for sending data to the action URL (for type=\"submit\" and type=\"image\")"
+    },
+    {
+      "name": "formnovalidate",
+      "values": "formnovalidate",
+      "function": "Defines that form elements should not be validated when submitted"
+    },
+    {
+      "name": "formtarget",
+      "values": "_blank | _self | _parent | _top | framename",
+      "function": "Specifies where to display the response that is received after submitting the form (for type=\"submit\" and type=\"image\")"
+    },
+    {
+      "name": "height",
+      "values": "pixels",
+      "function": "Specifies the height of an <input> element (only for type=\"image\")"
+    },
+    {
+      "name": "list",
+      "values": "datalist_id",
+      "function": "Refers to a <datalist> element that contains pre-defined options for an <input> element"
+    },
+    {
+      "name": "max",
+      "values": "number | date",
+      "function": "Specifies the maximum value for an <input> element"
+    },
+    {
+      "name": "maxlength",
+      "values": "number",
+      "function": "Specifies the maximum number of characters allowed in an <input> element"
+    },
+    {
+      "name": "min",
+      "values": "number | date",
+      "function": "Specifies a minimum value for an <input> element"
+    },
+    {
+      "name": "minlength",
+      "values": "number",
+      "function": "Specifies the minimum number of characters required in an <input> element"
+    },
+    {
+      "name": "multiple",
+      "values": "multiple",
+      "function": "Specifies that a user can enter more than one value in an <input> element"
+    },
+    {
+      "name": "name",
+      "values": "text",
+      "function": "Specifies the name of an <input> element"
+    },
+    {
+      "name": "pattern",
+      "values": "regexp",
+      "function": "Specifies a regular expression that an <input> element's value is checked against"
+    },
+    {
+      "name": "placeholder",
+      "values": "text",
+      "function": "Specifies a short hint that describes the expected value of an <input> element"
+    },
+    {
+      "name": "popovertarget",
+      "values": "element_id",
+      "function": "Specifies which popover element to invoke (only for type=\"button\")"
+    },
+    {
+      "name": "popovertargetaction",
+      "values": "hide | show | toggle",
+      "function": "Specifies what happens to the popover element when you click the button (only for type=\"button\")"
+    },
+    {
+      "name": "readonly",
+      "values": "readonly",
+      "function": "Specifies that an input field is read-only"
+    },
+    {
+      "name": "required",
+      "values": "required",
+      "function": "Specifies that an input field must be filled out before submitting the form"
+    },
+    {
+      "name": "size",
+      "values": "number",
+      "function": "Specifies the width, in characters, of an <input> element"
+    },
+    {
+      "name": "src",
+      "values": "URL",
+      "function": "Specifies the URL of the image to use as a submit button (only for type=\"image\")"
+    },
+    {
+      "name": "step",
+      "values": "number | any",
+      "function": "Specifies the interval between legal numbers in an input field"
+    },
+    {
+      "name": "type",
+      "values": "button | checkbox | color | date | datetime-local | email | file | hidden | image | month | number | password | radio | range | reset | search | submit | tel | text | time | url | week",
+      "function": "Specifies the type <input> element to display"
+    },
+    {
+      "name": "value",
+      "values": "text",
+      "function": "Specifies the value of an <input> element"
+    },
+    {
+      "name": "width",
+      "values": "pixels",
+      "function": "Specifies the width of an <input> element (only for type=\"image\")"
+    }
+  ],
+  "attributeCount": 33,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "form",
+      "fieldset"
+    ],
+    "children": []
+  }
+}

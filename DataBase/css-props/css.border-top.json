@@ -1,0 +1,43 @@
+{
+  "property": "border-top",
+  "page": "https://www.w3schools.com/cssref/pr_border-top.php",
+  "function": "The border-top shorthand property sets all the top border properties in one declaration.",
+  "category": "border",
+  "syntax": "border-top: border-width border-style border-color|initial|inherit;",
+  "defaults": {
+    "Default value": "medium none color",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.borderTop=\"3px dashed blue\" Try it"
+  },
+  "values": [
+    {
+      "value": "border-top-width",
+      "function": "Required. Specifies the width of the top border. Default value is \"medium\""
+    },
+    {
+      "value": "border-top-style",
+      "function": "Required. Specifies the style of the top border. Default value is \"none\""
+    },
+    {
+      "value": "border-top-color",
+      "function": "Optional. Specifies the color of the top border. Default value is the color of the text"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [
+    "border-top-width",
+    "border-top-style",
+    "border-top-color"
+  ],
+  "partOf": []
+}

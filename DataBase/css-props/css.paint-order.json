@@ -1,0 +1,43 @@
+{
+  "property": "paint-order",
+  "page": "https://www.w3schools.com/cssref/css_pr_paint-order.php",
+  "function": "The paint-order property specifies the order of how an SVG element or text is painted.",
+  "category": "text",
+  "syntax": "paint-order: normal|one value|two values|three values|initial|inherit;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.paintOrder=\"stroke fill\" Try it"
+  },
+  "values": [
+    {
+      "value": "normal",
+      "function": "Default value. The paint order is fill, stroke, markers."
+    },
+    {
+      "value": "one value",
+      "function": "Painting will start with given value, then continue with the remaining painting in default order. If only \"stroke\" is given, the next painting activity is fill, then markers."
+    },
+    {
+      "value": "two values",
+      "function": "Painting will start with given values, then continue with the remaining painting in default order. If \"stroke markers\" are given, the next painting activity will be fill."
+    },
+    {
+      "value": "three values",
+      "function": "Painting will be done according to given values."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [],
+  "partOf": []
+}

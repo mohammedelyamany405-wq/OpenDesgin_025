@@ -1,0 +1,20 @@
+{
+  "tag": "time",
+  "page": "https://www.w3schools.com/tags/tag_time.asp",
+  "function": "The <time> tag defines a specific time (or datetime).",
+  "category": "text",
+  "attributes": [
+    {
+      "name": "datetime",
+      "values": "datetime",
+      "function": "Represent a machine-readable format of the <time> element"
+    }
+  ],
+  "attributeCount": 1,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

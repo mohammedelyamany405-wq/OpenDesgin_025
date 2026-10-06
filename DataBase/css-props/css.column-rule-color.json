@@ -1,0 +1,31 @@
+{
+  "property": "column-rule-color",
+  "page": "https://www.w3schools.com/cssref/css3_pr_column-rule-color.php",
+  "function": "The column-rule-color property specifies the color of the rule between columns.",
+  "category": "box",
+  "syntax": "column-rule-color: color|initial|inherit;",
+  "defaults": {
+    "Default value": "The current color of the element",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.columnRuleColor=\"#0000ff\" Try it"
+  },
+  "values": [
+    {
+      "value": "color",
+      "function": "Specifies the color of the rule. Look at CSS Color Values for a complete list of possible color values"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": []
+}

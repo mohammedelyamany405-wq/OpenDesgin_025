@@ -1,0 +1,16 @@
+{
+  "tag": "main",
+  "page": "https://www.w3schools.com/tags/tag_main.asp",
+  "function": "Specify the main content of the document.",
+  "category": "sectioning",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "body"
+    ],
+    "children": []
+  }
+}

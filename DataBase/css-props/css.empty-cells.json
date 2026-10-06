@@ -1,0 +1,35 @@
+{
+  "property": "empty-cells",
+  "page": "https://www.w3schools.com/cssref/pr_tab_empty-cells.php",
+  "function": "The empty-cells property sets whether or not to display borders on empty cells in a table.",
+  "category": "tables",
+  "syntax": "empty-cells: show|hide|initial|inherit;",
+  "defaults": {
+    "Default value": "show",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.emptyCells=\"hide\" Try it"
+  },
+  "values": [
+    {
+      "value": "show",
+      "function": "Display borders on empty cells. This is default"
+    },
+    {
+      "value": "hide",
+      "function": "Hide borders on empty cells"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,39 @@
+{
+  "tag": "option",
+  "page": "https://www.w3schools.com/tags/tag_option.asp",
+  "function": "The <option> tag defines an option in a select list.",
+  "category": "forms",
+  "attributes": [
+    {
+      "name": "disabled",
+      "values": "disabled",
+      "function": "Specifies that an option should be disabled"
+    },
+    {
+      "name": "label",
+      "values": "text",
+      "function": "Specifies a shorter label for an option"
+    },
+    {
+      "name": "selected",
+      "values": "selected",
+      "function": "Specifies that an option should be pre-selected when the page loads"
+    },
+    {
+      "name": "value",
+      "values": "text",
+      "function": "Specifies the value to be sent to a server"
+    }
+  ],
+  "attributeCount": 4,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "select",
+      "optgroup",
+      "datalist"
+    ],
+    "children": []
+  }
+}

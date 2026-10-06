@@ -1,0 +1,61 @@
+{
+  "property": "align-items",
+  "page": "https://www.w3schools.com/cssref/css3_pr_align-items.php",
+  "function": "The align-items property specifies the default alignment for items inside a flexbox or grid container.",
+  "category": "flexbox",
+  "syntax": "align-items: normal|stretch|positional alignment|flex-start|flex-end|baseline|initial|inherit;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.alignItems=\"center\" Try it"
+  },
+  "values": [
+    {
+      "value": "normal",
+      "function": "Default. Behaves like 'stretch' for flexbox and grid items, or 'start' for grid items with a defined block size."
+    },
+    {
+      "value": "stretch",
+      "function": "Items are stretched to fit the container"
+    },
+    {
+      "value": "center",
+      "function": "Items are positioned at the center of the container"
+    },
+    {
+      "value": "flex-start",
+      "function": "Items are positioned at the beginning of the container"
+    },
+    {
+      "value": "flex-end",
+      "function": "Items are positioned at the end of the container"
+    },
+    {
+      "value": "start",
+      "function": "Items are positioned at the beginning of their individual grid cells, in the block direction"
+    },
+    {
+      "value": "end",
+      "function": "Items are positioned at the end of the their individual grid cells, in the block direction"
+    },
+    {
+      "value": "baseline",
+      "function": "Items are positioned at the baseline of the container"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 10,
+  "shorthandFor": [],
+  "partOf": [
+    "place-items"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "tag": "form",
+  "page": "https://www.w3schools.com/tags/tag_form.asp",
+  "function": "An HTML form with two input fields and one submit button.",
+  "category": "forms",
+  "attributes": [
+    {
+      "name": "accept-charset",
+      "values": "character_set",
+      "function": "Specifies the character encodings that are to be used for the form submission"
+    },
+    {
+      "name": "action",
+      "values": "URL",
+      "function": "Specifies where to send the form-data when a form is submitted"
+    },
+    {
+      "name": "autocomplete",
+      "values": "on | off",
+      "function": "Specifies whether a form should have autocomplete on or off"
+    },
+    {
+      "name": "enctype",
+      "values": "application/x-www-form-urlencoded | multipart/form-data | text/plain",
+      "function": "Specifies how the form-data should be encoded when submitting it to the server (only for method=\"post\")"
+    },
+    {
+      "name": "method",
+      "values": "dialog | get | post",
+      "function": "Specifies the HTTP method to use when sending form-data"
+    },
+    {
+      "name": "name",
+      "values": "text",
+      "function": "Specifies the name of a form"
+    },
+    {
+      "name": "novalidate",
+      "values": "novalidate",
+      "function": "Specifies that the form should not be validated when submitted"
+    },
+    {
+      "name": "rel",
+      "values": "external | help | license | next | nofollow | noopener | noreferrer | opener | prev | search",
+      "function": "Specifies the relationship between a linked resource and the current document"
+    },
+    {
+      "name": "target",
+      "values": "_blank | _self | _parent | _top",
+      "function": "Specifies where to display the response that is received after submitting the form"
+    }
+  ],
+  "attributeCount": 9,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "body"
+    ],
+    "children": [
+      "input",
+      "label",
+      "button",
+      "select",
+      "textarea",
+      "fieldset"
+    ]
+  }
+}

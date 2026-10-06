@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+dist-ssr/
+coverage/
+*.tsbuildinfo
+
+# Logs and temp errors
+*.log
+*.err
+MS.Internal.*
+System.IO.*
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+
+# Local tool output
+.local/
+
+# Nested repo backup during snapshot staging (restored afterwards)
+.git-backups/

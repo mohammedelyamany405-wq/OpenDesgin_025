@@ -1,0 +1,14 @@
+{
+  "tag": "span",
+  "page": "https://www.w3schools.com/tags/tag_span.asp",
+  "function": "A <span> element which is used to color a part of a text.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

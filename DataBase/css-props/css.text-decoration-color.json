@@ -1,0 +1,33 @@
+{
+  "property": "text-decoration-color",
+  "page": "https://www.w3schools.com/cssref/css3_pr_text-decoration-color.php",
+  "function": "The text-decoration-color property specifies the color of the text-decoration (underlines, overlines, linethroughs).",
+  "category": "text",
+  "syntax": "text-decoration-color: color|initial|inherit;",
+  "defaults": {
+    "Default value": "currentColor",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.textDecorationColor=\"red\" Try it"
+  },
+  "values": [
+    {
+      "value": "color",
+      "function": "Specifies the color of the text-decoration"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": [
+    "text-decoration"
+  ]
+}

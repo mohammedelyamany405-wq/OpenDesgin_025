@@ -1,0 +1,62 @@
+{
+  "tag": "link",
+  "page": "https://www.w3schools.com/tags/tag_link.asp",
+  "function": "The <link> tag defines the relationship between the current document and an external resource.",
+  "category": "document",
+  "attributes": [
+    {
+      "name": "crossorigin",
+      "values": "anonymous | use-credentials",
+      "function": "Specifies how the element handles cross-origin requests"
+    },
+    {
+      "name": "href",
+      "values": "URL",
+      "function": "Specifies the location of the linked document"
+    },
+    {
+      "name": "hreflang",
+      "values": "language_code",
+      "function": "Specifies the language of the text in the linked document"
+    },
+    {
+      "name": "media",
+      "values": "media_query",
+      "function": "Specifies on what device the linked document will be displayed"
+    },
+    {
+      "name": "referrerpolicy",
+      "values": "no-referrer | no-referrer-when-downgrade | origin | origin-when-cross-origin | unsafe-url",
+      "function": "Specifies which referrer to use when fetching the resource"
+    },
+    {
+      "name": "rel",
+      "values": "alternate | author | dns-prefetch | help | icon | license | next | pingback | preconnect | prefetch | preload | prerender | prev | search | stylesheet",
+      "function": "Required. Specifies the relationship between the current document and the linked document"
+    },
+    {
+      "name": "sizes",
+      "values": "HeightxWidth | any",
+      "function": "Specifies the size of the linked resource. Only for rel=\"icon\""
+    },
+    {
+      "name": "title",
+      "values": "",
+      "function": "Defines a preferred or an alternate stylesheet"
+    },
+    {
+      "name": "type",
+      "values": "media_type",
+      "function": "Specifies the media type of the linked document"
+    }
+  ],
+  "attributeCount": 9,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "head"
+    ],
+    "children": []
+  }
+}

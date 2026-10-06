@@ -1,0 +1,33 @@
+{
+  "property": "transition-delay",
+  "page": "https://www.w3schools.com/cssref/css3_pr_transition-delay.php",
+  "function": "The transition-delay property specifies when the transition effect will start.",
+  "category": "transition",
+  "syntax": "transition-delay: time|initial|inherit;",
+  "defaults": {
+    "Default value": "0s",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.transitionDelay=\"2s\" Try it"
+  },
+  "values": [
+    {
+      "value": "time",
+      "function": "Specifies the number of seconds or milliseconds to wait before the transition effect will start"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": [
+    "transition"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "property": "@keyframes",
+  "page": "https://www.w3schools.com/cssref/atrule_keyframes.php",
+  "function": "The CSS @keyframes rule is used to control the steps in an animation sequence by defining CSS styles for points along the animation sequence.",
+  "category": "animation",
+  "syntax": "@keyframes name { keyframes-selector {css-styles;} keyframes-selector {css-styles;} ... }",
+  "defaults": {},
+  "values": [
+    {
+      "value": "name",
+      "function": "Required. Defines a name for the keyframe"
+    },
+    {
+      "value": "keyframes-selector",
+      "function": "Required. Points along the animation sequence.Legal values:0-100% from (same as 0%) to (same as 100%)Note: You can have many keyframes-selectors in one animation sequence"
+    },
+    {
+      "value": "css-styles",
+      "function": "Required. One or more CSS properties and values"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": []
+}

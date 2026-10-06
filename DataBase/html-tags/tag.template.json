@@ -1,0 +1,14 @@
+{
+  "tag": "template",
+  "page": "https://www.w3schools.com/tags/tag_template.asp",
+  "function": "Use <template> to hold some content that will be hidden when the page loads. Use JavaScript to display it.",
+  "category": "scripting",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

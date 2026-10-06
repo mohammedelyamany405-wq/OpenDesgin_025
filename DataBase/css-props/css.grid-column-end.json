@@ -1,0 +1,34 @@
+{
+  "property": "grid-column-end",
+  "page": "https://www.w3schools.com/cssref/pr_grid-column-end.php",
+  "function": "The grid-column-end property defines how many columns an item will span, or on which column-line the item will end (see example at the end of this page).",
+  "category": "grid",
+  "syntax": "grid-column-end: auto|span n|column-line;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS Grid Layout Module Level 1",
+    "JavaScript syntax": "object.style.gridColumnEnd=\"5\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default value. The item will span one column"
+    },
+    {
+      "value": "span n",
+      "function": "Specifies the number of columns the item will span"
+    },
+    {
+      "value": "column-line",
+      "function": "Specifies on which column to end the display of the item"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": [
+    "grid-area",
+    "grid-column"
+  ]
+}

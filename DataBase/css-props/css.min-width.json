@@ -1,0 +1,35 @@
+{
+  "property": "min-width",
+  "page": "https://www.w3schools.com/cssref/pr_dim_min-width.php",
+  "function": "The min-width property defines the minimum width of an element.",
+  "category": "box",
+  "syntax": "min-width: length|initial|inherit;",
+  "defaults": {
+    "Default value": "0",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.minWidth=\"400px\" Try it"
+  },
+  "values": [
+    {
+      "value": "length",
+      "function": "Default value is 0. Defines the minimum width in px, cm, etc. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Defines the minimum width in percent of the containing block"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

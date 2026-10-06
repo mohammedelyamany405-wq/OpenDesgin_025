@@ -1,0 +1,47 @@
+{
+  "property": "position",
+  "page": "https://www.w3schools.com/cssref/pr_class_position.php",
+  "function": "The position property specifies the type of positioning method used for an element (static, relative, absolute, fixed, or sticky).",
+  "category": "position",
+  "syntax": "position: static|absolute|fixed|relative|sticky|initial|inherit;",
+  "defaults": {
+    "Default value": "static",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.position=\"absolute\" Try it"
+  },
+  "values": [
+    {
+      "value": "static",
+      "function": "Default value. Elements render in order, as they appear in the document flow"
+    },
+    {
+      "value": "absolute",
+      "function": "The element is positioned relative to its first positioned (not static) ancestor element"
+    },
+    {
+      "value": "fixed",
+      "function": "The element is positioned relative to the browser window"
+    },
+    {
+      "value": "relative",
+      "function": "The element is positioned relative to its normal position, so \"left:20px\" adds 20 pixels to the element's LEFT position"
+    },
+    {
+      "value": "sticky",
+      "function": "The element is positioned based on the user's scroll position A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it \"sticks\" in place (like position:fixed). Note: Not supported in IE/Edge 15 or earlier. Supported in Safari from version 6.1 with a -webkit- prefix."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 7,
+  "shorthandFor": [],
+  "partOf": []
+}

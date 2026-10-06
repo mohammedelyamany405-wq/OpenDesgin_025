@@ -1,0 +1,69 @@
+{
+  "property": "justify-items",
+  "page": "https://www.w3schools.com/cssref/css_pr_justify-items.php",
+  "function": "The justify-items property is set on the grid container to give child elements (grid items) alignment in the inline direction.",
+  "category": "flexbox",
+  "syntax": "justify-items: legacy|normal|stretch|positional alignment|overflow-alignment|baseline alignment|initial|inherit;",
+  "defaults": {
+    "Default value": "legacy",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.justifyItems=\"center\" Try it"
+  },
+  "values": [
+    {
+      "value": "legacy",
+      "function": "Default value. Grid items with justify-self value 'auto' only inherits grid container justify-items property value if it starts with 'legacy'. It exists to implement the legacy alignment behavior of HTML's &#9001;center&#9002; element and align attribute."
+    },
+    {
+      "value": "normal",
+      "function": "Dependant on layout context, but similar to 'stretch' for grid layout"
+    },
+    {
+      "value": "stretch",
+      "function": "Stretches to fill the grid cell if inline-size (width) is not set."
+    },
+    {
+      "value": "start",
+      "function": "Align items at the start in the inline direction"
+    },
+    {
+      "value": "left",
+      "function": "Align items to the left"
+    },
+    {
+      "value": "center",
+      "function": "Align items to the center"
+    },
+    {
+      "value": "end",
+      "function": "Align items at the end in the inline direction"
+    },
+    {
+      "value": "right",
+      "function": "Align items to the right"
+    },
+    {
+      "value": "overflow-alignment",
+      "function": "'safe' sets alignment of the item to 'start' if the content overflows 'unsafe' keeps the alignment value regardless of wether or not the item content overflows"
+    },
+    {
+      "value": "baseline alignment",
+      "function": "The element is aligned with the baseline of the parent."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 12,
+  "shorthandFor": [],
+  "partOf": [
+    "place-items"
+  ]
+}

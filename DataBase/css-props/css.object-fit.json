@@ -1,0 +1,47 @@
+{
+  "property": "object-fit",
+  "page": "https://www.w3schools.com/cssref/css3_pr_object-fit.php",
+  "function": "The object-fit property is used to specify how an <img> or <video> should be resized to fit its container.",
+  "category": "background",
+  "syntax": "object-fit: fill|contain|cover|scale-down|none|initial|inherit;",
+  "defaults": {
+    "Default value": "see individual properties",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.objectFit=\"cover\" Try it"
+  },
+  "values": [
+    {
+      "value": "fill",
+      "function": "This is default. Does not preserve the aspect ratio. The image/video is resized to fill the container (will be stretched or squeezed to fit)"
+    },
+    {
+      "value": "contain",
+      "function": "Preserves the aspect ratio, and fits the image/video inside the container, without cutting - leaves empty space if needed"
+    },
+    {
+      "value": "cover",
+      "function": "Preserves the aspect ratio, and the image/video fills the container. Cuts overflowing content if needed"
+    },
+    {
+      "value": "none",
+      "function": "The image/video is not resized"
+    },
+    {
+      "value": "scale-down",
+      "function": "The image/video is scaled down to the smallest version of none or contain"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 7,
+  "shorthandFor": [],
+  "partOf": []
+}

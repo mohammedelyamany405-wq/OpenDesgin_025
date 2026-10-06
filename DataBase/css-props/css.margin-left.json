@@ -1,0 +1,41 @@
+{
+  "property": "margin-left",
+  "page": "https://www.w3schools.com/cssref/pr_margin-left.php",
+  "function": "The margin-left property sets the left margin of an element.",
+  "category": "box",
+  "syntax": "margin-left: length|auto|initial|inherit;",
+  "defaults": {
+    "Default value": "0",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.marginLeft=\"100px\" Try it"
+  },
+  "values": [
+    {
+      "value": "length",
+      "function": "Specifies a fixed left margin in px, pt, cm, etc. Default value is 0px. Negative values are allowed. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Specifies a left margin in percent of the width of the containing element"
+    },
+    {
+      "value": "auto",
+      "function": "The browser calculates a left margin"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": [
+    "margin"
+  ]
+}

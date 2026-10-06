@@ -1,0 +1,39 @@
+{
+  "property": "offset-position",
+  "page": "https://www.w3schools.com/cssref/css_pr_offset-position.php",
+  "function": "The offset-position property specifies the initial position of an element along a path.",
+  "category": "position",
+  "syntax": "offset-position: auto|normal|position|initial|inherit;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.offsetPosition=\"auto\""
+  },
+  "values": [
+    {
+      "value": "normal",
+      "function": "Sets the offset starting position to 50% 50% of the containing block. This is default."
+    },
+    {
+      "value": "auto",
+      "function": "Sets the offset starting position to the top-left corner of the element's box"
+    },
+    {
+      "value": "position",
+      "function": "Specifies the position as an x/y coordinate to place an element relative to its box edges. The position can be defined using one to four values"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

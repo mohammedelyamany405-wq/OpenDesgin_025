@@ -1,0 +1,14 @@
+{
+  "tag": "noscript",
+  "page": "https://www.w3schools.com/tags/tag_noscript.asp",
+  "function": "The <noscript> tag defines an alternate content to be displayed to users that have disabled scripts in their browser or have a browser that doesn't support script.",
+  "category": "scripting",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

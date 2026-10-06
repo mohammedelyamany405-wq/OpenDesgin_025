@@ -1,0 +1,16 @@
+{
+  "tag": "menu",
+  "page": "https://www.w3schools.com/tags/tag_menu.asp",
+  "function": "The <menu> tag defines an unordered list of content.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": [
+      "li"
+    ]
+  }
+}

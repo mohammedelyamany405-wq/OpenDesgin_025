@@ -1,0 +1,39 @@
+{
+  "property": "max-block-size",
+  "page": "https://www.w3schools.com/cssref/css_pr_max-block-size.php",
+  "function": "The max-block-size property specifies the maximum size of an element in the block direction.",
+  "category": "box",
+  "syntax": "max-block-size: auto|value|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.maxBlockSize=\"60px\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default. The element's default max-block-size value."
+    },
+    {
+      "value": "length",
+      "function": "Specifies max-block-size in px, pt, cm, etc. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Specifies max-block-size in percent relative to size of parent element on the corresponding axis."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

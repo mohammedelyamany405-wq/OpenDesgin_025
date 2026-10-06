@@ -1,0 +1,51 @@
+{
+  "property": "offset",
+  "page": "https://www.w3schools.com/cssref/css_pr_offset.php",
+  "function": "The offset property is used when animating an element along a path, and is a shorthand property for the following properties:",
+  "category": "position",
+  "syntax": "offset: auto|value|initial|inherit;",
+  "defaults": {
+    "Default value": "See the default value for the individual properties",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.offset=\"path('M 50,250 C 700,-50 -400,-50 250,250') 200px auto 90deg\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default. See default value for each individual 'offset-' property."
+    },
+    {
+      "value": "offset-anchor",
+      "function": "Specifies the point on an element that is fixed to the path it is animated along. Default value is auto"
+    },
+    {
+      "value": "offset-distance",
+      "function": "Specifies the distance from the start of the path defined by offset-path. Default value is 0"
+    },
+    {
+      "value": "offset-path",
+      "function": "Specifies the path an element is animated along. Default value is none"
+    },
+    {
+      "value": "offset-position",
+      "function": "Specifies the initial position of an element along a path. Default value is normal"
+    },
+    {
+      "value": "offset-rotate",
+      "function": "Specifies rotation of an element as it is animated along a path. Default value is auto"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 8,
+  "shorthandFor": [],
+  "partOf": []
+}

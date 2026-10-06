@@ -1,0 +1,29 @@
+{
+  "property": "@supports",
+  "page": "https://www.w3schools.com/cssref/atrule_supports.php",
+  "function": "The CSS @supports rule allows to test whether a browser supports a CSS feature, and to define fallback styles if the feature is not supported.",
+  "category": "at-rules",
+  "syntax": "@supports (supports-condition) { if condition is true use this CSS }",
+  "defaults": {},
+  "values": [
+    {
+      "value": "supports-condition",
+      "function": "Defines the condition in a name-value pair (property: value) or a function() syntax. The conditions can be combined by and, or, or not."
+    },
+    {
+      "value": "selector()",
+      "function": "Is a function() syntax. Checks if a browser supports the specified selector syntax. E.g. @supports selector(h2 > p) returns true and applies the CSS style if the browser supports the child combinator"
+    },
+    {
+      "value": "font-tech()",
+      "function": "Is a function() syntax. Checks if a browser supports the specified font technology. E.g. @supports font-tech(color-svg) returns true and applies the CSS style if the browser supports SVG multi-colored tables"
+    },
+    {
+      "value": "font-format()",
+      "function": "Is a function() syntax. Checks if a browser supports the specified font format. E.g. @supports font-format (woff) returns true and applies the CSS style if the browser supports WOFF 1.0"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,37 @@
+{
+  "property": "padding-right",
+  "page": "https://www.w3schools.com/cssref/pr_padding-right.php",
+  "function": "An element's padding is the space between its content and its border.",
+  "category": "box",
+  "syntax": "padding-right: length|initial|inherit;",
+  "defaults": {
+    "Default value": "0",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.paddingRight=\"50px\" Try it"
+  },
+  "values": [
+    {
+      "value": "length",
+      "function": "Specifies a fixed right padding in px, pt, cm, etc. Default value is 0. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Specifies a right padding in percent of the width of the containing element"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": [
+    "padding"
+  ]
+}

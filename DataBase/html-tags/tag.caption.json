@@ -1,0 +1,16 @@
+{
+  "tag": "caption",
+  "page": "https://www.w3schools.com/tags/tag_caption.asp",
+  "function": "The <caption> tag defines a table caption.",
+  "category": "tables",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "table"
+    ],
+    "children": []
+  }
+}

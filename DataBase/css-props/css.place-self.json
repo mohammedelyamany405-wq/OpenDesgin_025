@@ -1,0 +1,70 @@
+{
+  "property": "place-self",
+  "page": "https://www.w3schools.com/cssref/css_pr_place-self.php",
+  "function": "The place-self property is used to align individual grid items, and is a shorthand property for the following properties:",
+  "category": "flexbox",
+  "syntax": "place-self: auto|value|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.placeSelf=\"end stretch\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default. The element's default place-self value."
+    },
+    {
+      "value": "normal",
+      "function": "Dependant on layout context, but similar to 'stretch' for grid layout for grid items when size is not set. If size is set, the property value behaves lik 'start'."
+    },
+    {
+      "value": "stretch",
+      "function": "Stretches to fill the grid cell if size is not set."
+    },
+    {
+      "value": "start",
+      "function": "Align items at the start in the inline and block directions"
+    },
+    {
+      "value": "left",
+      "function": "Align items to the left in the inline direction, as the justify-self property value."
+    },
+    {
+      "value": "center",
+      "function": "Align items to the center"
+    },
+    {
+      "value": "end",
+      "function": "Align items at the end in the inline and block directions"
+    },
+    {
+      "value": "right",
+      "function": "Align items to the right in the inline direction, as the justify-self property value."
+    },
+    {
+      "value": "overflow-alignment",
+      "function": "'safe' sets alignment of the item to 'start' if the content overflows 'unsafe' keeps the alignment value regardless of wether or not the item content overflows"
+    },
+    {
+      "value": "baseline alignment",
+      "function": "The element is aligned with the baseline of the parent."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 12,
+  "shorthandFor": [
+    "align-self",
+    "justify-self"
+  ],
+  "partOf": []
+}

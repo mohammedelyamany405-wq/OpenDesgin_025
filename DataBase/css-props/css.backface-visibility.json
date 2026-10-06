@@ -1,0 +1,35 @@
+{
+  "property": "backface-visibility",
+  "page": "https://www.w3schools.com/cssref/css3_pr_backface-visibility.php",
+  "function": "The backface-visibility property defines whether or not the back face of an element should be visible when facing the user.",
+  "category": "transform",
+  "syntax": "backface-visibility: visible|hidden|initial|inherit;",
+  "defaults": {
+    "Default value": "visible",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.backfaceVisibility=\"hidden\" Try it"
+  },
+  "values": [
+    {
+      "value": "visible",
+      "function": "Default value. The backside is visible"
+    },
+    {
+      "value": "hidden",
+      "function": "The backside is not visible"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

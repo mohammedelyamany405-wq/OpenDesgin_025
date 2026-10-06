@@ -1,0 +1,41 @@
+{
+  "property": "background-clip",
+  "page": "https://www.w3schools.com/cssref/css3_pr_background-clip.php",
+  "function": "The background-clip property defines how far the background (color, image, or gradient) should extend within an element.",
+  "category": "background",
+  "syntax": "background-clip: border-box|padding-box|content-box|initial|inherit;",
+  "defaults": {
+    "Default value": "border-box",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.backgroundClip=\"content-box\" Try it"
+  },
+  "values": [
+    {
+      "value": "border-box",
+      "function": "Default value. The background extends behind the border"
+    },
+    {
+      "value": "padding-box",
+      "function": "The background extends to the inside edge of the border"
+    },
+    {
+      "value": "content-box",
+      "function": "The background extends to the edge of the content box"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": [
+    "background"
+  ]
+}

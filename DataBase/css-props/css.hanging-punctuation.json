@@ -1,0 +1,47 @@
+{
+  "property": "hanging-punctuation",
+  "page": "https://www.w3schools.com/cssref/css3_pr_hanging-punctuation.php",
+  "function": "The hanging-punctuation property specifies whether a punctuation mark may be placed outside the line box at the start or at the end of a full line of text.",
+  "category": "text",
+  "syntax": "hanging-punctuation: none|first|last|allow-end|force-end|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.hangingPunctuation=\"first\""
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "No punctuation mark may be placed outside the line box at the start or at the end of a full line of text"
+    },
+    {
+      "value": "first",
+      "function": "Punctuation may hang outside the start edge of the first line"
+    },
+    {
+      "value": "last",
+      "function": "Punctuation may hang outside the end edge of the last line"
+    },
+    {
+      "value": "allow-end",
+      "function": "Punctuation may hang outside the end edge of all lines if the punctuation does not otherwise fit prior to justification"
+    },
+    {
+      "value": "force-end",
+      "function": "Punctuation may hang outside the end edge of all lines. If justification is enabled on this line, then it will force the punctuation to hang"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 7,
+  "shorthandFor": [],
+  "partOf": []
+}

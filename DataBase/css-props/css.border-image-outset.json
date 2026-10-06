@@ -1,0 +1,35 @@
+{
+  "property": "border-image-outset",
+  "page": "https://www.w3schools.com/cssref/css3_pr_border-image-outset.php",
+  "function": "The border-image-outset property specifies the amount by which the border image area extends beyond the border box.",
+  "category": "border",
+  "syntax": "border-image-outset: length|number|initial|inherit;",
+  "defaults": {
+    "Default value": "0",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.borderImageOutset=\"10px\" Try it"
+  },
+  "values": [
+    {
+      "value": "length",
+      "function": "A length unit specifying how far from the edges the border-image will appear. Default value is 0"
+    },
+    {
+      "value": "number",
+      "function": "Represent multiples of the corresponding border-width"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

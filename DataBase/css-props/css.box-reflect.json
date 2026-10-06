@@ -1,0 +1,55 @@
+{
+  "property": "box-reflect",
+  "page": "https://www.w3schools.com/cssref/css_pr_box-reflect.php",
+  "function": "The box-reflect property is used to create a reflection of an element.",
+  "category": "box",
+  "syntax": "box-reflect: none|below|above|left|right|position offset gradient|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.webkitBoxReflect=\"below\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "Default value. No reflection is displayed."
+    },
+    {
+      "value": "below",
+      "function": "Creates a reflection below the element."
+    },
+    {
+      "value": "above",
+      "function": "Creates a reflection above the element."
+    },
+    {
+      "value": "left",
+      "function": "Creates a reflection to the left of the element."
+    },
+    {
+      "value": "right",
+      "function": "Creates a reflection to the right of the element."
+    },
+    {
+      "value": "position offset",
+      "function": "Two value syntax: - position sets reflection below, above, left, or right of the element. - offset sets the distance to the reflection. Distance is set in px, pt, cm, etc. Default value is 0. Read about length units"
+    },
+    {
+      "value": "position offset gradient",
+      "function": "Three value syntax: - position sets reflection below, above, left, or right of the element. - offset sets the distance to the reflection. Distance is set in px, pt, cm, etc. Default value is 0. Read about length units - gradient sets a transition for the reflection, i.e. a fading effect."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 9,
+  "shorthandFor": [],
+  "partOf": []
+}

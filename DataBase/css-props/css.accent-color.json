@@ -1,0 +1,35 @@
+{
+  "property": "accent-color",
+  "page": "https://www.w3schools.com/cssref/css4_pr_accent-color.php",
+  "function": "The accent-color property specifies the accent color for user-interface controls like: <input type=\"checkbox\">, <input type=\"radio\">, <input type=\"range\"> and <progress>.",
+  "category": "color",
+  "syntax": "accent-color: auto|color|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS4",
+    "JavaScript syntax": "object.style.accentColor=\"red\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default value. The browser choose the accent color"
+    },
+    {
+      "value": "color",
+      "function": "Specifies the color to be used as the accent color. All legal color values can be used (rgb, hex, named-color, etc). For more information on legal values, read our CSS Colors Tutorial"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

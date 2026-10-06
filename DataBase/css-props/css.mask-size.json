@@ -1,0 +1,43 @@
+{
+  "property": "mask-size",
+  "page": "https://www.w3schools.com/cssref/css3_pr_mask-size.php",
+  "function": "The mask-size property specifies the size of the mask layer image.",
+  "category": "background",
+  "syntax": "mask-size: auto|size|contain|cover|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS Masking Module Level 1",
+    "JavaScript syntax": "object.style.maskSize=\"100px 200px\""
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "This is default"
+    },
+    {
+      "value": "size",
+      "function": "Specifies the size of the mask image in px, em, etc, or in %"
+    },
+    {
+      "value": "contain",
+      "function": "Scales the mask image in a way that both its width and its height fit inside the container"
+    },
+    {
+      "value": "cover",
+      "function": "Scales the mask image in a way that both its width and its height cover the container"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [],
+  "partOf": []
+}

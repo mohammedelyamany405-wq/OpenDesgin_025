@@ -1,0 +1,78 @@
+{
+  "tag": "img",
+  "page": "https://www.w3schools.com/tags/tag_img.asp",
+  "function": "The <img> tag is used to embed an image in an HTML page.",
+  "category": "media",
+  "attributes": [
+    {
+      "name": "alt",
+      "values": "text",
+      "function": "Specifies an alternate text for an image"
+    },
+    {
+      "name": "crossorigin",
+      "values": "anonymous | use-credentials",
+      "function": "Allow images from third-party sites that allow cross-origin access to be used with canvas"
+    },
+    {
+      "name": "height",
+      "values": "pixels",
+      "function": "Specifies the height of an image"
+    },
+    {
+      "name": "ismap",
+      "values": "ismap",
+      "function": "Specifies an image as a server-side image map"
+    },
+    {
+      "name": "loading",
+      "values": "eager | lazy",
+      "function": "Specifies whether a browser should load an image immediately or to defer loading of images until some conditions are met"
+    },
+    {
+      "name": "longdesc",
+      "values": "URL",
+      "function": "Specifies a URL to a detailed description of an image"
+    },
+    {
+      "name": "referrerpolicy",
+      "values": "no-referrer | no-referrer-when-downgrade | origin | origin-when-cross-origin | unsafe-url",
+      "function": "Specifies which referrer information to use when fetching an image"
+    },
+    {
+      "name": "sizes",
+      "values": "sizes",
+      "function": "Specifies image sizes for different page layouts"
+    },
+    {
+      "name": "src",
+      "values": "URL",
+      "function": "Specifies the path to the image"
+    },
+    {
+      "name": "srcset",
+      "values": "URL-list",
+      "function": "Specifies a list of image files to use in different situations"
+    },
+    {
+      "name": "usemap",
+      "values": "#mapname",
+      "function": "Specifies an image as a client-side image map"
+    },
+    {
+      "name": "width",
+      "values": "pixels",
+      "function": "Specifies the width of an image"
+    }
+  ],
+  "attributeCount": 12,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "figure",
+      "picture"
+    ],
+    "children": []
+  }
+}

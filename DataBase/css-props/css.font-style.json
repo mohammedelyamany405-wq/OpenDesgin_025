@@ -1,0 +1,41 @@
+{
+  "property": "font-style",
+  "page": "https://www.w3schools.com/cssref/pr_font_font-style.php",
+  "function": "The font-style property specifies the font style for a text.",
+  "category": "text",
+  "syntax": "font-style: normal|italic|oblique|initial|inherit;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.fontStyle=\"italic\" Try it"
+  },
+  "values": [
+    {
+      "value": "normal",
+      "function": "The browser displays a normal font style. This is default"
+    },
+    {
+      "value": "italic",
+      "function": "The browser displays an italic font style"
+    },
+    {
+      "value": "oblique",
+      "function": "The browser displays an oblique font style"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": [
+    "font"
+  ]
+}

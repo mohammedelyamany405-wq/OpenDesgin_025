@@ -1,0 +1,66 @@
+{
+  "property": "text-emphasis",
+  "page": "https://www.w3schools.com/cssref/css3_pr_text-emphasis.php",
+  "function": "The text-emphasis property is used to apply emphasis marks to text.",
+  "category": "text",
+  "syntax": "text-emphasis: none|filled|open|dot|circle|double-circle|triangle|sesame|string|color|initial|inherit;",
+  "defaults": {
+    "Default value": "none currentcolor",
+    "Inherited": "yes",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.textEmphasis=\"filled blue\""
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "No emphasis marks are applied"
+    },
+    {
+      "value": "filled",
+      "function": "The emphasis marks are filled with a solid color"
+    },
+    {
+      "value": "open",
+      "function": "The emphasis marks are hollow"
+    },
+    {
+      "value": "dot",
+      "function": "The emphasis marks are small circles"
+    },
+    {
+      "value": "circle",
+      "function": "The emphasis marks are circles"
+    },
+    {
+      "value": "double-circle",
+      "function": "The emphasis marks are double circles"
+    },
+    {
+      "value": "triangle",
+      "function": "The emphasis marks are triangles"
+    },
+    {
+      "value": "sesame",
+      "function": "The emphasis marks are sesames"
+    },
+    {
+      "value": "string",
+      "function": "The emphasis marks are the given string (one character)"
+    },
+    {
+      "value": "color",
+      "function": "Sets the color of the emphasis marks"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 12,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,29 @@
+﻿{
+    "version":  "1.0",
+    "nodes":  {
+                  "0:4":  {
+                              "htmlTag":  "div",
+                              "updatedAt":  "2026-09-01T03:28:55.5006740+03:00",
+                              "classes":  {
+
+                                          },
+                              "behavior":  "none"
+                          },
+                  "0:5":  {
+                              "htmlTag":  "header",
+                              "updatedAt":  "2026-09-01T03:32:16.6399435+03:00",
+                              "classes":  {
+
+                                          },
+                              "behavior":  "none"
+                          },
+                  "0:6":  {
+                              "htmlTag":  "main",
+                              "updatedAt":  "2026-09-01T03:43:26.7912010+03:00",
+                              "classes":  {
+
+                                          },
+                              "behavior":  "none"
+                          }
+              }
+}

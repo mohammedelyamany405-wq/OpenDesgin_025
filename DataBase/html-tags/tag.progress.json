@@ -1,0 +1,25 @@
+{
+  "tag": "progress",
+  "page": "https://www.w3schools.com/tags/tag_progress.asp",
+  "function": "The <progress> tag represents the completion progress of a task.",
+  "category": "forms",
+  "attributes": [
+    {
+      "name": "max",
+      "values": "number",
+      "function": "Specifies how much work the task requires in total. Default value is 1"
+    },
+    {
+      "name": "value",
+      "values": "number",
+      "function": "Specifies how much of the task has been completed"
+    }
+  ],
+  "attributeCount": 2,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

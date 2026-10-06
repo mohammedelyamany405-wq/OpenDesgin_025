@@ -1,0 +1,39 @@
+{
+  "property": "border-block-end",
+  "page": "https://www.w3schools.com/cssref/css_pr_border-block-end.php",
+  "function": "The border-block-end property is a shorthand property for these properties:",
+  "category": "border",
+  "syntax": "border-block-end: border-block-end-width border-block-end-style border-block-end-color|initial|inherit;",
+  "defaults": {
+    "Default value": "medium none currentcolor",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.borderBlockEnd=\"pink dotted 5px\" Try it"
+  },
+  "values": [
+    {
+      "value": "border-block-end-width",
+      "function": "Specifies the width of an element's border at the end in the block direction. Default value is \"medium\""
+    },
+    {
+      "value": "border-block-end-style",
+      "function": "Specifies the style of an element's border at the end in the block direction. Default value is \"none\""
+    },
+    {
+      "value": "border-block-end-color",
+      "function": "Specifies the color of an element's border at the end in the block direction. Default value is the current color of the border"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

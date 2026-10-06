@@ -1,0 +1,43 @@
+{
+  "property": "offset-anchor",
+  "page": "https://www.w3schools.com/cssref/css_pr_offset-anchor.php",
+  "function": "The offset-anchor property specifies the point on an element to be fixed along a path defined by the offset-path property.",
+  "category": "position",
+  "syntax": "offset-anchor: auto|value|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.offsetAnchor=\"bottom right\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default. The achored point will be in the center of the element, same as property value '50% 50%'."
+    },
+    {
+      "value": "left top | left center | left bottom | right top | right center | right bottom | center top | center center | center bottom",
+      "function": "If you only specify one keyword, the other value will be \"center\""
+    },
+    {
+      "value": "xpos ypos",
+      "function": "The first value is the horizontal position and the second value is the vertical. The top left corner is 0 0. Units can be pixels (0px 0px) or any other CSS units. If you only specify one value, the other value will be 50%. You can mix % and positions"
+    },
+    {
+      "value": "x% y%",
+      "function": "The first value is the horizontal position and the second value is the vertical. The top left corner is 0% 0%. The right bottom corner is 100% 100%. If you only specify one value, the other value will be 50%. Default value is: 50% 50%"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [],
+  "partOf": []
+}

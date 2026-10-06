@@ -1,0 +1,30 @@
+{
+  "property": "grid-template-areas",
+  "page": "https://www.w3schools.com/cssref/pr_grid-template-areas.php",
+  "function": "The grid-template-areas property specifies areas within the grid layout.",
+  "category": "grid",
+  "syntax": "grid-template-areas: none|itemnames;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS Grid Layout Module Level 1",
+    "JavaScript syntax": "object.style.gridTemplateAreas=\". . . myArea myArea\" Try it-->"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "Default value. No named grid areas"
+    },
+    {
+      "value": "itemnames",
+      "function": "A sequence that specifies how each columns and row should display"
+    }
+  ],
+  "valueCount": 2,
+  "shorthandFor": [],
+  "partOf": [
+    "grid",
+    "grid-template"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "property": "flex-wrap",
+  "page": "https://www.w3schools.com/cssref/css3_pr_flex-wrap.php",
+  "function": "The flex-wrap property specifies whether the flexible items should wrap or not.",
+  "category": "flexbox",
+  "syntax": "flex-wrap: nowrap|wrap|wrap-reverse|initial|inherit;",
+  "defaults": {
+    "Default value": "nowrap",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.flexWrap=\"nowrap\" Try it"
+  },
+  "values": [
+    {
+      "value": "nowrap",
+      "function": "Default value. Specifies that the flexible items will not wrap"
+    },
+    {
+      "value": "wrap",
+      "function": "Specifies that the flexible items will wrap if necessary"
+    },
+    {
+      "value": "wrap-reverse",
+      "function": "Specifies that the flexible items will wrap, if necessary, in reverse order"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": [
+    "flex-flow"
+  ]
+}

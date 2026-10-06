@@ -1,0 +1,54 @@
+{
+  "property": "place-items",
+  "page": "https://www.w3schools.com/cssref/css_pr_place-items.php",
+  "function": "The place-items property is used in grid layout, and is a shorthand property for the following properties:",
+  "category": "flexbox",
+  "syntax": "place-items: normal legacy|value|initial|inherit;",
+  "defaults": {
+    "Default value": "normal legacy",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.placeItems=\"stretch center\" Try it"
+  },
+  "values": [
+    {
+      "value": "normal legacy",
+      "function": "Default. The element's default place-items value. The default value for align-items is 'normal', and the default value for justify-items is 'legacy'."
+    },
+    {
+      "value": "baseline",
+      "function": "Items are positioned at the baseline of the container"
+    },
+    {
+      "value": "center",
+      "function": "Align items to the center of the grid cell"
+    },
+    {
+      "value": "end",
+      "function": "Align items at the end of the grid cell"
+    },
+    {
+      "value": "start",
+      "function": "Align items at the start of the grid cell"
+    },
+    {
+      "value": "stretch",
+      "function": "Stretches grid items to fill the grid container if the grid item sizes are not set."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 8,
+  "shorthandFor": [
+    "align-items",
+    "justify-items"
+  ],
+  "partOf": []
+}

@@ -1,0 +1,21 @@
+{
+  "property": "@namespace",
+  "page": "https://www.w3schools.com/cssref/atrule_namespace.php",
+  "function": "The CSS @namespace rule is used to define an XML namespace to be used in the style sheet.",
+  "category": "at-rules",
+  "syntax": "@namspace prefix url(xmlNamspaceURL);",
+  "defaults": {},
+  "values": [
+    {
+      "value": "prefix",
+      "function": "Optional. Defines a namespace prefix"
+    },
+    {
+      "value": "url()",
+      "function": "Required. The URL of the namespace"
+    }
+  ],
+  "valueCount": 2,
+  "shorthandFor": [],
+  "partOf": []
+}

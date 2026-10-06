@@ -1,0 +1,35 @@
+{
+  "property": "text-indent",
+  "page": "https://www.w3schools.com/cssref/pr_text_text-indent.php",
+  "function": "The text-indent property specifies the indentation of the first line in a text-block.",
+  "category": "text",
+  "syntax": "text-indent: length|initial|inherit;",
+  "defaults": {
+    "Default value": "0",
+    "Inherited": "yes",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.textIndent=\"50px\" Try it"
+  },
+  "values": [
+    {
+      "value": "length",
+      "function": "Defines a fixed indentation in px, pt, cm, em, etc. Default value is 0. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Defines the indentation in % of the width of the parent element"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,117 @@
+{
+  "property": "list-style-type",
+  "page": "https://www.w3schools.com/cssref/pr_list-style-type.php",
+  "function": "The list-style-type specifies the type of list-item marker in a list.",
+  "category": "text",
+  "syntax": "list-style-type: value;",
+  "defaults": {
+    "Default value": "disc",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.listStyleType=\"square\" Try it"
+  },
+  "values": [
+    {
+      "value": "disc",
+      "function": "Default value. The marker is a filled circle"
+    },
+    {
+      "value": "armenian",
+      "function": "The marker is traditional Armenian numbering"
+    },
+    {
+      "value": "circle",
+      "function": "The marker is a circle"
+    },
+    {
+      "value": "cjk-ideographic",
+      "function": "The marker is plain ideographic numbers"
+    },
+    {
+      "value": "decimal",
+      "function": "The marker is a number"
+    },
+    {
+      "value": "decimal-leading-zero",
+      "function": "The marker is a number with leading zeros (01, 02, 03, etc.)"
+    },
+    {
+      "value": "georgian",
+      "function": "The marker is traditional Georgian numbering"
+    },
+    {
+      "value": "hebrew",
+      "function": "The marker is traditional Hebrew numbering"
+    },
+    {
+      "value": "hiragana",
+      "function": "The marker is traditional Hiragana numbering"
+    },
+    {
+      "value": "hiragana-iroha",
+      "function": "The marker is traditional Hiragana iroha numbering"
+    },
+    {
+      "value": "katakana",
+      "function": "The marker is traditional Katakana numbering"
+    },
+    {
+      "value": "katakana-iroha",
+      "function": "The marker is traditional Katakana iroha numbering"
+    },
+    {
+      "value": "lower-alpha",
+      "function": "The marker is lower-alpha (a, b, c, d, e, etc.)"
+    },
+    {
+      "value": "lower-greek",
+      "function": "The marker is lower-greek"
+    },
+    {
+      "value": "lower-latin",
+      "function": "The marker is lower-latin (a, b, c, d, e, etc.)"
+    },
+    {
+      "value": "lower-roman",
+      "function": "The marker is lower-roman (i, ii, iii, iv, v, etc.)"
+    },
+    {
+      "value": "none",
+      "function": "No marker is shown"
+    },
+    {
+      "value": "square",
+      "function": "The marker is a square"
+    },
+    {
+      "value": "upper-alpha",
+      "function": "The marker is upper-alpha (A, B, C, D, E, etc.)"
+    },
+    {
+      "value": "upper-greek",
+      "function": "The marker is upper-greek"
+    },
+    {
+      "value": "upper-latin",
+      "function": "The marker is upper-latin (A, B, C, D, E, etc.)"
+    },
+    {
+      "value": "upper-roman",
+      "function": "The marker is upper-roman (I, II, III, IV, V, etc.)"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 24,
+  "shorthandFor": [],
+  "partOf": [
+    "list-style"
+  ]
+}

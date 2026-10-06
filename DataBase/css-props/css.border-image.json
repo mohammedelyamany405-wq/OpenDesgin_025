@@ -1,0 +1,47 @@
+{
+  "property": "border-image",
+  "page": "https://www.w3schools.com/cssref/css3_pr_border-image.php",
+  "function": "The border-image property allows you to specify an image to be used as the border around an element.",
+  "category": "border",
+  "syntax": "border-image: source slice width outset repeat|initial|inherit;",
+  "defaults": {
+    "Default value": "none 100% 1 0 stretch",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.borderImage=\"url(border.png) 30 round\" Try it"
+  },
+  "values": [
+    {
+      "value": "border-image-source",
+      "function": "The path to the image to be used as a border"
+    },
+    {
+      "value": "border-image-slice",
+      "function": "How to slice the border image"
+    },
+    {
+      "value": "border-image-width",
+      "function": "The width of the border image"
+    },
+    {
+      "value": "border-image-outset",
+      "function": "The amount by which the border image area extends beyond the border box"
+    },
+    {
+      "value": "border-image-repeat",
+      "function": "Whether the border image should be repeated, rounded or stretched"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 7,
+  "shorthandFor": [],
+  "partOf": []
+}

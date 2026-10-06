@@ -1,0 +1,25 @@
+{
+  "property": "@font-palette-values",
+  "page": "https://www.w3schools.com/cssref/atrule_font-palette-values.php",
+  "function": "The CSS @font-palette-values rule is used to customize the default values of a font-palette.",
+  "category": "at-rules",
+  "syntax": "@font-palette-values --identifier { one or more descriptors }",
+  "defaults": {},
+  "values": [
+    {
+      "value": "font-family",
+      "function": "Defines the font family name this palette can be applied to"
+    },
+    {
+      "value": "base-palette",
+      "function": "Defines the name or index of the base palette to use"
+    },
+    {
+      "value": "override-colors",
+      "function": "Defines the colors in the base palette to override"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": []
+}

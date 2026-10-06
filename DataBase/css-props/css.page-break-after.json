@@ -1,0 +1,47 @@
+{
+  "property": "page-break-after",
+  "page": "https://www.w3schools.com/cssref/pr_print_pageba.php",
+  "function": "The page-break-after property adds a page-break after a specified element.",
+  "category": "print",
+  "syntax": "page-break-after: auto|always|avoid|left|right|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.pageBreakAfter=\"always\""
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default. Automatic page-break"
+    },
+    {
+      "value": "always",
+      "function": "Always insert a page-break after the element"
+    },
+    {
+      "value": "avoid",
+      "function": "Avoid a page-break after the element (if possible)"
+    },
+    {
+      "value": "left",
+      "function": "Insert page-break after the element so that the next page is formatted as a left page"
+    },
+    {
+      "value": "right",
+      "function": "Insert page-break after the element so that the next page is formatted as a right page"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 7,
+  "shorthandFor": [],
+  "partOf": []
+}

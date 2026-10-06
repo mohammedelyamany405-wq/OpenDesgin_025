@@ -1,0 +1,35 @@
+{
+  "property": "box-sizing",
+  "page": "https://www.w3schools.com/cssref/css3_pr_box-sizing.php",
+  "function": "The box-sizing property defines how the width and height of an element are calculated: should they include padding and borders, or not.",
+  "category": "box",
+  "syntax": "box-sizing: content-box|border-box|initial|inherit;",
+  "defaults": {
+    "Default value": "content-box",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.boxSizing=\"border-box\" Try it"
+  },
+  "values": [
+    {
+      "value": "content-box",
+      "function": "Default. The width and height properties (and min/max properties) includes only the content. Border and padding are not included"
+    },
+    {
+      "value": "border-box",
+      "function": "The width and height properties (and min/max properties) includes content, padding and border"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

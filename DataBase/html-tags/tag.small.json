@@ -1,0 +1,14 @@
+{
+  "tag": "small",
+  "page": "https://www.w3schools.com/tags/tag_small.asp",
+  "function": "The <small> tag defines smaller text (like copyright and other side-comments).",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

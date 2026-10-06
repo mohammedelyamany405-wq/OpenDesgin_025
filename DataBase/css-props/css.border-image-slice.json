@@ -1,0 +1,39 @@
+{
+  "property": "border-image-slice",
+  "page": "https://www.w3schools.com/cssref/css3_pr_border-image-slice.php",
+  "function": "The border-image-slice property specifies how to slice the image specified by border-image-source. The image is always sliced into nine sections: four corners, four edges and the middle.",
+  "category": "border",
+  "syntax": "border-image-slice: number|%|fill|initial|inherit;",
+  "defaults": {
+    "Default value": "100%",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.borderImageSlice=\"30%\" Try it"
+  },
+  "values": [
+    {
+      "value": "number",
+      "function": "The number(s) represent pixels for raster images or coordinates for vector images"
+    },
+    {
+      "value": "%",
+      "function": "Percentages are relative to the height or width of the image"
+    },
+    {
+      "value": "fill",
+      "function": "Causes the middle part of the image to be displayed"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,29 @@
+{
+  "tag": "body",
+  "page": "https://www.w3schools.com/tags/tag_body.asp",
+  "function": "The <body> tag defines the document's body.",
+  "category": "document",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "html"
+    ],
+    "children": [
+      "header",
+      "main",
+      "footer",
+      "section",
+      "article",
+      "nav",
+      "aside",
+      "div",
+      "p",
+      "form",
+      "table",
+      "script"
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "property": "mask-image",
+  "page": "https://www.w3schools.com/cssref/css3_pr_mask-image.php",
+  "function": "The mask-image property specifies an image to be used as a mask layer for an element.",
+  "category": "background",
+  "syntax": "mask-image: none|image|url()|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS Masking Module Level 1",
+    "JavaScript syntax": "object.style.maskImage=\"url(star.svg)\""
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "This is default"
+    },
+    {
+      "value": "image",
+      "function": "An image to use as the mask layer"
+    },
+    {
+      "value": "url()",
+      "function": "A URL reference to an image or an SVG <mask> element"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,45 @@
+{
+  "property": "flex-direction",
+  "page": "https://www.w3schools.com/cssref/css3_pr_flex-direction.php",
+  "function": "The flex-direction property specifies the direction of the flexible items.",
+  "category": "flexbox",
+  "syntax": "flex-direction: row|row-reverse|column|column-reverse|initial|inherit;",
+  "defaults": {
+    "Default value": "row",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.flexDirection=\"column-reverse\" Try it"
+  },
+  "values": [
+    {
+      "value": "row",
+      "function": "Default value. The flexible items are displayed horizontally, as a row"
+    },
+    {
+      "value": "row-reverse",
+      "function": "Same as row, but in reverse order"
+    },
+    {
+      "value": "column",
+      "function": "The flexible items are displayed vertically, as a column"
+    },
+    {
+      "value": "column-reverse",
+      "function": "Same as column, but in reverse order"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [],
+  "partOf": [
+    "flex-flow"
+  ]
+}

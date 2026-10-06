@@ -1,0 +1,32 @@
+{
+  "tag": "ol",
+  "page": "https://www.w3schools.com/tags/tag_ol.asp",
+  "function": "Two different ordered lists (the first list starts at 1, and the second starts at 50).",
+  "category": "text",
+  "attributes": [
+    {
+      "name": "reversed",
+      "values": "reversed",
+      "function": "Specifies that the list order should be reversed (9,8,7...)"
+    },
+    {
+      "name": "start",
+      "values": "number",
+      "function": "Specifies the start value of an ordered list"
+    },
+    {
+      "name": "type",
+      "values": "1 | A | a | I | i",
+      "function": "Specifies the kind of marker to use in the list"
+    }
+  ],
+  "attributeCount": 3,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": [
+      "li"
+    ]
+  }
+}

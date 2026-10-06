@@ -1,0 +1,59 @@
+{
+  "property": "grid",
+  "page": "https://www.w3schools.com/cssref/pr_grid.php",
+  "function": "The grid property is a shorthand property for:",
+  "category": "grid",
+  "syntax": "grid: none|grid-template-rows / grid-template-columns|grid-template-areas|grid-template-rows / [grid-auto-flow] grid-auto-columns|[grid-auto-flow] grid-auto-rows / grid-template-columns|initial|inherit;",
+  "defaults": {
+    "Default value": "none none none auto auto row",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS Grid Layout Module Level 1",
+    "JavaScript syntax": "object.style.grid=\"250px / auto auto auto\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "Default value. No specific sizing of the columns or rows"
+    },
+    {
+      "value": "grid-template-rows / grid-template-columns",
+      "function": "Specifies the size(s) of the columns and rows"
+    },
+    {
+      "value": "grid-template-areas",
+      "function": "Specifies the grid layout using named items"
+    },
+    {
+      "value": "grid-template-rows / grid-auto-columns",
+      "function": "Specifies the size (height) of the rows, and the auto size of the columns"
+    },
+    {
+      "value": "grid-auto-rows / grid-template-columns",
+      "function": "Specifies the auto size of the rows, and sets the grid-template-columns property"
+    },
+    {
+      "value": "grid-template-rows / grid-auto-flow grid-auto-columns",
+      "function": "Specifies the size (height) of the rows, and how to place auto-placed items, and the auto size of the columns"
+    },
+    {
+      "value": "grid-auto-flow grid-auto-rows / grid-template-columns",
+      "function": "Specifies how to place auto-placed items, and the auto size of the rows, and sets the grid-template-columns property"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 9,
+  "shorthandFor": [
+    "grid-template-rows",
+    "grid-template-columns",
+    "grid-template-areas"
+  ],
+  "partOf": []
+}

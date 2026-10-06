@@ -1,0 +1,55 @@
+{
+  "property": "grid-auto-columns",
+  "page": "https://www.w3schools.com/cssref/pr_grid-auto-columns.php",
+  "function": "The grid-auto-columns property sets a size for the columns in a grid container.",
+  "category": "grid",
+  "syntax": "grid-auto-columns: auto|max-content|min-content|minmax()|fit-content()|length|%|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS Grid Layout Module Level 1",
+    "JavaScript syntax": "object.style.gridAutoColumns=\"120px\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default value. The size of the columns is determined by the size of the container"
+    },
+    {
+      "value": "max-content",
+      "function": "Sets the size of each column depending on the largest item in the column"
+    },
+    {
+      "value": "min-content",
+      "function": "Sets the size of each column depending on the smallest item in the column"
+    },
+    {
+      "value": "minmax()",
+      "function": "Defines a size range greater than or equal to a min value and less than or equal to a max value"
+    },
+    {
+      "value": "fit-content()",
+      "function": "Sets the size of the columns in length or %, and works like the column will use the available space, but it will never expand the max-content size"
+    },
+    {
+      "value": "length",
+      "function": "Sets the size of the columns, by using a legal length value. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Sets the size of the columns, by using a percent value"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 9,
+  "shorthandFor": [],
+  "partOf": []
+}

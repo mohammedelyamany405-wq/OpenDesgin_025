@@ -1,0 +1,30 @@
+{
+  "property": "initial-letter",
+  "page": "https://www.w3schools.com/cssref/css3_pr_initial-letter.php",
+  "function": "The initial-letter property specifies the size of the initial-letter and optionally the number of lines the initial letter should sink (down in the text).",
+  "category": "text",
+  "syntax": "initial-letter: normal|number|integer;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3"
+  },
+  "values": [
+    {
+      "value": "normal",
+      "function": "Default. No effect. Text behaves as normal"
+    },
+    {
+      "value": "number",
+      "function": "Sets the size of the initial letter (how many lines the initial letter should span)"
+    },
+    {
+      "value": "integer",
+      "function": "Optional. Sets the number of lines the initial letter should sink (in the text)"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": []
+}

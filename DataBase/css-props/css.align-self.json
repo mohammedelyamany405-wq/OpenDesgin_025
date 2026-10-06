@@ -1,0 +1,53 @@
+{
+  "property": "align-self",
+  "page": "https://www.w3schools.com/cssref/css3_pr_align-self.php",
+  "function": "The align-self property specifies the alignment in the block direction for the selected item inside a flexbox or grid container.",
+  "category": "flexbox",
+  "syntax": "align-self: auto|stretch|center|flex-start|flex-end|baseline|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.alignSelf=\"center\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default. The element inherits its parent container's align-items property, or \"stretch\" if it has no parent container"
+    },
+    {
+      "value": "stretch",
+      "function": "The element is positioned to fit the container"
+    },
+    {
+      "value": "center",
+      "function": "The element is positioned at the center of the container"
+    },
+    {
+      "value": "flex-start",
+      "function": "The element is positioned at the beginning of the container"
+    },
+    {
+      "value": "flex-end",
+      "function": "The element is positioned at the end of the container"
+    },
+    {
+      "value": "baseline",
+      "function": "The element is positioned at the baseline of the container"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 8,
+  "shorthandFor": [],
+  "partOf": [
+    "place-self"
+  ]
+}

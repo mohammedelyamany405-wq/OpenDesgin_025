@@ -1,0 +1,23 @@
+{
+  "tag": "head",
+  "page": "https://www.w3schools.com/tags/tag_head.asp",
+  "function": "A simple HTML document, with a <title> tag inside the head section.",
+  "category": "document",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "html"
+    ],
+    "children": [
+      "title",
+      "base",
+      "link",
+      "meta",
+      "style",
+      "script"
+    ]
+  }
+}

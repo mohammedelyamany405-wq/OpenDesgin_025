@@ -1,0 +1,41 @@
+{
+  "property": "margin-bottom",
+  "page": "https://www.w3schools.com/cssref/pr_margin-bottom.php",
+  "function": "The margin-bottom property sets the bottom margin of an element.",
+  "category": "box",
+  "syntax": "margin-bottom: length|auto|initial|inherit;",
+  "defaults": {
+    "Default value": "0",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.marginBottom=\"100px\" Try it"
+  },
+  "values": [
+    {
+      "value": "length",
+      "function": "Specifies a fixed bottom margin in px, cm, em, etc. Default value is 0. Negative values are allowed. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Specifies a bottom margin in percent of the width of the containing element"
+    },
+    {
+      "value": "auto",
+      "function": "The browser calculates a bottom margin"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": [
+    "margin"
+  ]
+}

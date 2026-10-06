@@ -1,0 +1,47 @@
+{
+  "property": "image-rendering",
+  "page": "https://www.w3schools.com/cssref/css3_pr_image-rendering.php",
+  "function": "The image-rendering property specifies the type of algorithm to be used for image scaling.",
+  "category": "background",
+  "syntax": "image-rendering: auto|smooth|high-quality|crisp-edges|pixelated|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.imageRendering=\"pixelated\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Let the browser choose the scaling algorithm. This is default"
+    },
+    {
+      "value": "smooth",
+      "function": "Use an algorithm that smooth out the colors in the image"
+    },
+    {
+      "value": "high-quality",
+      "function": "Same as smooth, but with a preference for higher-quality scaling"
+    },
+    {
+      "value": "crisp-edges",
+      "function": "Use an algorithm that will preserve the contrast and edges in the image"
+    },
+    {
+      "value": "pixelated",
+      "function": "If the image is scaled up, the nearest-neighbor algorithm is used, so the image will appear as being composed of large pixels. If the image is scaled down, it will be the same as auto"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 7,
+  "shorthandFor": [],
+  "partOf": []
+}

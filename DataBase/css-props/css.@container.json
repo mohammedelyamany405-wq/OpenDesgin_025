@@ -1,0 +1,21 @@
+{
+  "property": "@container",
+  "page": "https://www.w3schools.com/cssref/atrule_container.php",
+  "function": "The CSS @container rule is used to define styles for other elements depending on the container's size or styles.",
+  "category": "at-rules",
+  "syntax": "@container containername (containerquery) { css declarations }",
+  "defaults": {},
+  "values": [
+    {
+      "value": "containername",
+      "function": "Optional. The name of the container"
+    },
+    {
+      "value": "containerquery",
+      "function": "Required. The condition to evaluate against. Styles are applied if the condition is true. The following descriptors can be used within containerquery: aspect-ratio block-size height inline-size orientation width"
+    }
+  ],
+  "valueCount": 2,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,40 @@
+{
+  "property": "padding",
+  "page": "https://www.w3schools.com/cssref/pr_padding.php",
+  "function": "An element's padding is the space between its content and its border.",
+  "category": "box",
+  "syntax": "padding: length|initial|inherit;",
+  "defaults": {
+    "Default value": "0",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.padding=\"100px 20px\" Try it"
+  },
+  "values": [
+    {
+      "value": "length",
+      "function": "Specifies the padding in px, pt, cm, etc. Default value is 0. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Specifies the padding in percent of the width of the containing element"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [
+    "padding-top",
+    "padding-right",
+    "padding-bottom",
+    "padding-left"
+  ],
+  "partOf": []
+}

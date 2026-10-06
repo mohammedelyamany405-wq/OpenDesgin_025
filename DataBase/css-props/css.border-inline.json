@@ -1,0 +1,39 @@
+{
+  "property": "border-inline",
+  "page": "https://www.w3schools.com/cssref/css_pr_border-inline.php",
+  "function": "The border-inline property is a shorthand property for these properties:",
+  "category": "border",
+  "syntax": "border-inline: border-inline-width border-inline-style border-inline-color |initial|inherit;",
+  "defaults": {
+    "Default value": "medium none color",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.borderInline=\"dashed hotpink 10px\" Try it"
+  },
+  "values": [
+    {
+      "value": "border-inline-width",
+      "function": "Specifies the width of the borders in the inline direction. Default value is \"medium\""
+    },
+    {
+      "value": "border-inline-style",
+      "function": "Specifies the style of the borders in the inline direction. Default value is \"none\""
+    },
+    {
+      "value": "border-inline-color",
+      "function": "Specifies the color of the borders in the inline direction. Default value is the color of the text"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

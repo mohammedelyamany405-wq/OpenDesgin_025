@@ -1,0 +1,59 @@
+{
+  "property": "background-blend-mode",
+  "page": "https://www.w3schools.com/cssref/pr_background-blend-mode.php",
+  "function": "The background-blend-mode property defines the blending mode of each background layer (color and/or image).",
+  "category": "background",
+  "syntax": "background-blend-mode: normal|multiply|screen|overlay|darken|lighten|color-dodge|saturation|color|luminosity;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.backgroundBlendMode=\"screen\""
+  },
+  "values": [
+    {
+      "value": "normal",
+      "function": "This is default. Sets the blending mode to normal"
+    },
+    {
+      "value": "multiply",
+      "function": "Sets the blending mode to multiply"
+    },
+    {
+      "value": "screen",
+      "function": "Sets the blending mode to screen"
+    },
+    {
+      "value": "overlay",
+      "function": "Sets the blending mode to overlay"
+    },
+    {
+      "value": "darken",
+      "function": "Sets the blending mode to darken"
+    },
+    {
+      "value": "lighten",
+      "function": "Sets the blending mode to lighten"
+    },
+    {
+      "value": "color-dodge",
+      "function": "Sets the blending mode to color-dodge"
+    },
+    {
+      "value": "saturation",
+      "function": "Sets the blending mode to saturation"
+    },
+    {
+      "value": "color",
+      "function": "Sets the blending mode to color"
+    },
+    {
+      "value": "luminosity",
+      "function": "Sets the blending mode to luminosity"
+    }
+  ],
+  "valueCount": 10,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,107 @@
+import type { Editor, EditorState } from '@open-pencil/core/editor'
+import { browserHTMLToSceneGraph } from '@open-pencil/dom-css/browser'
+
+import { describeDiagnosticError, recordDocumentFailure } from '@/app/diagnostics'
+import { yieldToUI } from '@/app/document/io/browser'
+import { applyImportedDocument } from '@/app/document/io/imported-document'
+import { notificationMessages } from '@/app/i18n/notifications'
+import { toast } from '@/app/shell/ui'
+
+type OpenDOMDocumentState = EditorState & {
+  documentName: string
+  loading: boolean
+}
+
+type OpenDOMFileOptions = {
+  editor: Editor
+  state: OpenDOMDocumentState
+  setDocumentSource: (
+    fileName: string,
+    sourceFormat: string,
+    handle?: FileSystemFileHandle,
+    path?: string
+  ) => void
+  fitCurrentPageToViewport: () => Promise<void>
+}
+
+type DOMImportOptions = {
+  cssText?: string
+  handle?: FileSystemFileHandle
+  path?: string
+}
+
+type DOMTextImportOptions = {
+  cssText?: string
+  documentName?: string
+}
+
+function errorDetail(error: unknown): string {
+  return error instanceof Error ? error.message : String(error)
+}
+
+function documentNameFor(file: File): string {
+  return file.name.replace(/\.(html?|xhtml)$/i, '')
+}
+
+export function createDOMOpenActions({
+  editor,
+  state,
+  setDocumentSource,
+  fitCurrentPageToViewport
+}: OpenDOMFileOptions) {
+  async function applyDOMText(html: string, options: DOMTextImportOptions) {
+    await yieldToUI()
+    const pageName = options.documentName ?? 'DOM Import'
+    const graph = await browserHTMLToSceneGraph(html, { cssText: options.cssText, pageName })
+    await yieldToUI()
+    await applyImportedDocument(editor, graph)
+    state.documentName = pageName
+    await fitCurrentPageToViewport()
+    editor.requestRender()
+    return pageName
+  }
+
+  async function importDOMText(html: string, options: DOMTextImportOptions = {}) {
+    try {
+      state.loading = true
+      const pageName = await applyDOMText(html, options)
+      setDocumentSource(`${pageName}.html`, 'html')
+      toast.info(notificationMessages.get().importedDOMCSS)
+    } catch (e) {
+      recordDocumentFailure({
+        operation: 'import',
+        format: 'dom-css',
+        ...describeDiagnosticError(e),
+        retryable: describeDiagnosticError(e).retryable
+      })
+      toast.error(notificationMessages.get().importDOMCSSFailed({ error: errorDetail(e) }))
+      throw e
+    } finally {
+      state.loading = false
+    }
+  }
+
+  async function openDOMFile(file: File, options: DOMImportOptions = {}) {
+    try {
+      state.loading = true
+      const html = await file.text()
+      await applyDOMText(html, {
+        cssText: options.cssText,
+        documentName: documentNameFor(file)
+      })
+      setDocumentSource(file.name, 'html', options.handle, options.path)
+    } catch (e) {
+      recordDocumentFailure({
+        operation: 'open',
+        format: 'dom-css',
+        ...describeDiagnosticError(e),
+        retryable: describeDiagnosticError(e).retryable
+      })
+      toast.error(notificationMessages.get().openDOMCSSFailed({ error: errorDetail(e) }))
+    } finally {
+      state.loading = false
+    }
+  }
+
+  return { openDOMFile, importDOMText }
+}

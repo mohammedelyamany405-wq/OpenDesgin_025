@@ -1,0 +1,33 @@
+{
+  "property": "flex-shrink",
+  "page": "https://www.w3schools.com/cssref/css3_pr_flex-shrink.php",
+  "function": "The flex-shrink property specifies how the item will shrink relative to the rest of the flexible items inside the same container.",
+  "category": "flexbox",
+  "syntax": "flex-shrink: number|initial|inherit;",
+  "defaults": {
+    "Default value": "1",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.flexShrink=\"5\" Try it"
+  },
+  "values": [
+    {
+      "value": "number",
+      "function": "A number specifying how much the item will shrink relative to the rest of the flexible items. Default value is 1"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": [
+    "flex"
+  ]
+}

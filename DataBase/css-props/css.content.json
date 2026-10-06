@@ -1,0 +1,67 @@
+{
+  "property": "content",
+  "page": "https://www.w3schools.com/cssref/pr_gen_content.php",
+  "function": "The content property is used with the ::before and ::after pseudo-elements, to insert generated content.",
+  "category": "text",
+  "syntax": "content: normal|none|counter|attr|string|open-quote|close-quote|no-open-quote|no-close-quote|url|initial|inherit;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS2",
+    "JavaScript syntax": "You can't give an element a pseudo-class by using JavaScript,but there are other ways to get the same result: Try it"
+  },
+  "values": [
+    {
+      "value": "normal",
+      "function": "Default value. Sets the content, if specified, to normal, which default is \"none\" (which is nothing)"
+    },
+    {
+      "value": "none",
+      "function": "Sets the content, if specified, to nothing"
+    },
+    {
+      "value": "counter",
+      "function": "Sets the content as a counter"
+    },
+    {
+      "value": "attr(attribute)",
+      "function": "Sets the content as one of the selector's attribute"
+    },
+    {
+      "value": "string",
+      "function": "Sets the content to the text you specify"
+    },
+    {
+      "value": "open-quote",
+      "function": "Sets the content to be an opening quote"
+    },
+    {
+      "value": "close-quote",
+      "function": "Sets the content to be a closing quote"
+    },
+    {
+      "value": "no-open-quote",
+      "function": "Removes the opening quote from the content, if specified"
+    },
+    {
+      "value": "no-close-quote",
+      "function": "Removes the closing quote from the content, if specified"
+    },
+    {
+      "value": "url(url)",
+      "function": "Sets the content to be some kind of media (an image, a sound, a video, etc.)"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 12,
+  "shorthandFor": [],
+  "partOf": []
+}

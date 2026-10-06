@@ -1,0 +1,42 @@
+{
+  "property": "color-scheme",
+  "page": "https://www.w3schools.com/cssref/css3_pr_color-scheme.php",
+  "function": "The color-scheme property indicates which operating system color scheme an element should render with.",
+  "category": "color",
+  "syntax": "color-scheme: normal|light|dark|only light|only dark|light dark;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "yes",
+    "Version": "CSS Color Adjustment Module Level 1",
+    "JavaScript syntax": ""
+  },
+  "values": [
+    {
+      "value": "normal",
+      "function": "The element can be rendered with the OS default color scheme"
+    },
+    {
+      "value": "light",
+      "function": "The element can be rendered with the OS light color scheme"
+    },
+    {
+      "value": "dark",
+      "function": "The element can be rendered with the OS dark color scheme"
+    },
+    {
+      "value": "only light",
+      "function": "The element should only be rendered with the OS light color scheme. Forbids the browser to override the color scheme for the element"
+    },
+    {
+      "value": "only dark",
+      "function": "The element should only be rendered with the OS dark color scheme. Forbids the browser to override the color scheme for the element"
+    },
+    {
+      "value": "light dark",
+      "function": "The element can be rendered with the OS light or dark color scheme (depends on the user's settings)"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [],
+  "partOf": []
+}

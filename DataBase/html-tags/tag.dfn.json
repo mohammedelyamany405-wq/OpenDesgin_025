@@ -1,0 +1,14 @@
+{
+  "tag": "dfn",
+  "page": "https://www.w3schools.com/tags/tag_dfn.asp",
+  "function": "The <dfn> tag stands for the \"definition element\", and it specifies a term that is going to be defined within the content.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

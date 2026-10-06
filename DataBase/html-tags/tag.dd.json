@@ -1,0 +1,16 @@
+{
+  "tag": "dd",
+  "page": "https://www.w3schools.com/tags/tag_dd.asp",
+  "function": "A description list, with terms and descriptions.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "dl"
+    ],
+    "children": []
+  }
+}

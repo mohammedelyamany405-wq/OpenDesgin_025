@@ -1,0 +1,27 @@
+{
+  "tag": "details",
+  "page": "https://www.w3schools.com/tags/tag_details.asp",
+  "function": "Specify details that the user can open and close on demand.",
+  "category": "interactive",
+  "attributes": [
+    {
+      "name": "open",
+      "values": "open",
+      "function": "Specifies that the details should be visible (open) to the user"
+    },
+    {
+      "name": "name",
+      "values": "groupname",
+      "function": "Specifies a group name - when using the same name for several <details> elements, the user can open only one dialog box at the time"
+    }
+  ],
+  "attributeCount": 2,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": [
+      "summary"
+    ]
+  }
+}

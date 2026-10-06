@@ -1,0 +1,43 @@
+{
+  "property": "border",
+  "page": "https://www.w3schools.com/cssref/pr_border.php",
+  "function": "The border property is a shorthand property for:",
+  "category": "border",
+  "syntax": "border: border-width border-style border-color|initial|inherit;",
+  "defaults": {
+    "Default value": "medium none color",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.border=\"3px solid blue\" Try it"
+  },
+  "values": [
+    {
+      "value": "border-width",
+      "function": "Specifies the width of the border. Default value is \"medium\""
+    },
+    {
+      "value": "border-style",
+      "function": "Specifies the style of the border. Default value is \"none\""
+    },
+    {
+      "value": "border-color",
+      "function": "Specifies the color of the border. Default value is the color of the text"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [
+    "border-width",
+    "border-style",
+    "border-color"
+  ],
+  "partOf": []
+}

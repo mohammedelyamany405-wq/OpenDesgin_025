@@ -1,0 +1,16 @@
+{
+  "tag": "title",
+  "page": "https://www.w3schools.com/tags/tag_title.asp",
+  "function": "The <title> tag defines the title of the document. The title must be text-only, and it is shown in the browser's title bar or in the page's tab.",
+  "category": "document",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "head"
+    ],
+    "children": []
+  }
+}

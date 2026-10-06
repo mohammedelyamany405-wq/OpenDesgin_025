@@ -1,0 +1,42 @@
+{
+  "property": "columns",
+  "page": "https://www.w3schools.com/cssref/css3_pr_columns.php",
+  "function": "The columns property is a shorthand property for:",
+  "category": "box",
+  "syntax": "columns: auto|column-width column-count|initial|inherit;",
+  "defaults": {
+    "Default value": "auto auto",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.columns=\"100px 3\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default value. Sets both the column-width and column-count to \"auto\""
+    },
+    {
+      "value": "column-width",
+      "function": "Defines the minimum width for each column"
+    },
+    {
+      "value": "column-count",
+      "function": "Defines the maximum number of columns"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [
+    "column-width",
+    "column-count"
+  ],
+  "partOf": []
+}

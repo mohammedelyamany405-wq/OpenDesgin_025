@@ -1,0 +1,42 @@
+{
+  "tag": "th",
+  "page": "https://www.w3schools.com/tags/tag_th.asp",
+  "function": "A simple HTML table with three rows, two header cells and four data cells.",
+  "category": "tables",
+  "attributes": [
+    {
+      "name": "abbr",
+      "values": "text",
+      "function": "Specifies an abbreviated version of the content in a header cell"
+    },
+    {
+      "name": "colspan",
+      "values": "number",
+      "function": "Specifies the number of columns a header cell should span"
+    },
+    {
+      "name": "headers",
+      "values": "header_id",
+      "function": "Specifies one or more header cells a cell is related to"
+    },
+    {
+      "name": "rowspan",
+      "values": "number",
+      "function": "Specifies the number of rows a header cell should span"
+    },
+    {
+      "name": "scope",
+      "values": "col | colgroup | row | rowgroup",
+      "function": "Specifies whether a header cell is a header for a column, row, or group of columns or rows"
+    }
+  ],
+  "attributeCount": 5,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "tr"
+    ],
+    "children": []
+  }
+}

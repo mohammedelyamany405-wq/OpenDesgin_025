@@ -1,0 +1,35 @@
+{
+  "property": "caret-color",
+  "page": "https://www.w3schools.com/cssref/css3_pr_caret-color.php",
+  "function": "The caret-color property specifies the color of the cursor (caret) in inputs, textareas, or any element that is editable.",
+  "category": "box",
+  "syntax": "caret-color: auto|color|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.caretColor=\"red\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default. Browsers uses the currentColor for the caret"
+    },
+    {
+      "value": "color",
+      "function": "Specifies a color to use for the caret. All legal color values can be used (rgb, hex, named-color, etc). For more information on legal values, read our CSS Colors Tutorial"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

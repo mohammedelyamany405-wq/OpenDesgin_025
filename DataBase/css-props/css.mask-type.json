@@ -1,0 +1,35 @@
+{
+  "property": "mask-type",
+  "page": "https://www.w3schools.com/cssref/css3_pr_mask-type.php",
+  "function": "The mask-type property specifies whether an SVG <mask> element is treated as a luminance mask or as an alpha mask.",
+  "category": "background",
+  "syntax": "mask-type: luminance|alpha|initial|inherit;",
+  "defaults": {
+    "Default value": "luminance",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS Masking Module Level 1",
+    "JavaScript syntax": "object.style.maskType=\"alpha\""
+  },
+  "values": [
+    {
+      "value": "luminance",
+      "function": "Treat the mask image as a luminance mask. This is default."
+    },
+    {
+      "value": "alpha",
+      "function": "Treat the mask image as an alpha mask"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

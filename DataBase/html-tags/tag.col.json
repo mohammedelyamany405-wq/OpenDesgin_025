@@ -1,0 +1,22 @@
+{
+  "tag": "col",
+  "page": "https://www.w3schools.com/tags/tag_col.asp",
+  "function": "Set the background color of the three columns with the <colgroup> and <col> tags.",
+  "category": "tables",
+  "attributes": [
+    {
+      "name": "span",
+      "values": "number",
+      "function": "Specifies the number of columns a <col> element should span"
+    }
+  ],
+  "attributeCount": 1,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "colgroup"
+    ],
+    "children": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "tag": "var",
+  "page": "https://www.w3schools.com/tags/tag_var.asp",
+  "function": "Define some text as variables in a document.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "tag": "header",
+  "page": "https://www.w3schools.com/tags/tag_header.asp",
+  "function": "The <header> element represents a container for introductory content or a set of navigational links.",
+  "category": "sectioning",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "body"
+    ],
+    "children": [
+      "nav",
+      "h1"
+    ]
+  }
+}

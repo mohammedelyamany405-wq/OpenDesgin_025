@@ -1,0 +1,50 @@
+{
+  "tag": "meter",
+  "page": "https://www.w3schools.com/tags/tag_meter.asp",
+  "function": "Use the meter element to display a scalar value within a given range (a gauge).",
+  "category": "forms",
+  "attributes": [
+    {
+      "name": "form",
+      "values": "form_id",
+      "function": "Specifies which form the <meter> element belongs to"
+    },
+    {
+      "name": "high",
+      "values": "number",
+      "function": "Specifies the range that is considered to be a high value"
+    },
+    {
+      "name": "low",
+      "values": "number",
+      "function": "Specifies the range that is considered to be a low value"
+    },
+    {
+      "name": "max",
+      "values": "number",
+      "function": "Specifies the maximum value of the range"
+    },
+    {
+      "name": "min",
+      "values": "number",
+      "function": "Specifies the minimum value of the range. Default value is 0"
+    },
+    {
+      "name": "optimum",
+      "values": "number",
+      "function": "Specifies what value is the optimal value for the gauge"
+    },
+    {
+      "name": "value",
+      "values": "number",
+      "function": "Required. Specifies the current value of the gauge"
+    }
+  ],
+  "attributeCount": 7,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

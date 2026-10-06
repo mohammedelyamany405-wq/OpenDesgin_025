@@ -1,0 +1,51 @@
+{
+  "property": "offset-path",
+  "page": "https://www.w3schools.com/cssref/css_pr_offset-path.php",
+  "function": "The offset-path property creates a path for an animated element to follow.",
+  "category": "position",
+  "syntax": "offset-path: none|path()|ray()|url()|basic-shape|cord-box|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "Yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.offsetPath=\"path('M20,170 L100,20 L180,100 Z')\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "Default. The element's default offset-path property value"
+    },
+    {
+      "value": "path()",
+      "function": "Specify a path in SVG syntax. Learn about SVG paths"
+    },
+    {
+      "value": "ray()",
+      "function": "Specify a path with the CSS ray() function"
+    },
+    {
+      "value": "url()",
+      "function": "Specify a path by using the URL to an SVG file"
+    },
+    {
+      "value": "<basic-shape>",
+      "function": "Specify a path by defining a basic shape using CSS functions like inset(), circle(), ellipse() or polygon()"
+    },
+    {
+      "value": "<coord-box>",
+      "function": ""
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 8,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,14 @@
+{
+  "tag": "em",
+  "page": "https://www.w3schools.com/tags/tag_em.asp",
+  "function": "The <em> tag is used to define emphasized text. The content inside is typically displayed in italic.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "tag": "optgroup",
+  "page": "https://www.w3schools.com/tags/tag_optgroup.asp",
+  "function": "Group related options with <optgroup> tags.",
+  "category": "forms",
+  "attributes": [
+    {
+      "name": "disabled",
+      "values": "disabled",
+      "function": "Specifies that an option-group should be disabled"
+    },
+    {
+      "name": "label",
+      "values": "text",
+      "function": "Specifies a label for an option-group"
+    }
+  ],
+  "attributeCount": 2,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "select"
+    ],
+    "children": [
+      "option"
+    ]
+  }
+}

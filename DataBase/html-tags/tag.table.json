@@ -1,0 +1,23 @@
+{
+  "tag": "table",
+  "page": "https://www.w3schools.com/tags/tag_table.asp",
+  "function": "A simple HTML table, containing two columns and two rows.",
+  "category": "tables",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "body"
+    ],
+    "children": [
+      "caption",
+      "colgroup",
+      "thead",
+      "tbody",
+      "tfoot",
+      "tr"
+    ]
+  }
+}

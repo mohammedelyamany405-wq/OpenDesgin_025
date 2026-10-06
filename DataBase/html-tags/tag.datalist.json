@@ -1,0 +1,16 @@
+{
+  "tag": "datalist",
+  "page": "https://www.w3schools.com/tags/tag_datalist.asp",
+  "function": "A datalist with pre-defined options (connected to an <input> element).",
+  "category": "forms",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": [
+      "option"
+    ]
+  }
+}

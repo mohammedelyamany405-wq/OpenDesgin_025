@@ -1,0 +1,31 @@
+{
+  "property": "order",
+  "page": "https://www.w3schools.com/cssref/css3_pr_order.php",
+  "function": "The order property specifies the visual order of a flex item or grid item in a flex or grid container.",
+  "category": "flexbox",
+  "syntax": "order: number|initial|inherit;",
+  "defaults": {
+    "Default value": "0",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.order=\"2\" Try it"
+  },
+  "values": [
+    {
+      "value": "number",
+      "function": "Default value 0. Specifies the order for the flex item or grid item"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": []
+}

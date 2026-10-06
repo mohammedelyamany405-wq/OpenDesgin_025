@@ -1,0 +1,39 @@
+{
+  "property": "float",
+  "page": "https://www.w3schools.com/cssref/pr_class_float.php",
+  "function": "The float property specifies whether an element should float to the left, right, or not at all.",
+  "category": "position",
+  "syntax": "float: none|left|right|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.cssFloat=\"left\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "The element does not float, (will be displayed just where it occurs in the text). This is default"
+    },
+    {
+      "value": "left",
+      "function": "The element floats to the left of its container"
+    },
+    {
+      "value": "right",
+      "function": "The element floats the right of its container"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

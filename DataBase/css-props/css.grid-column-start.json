@@ -1,0 +1,34 @@
+{
+  "property": "grid-column-start",
+  "page": "https://www.w3schools.com/cssref/pr_grid-column-start.php",
+  "function": "The grid-column-start property defines on which column-line the item will start.",
+  "category": "grid",
+  "syntax": "grid-column-start: auto|span n|column-line;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS Grid Layout Module Level 1",
+    "JavaScript syntax": "object.style.gridColumnStart=\"3\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default value. The item will be placed following the flow"
+    },
+    {
+      "value": "span n",
+      "function": "Specifies the number of columns the item will span"
+    },
+    {
+      "value": "column-line",
+      "function": "Specifies on which column to start the display of the item"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": [
+    "grid-area",
+    "grid-column"
+  ]
+}

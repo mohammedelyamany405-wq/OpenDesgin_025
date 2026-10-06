@@ -1,0 +1,30 @@
+{
+  "property": "grid-row-start",
+  "page": "https://www.w3schools.com/cssref/pr_grid-row-start.php",
+  "function": "The grid-row-start property defines on which row-line the item will start.",
+  "category": "grid",
+  "syntax": "grid-row-start: auto|row-line;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS Grid Layout Module Level 1",
+    "JavaScript syntax": "object.style.gridRowStart=\"3\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default value. The item will be placed by following the flow."
+    },
+    {
+      "value": "row-line",
+      "function": "Specifies on which row to start the display of the item."
+    }
+  ],
+  "valueCount": 2,
+  "shorthandFor": [],
+  "partOf": [
+    "grid-area",
+    "grid-row"
+  ]
+}

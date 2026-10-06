@@ -1,0 +1,51 @@
+{
+  "property": "mask-repeat",
+  "page": "https://www.w3schools.com/cssref/css3_pr_mask-repeat.php",
+  "function": "The mask-repeat property sets if/how a mask image will be repeated.",
+  "category": "background",
+  "syntax": "mask-repeat: repeat|repeat-x|repeat-y|space|round|no-repeat|initial|inherit;",
+  "defaults": {
+    "Default value": "repeat",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS Masking Module Level 1",
+    "JavaScript syntax": "object.style.maskRepeat=\"no-repeat\""
+  },
+  "values": [
+    {
+      "value": "repeat",
+      "function": "The mask image is repeated both vertically and horizontally. The last image will be clipped if it does not fit. This is default"
+    },
+    {
+      "value": "repeat-x",
+      "function": "The mask image is repeated only horizontally"
+    },
+    {
+      "value": "repeat-y",
+      "function": "The mask image is repeated only vertically"
+    },
+    {
+      "value": "space",
+      "function": "The mask image is repeated as much as possible without clipping. The first and last image is pinned to either side of the element, and whitespace is distributed evenly between the images"
+    },
+    {
+      "value": "round",
+      "function": "The mask image is repeated and squished or stretched to fill the space (no gaps)"
+    },
+    {
+      "value": "no-repeat",
+      "function": "The mask image is not repeated. The image will only be shown once"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 8,
+  "shorthandFor": [],
+  "partOf": []
+}

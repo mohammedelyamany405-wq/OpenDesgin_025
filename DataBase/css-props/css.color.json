@@ -1,0 +1,31 @@
+{
+  "property": "color",
+  "page": "https://www.w3schools.com/cssref/pr_text_color.php",
+  "function": "The color property specifies the color of text.",
+  "category": "color",
+  "syntax": "color: color|initial|inherit;",
+  "defaults": {
+    "Default value": "not specified",
+    "Inherited": "yes",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.color=\"#0000FF\" Try it"
+  },
+  "values": [
+    {
+      "value": "color",
+      "function": "Specifies the text color. Look at CSS Color Values for a complete list of possible color values."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": []
+}

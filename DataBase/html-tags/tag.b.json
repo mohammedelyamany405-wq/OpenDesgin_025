@@ -1,0 +1,14 @@
+{
+  "tag": "b",
+  "page": "https://www.w3schools.com/tags/tag_b.asp",
+  "function": "Make some text bold (without marking it as important).",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

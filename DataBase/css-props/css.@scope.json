@@ -1,0 +1,12 @@
+{
+  "property": "@scope",
+  "page": "https://www.w3schools.com/cssref/atrule_scope.php",
+  "function": "The CSS @scope rule allows you to select elements in specific DOM subtrees.",
+  "category": "at-rules",
+  "syntax": "@scope (scope root) { rulesets } or /* donut scope */ @scope (scope root) to (scope limit) { rulesets }",
+  "defaults": {},
+  "values": [],
+  "valueCount": 0,
+  "shorthandFor": [],
+  "partOf": []
+}

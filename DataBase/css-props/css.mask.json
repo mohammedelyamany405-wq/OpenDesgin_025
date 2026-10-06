@@ -1,0 +1,59 @@
+{
+  "property": "mask",
+  "page": "https://www.w3schools.com/cssref/css3_pr_mask.php",
+  "function": "The mask property is used to hide an element (partially or fully) by masking or clipping the image at specific points:",
+  "category": "background",
+  "syntax": "mask-image: mask-image mask-mode mask-repeat mask-position mask-clip mask-origin mask-size mask-composite|initial|inherit;",
+  "defaults": {
+    "Default value": "none match-source repeat 0% 0% border-box border-box auto add",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS Masking Module Level 1",
+    "JavaScript syntax": "object.style.mask=\"url(star.svg)\""
+  },
+  "values": [
+    {
+      "value": "mask-image",
+      "function": "Specifies an image to be used as a mask layer for an element. Default value is none"
+    },
+    {
+      "value": "mask-mode",
+      "function": "Specifies whether the mask layer image should be treated as a luminance mask or as an alpha mask. Default value is match-source"
+    },
+    {
+      "value": "mask-repeat",
+      "function": "Sets if/how a mask image will be repeated. Default value is repeat"
+    },
+    {
+      "value": "mask-position",
+      "function": "Sets the starting position of a mask image (relative to the mask position area). Default value is 0% 0%"
+    },
+    {
+      "value": "mask-clip",
+      "function": "Specifies which area is affected by a mask image. Default value is border-box"
+    },
+    {
+      "value": "mask-origin",
+      "function": "Specifies the origin position (the mask position area) of a mask layer image. Default value is border- box"
+    },
+    {
+      "value": "mask-size",
+      "function": "Specifies the size of the mask layer image. Default value is auto"
+    },
+    {
+      "value": "mask-composite",
+      "function": "Specifies a compositing operation used on the current mask layer with the mask layers below it. Default value is add"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 10,
+  "shorthandFor": [],
+  "partOf": []
+}

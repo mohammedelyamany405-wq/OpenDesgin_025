@@ -1,0 +1,65 @@
+{
+  "property": "animation-timing-function",
+  "page": "https://www.w3schools.com/cssref/css3_pr_animation-timing-function.php",
+  "function": "The animation-timing-function specifies the speed curve of an animation.",
+  "category": "animation",
+  "syntax": "animation-timing-function: linear|ease|ease-in|ease-out|ease-in-out|step-start|step-end|steps(int,start|end)|cubic-bezier(n,n,n,n)|initial|inherit;",
+  "defaults": {
+    "Default value": "ease",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.animationTimingFunction=\"linear\" Try it"
+  },
+  "values": [
+    {
+      "value": "linear",
+      "function": "The animation has the same speed from start to end"
+    },
+    {
+      "value": "ease",
+      "function": "Default value. The animation has a slow start, then fast, before it ends slowly"
+    },
+    {
+      "value": "ease-in",
+      "function": "The animation has a slow start"
+    },
+    {
+      "value": "ease-out",
+      "function": "The animation has a slow end"
+    },
+    {
+      "value": "ease-in-out",
+      "function": "The animation has both a slow start and a slow end"
+    },
+    {
+      "value": "step-start",
+      "function": "Equivalent to steps(1, start)"
+    },
+    {
+      "value": "step-end",
+      "function": "Equivalent to steps(1, end)"
+    },
+    {
+      "value": "steps(int,step-position)",
+      "function": "Specifies a stepping function, with two parameters. The first parameter specifies the number of steps/intervals. The second parameter, specifies when the jump between values occurs"
+    },
+    {
+      "value": "cubic-bezier(n,n,n,n)",
+      "function": "Define your own values in the cubic-bezier function Possible values are numeric values from 0 to 1"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 11,
+  "shorthandFor": [],
+  "partOf": [
+    "animation"
+  ]
+}

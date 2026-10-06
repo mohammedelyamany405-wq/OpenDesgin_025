@@ -1,0 +1,45 @@
+{
+  "property": "outline-width",
+  "page": "https://www.w3schools.com/cssref/pr_outline-width.php",
+  "function": "An outline is a line that is drawn around elements, outside the borders, to make the element \"stand out\".",
+  "category": "border",
+  "syntax": "outline-width: medium|thin|thick|length|initial|inherit;",
+  "defaults": {
+    "Default value": "medium",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.outlineWidth=\"12px\" Try it"
+  },
+  "values": [
+    {
+      "value": "medium",
+      "function": "Specifies a medium outline. This is default"
+    },
+    {
+      "value": "thin",
+      "function": "Specifies a thin outline"
+    },
+    {
+      "value": "thick",
+      "function": "Specifies a thick outline"
+    },
+    {
+      "value": "length",
+      "function": "Allows you to define the thickness of the outline. Read about length units"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [],
+  "partOf": [
+    "outline"
+  ]
+}

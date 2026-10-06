@@ -1,0 +1,39 @@
+{
+  "property": "max-width",
+  "page": "https://www.w3schools.com/cssref/pr_dim_max-width.php",
+  "function": "The max-width property defines the maximum width of an element.",
+  "category": "box",
+  "syntax": "max-width: none|length|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.maxWidth=\"600px\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "No maximum width. This is default"
+    },
+    {
+      "value": "length",
+      "function": "Defines the maximum width in px, cm, etc. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Defines the maximum width in percent of the containing block"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

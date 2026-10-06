@@ -1,0 +1,20 @@
+{
+  "tag": "data",
+  "page": "https://www.w3schools.com/tags/tag_data.asp",
+  "function": "The following example displays product names but also associates each name with a product number.",
+  "category": "text",
+  "attributes": [
+    {
+      "name": "value",
+      "values": "machine-readable format",
+      "function": "Specifies the machine-readable translation of the content of the element"
+    }
+  ],
+  "attributeCount": 1,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

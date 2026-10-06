@@ -1,0 +1,37 @@
+{
+  "property": "border-top-left-radius",
+  "page": "https://www.w3schools.com/cssref/css3_pr_border-top-left-radius.php",
+  "function": "The border-top-left-radius property defines the radius of the top-left corner.",
+  "category": "border",
+  "syntax": "border-top-left-radius: length|% [length|%]|initial|inherit;",
+  "defaults": {
+    "Default value": "0",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.borderTopLeftRadius=\"25px\" Try it"
+  },
+  "values": [
+    {
+      "value": "length",
+      "function": "Defines the shape of the top-left corner. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Defines the shape of the top-left corner in %"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": [
+    "border-radius"
+  ]
+}

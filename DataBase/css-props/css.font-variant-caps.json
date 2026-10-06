@@ -1,0 +1,59 @@
+{
+  "property": "font-variant-caps",
+  "page": "https://www.w3schools.com/cssref/css3_pr_font-variant-caps.php",
+  "function": "The font-variant-caps property controls the usage of alternate glyphs for capital letters.",
+  "category": "text",
+  "syntax": "font-variant-caps: normal|small-caps|all-small-caps|petite-caps|all-petite-caps|unicase|titling-caps|initial|inherit|unset;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.fontVariantCaps=\"small-caps\""
+  },
+  "values": [
+    {
+      "value": "normal",
+      "function": "Deactivates the use of alternate glyphs"
+    },
+    {
+      "value": "small-caps",
+      "function": "Displays small capitals"
+    },
+    {
+      "value": "all-small-caps",
+      "function": "Displays small capitals for both upper and lowercase letters"
+    },
+    {
+      "value": "petite-caps",
+      "function": "Displays petite capitals"
+    },
+    {
+      "value": "all-petite-caps",
+      "function": "Displays petite capitals for both upper and lowercase letters"
+    },
+    {
+      "value": "unicase",
+      "function": "Displays a mix of small capitals for uppercase letters with normal lowercase letters"
+    },
+    {
+      "value": "titling-caps",
+      "function": "Displays titling capitals"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    },
+    {
+      "value": "unset",
+      "function": ""
+    }
+  ],
+  "valueCount": 10,
+  "shorthandFor": [],
+  "partOf": []
+}

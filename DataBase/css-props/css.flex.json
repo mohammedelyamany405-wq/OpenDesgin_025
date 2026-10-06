@@ -1,0 +1,51 @@
+{
+  "property": "flex",
+  "page": "https://www.w3schools.com/cssref/css3_pr_flex.php",
+  "function": "The flex property is a shorthand property for:",
+  "category": "flexbox",
+  "syntax": "flex: flex-grow flex-shrink flex-basis|auto|initial|inherit;",
+  "defaults": {
+    "Default value": "0 1 auto",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.flex=\"1\" Try it"
+  },
+  "values": [
+    {
+      "value": "flex-grow",
+      "function": "A number specifying how much the item will grow relative to the rest of the flexible items"
+    },
+    {
+      "value": "flex-shrink",
+      "function": "A number specifying how much the item will shrink relative to the rest of the flexible items"
+    },
+    {
+      "value": "flex-basis",
+      "function": "The length of the item. Legal values: \"auto\", \"inherit\", or a number followed by \"%\", \"px\", \"em\" or any other length unit"
+    },
+    {
+      "value": "auto",
+      "function": "Same as 1 1 auto."
+    },
+    {
+      "value": "initial",
+      "function": "Same as 0 1 auto. Read about initial"
+    },
+    {
+      "value": "none",
+      "function": "Same as 0 0 auto."
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 7,
+  "shorthandFor": [
+    "flex-grow",
+    "flex-shrink",
+    "flex-basis"
+  ],
+  "partOf": []
+}

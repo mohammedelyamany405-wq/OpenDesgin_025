@@ -1,0 +1,39 @@
+{
+  "property": "overscroll-behavior-block",
+  "page": "https://www.w3schools.com/cssref/css_pr_overscroll-behavior-block.php",
+  "function": "The overscroll-behavior-block property is used to turn off scroll chaining or overscroll affordance on an element when you try to scroll past the scroll boundary in the block direction.",
+  "category": "box",
+  "syntax": "overscroll-behavior-block: auto|contain|none|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.overscrollBehaviorBlock=\"none\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Allows scroll chaining and overscroll affordance behavior. This is default"
+    },
+    {
+      "value": "contain",
+      "function": "Allows overscroll affordance behavior, but not scroll chaining."
+    },
+    {
+      "value": "none",
+      "function": "Does not allow overscroll affordance or scroll chaining behavior."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,14 @@
+{
+  "tag": "code",
+  "page": "https://www.w3schools.com/tags/tag_code.asp",
+  "function": "Define some text as computer code in a document.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

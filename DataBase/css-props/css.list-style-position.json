@@ -1,0 +1,37 @@
+{
+  "property": "list-style-position",
+  "page": "https://www.w3schools.com/cssref/pr_list-style-position.php",
+  "function": "The list-style-position property specifies the position of the list-item markers (bullet points).",
+  "category": "text",
+  "syntax": "list-style-position: inside|outside|initial|inherit;",
+  "defaults": {
+    "Default value": "outside",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.listStylePosition=\"inside\" Try it"
+  },
+  "values": [
+    {
+      "value": "inside",
+      "function": "The bullet points will be inside the list item"
+    },
+    {
+      "value": "outside",
+      "function": "The bullet points will be outside the list item. This is default"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": [
+    "list-style"
+  ]
+}

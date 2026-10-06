@@ -1,0 +1,33 @@
+{
+  "property": "animation-duration",
+  "page": "https://www.w3schools.com/cssref/css3_pr_animation-duration.php",
+  "function": "The animation-duration property defines how long an animation should take to complete one cycle.",
+  "category": "animation",
+  "syntax": "animation-duration: time|initial|inherit;",
+  "defaults": {
+    "Default value": "0",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.animationDuration=\"3s\" Try it"
+  },
+  "values": [
+    {
+      "value": "time",
+      "function": "Specifies the length of time an animation should take to complete one cycle. This can be specified in seconds or milliseconds. Default value is 0, which means that no animation will occur"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": [
+    "animation"
+  ]
+}

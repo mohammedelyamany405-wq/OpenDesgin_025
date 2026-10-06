@@ -1,0 +1,39 @@
+{
+  "property": "offset-distance",
+  "page": "https://www.w3schools.com/cssref/css_pr_offset-distance.php",
+  "function": "The offset-distance property sets the distance of an element from the start of the path defined by the offset-path property.",
+  "category": "position",
+  "syntax": "offset-distance: auto|value|initial|inherit;",
+  "defaults": {
+    "Default value": "0",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.offsetDistance=\"200px\" Try it"
+  },
+  "values": [
+    {
+      "value": "0",
+      "function": "The element is placed at the start of its path. This is default."
+    },
+    {
+      "value": "length",
+      "function": "Specifies the elements distance from the start of its path in px, pt, cm, etc. Negative values are not allowed. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Specifies the distance in percent relative to the lenth of the path."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

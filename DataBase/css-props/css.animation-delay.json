@@ -1,0 +1,33 @@
+{
+  "property": "animation-delay",
+  "page": "https://www.w3schools.com/cssref/css3_pr_animation-delay.php",
+  "function": "The animation-delay property specifies a delay for the start of an animation.",
+  "category": "animation",
+  "syntax": "animation-delay: time|initial|inherit;",
+  "defaults": {
+    "Default value": "0s",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.animationDelay=\"1s\" Try it"
+  },
+  "values": [
+    {
+      "value": "time",
+      "function": "Optional. Defines the number of seconds (s) or milliseconds (ms) to wait before the animation will start. Default value is 0. Negative values are allowed. If you use negative values, the animation will start as if it had already been playing for N seconds/milliseconds."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": [
+    "animation"
+  ]
+}

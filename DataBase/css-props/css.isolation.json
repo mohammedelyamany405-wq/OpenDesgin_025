@@ -1,0 +1,35 @@
+{
+  "property": "isolation",
+  "page": "https://www.w3schools.com/cssref/css3_pr_isolation.php",
+  "function": "The isolation property defines whether an element must create a new stacking content.",
+  "category": "position",
+  "syntax": "isolation: auto|isolate|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.isolation=\"isolate\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default. A new stacking context is created only if one of the properties applied to the element requires it"
+    },
+    {
+      "value": "isolate",
+      "function": "A new stacking context must be created"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

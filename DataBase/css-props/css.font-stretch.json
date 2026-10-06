@@ -1,0 +1,63 @@
+{
+  "property": "font-stretch",
+  "page": "https://www.w3schools.com/cssref/css3_pr_font-stretch.php",
+  "function": "The font-stretch property allows you to make text narrower (condensed) or wider (expanded).",
+  "category": "text",
+  "syntax": "",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "yes",
+    "Animatable": "yes. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.fontStretch=\"expanded\""
+  },
+  "values": [
+    {
+      "value": "ultra-condensed",
+      "function": "Makes the text as narrow as it gets"
+    },
+    {
+      "value": "extra-condensed",
+      "function": "Makes the text narrower than condensed, but not as narrow as ultra-condensed"
+    },
+    {
+      "value": "condensed",
+      "function": "Makes the text narrower than semi-condensed, but not as narrow as extra-condensed"
+    },
+    {
+      "value": "semi-condensed",
+      "function": "Makes the text narrower than normal, but not as narrow as condensed"
+    },
+    {
+      "value": "normal",
+      "function": "Default value. No font stretching"
+    },
+    {
+      "value": "semi-expanded",
+      "function": "Makes the text wider than normal, but not as wide as expanded"
+    },
+    {
+      "value": "expanded",
+      "function": "Makes the text wider than semi-expanded, but not as wide as extra-expanded"
+    },
+    {
+      "value": "extra-expanded",
+      "function": "Makes the text wider than expanded, but not as wide as ultra-expanded"
+    },
+    {
+      "value": "ultra-expanded",
+      "function": "Makes the text as wide as it gets"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 11,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,33 @@
+{
+  "property": "outline-color",
+  "page": "https://www.w3schools.com/cssref/pr_outline-color.php",
+  "function": "An outline is a line that is drawn around elements, outside the borders, to make the element \"stand out\".",
+  "category": "border",
+  "syntax": "outline-color: color|initial|inherit;",
+  "defaults": {
+    "Default value": "currentcolor",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.outlineColor=\"#FF0000\" Try it"
+  },
+  "values": [
+    {
+      "value": "color",
+      "function": "Specifies the color of the outline. Look at CSS Color Values for a complete list of possible color values."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": [
+    "outline"
+  ]
+}

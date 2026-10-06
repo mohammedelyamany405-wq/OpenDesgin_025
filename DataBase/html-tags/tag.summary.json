@@ -1,0 +1,16 @@
+{
+  "tag": "summary",
+  "page": "https://www.w3schools.com/tags/tag_summary.asp",
+  "function": "The <summary> tag defines a visible heading for the <details> element. The heading can be clicked to view/hide the details.",
+  "category": "interactive",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "details"
+    ],
+    "children": []
+  }
+}

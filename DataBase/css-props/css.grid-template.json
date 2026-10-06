@@ -1,0 +1,43 @@
+{
+  "property": "grid-template",
+  "page": "https://www.w3schools.com/cssref/pr_grid-template.php",
+  "function": "The grid-template property is a shorthand property for the following properties:",
+  "category": "grid",
+  "syntax": "grid-template: none|grid-template-rows / grid-template-columns|grid-template-areas|initial|inherit;",
+  "defaults": {
+    "Default value": "none none none",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS Grid Layout Module Level 1",
+    "JavaScript syntax": "object.style.gridTemplate=\"250px / auto auto\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "Default value. No specific sizing of the columns or rows"
+    },
+    {
+      "value": "grid-template rows / grid-template-columns",
+      "function": "Specifies the size(s) of the columns and rows"
+    },
+    {
+      "value": "grid-template-areas",
+      "function": "Specifies the grid layout using named items"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [
+    "grid-template-rows",
+    "grid-template-columns",
+    "grid-template-areas"
+  ],
+  "partOf": []
+}

@@ -1,0 +1,70 @@
+{
+  "property": "grid-template-columns",
+  "page": "https://www.w3schools.com/cssref/pr_grid-template-columns.php",
+  "function": "The grid-template-columns property specifies the number (and the widths) of columns in a grid layout.",
+  "category": "grid",
+  "syntax": "grid-template-columns: none|auto|max-content|min-content|minmax()|length|percentage|fit-content()|repeat()|subgrid|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS Grid Layout Module Level 1",
+    "JavaScript syntax": "object.style.gridTemplateColumns=\"50px 50px 50px\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "Default value. Columns are created if needed"
+    },
+    {
+      "value": "auto",
+      "function": "The size of the columns is determined by the size of the container and on the size of the content of the items in the column"
+    },
+    {
+      "value": "max-content",
+      "function": "Sets the size of each column to depend on the largest item in the column"
+    },
+    {
+      "value": "min-content",
+      "function": "Sets the size of each column to depend on the smallest item in the column"
+    },
+    {
+      "value": "minmax()",
+      "function": "Defines a size range greater than or equal to a min value and less than or equal to a max value"
+    },
+    {
+      "value": "length",
+      "function": "Sets the size of the columns, by using a legal length value. Read about length units"
+    },
+    {
+      "value": "percentage",
+      "function": "Sets the size of the columns, in percent, relative to the inline size of the container"
+    },
+    {
+      "value": "fit-content()",
+      "function": "Sets the size of the columns in length or %, and works like the column will use the available space, but it will never expand the max-content size"
+    },
+    {
+      "value": "repeat()",
+      "function": "Repeats a set of columns in the grid"
+    },
+    {
+      "value": "subgrid",
+      "function": "Indicates that the grid will adopt the spanned portion of its parent grid in that axis"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 12,
+  "shorthandFor": [],
+  "partOf": [
+    "grid",
+    "grid-template"
+  ]
+}

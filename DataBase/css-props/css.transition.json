@@ -1,0 +1,48 @@
+{
+  "property": "transition",
+  "page": "https://www.w3schools.com/cssref/css3_pr_transition.php",
+  "function": "The transition property is a shorthand property for:",
+  "category": "transition",
+  "syntax": "transition: property duration timing-function delay|initial|inherit;",
+  "defaults": {
+    "Default value": "all 0s ease 0s",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.transition=\"all 2s\" Try it"
+  },
+  "values": [
+    {
+      "value": "transition-property",
+      "function": "Specifies the name of the CSS property the transition effect is for"
+    },
+    {
+      "value": "transition-duration",
+      "function": "Specifies how many seconds or milliseconds the transition effect takes to complete"
+    },
+    {
+      "value": "transition-timing-function",
+      "function": "Specifies the speed curve of the transition effect"
+    },
+    {
+      "value": "transition-delay",
+      "function": "Defines when the transition effect will start"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [
+    "transition-property",
+    "transition-duration",
+    "transition-timing-function",
+    "transition-delay"
+  ],
+  "partOf": []
+}

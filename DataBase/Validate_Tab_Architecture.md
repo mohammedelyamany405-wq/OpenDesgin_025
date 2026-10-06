@@ -14,6 +14,7 @@
 | 3 | عنصر ورقي `div` بدون أبناء وبدون وسم | warning | `tag === 'div'` + leaf |
 | 4 | حاوية لها أبناء بدون Flex/Grid معلن | warning | `layout === 'none'` + container |
 | 5 | `img` له أبناء | error | `img` يجب أن يكون leaf |
+| 7 | `img` بلا `src` ولا image-fill | warning | اختر ملفا أو URL من Tags |
 | 6 | `button` / `a` باسم افتراضي | warning | الاسم يبدأ بـ Rectangle/Ellipse/Frame/Group/Text |
 
 ## 3. آلية القراءة

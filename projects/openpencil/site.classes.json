@@ -1,0 +1,166 @@
+﻿{
+    "version":  "1.0",
+    "classes":  {
+                    "layout":  {
+                                   "container":  {
+                                                     "name":  "container",
+                                                     "properties":  {
+                                                                        "max-width":  "1200px",
+                                                                        "margin":  "0 auto",
+                                                                        "padding":  "0 20px"
+                                                                    }
+                                                 },
+                                   "flex-center":  {
+                                                       "name":  "flex-center",
+                                                       "properties":  {
+                                                                          "display":  "flex",
+                                                                          "justify-content":  "center",
+                                                                          "align-items":  "center"
+                                                                      }
+                                                   },
+                                   "grid-2":  {
+                                                  "name":  "grid-2",
+                                                  "properties":  {
+                                                                     "display":  "grid",
+                                                                     "grid-template-columns":  "repeat(2, 1fr)",
+                                                                     "gap":  "20px"
+                                                                 }
+                                              },
+                                   "grid-3":  {
+                                                  "name":  "grid-3",
+                                                  "properties":  {
+                                                                     "display":  "grid",
+                                                                     "grid-template-columns":  "repeat(3, 1fr)",
+                                                                     "gap":  "20px"
+                                                                 }
+                                              }
+                               },
+                    "text":  {
+                                 "heading-1":  {
+                                                   "name":  "heading-1",
+                                                   "properties":  {
+                                                                      "font-size":  "32px",
+                                                                      "font-weight":  "bold",
+                                                                      "line-height":  "1.2"
+                                                                  }
+                                               },
+                                 "heading-2":  {
+                                                   "name":  "heading-2",
+                                                   "properties":  {
+                                                                      "font-size":  "24px",
+                                                                      "font-weight":  "bold",
+                                                                      "line-height":  "1.3"
+                                                                  }
+                                               },
+                                 "body-text":  {
+                                                   "name":  "body-text",
+                                                   "properties":  {
+                                                                      "font-size":  "16px",
+                                                                      "line-height":  "1.6"
+                                                                  }
+                                               },
+                                 "small-text":  {
+                                                    "name":  "small-text",
+                                                    "properties":  {
+                                                                       "font-size":  "14px",
+                                                                       "color":  "#666"
+                                                                   }
+                                                }
+                             },
+                    "spacing":  {
+                                    "p-1":  {
+                                                "name":  "p-1",
+                                                "properties":  {
+                                                                   "padding":  "8px"
+                                                               }
+                                            },
+                                    "p-2":  {
+                                                "name":  "p-2",
+                                                "properties":  {
+                                                                   "padding":  "16px"
+                                                               }
+                                            },
+                                    "p-3":  {
+                                                "name":  "p-3",
+                                                "properties":  {
+                                                                   "padding":  "24px"
+                                                               }
+                                            },
+                                    "m-1":  {
+                                                "name":  "m-1",
+                                                "properties":  {
+                                                                   "margin":  "8px"
+                                                               }
+                                            },
+                                    "m-2":  {
+                                                "name":  "m-2",
+                                                "properties":  {
+                                                                   "margin":  "16px"
+                                                               }
+                                            }
+                                },
+                    "colors":  {
+                                   "bg-primary":  {
+                                                      "name":  "bg-primary",
+                                                      "properties":  {
+                                                                         "background-color":  "#3b82f6"
+                                                                     }
+                                                  },
+                                   "bg-secondary":  {
+                                                        "name":  "bg-secondary",
+                                                        "properties":  {
+                                                                           "background-color":  "#6b7280"
+                                                                       }
+                                                    },
+                                   "text-white":  {
+                                                      "name":  "text-white",
+                                                      "properties":  {
+                                                                         "color":  "#ffffff"
+                                                                     }
+                                                  },
+                                   "text-dark":  {
+                                                     "name":  "text-dark",
+                                                     "properties":  {
+                                                                        "color":  "#1f2937"
+                                                                    }
+                                                 }
+                               },
+                    "effects":  {
+                                    "shadow-sm":  {
+                                                      "name":  "shadow-sm",
+                                                      "properties":  {
+                                                                         "box-shadow":  "0 1px 2px rgba(0, 0, 0, 0.05)"
+                                                                     }
+                                                  },
+                                    "shadow-md":  {
+                                                      "name":  "shadow-md",
+                                                      "properties":  {
+                                                                         "box-shadow":  "0 4px 6px rgba(0, 0, 0, 0.1)"
+                                                                     }
+                                                  },
+                                    "rounded":  {
+                                                    "name":  "rounded",
+                                                    "properties":  {
+                                                                       "border-radius":  "8px"
+                                                                   }
+                                                },
+                                    "rounded-full":  {
+                                                         "name":  "rounded-full",
+                                                         "properties":  {
+                                                                            "border-radius":  "9999px"
+                                                                        }
+                                                     }
+                                }
+                },
+    "applied":  {
+                    "0:4":  [
+                                "container",
+                                "flex-center",
+                                "rounded"
+                            ],
+                    "0:5":  [
+                                "container",
+                                "flex-center"
+                            ]
+                }
+}

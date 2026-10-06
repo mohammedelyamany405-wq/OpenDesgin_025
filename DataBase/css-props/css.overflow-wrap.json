@@ -1,0 +1,39 @@
+{
+  "property": "overflow-wrap",
+  "page": "https://www.w3schools.com/cssref/css3_pr_overflow-wrap.php",
+  "function": "The overflow-wrap property specifies whether or not the browser can break lines with long words, if they overflow the container.",
+  "category": "box",
+  "syntax": "overflow-wrap: normal|anywhere|break-word|initial|inherit;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.overflowWrap=\"normal\" Try it"
+  },
+  "values": [
+    {
+      "value": "normal",
+      "function": "Long words will not break, even if they overflow the container. This is default"
+    },
+    {
+      "value": "anywhere",
+      "function": "Long words will break if they overflow the container"
+    },
+    {
+      "value": "break-word",
+      "function": "Long words will break if they overflow the container"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

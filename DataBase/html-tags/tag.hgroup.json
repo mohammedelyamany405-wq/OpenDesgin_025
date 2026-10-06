@@ -1,0 +1,14 @@
+{
+  "tag": "hgroup",
+  "page": "https://www.w3schools.com/tags/tag_hgroup.asp",
+  "function": "Use the hgroup element to mark that the heading and the paragraph are related.",
+  "category": "sectioning",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

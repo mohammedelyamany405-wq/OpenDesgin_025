@@ -1,0 +1,92 @@
+{
+  "tag": "button",
+  "page": "https://www.w3schools.com/tags/tag_button.asp",
+  "function": "A clickable button is marked up as follows.",
+  "category": "forms",
+  "attributes": [
+    {
+      "name": "autofocus",
+      "values": "autofocus",
+      "function": "Specifies that a button should automatically get focus when the page loads"
+    },
+    {
+      "name": "disabled",
+      "values": "disabled",
+      "function": "Specifies that a button should be disabled"
+    },
+    {
+      "name": "command",
+      "values": "show-modal | close | request-close | show-popover | hide-popover | toggle-popover | --custom-value",
+      "function": "Specifies the action to be performed"
+    },
+    {
+      "name": "commandfor",
+      "values": "",
+      "function": "Turns the button into a command button"
+    },
+    {
+      "name": "form",
+      "values": "form_id",
+      "function": "Specifies which form the button belongs to"
+    },
+    {
+      "name": "formaction",
+      "values": "URL",
+      "function": "Specifies where to send the form-data when a form is submitted. Only for type=\"submit\""
+    },
+    {
+      "name": "formenctype",
+      "values": "application/x-www-form-urlencoded | multipart/form-data | text/plain",
+      "function": "Specifies how form-data should be encoded before sending it to a server. Only for type=\"submit\""
+    },
+    {
+      "name": "formmethod",
+      "values": "get | post",
+      "function": "Specifies how to send the form-data (which HTTP method to use). Only for type=\"submit\""
+    },
+    {
+      "name": "formnovalidate",
+      "values": "formnovalidate",
+      "function": "Specifies that the form-data should not be validated on submission. Only for type=\"submit\""
+    },
+    {
+      "name": "formtarget",
+      "values": "_blank | _self | _parent | _top | framename",
+      "function": "Specifies where to display the response after submitting the form. Only for type=\"submit\""
+    },
+    {
+      "name": "name",
+      "values": "name",
+      "function": "Specifies a name for the button"
+    },
+    {
+      "name": "popovertarget",
+      "values": "element_id",
+      "function": "Specifies which popover element to invoke"
+    },
+    {
+      "name": "popovertargetaction",
+      "values": "hide | show | toggle",
+      "function": "Specifies what happens to the targeted popover element when you click the button"
+    },
+    {
+      "name": "type",
+      "values": "button | reset | submit",
+      "function": "Specifies the type of button"
+    },
+    {
+      "name": "value",
+      "values": "text",
+      "function": "Specifies an initial value for the button"
+    }
+  ],
+  "attributeCount": 15,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "form"
+    ],
+    "children": []
+  }
+}

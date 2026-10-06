@@ -1,0 +1,41 @@
+{
+  "property": "transition-property",
+  "page": "https://www.w3schools.com/cssref/css3_pr_transition-property.php",
+  "function": "The transition-property property specifies the name of the CSS property the transition effect is for (the transition effect will start when the specified CSS property changes).",
+  "category": "transition",
+  "syntax": "transition-property: none|all|property|initial|inherit;",
+  "defaults": {
+    "Default value": "all",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.transitionProperty=\"width,height\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "No property will get a transition effect"
+    },
+    {
+      "value": "all",
+      "function": "Default value. All properties will get a transition effect"
+    },
+    {
+      "value": "property",
+      "function": "Defines a comma separated list of CSS property names the transition effect is for"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": [
+    "transition"
+  ]
+}

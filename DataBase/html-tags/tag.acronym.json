@@ -1,0 +1,14 @@
+{
+  "tag": "acronym",
+  "page": "https://www.w3schools.com/tags/tag_acronym.asp",
+  "function": "The <acronym> tag was used in HTML 4 to define an acronym.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

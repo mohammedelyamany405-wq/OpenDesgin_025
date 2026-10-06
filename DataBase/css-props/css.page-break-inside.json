@@ -1,0 +1,35 @@
+{
+  "property": "page-break-inside",
+  "page": "https://www.w3schools.com/cssref/pr_print_pagebi.php",
+  "function": "The page-break-inside property sets whether a page-break should be avoided inside a specified element.",
+  "category": "print",
+  "syntax": "page-break-inside: auto|avoid|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.pageBreakInside=\"avoid\""
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default. Automatic page-breaks"
+    },
+    {
+      "value": "avoid",
+      "function": "Avoid page-break inside the element (if possible)"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,49 @@
+{
+  "property": "background-size",
+  "page": "https://www.w3schools.com/cssref/css3_pr_background-size.php",
+  "function": "The background-size property specifies the size of the background images.",
+  "category": "background",
+  "syntax": "background-size: auto|length|cover|contain|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.backgroundSize=\"60px 120px\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default value. The background image is displayed in its original size"
+    },
+    {
+      "value": "length",
+      "function": "Sets the width and height of the background image. The first value sets the width, the second value sets the height. If only one value is given, the second is set to \"auto\". Read about length units"
+    },
+    {
+      "value": "percentage",
+      "function": "Sets the width and height of the background image in percent of the parent element. The first value sets the width, the second value sets the height. If only one value is given, the second is set to \"auto\""
+    },
+    {
+      "value": "cover",
+      "function": "Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges"
+    },
+    {
+      "value": "contain",
+      "function": "Resize the background image to make sure the image is fully visible"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 7,
+  "shorthandFor": [],
+  "partOf": [
+    "background"
+  ]
+}

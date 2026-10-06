@@ -1,0 +1,39 @@
+{
+  "property": "margin-inline",
+  "page": "https://www.w3schools.com/cssref/css_pr_margin-inline.php",
+  "function": "The margin-inline property specifies the margin at the start and end in the inline direction, and is a shorthand property for the following properties:",
+  "category": "box",
+  "syntax": "margin-inline: auto|value|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.marginInline=\"50px 10px\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "Default. The element's default margin-inline value."
+    },
+    {
+      "value": "length",
+      "function": "Specifies margin-inline in px, pt, cm, etc. Negative values are allowed. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Specifies margin-inline in percent relative to size of parent element in the inline direction."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

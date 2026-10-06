@@ -1,0 +1,47 @@
+{
+  "property": "text-shadow",
+  "page": "https://www.w3schools.com/cssref/css3_pr_text-shadow.php",
+  "function": "The text-shadow property adds shadow to text.",
+  "category": "text",
+  "syntax": "text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "yes",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.textShadow=\"2px 5px 5px red\" Try it"
+  },
+  "values": [
+    {
+      "value": "h-shadow",
+      "function": "Required. The position of the horizontal shadow. Negative values are allowed"
+    },
+    {
+      "value": "v-shadow",
+      "function": "Required. The position of the vertical shadow. Negative values are allowed"
+    },
+    {
+      "value": "blur-radius",
+      "function": "Optional. The blur radius. Default value is 0"
+    },
+    {
+      "value": "color",
+      "function": "Optional. The color of the shadow. Look at CSS Color Values for a complete list of possible color values"
+    },
+    {
+      "value": "none",
+      "function": "Default value. No shadow"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 7,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,43 @@
+{
+  "property": "list-style",
+  "page": "https://www.w3schools.com/cssref/pr_list-style.php",
+  "function": "The list-style property is a shorthand for the following properties:",
+  "category": "text",
+  "syntax": "list-style: list-style-type list-style-position list-style-image|initial|inherit;",
+  "defaults": {
+    "Default value": "disc outside none",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.listStyle=\"decimal inside\" Try it"
+  },
+  "values": [
+    {
+      "value": "list-style-type",
+      "function": "Specifies the type of list-item marker. Default value is \"disc\""
+    },
+    {
+      "value": "list-style-position",
+      "function": "Specifies where to place the list-item marker. Default value is \"outside\""
+    },
+    {
+      "value": "list-style-image",
+      "function": "Specifies the type of list-item marker. Default value is \"none\""
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [
+    "list-style-type",
+    "list-style-position",
+    "list-style-image"
+  ],
+  "partOf": []
+}

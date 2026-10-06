@@ -1,0 +1,14 @@
+{
+  "tag": "strong",
+  "page": "https://www.w3schools.com/tags/tag_strong.asp",
+  "function": "The <strong> tag is used to define text with strong importance. The content inside is typically displayed in bold.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

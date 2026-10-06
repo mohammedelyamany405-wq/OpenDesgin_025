@@ -1,0 +1,19 @@
+{
+  "tag": "p",
+  "page": "https://www.w3schools.com/tags/tag_p.asp",
+  "function": "Browsers automatically add a single blank line before and after each <p> element.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "body",
+      "footer",
+      "section",
+      "article"
+    ],
+    "children": []
+  }
+}

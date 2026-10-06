@@ -1,0 +1,67 @@
+{
+  "property": "column-rule-style",
+  "page": "https://www.w3schools.com/cssref/css3_pr_column-rule-style.php",
+  "function": "The column-rule-style property specifies the style of the rule between columns.",
+  "category": "box",
+  "syntax": "column-rule-style: none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.columnRuleStyle=\"dotted\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "Default value. Defines no rule"
+    },
+    {
+      "value": "hidden",
+      "function": "Defines a hidden rule"
+    },
+    {
+      "value": "dotted",
+      "function": "Defines a dotted rule"
+    },
+    {
+      "value": "dashed",
+      "function": "Defines a dashed rule"
+    },
+    {
+      "value": "solid",
+      "function": "Defines a solid rule"
+    },
+    {
+      "value": "double",
+      "function": "Defines a double rule"
+    },
+    {
+      "value": "groove",
+      "function": "Specifies a 3D grooved rule. The effect depends on the width and color values"
+    },
+    {
+      "value": "ridge",
+      "function": "Specifies a 3D ridged rule. The effect depends on the width and color values"
+    },
+    {
+      "value": "inset",
+      "function": "Specifies a 3D inset rule. The effect depends on the width and color values"
+    },
+    {
+      "value": "outset",
+      "function": "Specifies a 3D outset rule. The effect depends on the width and color values"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 12,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,20 @@
+{
+  "tag": "bdo",
+  "page": "https://www.w3schools.com/tags/tag_bdo.asp",
+  "function": "The <bdo> tag is used to override the current text direction.",
+  "category": "text",
+  "attributes": [
+    {
+      "name": "dir",
+      "values": "ltr | rtl",
+      "function": "Required. Specifies the text direction of the text inside the <bdo> element"
+    }
+  ],
+  "attributeCount": 1,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

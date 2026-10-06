@@ -1,0 +1,44 @@
+{
+  "tag": "source",
+  "page": "https://www.w3schools.com/tags/tag_source.asp",
+  "function": "An audio player with two source files. The browser will choose the first <source> it supports.",
+  "category": "media",
+  "attributes": [
+    {
+      "name": "media",
+      "values": "media_query",
+      "function": "Accepts any valid media query that would normally be defined in a CSS"
+    },
+    {
+      "name": "sizes",
+      "values": "",
+      "function": "Specifies image sizes for different page layouts"
+    },
+    {
+      "name": "src",
+      "values": "URL",
+      "function": "Required when <source> is used in <audio> and <video>. Specifies the URL of the media file"
+    },
+    {
+      "name": "srcset",
+      "values": "URL",
+      "function": "Required when <source> is used in <picture>. Specifies the URL of the image to use in different situations"
+    },
+    {
+      "name": "type",
+      "values": "MIME-type",
+      "function": "Specifies the MIME-type of the resource"
+    }
+  ],
+  "attributeCount": 5,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "picture",
+      "video",
+      "audio"
+    ],
+    "children": []
+  }
+}

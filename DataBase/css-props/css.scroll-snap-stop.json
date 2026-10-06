@@ -1,0 +1,35 @@
+{
+  "property": "scroll-snap-stop",
+  "page": "https://www.w3schools.com/cssref/css_pr_scroll-snap-stop.php",
+  "function": "When swiping fast on a trackpad or a touch screen, the scroll-snap-stop property specifies whether to scroll past elements or to stop and snap on the next element.",
+  "category": "scroll",
+  "syntax": "scroll-snap-stop: normal|always|initial|inherit;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.scrollSnapStop=\"always\" Try it"
+  },
+  "values": [
+    {
+      "value": "normal",
+      "function": "Default value. After fast swipe with touchpad or touch screen, the scrolling slows down slowly and passes several elements."
+    },
+    {
+      "value": "always",
+      "function": "After fast swipe with touchpad or touch screen, scrolling stops and the next element snaps into focus."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

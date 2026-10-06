@@ -1,0 +1,33 @@
+{
+  "property": "transition-duration",
+  "page": "https://www.w3schools.com/cssref/css3_pr_transition-duration.php",
+  "function": "The transition-duration property specifies how many seconds (s) or milliseconds (ms) a transition effect takes to complete.",
+  "category": "transition",
+  "syntax": "transition-duration: time|initial|inherit;",
+  "defaults": {
+    "Default value": "0s",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.transitionDuration=\"1s\" Try it"
+  },
+  "values": [
+    {
+      "value": "time",
+      "function": "Specifies how many seconds or milliseconds a transition effect takes to complete. Default value is 0s, meaning there will be no effect"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": [
+    "transition"
+  ]
+}

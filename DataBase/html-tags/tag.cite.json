@@ -1,0 +1,14 @@
+{
+  "tag": "cite",
+  "page": "https://www.w3schools.com/tags/tag_cite.asp",
+  "function": "Define the title of a work with the <cite> tag.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

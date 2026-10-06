@@ -1,0 +1,14 @@
+{
+  "tag": "search",
+  "page": "https://www.w3schools.com/tags/tag_search.asp",
+  "function": "Surround the search form with a search element.",
+  "category": "sectioning",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

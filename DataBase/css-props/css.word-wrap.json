@@ -1,0 +1,35 @@
+{
+  "property": "word-wrap",
+  "page": "https://www.w3schools.com/cssref/css3_pr_word-wrap.php",
+  "function": "The word-wrap property allows long words to be able to be broken and wrap onto the next line.",
+  "category": "text",
+  "syntax": "word-wrap: normal|break-word|initial|inherit;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.wordWrap=\"break-word\" Try it"
+  },
+  "values": [
+    {
+      "value": "normal",
+      "function": "Break words only at allowed break points. This is default"
+    },
+    {
+      "value": "break-word",
+      "function": "Allows unbreakable words to be broken"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

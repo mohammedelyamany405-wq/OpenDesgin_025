@@ -1,0 +1,20 @@
+﻿{
+    "tag":  "svg",
+    "page":  "https://www.w3schools.com/tags/tag_svg.asp",
+    "function":  "The \u003csvg\u003e tag defines a container for SVG graphics.",
+    "category":  "media",
+    "attributes":  [
+
+                   ],
+    "attributeCount":  0,
+    "globalAttributes":  true,
+    "eventAttributes":  true,
+    "related":  {
+                    "parents":  [
+
+                                ],
+                    "children":  [
+
+                                 ]
+                }
+}

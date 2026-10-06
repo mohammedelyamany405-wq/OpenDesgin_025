@@ -1,0 +1,48 @@
+{
+  "property": "text-decoration",
+  "page": "https://www.w3schools.com/cssref/pr_text_text-decoration.php",
+  "function": "The text-decoration property specifies the decoration added to text, and is a shorthand property for:",
+  "category": "text",
+  "syntax": "text-decoration: text-decoration-line text-decoration-color text-decoration-style text-decoration-thickness|initial|inherit;",
+  "defaults": {
+    "Default value": "none currentColor solid auto",
+    "Inherited": "no",
+    "Animatable": "no, see individual properties. Read about animatable",
+    "Version": "CSS1, renewed in CSS3",
+    "JavaScript syntax": "object.style.textDecoration=\"underline\" Try it"
+  },
+  "values": [
+    {
+      "value": "text-decoration-line",
+      "function": "Sets the kind of text decoration to use (like underline, overline, line-through)"
+    },
+    {
+      "value": "text-decoration-color",
+      "function": "Sets the color of the text decoration"
+    },
+    {
+      "value": "text-decoration-style",
+      "function": "Sets the style of the text decoration (like solid, wavy, dotted, dashed, double)"
+    },
+    {
+      "value": "text-decoration-thickness",
+      "function": "Sets the thickness of the decoration line"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [
+    "text-decoration-line",
+    "text-decoration-color",
+    "text-decoration-style",
+    "text-decoration-thickness"
+  ],
+  "partOf": []
+}

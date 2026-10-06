@@ -1,0 +1,35 @@
+{
+  "property": "scrollbar-color",
+  "page": "https://www.w3schools.com/cssref/css_pr_scrollbar-color.php",
+  "function": "The scrollbar-color property specifies the color of the scrollbar track (background) and thumb (the scroller).",
+  "category": "scroll",
+  "syntax": "scrollbar-color: auto|color color;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS Scrollbars Styling Module Level 1",
+    "JavaScript syntax": "object.style.scrollbarColor=\"red blue\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "The browser sets the colors of the scrollbar. This is default"
+    },
+    {
+      "value": "color color",
+      "function": "The first color sets the color of the thumb of the scrollbar, and the second color sets the color of the track of the scrollbar"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

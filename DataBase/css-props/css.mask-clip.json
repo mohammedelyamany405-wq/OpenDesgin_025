@@ -1,0 +1,71 @@
+{
+  "property": "mask-clip",
+  "page": "https://www.w3schools.com/cssref/css3_pr_mask-clip.php",
+  "function": "The mask-clip property specifies which area is affected by a mask image.",
+  "category": "background",
+  "syntax": "mask-clip: border-box|content-box|padding-box|fill-box|stroke-box|view-box|no-clip|border|padding|content|text|initial|inherit;",
+  "defaults": {
+    "Default value": "border-box",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS Masking Module Level 1",
+    "JavaScript syntax": "object.style.maskClip=\"padding-box\""
+  },
+  "values": [
+    {
+      "value": "border-box",
+      "function": "The painted content is clipped to the border box. This is default"
+    },
+    {
+      "value": "content-box",
+      "function": "The painted content is clipped to the content box"
+    },
+    {
+      "value": "padding-box",
+      "function": "The painted content is clipped to the padding box"
+    },
+    {
+      "value": "fill-box",
+      "function": "The painted content is clipped to the object bounding box"
+    },
+    {
+      "value": "stroke-box",
+      "function": "The painted content is clipped to the stroke bounding box"
+    },
+    {
+      "value": "view-box",
+      "function": "Use the nearest SVG viewport as reference box"
+    },
+    {
+      "value": "no-clip",
+      "function": "No clipping"
+    },
+    {
+      "value": "border",
+      "function": "The same as border-box"
+    },
+    {
+      "value": "padding",
+      "function": "The same as padding-box"
+    },
+    {
+      "value": "content",
+      "function": "The same as content-box"
+    },
+    {
+      "value": "text",
+      "function": "Clips the mask to the text of the element"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 13,
+  "shorthandFor": [],
+  "partOf": []
+}

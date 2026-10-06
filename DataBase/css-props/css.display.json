@@ -1,0 +1,111 @@
+{
+  "property": "display",
+  "page": "https://www.w3schools.com/cssref/pr_class_display.php",
+  "function": "The display property specifies the display behavior (the type of rendering box) of an element.",
+  "category": "box",
+  "syntax": "display: value;",
+  "defaults": {
+    "Default value": "inline",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.display=\"none\" Try it"
+  },
+  "values": [
+    {
+      "value": "inline",
+      "function": "Displays an element as an inline element (like <span>). Any height and width properties will have no effect. This is default."
+    },
+    {
+      "value": "block",
+      "function": "Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width"
+    },
+    {
+      "value": "contents",
+      "function": "Makes the container disappear, making the child elements children of the element the next level up in the DOM"
+    },
+    {
+      "value": "flex",
+      "function": "Displays an element as a block-level flex container"
+    },
+    {
+      "value": "grid",
+      "function": "Displays an element as a block-level grid container"
+    },
+    {
+      "value": "inline-block",
+      "function": "Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values"
+    },
+    {
+      "value": "inline-flex",
+      "function": "Displays an element as an inline-level flex container"
+    },
+    {
+      "value": "inline-grid",
+      "function": "Displays an element as an inline-level grid container"
+    },
+    {
+      "value": "inline-table",
+      "function": "The element is displayed as an inline-level table"
+    },
+    {
+      "value": "list-item",
+      "function": "Let the element behave like a <li> element"
+    },
+    {
+      "value": "run-in",
+      "function": "Displays an element as either block or inline, depending on context"
+    },
+    {
+      "value": "table",
+      "function": "Let the element behave like a <table> element"
+    },
+    {
+      "value": "table-caption",
+      "function": "Let the element behave like a <caption> element"
+    },
+    {
+      "value": "table-column-group",
+      "function": "Let the element behave like a <colgroup> element"
+    },
+    {
+      "value": "table-header-group",
+      "function": "Let the element behave like a <thead> element"
+    },
+    {
+      "value": "table-footer-group",
+      "function": "Let the element behave like a <tfoot> element"
+    },
+    {
+      "value": "table-row-group",
+      "function": "Let the element behave like a <tbody> element"
+    },
+    {
+      "value": "table-cell",
+      "function": "Let the element behave like a <td> element"
+    },
+    {
+      "value": "table-column",
+      "function": "Let the element behave like a <col> element"
+    },
+    {
+      "value": "table-row",
+      "function": "Let the element behave like a <tr> element"
+    },
+    {
+      "value": "none",
+      "function": "The element is completely removed"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 23,
+  "shorthandFor": [],
+  "partOf": []
+}

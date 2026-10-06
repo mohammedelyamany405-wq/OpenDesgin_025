@@ -1,0 +1,39 @@
+{
+  "property": "height",
+  "page": "https://www.w3schools.com/cssref/pr_dim_height.php",
+  "function": "The height property sets the height of an element.",
+  "category": "box",
+  "syntax": "height: auto|length|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.height=\"500px\" Try it"
+  },
+  "values": [
+    {
+      "value": "auto",
+      "function": "The browser calculates the height. This is default"
+    },
+    {
+      "value": "length",
+      "function": "Defines the height in px, cm, etc. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Defines the height in percent of the containing block"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

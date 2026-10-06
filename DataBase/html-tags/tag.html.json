@@ -1,0 +1,23 @@
+{
+  "tag": "html",
+  "page": "https://www.w3schools.com/tags/tag_html.asp",
+  "function": "The <html> tag represents the root of an HTML document.",
+  "category": "document",
+  "attributes": [
+    {
+      "name": "xmlns",
+      "values": "http://www.w3.org/1999/xhtml",
+      "function": "Specifies the XML namespace attribute (If you need your content to conform to XHTML)"
+    }
+  ],
+  "attributeCount": 1,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": [
+      "head",
+      "body"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+﻿{
+  "version": "1.0",
+  "breakpoints": {
+    "desktop": 1200,
+    "tablet": 768,
+    "mobile": 375
+  },
+  "pages": [
+    {
+      "id": "0:3",
+      "name": "Page 1",
+      "frames": [
+        {
+          "id": "0:13",
+          "name": "Desktop",
+          "width": 1200,
+          "height": 800,
+          "breakpoint": "desktop"
+        },
+        {
+          "id": "0:14",
+          "name": "Tablet",
+          "width": 768,
+          "height": 1024,
+          "breakpoint": "tablet"
+        },
+        {
+          "id": "0:15",
+          "name": "Mobile",
+          "width": 375,
+          "height": 812,
+          "breakpoint": "mobile"
+        }
+      ]
+    }
+  ]
+}

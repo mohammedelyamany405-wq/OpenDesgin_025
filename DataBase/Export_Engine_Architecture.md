@@ -43,8 +43,10 @@ function tagNameForNode(node: SceneNode): string {
 }
 ```
 
-`attrsForNode` يضيف: `class` من `web-builder-classes` + `aria-hidden="true"` للزخرفي.
+`attrsForNode` يضيف: `class` من `web-builder-classes` + `aria-hidden="true"` للزخرفي
++ دمج `web-builder-attrs` (نية المصمم تغلب fill الصورة).
 `styleFromSceneNode` يطبق `web-builder-layout` (flex/grid) قبل fallback على `layoutMode`.
+التسلسل يهرب الخصائص (`escapeAttr`) — ولوحة التصدير تهرب بـ `escapeAttrValue`.
 
 ## 4. تصدير اللوحة (Panel Export في WebBuilderPanel)
 

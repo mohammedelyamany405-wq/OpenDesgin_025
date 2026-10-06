@@ -1,0 +1,35 @@
+{
+  "property": "scroll-margin-inline-end",
+  "page": "https://www.w3schools.com/cssref/css_pr_scroll-margin-inline-end.php",
+  "function": "The scroll-margin-inline-end property specifies the distance in the inline direction, between the snap position and the container.",
+  "category": "scroll",
+  "syntax": "scroll-margin-inline-end: 0|value|initial|inherit;",
+  "defaults": {
+    "Default value": "0",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.scrollMarginInlineEnd=\"20px\" Try it"
+  },
+  "values": [
+    {
+      "value": "0",
+      "function": "Default. The element's default scroll-margin-inline-end distance."
+    },
+    {
+      "value": "length",
+      "function": "Specifies distance in px, pt, cm, etc. Negative values are allowed. Read about length units"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,39 @@
+{
+  "property": "grid-auto-flow",
+  "page": "https://www.w3schools.com/cssref/pr_grid-auto-flow.php",
+  "function": "The grid-auto-flow property controls how auto-placed items get inserted in the grid.",
+  "category": "grid",
+  "syntax": "grid-auto-flow: row|column|dense|row dense|column dense;",
+  "defaults": {
+    "Default value": "row",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS Grid Layout Module Level 1",
+    "JavaScript syntax": "object.style.gridAutoFlow=\"row dense\" Try it"
+  },
+  "values": [
+    {
+      "value": "row",
+      "function": "Default value. Places items by filling each row"
+    },
+    {
+      "value": "column",
+      "function": "Places items by filling each column"
+    },
+    {
+      "value": "dense",
+      "function": "Place items to fill any holes in the grid"
+    },
+    {
+      "value": "row dense",
+      "function": "Places items by filling each row, and fill any holes in the grid"
+    },
+    {
+      "value": "column dense",
+      "function": "Places items by filling each column, and fill any holes in the grid"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

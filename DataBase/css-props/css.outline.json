@@ -1,0 +1,43 @@
+{
+  "property": "outline",
+  "page": "https://www.w3schools.com/cssref/pr_outline.php",
+  "function": "An outline is a line that is drawn around elements, outside the borders, to make the element \"stand out\".",
+  "category": "border",
+  "syntax": "outline: outline-width outline-style outline-color|initial|inherit;",
+  "defaults": {
+    "Default value": "medium invert color",
+    "Inherited": "no",
+    "Animatable": "yes, see individual properties. Read about animatable Try it",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.outline=\"#0000FF dotted 5px\" Try it"
+  },
+  "values": [
+    {
+      "value": "outline-width",
+      "function": "Specifies the width of outline"
+    },
+    {
+      "value": "outline-style",
+      "function": "Specifies the style of the outline"
+    },
+    {
+      "value": "outline-color",
+      "function": "Specifies the color of the outline"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [
+    "outline-width",
+    "outline-style",
+    "outline-color"
+  ],
+  "partOf": []
+}

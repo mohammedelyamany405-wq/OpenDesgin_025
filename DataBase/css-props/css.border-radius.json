@@ -1,0 +1,40 @@
+{
+  "property": "border-radius",
+  "page": "https://www.w3schools.com/cssref/css3_pr_border-radius.php",
+  "function": "The border-radius property defines the radius of the element's corners.",
+  "category": "border",
+  "syntax": "border-radius: 1-4 length|% / 1-4 length|%|initial|inherit;",
+  "defaults": {
+    "Default value": "0",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.borderRadius=\"25px\" Try it"
+  },
+  "values": [
+    {
+      "value": "length",
+      "function": "Defines the shape of the corners. Default value is 0. Read about length units"
+    },
+    {
+      "value": "%",
+      "function": "Defines the shape of the corners in %"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [
+    "border-top-left-radius",
+    "border-top-right-radius",
+    "border-bottom-right-radius",
+    "border-bottom-left-radius"
+  ],
+  "partOf": []
+}

@@ -1,0 +1,39 @@
+{
+  "property": "visibility",
+  "page": "https://www.w3schools.com/cssref/pr_class_visibility.php",
+  "function": "The visibility property specifies whether or not an element is visible.",
+  "category": "box",
+  "syntax": "visibility: visible|hidden|collapse|initial|inherit;",
+  "defaults": {
+    "Default value": "visible",
+    "Inherited": "yes",
+    "Animatable": "yes. Read about animatable",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.visibility=\"hidden\" Try it"
+  },
+  "values": [
+    {
+      "value": "visible",
+      "function": "Default value. The element is visible"
+    },
+    {
+      "value": "hidden",
+      "function": "The element is hidden (but still takes up space)"
+    },
+    {
+      "value": "collapse",
+      "function": "Only for table rows (<tr>), row groups (<tbody>), columns (<col>), column groups (<colgroup>), and flex items. This value removes a row or column as if display: none where used.If collapse is used on other elements, it renders as \"hidden\""
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

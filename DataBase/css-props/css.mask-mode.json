@@ -1,0 +1,39 @@
+{
+  "property": "mask-mode",
+  "page": "https://www.w3schools.com/cssref/css3_pr_mask-mode.php",
+  "function": "The mask-mode property specifies whether the mask layer image should be treated as a luminance mask or as an alpha mask.",
+  "category": "background",
+  "syntax": "mask-mode: match-source|luminance|alpha|initial|inherit;",
+  "defaults": {
+    "Default value": "match-source",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS Masking Module Level 1",
+    "JavaScript syntax": "object.style.maskMode=\"alpha\""
+  },
+  "values": [
+    {
+      "value": "match-source",
+      "function": "If the mask-image property is an image (an image URL or a gradient), set mask-mode to alpha. If the mask-image property is an SVG <mask> element, use the <mask> element's mask-type property. This is default."
+    },
+    {
+      "value": "luminance",
+      "function": "Use the luminance values of the mask image as the mask values"
+    },
+    {
+      "value": "alpha",
+      "function": "Use the alpha values of the mask image as the mask values"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": []
+}

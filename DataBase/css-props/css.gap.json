@@ -1,0 +1,38 @@
+{
+  "property": "gap",
+  "page": "https://www.w3schools.com/cssref/css3_pr_gap.php",
+  "function": "The gap property defines the size of the gap between the rows and between the columns in flexbox, grid or multi-column layout. It is a shorthand for the following properties:",
+  "category": "flexbox",
+  "syntax": "gap: row-gap column-gap|initial|inherit;",
+  "defaults": {
+    "Default value": "normal normal",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS Box Alignment Module Level 3",
+    "JavaScript syntax": "object.style.gap=\"50px 100px\" Try it"
+  },
+  "values": [
+    {
+      "value": "row-gap",
+      "function": "Sets the size of the gap between the rows in a grid or flexbox layout"
+    },
+    {
+      "value": "column-gap",
+      "function": "Sets the size of the gap between the columns in a grid, flexbox or multi-column layout"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [
+    "row-gap",
+    "column-gap"
+  ],
+  "partOf": []
+}

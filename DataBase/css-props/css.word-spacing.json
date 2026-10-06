@@ -1,0 +1,35 @@
+{
+  "property": "word-spacing",
+  "page": "https://www.w3schools.com/cssref/pr_text_word-spacing.php",
+  "function": "The word-spacing property increases or decreases the white space between words.",
+  "category": "text",
+  "syntax": "word-spacing: normal|length|initial|inherit;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "yes",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.wordSpacing=\"20px\" Try it"
+  },
+  "values": [
+    {
+      "value": "normal",
+      "function": "Defines normal space between words (0.25em) . This is default"
+    },
+    {
+      "value": "length",
+      "function": "Defines an additional space between words (in px, pt, cm, em, etc). Negative values are allowed. Read about length units"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

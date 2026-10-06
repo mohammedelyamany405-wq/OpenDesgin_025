@@ -1,0 +1,51 @@
+{
+  "property": "background-position-y",
+  "page": "https://www.w3schools.com/cssref/css_pr_background-position-y.php",
+  "function": "The background-position-y property sets the position of a background image on the y-axis.",
+  "category": "background",
+  "syntax": "background-position-y: value;",
+  "defaults": {
+    "Default value": "0%",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.backgroundPositionY=\"center\" Try it"
+  },
+  "values": [
+    {
+      "value": "top",
+      "function": "Positions background top on y-axis."
+    },
+    {
+      "value": "bottom",
+      "function": "Positions background bottom on y-axis."
+    },
+    {
+      "value": "center",
+      "function": "Positions background center on y-axis."
+    },
+    {
+      "value": "y%",
+      "function": "Top side is 0% on y-axis, and bottom side is 100%. Percentage value refers to height of background positioning area minus height of background image."
+    },
+    {
+      "value": "ypos",
+      "function": "Vertical distance from top side. Units can be pixels (0px) or any other CSS units."
+    },
+    {
+      "value": "ypos offset",
+      "function": "Two value syntax, only supported in Firefox and Safari. - ypos is set either to \"top\" or \"bottom\". - offset is vertical distance from background image and \"top\" or \"bottom\" side set with ypos. Units can be pixels or any other CSS units."
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 8,
+  "shorthandFor": [],
+  "partOf": []
+}

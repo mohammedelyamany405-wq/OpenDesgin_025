@@ -1,0 +1,35 @@
+{
+  "property": "counter-set",
+  "page": "https://www.w3schools.com/cssref/pr_gen_counter-set.php",
+  "function": "The counter-set property creates and sets a CSS counter to a specific value.",
+  "category": "text",
+  "syntax": "counter-set: none|counter-name number|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.counterSet=\"4\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "Default value. No counter set is to be performed"
+    },
+    {
+      "value": "counter-name number",
+      "function": "The name of the counter to set and the value to set the counter to on each occurrence of the selector. The default number value is 0"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": []
+}

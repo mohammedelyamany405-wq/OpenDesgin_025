@@ -1,0 +1,16 @@
+{
+  "tag": "rp",
+  "page": "https://www.w3schools.com/tags/tag_rp.asp",
+  "function": "The <rp> tag can be used to provide parentheses around a ruby text, to be shown by browsers that do not support ruby annotations.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "ruby"
+    ],
+    "children": []
+  }
+}

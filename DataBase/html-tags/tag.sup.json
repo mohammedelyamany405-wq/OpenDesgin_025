@@ -1,0 +1,14 @@
+{
+  "tag": "sup",
+  "page": "https://www.w3schools.com/tags/tag_sup.asp",
+  "function": "The <sup> tag defines superscript text. Superscript text appears half a character above the normal line, and is sometimes rendered in a smaller font.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

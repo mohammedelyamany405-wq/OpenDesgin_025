@@ -1,0 +1,25 @@
+{
+  "property": "@media",
+  "page": "https://www.w3schools.com/cssref/atrule_media.php",
+  "function": "The CSS @media rule is used in media queries to apply different styles for different media types/devices.",
+  "category": "at-rules",
+  "syntax": "@media not|only mediatype and (mediafeature and|or|not mediafeature) { CSS-Code; }",
+  "defaults": {},
+  "values": [
+    {
+      "value": "all",
+      "function": "Default. Used for all media type devices"
+    },
+    {
+      "value": "print",
+      "function": "Used for printers"
+    },
+    {
+      "value": "screen",
+      "function": "Used for computer screens, tablets, smart-phones etc."
+    }
+  ],
+  "valueCount": 3,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,14 @@
+{
+  "tag": "sub",
+  "page": "https://www.w3schools.com/tags/tag_sub.asp",
+  "function": "The <sub> tag defines subscript text. Subscript text appears half a character below the normal line, and is sometimes rendered in a smaller font.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

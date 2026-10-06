@@ -1,0 +1,37 @@
+{
+  "property": "list-style-image",
+  "page": "https://www.w3schools.com/cssref/pr_list-style-image.php",
+  "function": "The list-style-image property replaces the list-item marker with an image.",
+  "category": "text",
+  "syntax": "list-style-image: none|url()|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS1",
+    "JavaScript syntax": "object.style.listStyleImage=\"url('smiley.gif')\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "No image will be displayed. Instead, the list-style-type property will define what type of list marker will be rendered. This is default"
+    },
+    {
+      "value": "url()",
+      "function": "The URL to the image to be used as a list-item marker"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": [
+    "list-style"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "property": "mask-composite",
+  "page": "https://www.w3schools.com/cssref/css3_pr_mask-composite.php",
+  "function": "The mask-composite property specifies a compositing operation used on the current mask layer with the mask layers below it.",
+  "category": "background",
+  "syntax": "mask-composite: add|subtract|intersect|exclude|initial|inherit;",
+  "defaults": {
+    "Default value": "add",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS Masking Module Level 1",
+    "JavaScript syntax": "object.style.maskComposite=\"intersect\""
+  },
+  "values": [
+    {
+      "value": "add",
+      "function": "The source is placed over the destination"
+    },
+    {
+      "value": "subtract",
+      "function": "The source is placed where it falls outside of the destination"
+    },
+    {
+      "value": "intersect",
+      "function": "The parts of source that overlap the destination, replace the destination"
+    },
+    {
+      "value": "exclude",
+      "function": "The non-overlapping regions of source and destination are combined"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 6,
+  "shorthandFor": [],
+  "partOf": []
+}

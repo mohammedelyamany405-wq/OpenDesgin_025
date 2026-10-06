@@ -1,0 +1,19 @@
+{
+  "tag": "footer",
+  "page": "https://www.w3schools.com/tags/tag_footer.asp",
+  "function": "The <footer> tag defines a footer for a document or section.",
+  "category": "sectioning",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [
+      "body"
+    ],
+    "children": [
+      "nav",
+      "p"
+    ]
+  }
+}

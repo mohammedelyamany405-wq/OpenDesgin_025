@@ -1,0 +1,37 @@
+{
+  "property": "flex-basis",
+  "page": "https://www.w3schools.com/cssref/css3_pr_flex-basis.php",
+  "function": "The flex-basis property specifies the initial length of a flexible item.",
+  "category": "flexbox",
+  "syntax": "flex-basis: number|auto|initial|inherit;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.flexBasis=\"200px\" Try it"
+  },
+  "values": [
+    {
+      "value": "number",
+      "function": "A length unit, or percentage, specifying the initial length of the flexible item(s)"
+    },
+    {
+      "value": "auto",
+      "function": "Default value. The length is equal to the length of the flexible item. If the item has no length specified, the length will be according to its content"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 4,
+  "shorthandFor": [],
+  "partOf": [
+    "flex"
+  ]
+}

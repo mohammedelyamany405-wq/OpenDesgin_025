@@ -1,0 +1,175 @@
+{
+  "property": "cursor",
+  "page": "https://www.w3schools.com/cssref/pr_class_cursor.php",
+  "function": "The cursor property specifies the mouse cursor to be displayed when pointing over an element.",
+  "category": "color",
+  "syntax": "cursor: value;",
+  "defaults": {
+    "Default value": "auto",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.cursor=\"crosshair\" Try it"
+  },
+  "values": [
+    {
+      "value": "alias",
+      "function": "The cursor indicates an alias of something is to be created"
+    },
+    {
+      "value": "all-scroll",
+      "function": "The cursor indicates that something can be scrolled in any direction"
+    },
+    {
+      "value": "auto",
+      "function": "Default. The browser sets a cursor"
+    },
+    {
+      "value": "cell",
+      "function": "The cursor indicates that a cell (or set of cells) may be selected"
+    },
+    {
+      "value": "col-resize",
+      "function": "The cursor indicates that the column can be resized horizontally"
+    },
+    {
+      "value": "context-menu",
+      "function": "The cursor indicates that a context-menu is available"
+    },
+    {
+      "value": "copy",
+      "function": "The cursor indicates something is to be copied"
+    },
+    {
+      "value": "crosshair",
+      "function": "The cursor render as a crosshair"
+    },
+    {
+      "value": "default",
+      "function": "The default cursor"
+    },
+    {
+      "value": "e-resize",
+      "function": "The cursor indicates that an edge of a box is to be moved right (east)"
+    },
+    {
+      "value": "ew-resize",
+      "function": "Indicates a bidirectional resize cursor"
+    },
+    {
+      "value": "grab",
+      "function": "The cursor indicates that something can be grabbed"
+    },
+    {
+      "value": "grabbing",
+      "function": "The cursor indicates that something can be grabbed"
+    },
+    {
+      "value": "help",
+      "function": "The cursor indicates that help is available"
+    },
+    {
+      "value": "move",
+      "function": "The cursor indicates something is to be moved"
+    },
+    {
+      "value": "n-resize",
+      "function": "The cursor indicates that an edge of a box is to be moved up (north)"
+    },
+    {
+      "value": "ne-resize",
+      "function": "The cursor indicates that an edge of a box is to be moved up and right (north/east)"
+    },
+    {
+      "value": "nesw-resize",
+      "function": "Indicates a bidirectional resize cursor"
+    },
+    {
+      "value": "ns-resize",
+      "function": "Indicates a bidirectional resize cursor"
+    },
+    {
+      "value": "nw-resize",
+      "function": "The cursor indicates that an edge of a box is to be moved up and left (north/west)"
+    },
+    {
+      "value": "nwse-resize",
+      "function": "Indicates a bidirectional resize cursor"
+    },
+    {
+      "value": "no-drop",
+      "function": "The cursor indicates that the dragged item cannot be dropped here"
+    },
+    {
+      "value": "none",
+      "function": "No cursor is rendered for the element"
+    },
+    {
+      "value": "not-allowed",
+      "function": "The cursor indicates that the requested action will not be executed"
+    },
+    {
+      "value": "pointer",
+      "function": "The cursor is a pointer and indicates a link"
+    },
+    {
+      "value": "progress",
+      "function": "The cursor indicates that the program is busy (in progress)"
+    },
+    {
+      "value": "row-resize",
+      "function": "The cursor indicates that the row can be resized vertically"
+    },
+    {
+      "value": "s-resize",
+      "function": "The cursor indicates that an edge of a box is to be moved down (south)"
+    },
+    {
+      "value": "se-resize",
+      "function": "The cursor indicates that an edge of a box is to be moved down and right (south/east)"
+    },
+    {
+      "value": "sw-resize",
+      "function": "The cursor indicates that an edge of a box is to be moved down and left (south/west)"
+    },
+    {
+      "value": "text",
+      "function": "The cursor indicates text that may be selected"
+    },
+    {
+      "value": "url()",
+      "function": "A comma separated list of URLs to custom cursors. Note: Always specify a generic cursor at the end of the list, in case none of the URL-defined cursors can be used"
+    },
+    {
+      "value": "vertical-text",
+      "function": "The cursor indicates vertical-text that may be selected"
+    },
+    {
+      "value": "w-resize",
+      "function": "The cursor indicates that an edge of a box is to be moved left (west)"
+    },
+    {
+      "value": "wait",
+      "function": "The cursor indicates that the program is busy"
+    },
+    {
+      "value": "zoom-in",
+      "function": "The cursor indicates that something can be zoomed in"
+    },
+    {
+      "value": "zoom-out",
+      "function": "The cursor indicates that something can be zoomed out"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 39,
+  "shorthandFor": [],
+  "partOf": []
+}

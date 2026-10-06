@@ -1,0 +1,41 @@
+{
+  "property": "background-origin",
+  "page": "https://www.w3schools.com/cssref/css3_pr_background-origin.php",
+  "function": "The background-origin property specifies the origin position (the background positioning area) of a background image.",
+  "category": "background",
+  "syntax": "background-origin: padding-box|border-box|content-box|initial|inherit;",
+  "defaults": {
+    "Default value": "padding-box",
+    "Inherited": "no",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.backgroundOrigin=\"content-box\" Try it"
+  },
+  "values": [
+    {
+      "value": "padding-box",
+      "function": "Default value. The background image starts from the upper left corner of the padding edge"
+    },
+    {
+      "value": "border-box",
+      "function": "The background image starts from the upper left corner of the border"
+    },
+    {
+      "value": "content-box",
+      "function": "The background image starts from the upper left corner of the content"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 5,
+  "shorthandFor": [],
+  "partOf": [
+    "background"
+  ]
+}

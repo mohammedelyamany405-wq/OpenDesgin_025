@@ -1,0 +1,20 @@
+{
+  "tag": "dialog",
+  "page": "https://www.w3schools.com/tags/tag_dialog.asp",
+  "function": "The <dialog> tag defines a dialog box or subwindow.",
+  "category": "interactive",
+  "attributes": [
+    {
+      "name": "open",
+      "values": "open",
+      "function": "Specifies that the dialog element is active and that the user can interact with it"
+    }
+  ],
+  "attributeCount": 1,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

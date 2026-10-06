@@ -1,0 +1,14 @@
+{
+  "tag": "samp",
+  "page": "https://www.w3schools.com/tags/tag_samp.asp",
+  "function": "Define some text as sample output from a computer program in a document.",
+  "category": "text",
+  "attributes": [],
+  "attributeCount": 0,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

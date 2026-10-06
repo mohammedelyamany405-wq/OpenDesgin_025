@@ -1,0 +1,20 @@
+{
+  "tag": "q",
+  "page": "https://www.w3schools.com/tags/tag_q.asp",
+  "function": "Browsers normally insert quotation marks around the quotation.",
+  "category": "text",
+  "attributes": [
+    {
+      "name": "cite",
+      "values": "URL",
+      "function": "Specifies the source URL of the quote"
+    }
+  ],
+  "attributeCount": 1,
+  "globalAttributes": true,
+  "eventAttributes": true,
+  "related": {
+    "parents": [],
+    "children": []
+  }
+}

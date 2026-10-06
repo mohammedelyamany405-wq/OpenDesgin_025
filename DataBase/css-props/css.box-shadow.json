@@ -1,0 +1,55 @@
+{
+  "property": "box-shadow",
+  "page": "https://www.w3schools.com/cssref/css3_pr_box-shadow.php",
+  "function": "The box-shadow property attaches one or more shadows to an element.",
+  "category": "background",
+  "syntax": "box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;",
+  "defaults": {
+    "Default value": "none",
+    "Inherited": "no",
+    "Animatable": "yes. Read about animatable Try it",
+    "Version": "CSS3",
+    "JavaScript syntax": "object.style.boxShadow=\"10px 20px 30px blue\" Try it"
+  },
+  "values": [
+    {
+      "value": "none",
+      "function": "Default value. No shadow is displayed"
+    },
+    {
+      "value": "h-offset",
+      "function": "Required. The horizontal offset of the shadow. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box"
+    },
+    {
+      "value": "v-offset",
+      "function": "Required. The vertical offset of the shadow. A positive value puts the shadow below the box, a negative value puts the shadow above the box"
+    },
+    {
+      "value": "blur",
+      "function": "Optional. The blur radius. The higher the number, the more blurred the shadow will be"
+    },
+    {
+      "value": "spread",
+      "function": "Optional. The spread radius. A positive value increases the size of the shadow, a negative value decreases the size of the shadow"
+    },
+    {
+      "value": "color",
+      "function": "Optional. The color of the shadow. The default value is the text color. Look at CSS Color Values for a complete list of possible color values.Note: In Safari (on PC) the color parameter is required. If you do not specify the color, the shadow is not displayed at all."
+    },
+    {
+      "value": "inset",
+      "function": "Optional. Changes the shadow from an outer shadow (outset) to an inner shadow"
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 9,
+  "shorthandFor": [],
+  "partOf": []
+}

@@ -1,0 +1,51 @@
+{
+  "property": "unicode-bidi",
+  "page": "https://www.w3schools.com/cssref/pr_text_unicode-bidi.php",
+  "function": "The unicode-bidi property is used together with the direction property to set or return whether the text should be overridden to support multiple languages in the same document.",
+  "category": "text",
+  "syntax": "unicode-bidi: normal|embed|bidi-override|initial|inherit;",
+  "defaults": {
+    "Default value": "normal",
+    "Inherited": "yes",
+    "Animatable": "no. Read about animatable",
+    "Version": "CSS2",
+    "JavaScript syntax": "object.style.unicodeBidi=\"bidi-override\" Try it"
+  },
+  "values": [
+    {
+      "value": "normal",
+      "function": "The element does not open an additional level of embedding. This is default"
+    },
+    {
+      "value": "embed",
+      "function": "For inline elements, this value opens an additional level of embedding"
+    },
+    {
+      "value": "bidi-override",
+      "function": "For inline elements, this creates an override. For block elements, this creates an override for inline-level descendants not within another block element"
+    },
+    {
+      "value": "isolate",
+      "function": "The element is isolated from its siblings"
+    },
+    {
+      "value": "isolate-override",
+      "function": ""
+    },
+    {
+      "value": "plaintext",
+      "function": ""
+    },
+    {
+      "value": "initial",
+      "function": "Sets this property to its default value. Read about initial"
+    },
+    {
+      "value": "inherit",
+      "function": "Inherits this property from its parent element. Read about inherit"
+    }
+  ],
+  "valueCount": 8,
+  "shorthandFor": [],
+  "partOf": []
+}
