@@ -22,6 +22,10 @@ declare global {
   interface Window {
     showOpenFilePicker?(options?: FilePickerOptions): Promise<FileSystemFileHandle[]>
     showSaveFilePicker?(options?: FilePickerOptions): Promise<FileSystemFileHandle>
+    showDirectoryPicker?(options?: {
+      id?: string
+      mode?: 'read' | 'readwrite'
+    }): Promise<FileSystemDirectoryHandle>
     queryLocalFonts?(): Promise<
       {
         family: string

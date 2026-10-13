@@ -1,7 +1,30 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, watch } from 'vue'
+import { zipSync } from 'fflate'
 import { useSelectionState } from '@open-pencil/vue'
 import { useEditorStore } from '@/app/editor/active-store'
+import {
+  escapeAttrValue,
+  escapeText,
+  elementComment,
+  isVoidTag
+} from '@/app/web-builder/export-format'
+import {
+  collectCriticalErrors,
+  collectWarnings,
+  hasExportableContent
+} from '@/app/web-builder/export-rules'
+import {
+  buildProjectContext,
+  resolvePageHref,
+  slugify,
+  type PageInput,
+  type ProjectContext
+} from '@/app/web-builder/project'
+import { visualStyleDeclarations } from '@/app/web-builder/export-style'
+import { PAGE_LINK_KEY } from '@/app/web-builder/tag-attrs'
+import { encodeBase64 } from '@open-pencil/core/bytes'
+import { detectImageMime } from '@open-pencil/core/io/formats/svg'
 
 import PanelSection from '@/components/ui/panel/PanelSection.vue'
 import DOMTreeTab from './DOMTreeTab.vue'
@@ -26,27 +49,18 @@ const PAGE_KEY = 'web-builder-page'
 const pageTitle = ref('Exported Page')
 const pageLang = ref('en')
 const pageDescription = ref('')
+const pageSlug = ref('')
+const pageIsHome = ref(false)
 
 function loadPageSettings() {
   const page = editor.graph.getNode(editor.state.currentPageId)
   if (!page) return
-  const entry = page.pluginData?.find(
-    (e: any) => e.pluginId === 'open-pencil' && e.key === PAGE_KEY
-  )
-  if (!entry) {
-    pageTitle.value = page.name || 'Exported Page'
-    pageLang.value = 'en'
-    pageDescription.value = ''
-    return
-  }
-  try {
-    const data = JSON.parse(entry.value)
-    pageTitle.value = data.title || page.name || 'Exported Page'
-    pageLang.value = data.lang || 'en'
-    pageDescription.value = data.description || ''
-  } catch {
-    pageTitle.value = page.name || 'Exported Page'
-  }
+  const meta = readPageMeta(page)
+  pageTitle.value = meta.title
+  pageLang.value = meta.lang
+  pageDescription.value = meta.description
+  pageSlug.value = meta.slug
+  pageIsHome.value = meta.isHome
 }
 
 function savePageSettings() {
@@ -62,7 +76,9 @@ function savePageSettings() {
     value: JSON.stringify({
       title: pageTitle.value,
       lang: pageLang.value,
-      description: pageDescription.value
+      description: pageDescription.value,
+      slug: pageSlug.value.trim() ? slugify(pageSlug.value) : slugify(page.name),
+      isHome: pageIsHome.value
     })
   })
   editor.updateNodeWithUndo(pageId, { pluginData }, 'Set page settings')
@@ -187,7 +203,7 @@ function toggleClass(className: string) {
   savePluginData('web-builder-classes', current)
 }
 
-function readNodeMeta(n: any): { tag: string; classes: string[]; layout: any; decorative: boolean; attrs: Record<string, any> } {
+function readNodeMeta(n: any): { tag: string; classes: string[]; layout: any; decorative: boolean; attrs: Record<string, any>; text: string; pageLink: string } {
   const tagEntry = n.pluginData?.find(
     (e: any) => e.pluginId === 'open-pencil' && e.key === 'web-builder-tag'
   )
@@ -199,6 +215,9 @@ function readNodeMeta(n: any): { tag: string; classes: string[]; layout: any; de
   )
   const decEntry = n.pluginData?.find(
     (e: any) => e.pluginId === 'open-pencil' && e.key === DECORATIVE_KEY
+  )
+  const pageLinkEntry = n.pluginData?.find(
+    (e: any) => e.pluginId === 'open-pencil' && e.key === PAGE_LINK_KEY
   )
   let cls: string[] = []
   try {
@@ -226,16 +245,10 @@ function readNodeMeta(n: any): { tag: string; classes: string[]; layout: any; de
     classes: cls,
     layout,
     decorative: decEntry?.value === 'true',
-    attrs
+    attrs,
+    text: typeof n.text === 'string' ? n.text : '',
+    pageLink: pageLinkEntry?.value || ''
   }
-}
-
-function escapeAttrValue(value: string): string {
-  return String(value)
-    .replaceAll('&', '&amp;')
-    .replaceAll('"', '&quot;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
 }
 
 function attrsToString(attrs: Record<string, any>): string {
@@ -264,74 +277,89 @@ function readPageBreakpoints(page: any): { tablet: number; mobile: number } {
   }
 }
 
-// DOM Tree - build from editor graph (fresh pluginData for every node)
-const domTreeData = computed(() => {
-  if (!editor?.graph) return null
+interface PageMeta {
+  id: string
+  name: string
+  title: string
+  lang: string
+  description: string
+  slug: string
+  isHome: boolean
+}
 
-  function buildNode(id: string): any {
-    const n = editor.graph.getNode(id)
-    if (!n) return null
-
-    const meta = readNodeMeta(n)
-
-    // Get children using graph.getChildren()
-    const children = editor.graph.getChildren(id)
-
-    return {
-      id: n.id,
-      name: n.name,
-      type: n.type,
-      tag: meta.tag,
-      classes: meta.classes,
-      layout: meta.layout,
-      decorative: meta.decorative,
-      attrs: meta.attrs,
-      children: children.map((child: any) => buildNode(child.id)).filter(Boolean) || []
-    }
+function readPageMeta(page: any): PageMeta {
+  const entry = page.pluginData?.find(
+    (e: any) => e.pluginId === 'open-pencil' && e.key === PAGE_KEY
+  )
+  let data: any = {}
+  try {
+    if (entry) data = JSON.parse(entry.value)
+  } catch {
+    data = {}
   }
+  return {
+    id: page.id,
+    name: page.name,
+    title: data.title || page.name || 'Exported Page',
+    lang: data.lang || 'en',
+    description: data.description || '',
+    slug: data.slug || slugify(page.name),
+    isHome: data.isHome === true
+  }
+}
 
-  // Get current page
-  const pageId = editor.state.currentPageId
+function readAllPagesMeta(): PageInput[] {
+  return editor.graph.getPages().map((p: any) => readPageMeta(p))
+}
+
+// Resolve a bitmap hash to an inline data URL so image fills survive in a
+// single self-contained HTML file (preview) and inside the exported project.
+function resolveImageDataUrl(imageHash: string): string | undefined {
+  const bytes = editor.graph.images.get(imageHash)
+  if (!bytes) return undefined
+  return `data:${detectImageMime(bytes)};base64,${encodeBase64(bytes)}`
+}
+
+function buildNode(id: string): any {
+  const n = editor.graph.getNode(id)
+  if (!n) return null
+
+  const meta = readNodeMeta(n)
+  const children = editor.graph.getChildren(id)
+
+  return {
+    id: n.id,
+    name: n.name,
+    type: n.type,
+    x: n.x,
+    y: n.y,
+    tag: meta.tag,
+    classes: meta.classes,
+    layout: meta.layout,
+    decorative: meta.decorative,
+    attrs: meta.attrs,
+    text: meta.text,
+    pageLink: meta.pageLink,
+    style: visualStyleDeclarations(n, resolveImageDataUrl),
+    children: children.map((child: any) => buildNode(child.id)).filter(Boolean) || []
+  }
+}
+
+// Build the DOM tree for any page (fresh pluginData for every node).
+function buildPageTree(pageId: string): any {
+  if (!editor?.graph) return null
   const page = editor.graph.getNode(pageId)
   if (!page) return null
-
-  // Get page children
   const pageChildren = editor.graph.getChildren(pageId)
-
   return {
     name: page.name,
     breakpoints: readPageBreakpoints(page),
     children: pageChildren.map((child: any) => buildNode(child.id)).filter(Boolean) || []
   }
-})
-
-// Export gate: critical errors block export (same rules as ValidateTab)
-function collectCriticalErrors(tree: any): string[] {
-  const errors: string[] = []
-  const allNodes: any[] = []
-  function collect(node: any) {
-    allNodes.push(node)
-    node.children?.forEach(collect)
-  }
-  tree.children?.forEach(collect)
-
-  const tags = allNodes.map((n) => n.tag || 'div')
-  for (const essential of ['header', 'main', 'footer']) {
-    if (!tags.includes(essential)) {
-      errors.push(`Missing essential tag: <${essential}>`)
-    }
-  }
-  const h1Count = tags.filter((t) => t === 'h1').length
-  if (h1Count > 1) {
-    errors.push(`Multiple <h1> tags found (${h1Count}) — keep only one per page`)
-  }
-  for (const n of allNodes) {
-    if ((n.tag || 'div') === 'img' && n.children?.length > 0) {
-      errors.push(`Element "${n.name}" is <img> but has children`)
-    }
-  }
-  return errors
 }
+
+// DOM Tree - current page only (reactive)
+const domTreeData = computed(() => buildPageTree(editor.state.currentPageId))
 
 function cssForClass(className: string): string {
   for (const cat of classCategories) {
@@ -368,42 +396,19 @@ function cssForLayout(layout: any): string[] {
   return rules
 }
 
-function collectWarnings(tree: any): string[] {
-  const warnings: string[] = []
-  const defaultNames = /^(rectangle|ellipse|frame|group|text)/i
-  function check(node: any) {
-    if (!node.decorative) {
-      const tag = node.tag || 'div'
-      const hasChildren = node.children?.length > 0
-      if (tag === 'div' && !hasChildren) {
-        warnings.push(`Element "${node.name}" has no specific tag`)
-      }
-      if (
-        hasChildren &&
-        (!node.layout || node.layout.type === 'none') &&
-        ['div', 'section', 'main', 'header', 'footer', 'nav', 'article', 'aside'].includes(tag)
-      ) {
-        warnings.push(`Container "${node.name}" has children but no Flex/Grid declared`)
-      }
-      if ((tag === 'button' || tag === 'a') && defaultNames.test(node.name)) {
-        warnings.push(`Element <${tag}> still has default name "${node.name}"`)
-      }
-      if (tag === 'img' && !node.attrs?.src) {
-        warnings.push(`Image "${node.name}" has no src — pick a file or URL in Tags tab`)
-      }
-    }
-    node.children?.forEach(check)
-  }
-  tree.children?.forEach(check)
-  return warnings
-}
-
 // Export
-function generateExport() {
+function generateExport(): string {
   const tree = domTreeData.value
   if (!tree) {
     exportStatus.value = 'No data to export'
-    return
+    return ''
+  }
+
+  if (!hasExportableContent(tree)) {
+    exportHtml.value = ''
+    pendingWarnings.value = []
+    exportStatus.value = 'Page has no elements to export'
+    return ''
   }
 
   const critical = collectCriticalErrors(tree)
@@ -412,7 +417,7 @@ function generateExport() {
     exportConfirmed.value = false
     pendingWarnings.value = []
     exportStatus.value = `Export blocked: ${critical.length} critical error(s). Fix them in Validate tab. (${critical[0]})`
-    return
+    return ''
   }
 
   if (!exportConfirmed.value) {
@@ -420,24 +425,51 @@ function generateExport() {
     if (warnings.length > 0) {
       pendingWarnings.value = warnings
       exportStatus.value = `${warnings.length} warning(s) found. Proceed or fix them first.`
-      return
+      return ''
     }
   }
   pendingWarnings.value = []
   exportConfirmed.value = false
 
+  loadPageSettings()
+  const ctx = buildProjectContext(readAllPagesMeta())
+  const html = buildExportHtml(tree, {
+    title: pageTitle.value,
+    lang: pageLang.value,
+    description: pageDescription.value,
+    ctx
+  })
+  exportHtml.value = html
+  exportStatus.value = 'HTML generated!'
+  return html
+}
+
+interface BuildOptions {
+  title: string
+  lang: string
+  description: string
+  ctx?: ProjectContext
+}
+
+// Builds the HTML/CSS purely from the tree — no validation gate. Callers decide the gate.
+function buildExportHtml(tree: any, options: BuildOptions): string {
   const usedClasses = new Map<string, string>()
   const layoutRules: string[] = []
   const tabletRules: string[] = []
   const mobileRules: string[] = []
   const bp = tree.breakpoints || { tablet: 768, mobile: 375 }
 
-  function nodeToHtml(node: any, indent: number = 0): string {
+  function nodeToHtml(node: any, indent: number = 0, absolute: boolean = false): string {
     const spaces = '  '.repeat(indent)
     const decorative = !!node.decorative
     const tag = decorative ? 'div' : node.tag || 'div'
     const aria = decorative ? ' aria-hidden="true"' : ''
-    const extraAttrs = decorative ? '' : attrsToString(node.attrs || {})
+
+    let nodeAttrs = node.attrs || {}
+    if (!decorative && node.pageLink && options.ctx?.hasPage(node.pageLink)) {
+      nodeAttrs = { ...nodeAttrs, href: resolvePageHref(node.pageLink, options.ctx) }
+    }
+    const extraAttrs = decorative ? '' : attrsToString(nodeAttrs)
 
     const cls: string[] = [...(node.classes || [])]
     for (const c of node.classes || []) {
@@ -447,35 +479,58 @@ function generateExport() {
       }
     }
 
+    const visualRules: string[] = node.style || []
     const rules = cssForLayout(node.layout)
-    if (rules.length > 0) {
+    const hasChildren = node.children?.length > 0
+    const freeForm = hasChildren && rules.length === 0
+    const positionRules: string[] = []
+    if (freeForm) positionRules.push('position: relative')
+    if (absolute) {
+      positionRules.push('position: absolute')
+      positionRules.push(`left: ${Math.round(node.x)}px`)
+      positionRules.push(`top: ${Math.round(node.y)}px`)
+    }
+    const styleRules = [...rules, ...visualRules, ...positionRules].map((rule) =>
+      rule.replace(/;\s*$/, '')
+    )
+    if (styleRules.length > 0) {
       const wbClass = `wb-${sanitizeId(node.id)}`
       cls.push(wbClass)
-      layoutRules.push(`.${wbClass} { ${rules.join(' ')} }`)
-      if (node.layout.tabletDirection && node.layout.tabletDirection !== 'inherit') {
+      layoutRules.push(`.${wbClass} { ${styleRules.join('; ')} }`)
+      if (node.layout?.tabletDirection && node.layout.tabletDirection !== 'inherit') {
         tabletRules.push(`.${wbClass} { flex-direction: ${node.layout.tabletDirection}; }`)
       }
-      if (node.layout.mobileDirection && node.layout.mobileDirection !== 'inherit') {
+      if (node.layout?.mobileDirection && node.layout.mobileDirection !== 'inherit') {
         mobileRules.push(`.${wbClass} { flex-direction: ${node.layout.mobileDirection}; }`)
       }
     }
 
     const classAttr = cls.length > 0 ? ` class="${cls.join(' ')}"` : ''
+    const comment = elementComment(node.name, tag, decorative, spaces)
+    const text = typeof node.text === 'string' ? node.text : ''
+    const open = `${spaces}<${tag}${classAttr}${aria}${extraAttrs}>`
 
-    if (node.children?.length > 0) {
-      const childrenHtml = node.children.map((c: any) => nodeToHtml(c, indent + 1)).join('\n')
-      return `${spaces}<${tag}${classAttr}${aria}${extraAttrs}>\n${childrenHtml}\n${spaces}</${tag}>`
-    } else {
-      return `${spaces}<${tag}${classAttr}${aria}${extraAttrs}></${tag}>`
+    if (hasChildren) {
+      const childrenHtml = node.children
+        .map((c: any) => nodeToHtml(c, indent + 1, freeForm))
+        .join('\n')
+      return `${comment}${open}\n${childrenHtml}\n${spaces}</${tag}>`
     }
+    if (isVoidTag(tag)) {
+      return `${comment}${open}`
+    }
+    if (text) {
+      return `${comment}${open}${escapeText(text)}</${tag}>`
+    }
+    return `${comment}${open}</${tag}>`
   }
 
   let body = ''
   tree.children?.forEach((child: any) => {
-    body += nodeToHtml(child, 1) + '\n'
+    body += nodeToHtml(child, 1, false) + '\n'
   })
 
-  let css = ''
+  let css = 'body { margin: 0; position: relative; }\n'
   usedClasses.forEach((def, name) => {
     css += `.${name} { ${def} }\n`
   })
@@ -487,10 +542,9 @@ function generateExport() {
     css += `@media (max-width: ${bp.mobile}px) {\n  ${mobileRules.join('\n  ')}\n}\n`
   }
 
-  loadPageSettings()
-  const escTitle = escapeAttrValue(pageTitle.value || 'Exported Page')
-  const escLang = escapeAttrValue(pageLang.value || 'en')
-  const escDesc = escapeAttrValue(pageDescription.value || '')
+  const escTitle = escapeAttrValue(options.title || 'Exported Page')
+  const escLang = escapeAttrValue(options.lang || 'en')
+  const escDesc = escapeAttrValue(options.description || '')
 
   let html = `<!DOCTYPE html>\n<html lang="${escLang}">\n<head>\n`
   html += '  <meta charset="UTF-8">\n'
@@ -502,8 +556,118 @@ function generateExport() {
   html += body
   html += '</body>\n</html>'
 
-  exportHtml.value = html
-  exportStatus.value = 'HTML generated!'
+  return html
+}
+
+function previewExport() {
+  const tree = domTreeData.value
+  if (!tree || !hasExportableContent(tree)) {
+    exportStatus.value = 'Nothing to preview — page has no elements'
+    return
+  }
+  loadPageSettings()
+  const ctx = buildProjectContext(readAllPagesMeta())
+  const html = buildExportHtml(tree, {
+    title: pageTitle.value,
+    lang: pageLang.value,
+    description: pageDescription.value,
+    ctx
+  })
+  const blob = new Blob([html], { type: 'text/html' })
+  const url = URL.createObjectURL(blob)
+  const win = window.open(url, '_blank')
+  if (!win) {
+    URL.revokeObjectURL(url)
+    exportStatus.value = 'Preview blocked by the browser — allow pop-ups, then retry.'
+    return
+  }
+  exportStatus.value = 'Preview opened (structure preview, validation skipped).'
+  setTimeout(() => URL.revokeObjectURL(url), 60_000)
+}
+
+interface ProjectFile {
+  name: string
+  html: string
+}
+
+function collectProjectFiles(): { files: ProjectFile[]; errors: string[] } {
+  const pages = editor.graph.getPages()
+  const ctx = buildProjectContext(readAllPagesMeta())
+  const files: ProjectFile[] = []
+  const errors: string[] = []
+
+  for (const page of pages) {
+    const tree = buildPageTree(page.id)
+    if (!tree || !hasExportableContent(tree)) continue
+    const critical = collectCriticalErrors(tree)
+    if (critical.length > 0) {
+      errors.push(`"${page.name}": ${critical[0]}`)
+      continue
+    }
+    const meta = readPageMeta(page)
+    const name = ctx.fileNameById.get(page.id) || `${slugify(page.name)}.html`
+    files.push({
+      name,
+      html: buildExportHtml(tree, {
+        title: meta.title,
+        lang: meta.lang,
+        description: meta.description,
+        ctx
+      })
+    })
+  }
+  return { files, errors }
+}
+
+function downloadZip(files: ProjectFile[]) {
+  const entries: Record<string, Uint8Array> = {}
+  const encoder = new TextEncoder()
+  for (const file of files) entries[file.name] = encoder.encode(file.html)
+  const zipped = zipSync(entries)
+  const blob = new Blob([zipped], { type: 'application/zip' })
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = 'openpencil-project.zip'
+  a.click()
+  setTimeout(() => URL.revokeObjectURL(url), 60_000)
+}
+
+async function createProject() {
+  const { files, errors } = collectProjectFiles()
+  if (files.length === 0) {
+    exportStatus.value =
+      errors.length > 0
+        ? `Nothing to write — ${errors.length} page(s) blocked. (${errors[0]})`
+        : 'Nothing to write — no pages with elements.'
+    return
+  }
+
+  if (window.showDirectoryPicker) {
+    try {
+      const dir = await window.showDirectoryPicker({ mode: 'readwrite' })
+      for (const file of files) {
+        const handle = await dir.getFileHandle(file.name, { create: true })
+        const writable = await handle.createWritable()
+        await writable.write(file.html)
+        await writable.close()
+      }
+      exportStatus.value = `Wrote ${files.length} file(s) to the chosen folder.${
+        errors.length ? ` Skipped ${errors.length} blocked page(s).` : ''
+      }`
+      return
+    } catch (e) {
+      if ((e as Error).name === 'AbortError') {
+        exportStatus.value = 'Create Project cancelled.'
+        return
+      }
+    }
+  }
+
+  downloadZip(files)
+  exportStatus.value = `Downloaded ${files.length} file(s) as a ZIP (folder picker unavailable).${
+    errors.length ? ` Skipped ${errors.length} blocked page(s).` : ''
+  }`
 }
 
 function proceedWithWarnings() {
@@ -623,11 +787,25 @@ watch(activeTab, (tab) => {
               <label>Description</label>
               <input v-model="pageDescription" class="attr-input" type="text" placeholder="Meta description" @change="savePageSettings" />
             </div>
+            <div class="ps-row">
+              <label>File slug</label>
+              <input v-model="pageSlug" class="attr-input" type="text" placeholder="page-slug" @change="savePageSettings" />
+            </div>
+            <div class="ps-row">
+              <label>Home page</label>
+              <input v-model="pageIsHome" type="checkbox" @change="savePageSettings" />
+            </div>
           </div>
         </PanelSection>
         <PanelSection label="Export HTML/CSS">
           <button class="export-btn" @click="generateExport">
             Generate HTML
+          </button>
+          <button class="export-btn" @click="previewExport">
+            Preview
+          </button>
+          <button class="export-btn" @click="createProject">
+            Create Project
           </button>
           
           <div v-if="exportStatus" class="export-status">

@@ -336,6 +336,7 @@ export const TAG_ATTRS: Record<string, AttrField[]> = {
 export const ATTRS_KEY = 'web-builder-attrs'
 export const TAG_KEY = 'web-builder-tag'
 export const DECORATIVE_KEY = 'web-builder-decorative'
+export const PAGE_LINK_KEY = 'web-builder-page-link'
 export const PLUGIN_ID = 'open-pencil'
 
 // Max inline image size (data URL) stored in pluginData

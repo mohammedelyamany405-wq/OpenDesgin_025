@@ -1,7 +1,191 @@
 # STATE — مصنع التعديلات المحلية
-آخر تحديث: 2026-10-07
-المرحلة الحالية: المرحلة 0 — توحيد المصدر وخط الأساس (منجزة، بانتظار إقرار)
+آخر تحديث: 2026-10-13
+المرحلة الحالية: المرحلة 4 — التدرجات + صور/أصول (كود منجز، بانتظار تحقق check:vue + إقرار بصري)
+المرحلة 3: كود منجز (التنسيق البصري) — بانتظار إقرار بصري نهائي (أُضيف الوضع الحرّ لإصلاح الانكماش).
+المرحلة 1: مُقَرّة بصرياً من المصمم (2026-10-11) — تصدير النص + التعليقات + Preview يعمل.
+المرحلة 2: مُقَرّة بصرياً (2026-10-11) — قائمة «اربط بصفحة» تعمل (لقطة: Rectangle موسّم <a> مرتبط بـ Aboutus).
+
+## المرحلة 4 — التدرجات + صور/أصول (2026-10-13) — قيد الإنجاز
+
+### الهدف
+إكمال المؤجَّل في المرحلة 3: تحويل تعبئات **التدرجات** (`GRADIENT_*`) و**الصور** (`IMAGE`)
+إلى CSS بدل تجاهلها، بحيث يقترب المخرج من التصميم.
+
+### المنجز (كود)
+- `src/app/web-builder/export-style.ts`:
+  - نوع `ImageResolver` (`(hash) => cssUrl | undefined`).
+  - `visualStyleDeclarations(node, resolveImage?)` صار يستدعي `fillDeclarations` (تُرجع `string[]`).
+  - **التدرجات:** `linearGradientCss` (زاوية دقيقة من مصفوفة المُصيّر: `angle = atan2(-m00*w, m10*h)`)،
+    `radialGradientCss` (مركز ونصفا قطري من `scale(w,h)*transform` على النقطة 0.5,0.5 ونصف قطر 0.5)،
+    `angularGradientCss` (conic بـ`from`)، و`GRADIENT_DIAMOND` → radial (المُصيّر يرسمه radial فعلاً).
+    تُطابق دلالات `packages/core/src/canvas/fills.ts` حرفياً. تدرّج بلا stops أو بلا transform = يُتخطّى.
+  - **الصور:** `imageDeclarations` تنتج `background-image: url("...")` + `background-position: center`
+    + `background-size`/`background-repeat` حسب `imageScaleMode` (FILL/CROP→cover, FIT→contain, TILE→repeat).
+  - ألوان المحطات تُضرب شفافيتها في `fill.opacity` لمطابقة `setAlphaf` في المُصيّر.
+  - النصوص تبقى solid فقط (تُتخطّى تدرجات/صور النص).
+- `packages/core/src/io/formats/svg/defs.ts`: تصدير `detectImageMime` (كان محلياً).
+- `packages/core/src/io/formats/svg/index.ts`: إعادة تصديره (لا تكرار لالتقاط نوع الصورة).
+- `WebBuilderPanel.vue`: `resolveImageDataUrl(hash)` يبني `data:<mime>;base64,...` من `editor.graph.images`
+  عبر `encodeBase64` + `detectImageMime`، ويُمرَّر إلى `visualStyleDeclarations` في `buildNode`.
+
+### قرار
+- الصور تُصدَّر **inline كـ data URL** (مضمّنة) في Preview والمشروع معاً — ملف HTML واحد قابل للنقل.
+  (تدويرها كملفات أصول منفصلة داخل مجلد المشروع = تحسين لاحق.)
+- زوايا/نصف قطر CSS تقريبية بحكم طبيعة `objectBoundingBox`؛ الزاوية الخطية هي الخاصية المهيمنة وتُحسب بدقة.
+
+### التحقق
+- `tests/engine/web-builder/export-style.test.ts`: **22/22** ✅ (8 اختبارات جديدة للتدرجات/الصور).
+- `bun test ./tests/engine/web-builder ./tests/engine/dom-css`: **82/82** ✅ (لا انحدار).
+- `bun run check:vue`: **لم يُكمَل** — أوقف المصمم الأمر عند نهاية الجلسة. مطلوب تشغيله عند الاستئناف.
+
+### الاختبار البصري المطلوب من المصمم (المرحلة 4)
+1. صمّم شكلاً بتعبئة **تدرّج خطي** (بمحور أفقي ورأسي) وشكلاً بتعبئة **صورة**.
+2. تبويب Export ← **Preview**: يجب أن يظهر التدرّج والصورة في مكانهما.
+3. سلّم لقطة للإقرار (أو صف الاتجاه إن ظهر معكوساً — التصحيح سطر واحد).
+
+### نقطة التوقف (نهاية جلسة 2026-10-13)
+- العمل موقوف هنا بقرار المصمم. الاختبارات خضراء. `check:vue` لم يُشغَّل بعد.
+- لم يُدفع شيء إلى الريموت (بانتظار موافقة المصمم).
+
+---
+
+## المرحلة 3 — تصدير التنسيق البصري (2026-10-11)
+
+### الهدف (بإقرار المصمم على النطاق)
+ضمّ الخصائص البصرية للعناصر إلى CSS: ألوان (Fill SOLID)، حدود (Stroke)، زوايا (Radius)،
+ظلال (Drop/Inner)، ضبابية (Blur)، وخطوط (Typography) — ليصبح المخرج شبيهًا بالتصميم.
+
+### المنجز (كود)
+- وحدة نقية جديدة `src/app/web-builder/export-style.ts`:
+  - `visualStyleDeclarations(node)` + واجهة `NodeStyleSource`.
+  - تعتمد `colorToCSS` من `@open-pencil/core/color` وأنواع `Fill/Stroke/Effect/Color` من `@open-pencil/scene-graph`.
+  - تغطي: **المقاسات (width/height + box-sizing + overflow)**، fill→background/color، stroke→border،
+    radius، box-shadow (drop+inner)، blur، opacity، typography.
+- `WebBuilderPanel.vue`: `buildNode` يخزّن `style` و`x`/`y` لكل عقدة، و`nodeToHtml` يدمج:
+  تصريحات التخطيط المصرَّح به + التنسيق البصري + **قواعد الوضع الحرّ** في صنف `wb-<id>` واحد.
+- **إصلاح علّة «التنسيقات لم تُطبَّق»** (تشخيص المصمم أقرّه): السبب كان غياب المقاسات فتنكمش
+  العناصر الفارغة إلى ارتفاع صفر. أُضيف تصدير `width/height` بالبكسل.
+- **الوضع الحرّ (Free-form)**: الحاوية بلا flex/grid مصرَّح به → `position: relative` وأبناؤها
+  `position: absolute` بإحداثياتهم المحلية، فيتراكب مستطيل الزر مع نصّه كما في التصميم.
+  (لا يخالف قاعدة «لا تحويل من X,Y»: نسخ ترتيب حرّ لا استنتاج flex/grid.) أُضيف `body { margin:0; position:relative }`.
+
+### قرار «لا تخمين»
+- تُصدَّر القيم المصرَّح بها فقط. **أُنجز في المرحلة 4:** التدرجات (`GRADIENT_*`) وتعبئات الصور
+  (كانت مؤجّلة هنا). الإحداثيات (X/Y) تُنقل كما هي في الوضع الحرّ (قاعدة «لا تحويل من X,Y»).
+
+### التحقق
+- `tests/engine/web-builder/export-style.test.ts`: 14/14 ✅
+- `bun test ./tests/engine/web-builder ./tests/engine/dom-css`: **74/74** ✅ (لا انحدار)
+- `bun run check:vue`: نجح (exit 0) ✅
+
+### الاختبار البصري المطلوب من المصمم (المرحلة 3)
+1. صمّم عناصر بألوان/زوايا/ظلال، وعنصر نصي بخط ولون وحجم (مثل زر «Group-button»).
+2. تبويب Export ← **Preview**: يجب أن تظهر الألوان والزوايا والظلال والخط، ويتراكب المستطيل مع النص.
+3. سلّم لقطة للإقرار.
+
+
 الفرع: `261007-chore-phase0-baseline`
+
+## المرحلة 2 — مشروع متعدد الصفحات + ربط الصفحات (2026-10-10)
+
+### الهدف
+تحويل التصدير من صفحة واحدة إلى **مشروع كامل**: لكل صفحة ملف HTML باسم slug،
+وربط عناصر `<a>` بصفحات أخرى يُحلّ إلى مسار نسبي.
+
+### المنجز (كود)
+- وحدة نقية جديدة `src/app/web-builder/project.ts`:
+  - `slugify` (يحفظ Unicode العربي، يزيل التشكيل، يمنع الفراغ)، `PageInput`، `ProjectContext`.
+  - `buildProjectContext`: يخصّص slug فريداً لكل صفحة، الصفحة الرئيسية = `index.html`،
+    ويُحجز اسم `index` كي لا تصطدم صفحة غير رئيسية بالرئيسية.
+  - `resolvePageHref(pageId, ctx)`: يُرجع اسم ملف الصفحة الهدف (روابط نسبية في جذر المشروع).
+- `src/app/web-builder/tag-attrs.ts`: إضافة `PAGE_LINK_KEY = 'web-builder-page-link'`.
+- `src/global.d.ts`: تعريف `window.showDirectoryPicker`.
+- `WebBuilderPanel.vue`:
+  - فصل `buildNode`/`buildPageTree(pageId)` لبناء شجرة أي صفحة.
+  - `readPageMeta` + `readAllPagesMeta` لقراءة إعدادات كل الصفحات.
+  - `buildExportHtml(tree, options)` صار يستقبل `{title, lang, description, ctx}` ويحلّ
+    `node.pageLink` إلى `href` عبر `resolvePageHref` قبل التصدير.
+  - `collectProjectFiles`: يبني ملفات كل الصفحات القابلة للتصدير، ويتخطى صفحات بها خطأ حرج.
+  - `createProject`: كتابة مباشرة في مجلد عبر `showDirectoryPicker`، مع **بديل ZIP**
+    عبر `fflate.zipSync` عند عدم توفّر الواجهة. زر **Create Project** أُضيف.
+  - Page Settings: حقول **File slug** + **Home page** (checkbox) تُحفظ في `web-builder-page`.
+- `TagsTab.vue`: قائمة منسدلة **«Page Link / اربط بصفحة»** تظهر عند وسم `<a>`، تسرد
+  الصفحات الأخرى وتربط `PAGE_LINK_KEY` بمعرّف الصفحة الهدف.
+
+### التحقق (بيئة Linux + bun 1.4.2)
+- `tests/engine/web-builder/` (export-format + export-rules + project): **33/33** ✅
+- `bun run check:vue`: نجح (exit 0) ✅
+- خادم المعاينة (Vite) يخدم الوحدات المحدّثة عبر HMR بنجاح.
+
+### الاختبار البصري المطلوب من المصمم (المرحلة 2)
+1. أنشئ صفحتين على الأقل (مثلاً `Home` و`About`)، فعّل **Home page** على الأولى.
+2. على صفحة `About` ضع نصاً موسوماً `h1`، وفي `Home` أضف عنصراً وسمه `<a>` واربطه بـ `About`.
+3. تبويب Export ← **Preview**: يظهر الرابط `href="about.html"`.
+4. **Create Project**: اختر مجلداً ← يُكتب `index.html` + `about.html` (أو ZIP بديل).
+5. سلّم لقطة للإقرار.
+
+## المرحلة 1 — تصدير النص + التعليقات + المعاينة (2026-10-08)
+
+### الفجوة التي عولجت
+- تصدير اللوحة (`generateExport` في `WebBuilderPanel.vue`) كان **يتجاهل النص كلياً**:
+  أي نص داخل `node.text` لم يظهر في HTML المولّد. هذه أخطر فجوة في المحرّك.
+
+### المنجز (كود)
+- وحدة جديدة نقية `src/app/web-builder/export-format.ts`:
+  - `tagLabelAr` (ترجمة الوسم للعربية من `tag-attrs.ts`)، `escapeText`، `escapeAttrValue`،
+    `isVoidTag`، `shouldComment`، `elementComment`.
+  - التعليق الثنائي: `<!-- EN: Name <tag> | AR: Name (اسم الوسم العربي) -->`.
+  - قاعدة التعليق: الدلالي والحاويات فقط (`tag !== 'div'`)، ويُلغى للعنصر الزخرفي.
+- `WebBuilderPanel.vue`:
+  - `readNodeMeta` يقرأ الآن `n.text`، و`buildNode` يمرّره كـ `text` في شجرة DOM.
+  - `nodeToHtml` أصبح: يطبع النص داخل العنصر، ويُخرج العناصر الفارغة (`img`…) بلا وسم إغلاق،
+    ويُسبق كل عنصر دلالي بتعليقه الثنائي. حُذفت دالة الهروب المحلية لتفادي التكرار.
+  - `generateExport` يعيد الآن سلسلة HTML (أو `''`) لتمكين المعاينة.
+  - `previewExport` جديدة: تولّد ثم تفتح HTML في تبويب جديد عبر Blob URL، مع رسائل عربية
+    عند حجب النوافذ المنبثقة. زر **Preview** أُضيف بجانب **Generate HTML**.
+- وحدة قواعد نقية جديدة `src/app/web-builder/export-rules.ts` (استُخرجت من اللوحة لأجل الاختبار):
+  - `collectCriticalErrors` (بوابة header/main/footer + h1 واحد + img بلا أبناء)، مع تصحيح:
+    العنصر الزخرفي لا يُحتسب كوسم أساسي (لأن المخرج يحوّله إلى `div`).
+  - `collectWarnings` (وسم ناقص، حاوية بلا Flex/Grid، اسم افتراضي، img بلا src، **صورة inline ضخمة**).
+  - `hasExportableContent` لكشف الصفحة الفارغة.
+- معالجة حالات الحدّية (بوابة G1):
+  - صفحة فارغة → «Page has no elements to export» بلا حوار تصدير.
+  - ملف قديم بلا pluginData → يُعامل كـ `div` مع تحذيرات (السلوك القائم، موثّق).
+  - صورة > `MAX_INLINE_IMAGE_BYTES` → تحذير عند التصدير.
+
+### قرار (بإقرار المصمم — 2026-10-08)
+- زر **Preview** يتجاوز بوابة الأخطاء الحرجة/التحذيرات ويعرض البنية والنص الحاليَّين **دائماً**
+  (للمراجعة أثناء العمل التدريجي)، بينما يبقى **Generate HTML** صارماً.
+- التنفيذ: فُصل بناء HTML في `buildExportHtml(tree)` مستقلة عن البوابة؛ `generateExport` يطبّق
+  البوابة ثم يستدعيها، و`previewExport` يستدعيها مباشرة.
+
+### التحقق (بيئة Linux + bun 1.4.2)
+- `tests/engine/web-builder/export-format.test.ts`: 7/7 ✅
+- `tests/engine/web-builder/export-rules.test.ts`: 15/15 ✅
+- `bun test ./tests/engine/web-builder ./tests/engine/dom-css`: **49/49** ✅ (لا انحدار)
+- `bun run check:vue`: نجح (exit 0) ✅
+- خادم المعاينة (Vite) يخدم الوحدات المحدّثة عبر HMR بنجاح.
+
+### معاينة حيّة (هذه الجلسة)
+- الرابط: https://1420-a0f68bd7b936f16b.monkeycode-ai.live (Vite :1420، Terminal `term_1791488260517_10`).
+- جسر أتمتة MCP حيّ: `127.0.0.1:7600` + مقبس، 114 أداة (منها `render`، `get_selection`، `get_page_tree`).
+  بانتظار فتح المصمم للرابط لربط المتصفح ثم المراقبة من الخلف.
+- لزم تعديل `vite/server.ts`: إضافة `allowedHosts: ['.monkeycode-ai.live']`.
+
+### ملاحظة التنسيق
+- لم يُشغَّل `oxfmt` على `WebBuilderPanel.vue` (كان سيعيد تنسيق الملف كاملاً = تشويش المراجعة).
+  الفرق مقتصر على 39 إضافة / 17 حذفاً في مواضع الميزة فقط. دَين التنسيق القديم للملف قائم كما هو.
+
+### الاختبار البصري المطلوب من المصمم
+1. شغّل من `OpenPencil.bat`، وافتح مشروعاً فيه عنصر نصي (مثل `Test2`).
+2. حدّد العنصر النصي، وسمِّه من تبويب Tags (مثلاً `h1`)، واكتب نصاً ظاهراً.
+3. تبويب Export ← **Generate HTML**: يجب أن يظهر النص داخل الوسم + تعليق ثنائي فوقه.
+4. تبويب Export ← **Preview**: يُفتح تبويب HTML أسود على أبيض (بلا ألوان/خطوط — مقصود في هذه المرحلة).
+5. سلّم لقطة للنتيجة للإقرار، أو صف الخلل.
+
+### القيود المعلنة لهذه المرحلة
+- المعاينة **بنية ونص فقط**: لا ألوان ولا خطوط ولا صور مصمّمة بعد (تأتي في مرحلة لاحقة).
+- صفحة واحدة فقط (الصفحة الحالية). تعدد الصفحات = المرحلة 2.
 
 ## المرحلة 0 — توحيد المصدر وخط الأساس (2026-10-07)
 

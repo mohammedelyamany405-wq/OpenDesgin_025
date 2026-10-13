@@ -11,6 +11,7 @@ import {
   ATTRS_KEY,
   TAG_KEY,
   DECORATIVE_KEY,
+  PAGE_LINK_KEY,
   PLUGIN_ID,
   MAX_INLINE_IMAGE_BYTES,
   type AttrField
@@ -23,6 +24,7 @@ const selectedTag = ref('')
 const baseName = ref('')
 const isDecorative = ref(false)
 const attrs = ref<Record<string, any>>({})
+const pageLink = ref('')
 const fileError = ref('')
 const fileInfo = ref('')
 
@@ -55,6 +57,7 @@ function load() {
     baseName.value = ''
     isDecorative.value = false
     attrs.value = {}
+    pageLink.value = ''
     fileInfo.value = ''
     return
   }
@@ -77,6 +80,11 @@ function load() {
   } catch {
     attrs.value = {}
   }
+
+  const linkEntry = n.pluginData.find(
+    (e: any) => e.pluginId === PLUGIN_ID && e.key === PAGE_LINK_KEY
+  )
+  pageLink.value = linkEntry?.value || ''
 
   // Base name = layer name without the trailing "-tag" suffix
   if (selectedTag.value && n.name.endsWith(`-${selectedTag.value}`)) {
@@ -147,6 +155,28 @@ function onFilePicked(event: Event, fieldName: string) {
 function clearAttr(fieldName: string) {
   setAttr({ name: fieldName } as AttrField, '')
   fileInfo.value = ''
+}
+
+const otherPages = computed(() => {
+  const currentId = editor.state.currentPageId
+  return editor.graph
+    .getPages()
+    .filter((p: any) => p.id !== currentId)
+    .map((p: any) => ({ id: p.id, name: p.name }))
+})
+
+function setPageLink(value: string) {
+  pageLink.value = value
+  const n = node.value
+  if (!n) return
+  if (!value) {
+    const pluginData = n.pluginData.filter(
+      (e: any) => !(e.pluginId === PLUGIN_ID && e.key === PAGE_LINK_KEY)
+    )
+    editor.updateNodeWithUndo(n.id, { pluginData }, 'Clear page link')
+    return
+  }
+  savePluginData(PAGE_LINK_KEY, value)
 }
 
 const currentElement = computed(() => {
@@ -233,6 +263,22 @@ watch(node, load)
               {{ item.label }}
             </button>
           </div>
+        </div>
+      </div>
+    </PanelSection>
+
+    <PanelSection v-if="selectedTag === 'a'" label="Page Link / اربط بصفحة">
+      <div class="attr-row">
+        <select
+          class="attr-input"
+          :value="pageLink"
+          @change="setPageLink(($event.target as HTMLSelectElement).value)"
+        >
+          <option value="">— no link —</option>
+          <option v-for="p in otherPages" :key="p.id" :value="p.id">{{ p.name }}</option>
+        </select>
+        <div class="link-hint">
+          Resolves to the target page's file at export (relative href).
         </div>
       </div>
     </PanelSection>
@@ -505,5 +551,10 @@ watch(node, load)
   padding: 6px 8px;
   border-radius: 4px;
   margin-bottom: 8px;
+}
+
+.link-hint {
+  font-size: 10px;
+  color: var(--text-secondary);
 }
 </style>

@@ -25,6 +25,7 @@ export function createDevServerOptions(host: string | undefined): ServerOptions 
     port: 1420,
     strictPort: true,
     host: host || false,
+    allowedHosts: ['.monkeycode-ai.live'],
     hmr: host
       ? {
           protocol: 'ws',
