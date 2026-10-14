@@ -1,5 +1,5 @@
 import { colorToCSS } from '@open-pencil/core/color'
-import type { Color, Effect, Fill, Stroke } from '@open-pencil/scene-graph'
+import type { Color, Effect, Fill, GradientTransform, Stroke } from '@open-pencil/scene-graph'
 
 /**
  * Structural view of the node fields the visual exporter needs.
@@ -89,15 +89,42 @@ function gradientStopList(fill: Fill): string {
 }
 
 /**
+ * Resolves the gradient's local frame: `scale(w,h) * transform` over the unit
+ * square, plus the transformed unit-space center (0.5, 0.5). Shared by the
+ * radial and angular converters.
+ */
+interface GradientFrame {
+  transform: GradientTransform
+  width: number
+  height: number
+  centerX: number
+  centerY: number
+}
+
+function gradientFrame(fill: Fill, width: number, height: number): GradientFrame | null {
+  const transform = fill.gradientTransform
+  if (!transform) return null
+  const w = width || 1
+  const h = height || 1
+  return {
+    transform,
+    width: w,
+    height: h,
+    centerX: (transform.m00 * 0.5 + transform.m01 * 0.5 + transform.m02) * w,
+    centerY: (transform.m10 * 0.5 + transform.m11 * 0.5 + transform.m12) * h
+  }
+}
+
+/**
  * The renderer places the first stop at `((m00+m02)w, (m10+m12)h)` and travels
  * toward `(m02*w, m12*h)`, i.e. direction `(-m00*w, -m10*h)`. CSS measures its
  * gradient angle clockwise from "up", so `angle = atan2(dx, -dy)`.
  */
 function linearGradientCss(fill: Fill, width: number, height: number): string | null {
-  const t = fill.gradientTransform
-  if (!t) return null
-  const dx = -t.m00 * (width || 1)
-  const dy = -t.m10 * (height || 1)
+  const frame = gradientFrame(fill, width, height)
+  if (!frame) return null
+  const dx = -frame.transform.m00 * frame.width
+  const dy = -frame.transform.m10 * frame.height
   const angle = normalizeDeg((Math.atan2(dx, -dy) * 180) / Math.PI)
   return `linear-gradient(${round(angle, 2)}deg, ${gradientStopList(fill)})`
 }
@@ -108,12 +135,9 @@ function linearGradientCss(fill: Fill, width: number, height: number): string | 
  * `GRADIENT_DIAMOND` as a radial gradient, so both map to `radial-gradient`.
  */
 function radialGradientCss(fill: Fill, width: number, height: number): string | null {
-  const t = fill.gradientTransform
-  if (!t) return null
-  const w = width || 1
-  const h = height || 1
-  const cx = (t.m00 * 0.5 + t.m01 * 0.5 + t.m02) * w
-  const cy = (t.m10 * 0.5 + t.m11 * 0.5 + t.m12) * h
+  const frame = gradientFrame(fill, width, height)
+  if (!frame) return null
+  const { transform: t, width: w, height: h, centerX: cx, centerY: cy } = frame
   const rx = 0.5 * Math.hypot(t.m00 * w, t.m10 * h)
   const ry = 0.5 * Math.hypot(t.m01 * w, t.m11 * h)
   if (rx <= 0 || ry <= 0) return null
@@ -128,12 +152,9 @@ function radialGradientCss(fill: Fill, width: number, height: number): string | 
  * gradients cannot carry a non-uniform matrix).
  */
 function angularGradientCss(fill: Fill, width: number, height: number): string | null {
-  const t = fill.gradientTransform
-  if (!t) return null
-  const w = width || 1
-  const h = height || 1
-  const cx = (t.m00 * 0.5 + t.m01 * 0.5 + t.m02) * w
-  const cy = (t.m10 * 0.5 + t.m11 * 0.5 + t.m12) * h
+  const frame = gradientFrame(fill, width, height)
+  if (!frame) return null
+  const { transform: t, width: w, height: h, centerX: cx, centerY: cy } = frame
   const from = normalizeDeg((Math.atan2(t.m00 * w, -t.m10 * h) * 180) / Math.PI)
   return `conic-gradient(from ${round(from, 2)}deg at ${round(cx)}px ${round(cy)}px, ${gradientStopList(
     fill

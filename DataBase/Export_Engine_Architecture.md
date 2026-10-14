@@ -231,4 +231,5 @@ readAllPagesMeta → buildProjectContext → buildExportHtml(tree, {title,lang,d
 ### اختبارات
 - `tests/engine/web-builder/export-style.test.ts`: 22/22 (منها 8 جديدة: خطي/رأسي/شفافية/شعاعي/زاوي/نص/صور/بلا resolver).
 - `bun test ./tests/engine/web-builder ./tests/engine/dom-css`: 82/82 ✅.
-- `bun run check:vue`: لم يُكمَل في هذه الجلسة (أوقفه المصمم) — مطلوب عند الاستئناف.
+- `bun run check:vue`: نجح (exit 0) ✅.
+- `bun run test:dupes`: 0 نسخ ✅ (استُخرج `gradientFrame` لتفادي تكرار مركز التدرج).
