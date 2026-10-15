@@ -23,6 +23,7 @@ import {
 } from '@/app/web-builder/project'
 import { visualStyleDeclarations } from '@/app/web-builder/export-style'
 import { PAGE_LINK_KEY } from '@/app/web-builder/tag-attrs'
+import { readResponsive, responsiveDeclarations } from '@/app/web-builder/responsive'
 import { encodeBase64 } from '@open-pencil/core/bytes'
 import { detectImageMime } from '@open-pencil/core/io/formats/svg'
 
@@ -30,6 +31,7 @@ import PanelSection from '@/components/ui/panel/PanelSection.vue'
 import DOMTreeTab from './DOMTreeTab.vue'
 import PagesTab from './PagesTab.vue'
 import LayoutTab from './LayoutTab.vue'
+import ResponsiveSection from './ResponsiveSection.vue'
 import ValidateTab from './ValidateTab.vue'
 import TagsTab from './TagsTab.vue'
 
@@ -493,16 +495,15 @@ function buildExportHtml(tree: any, options: BuildOptions): string {
     const styleRules = [...rules, ...visualRules, ...positionRules].map((rule) =>
       rule.replace(/;\s*$/, '')
     )
-    if (styleRules.length > 0) {
+    const responsive = readResponsive(node.layout)
+    const tabletDecls = responsiveDeclarations(responsive.tablet)
+    const mobileDecls = responsiveDeclarations(responsive.mobile)
+    if (styleRules.length > 0 || tabletDecls.length > 0 || mobileDecls.length > 0) {
       const wbClass = `wb-${sanitizeId(node.id)}`
       cls.push(wbClass)
-      layoutRules.push(`.${wbClass} { ${styleRules.join('; ')} }`)
-      if (node.layout?.tabletDirection && node.layout.tabletDirection !== 'inherit') {
-        tabletRules.push(`.${wbClass} { flex-direction: ${node.layout.tabletDirection}; }`)
-      }
-      if (node.layout?.mobileDirection && node.layout.mobileDirection !== 'inherit') {
-        mobileRules.push(`.${wbClass} { flex-direction: ${node.layout.mobileDirection}; }`)
-      }
+      if (styleRules.length > 0) layoutRules.push(`.${wbClass} { ${styleRules.join('; ')} }`)
+      if (tabletDecls.length > 0) tabletRules.push(`.${wbClass} { ${tabletDecls.join('; ')} }`)
+      if (mobileDecls.length > 0) mobileRules.push(`.${wbClass} { ${mobileDecls.join('; ')} }`)
     }
 
     const classAttr = cls.length > 0 ? ` class="${cls.join(' ')}"` : ''
@@ -531,6 +532,7 @@ function buildExportHtml(tree: any, options: BuildOptions): string {
   })
 
   let css = 'body { margin: 0; position: relative; }\n'
+  css += 'img, svg { max-width: 100%; height: auto; }\n'
   usedClasses.forEach((def, name) => {
     css += `.${name} { ${def} }\n`
   })
@@ -764,6 +766,7 @@ watch(activeTab, (tab) => {
       <!-- ==================== LAYOUT TAB ==================== -->
       <div v-if="activeTab === 'layout'" class="tab-panel">
         <LayoutTab />
+        <ResponsiveSection />
       </div>
       
       <!-- ==================== VALIDATE TAB ==================== -->

@@ -79,6 +79,14 @@ interface LayoutData {
 - `responsiveDeclarations`: كل حقل → تصريحه؛ `hidden` → `display: none`؛ `width:'full'` → `width: 100%`.
 - لا تصريحات عند تجاوز فارغ.
 
+## التنفيذ والتحقق (2026-10-13)
+- `src/app/web-builder/responsive.ts` (نقي) + `ResponsiveSection.vue` (الواجهة).
+- `LayoutTab.vue`: حُذفت صفوف Tablet/Mobile dir القديمة، وكتاباته تحفظ `responsive`.
+- `WebBuilderPanel.vue`: التصدير يقرأ `readResponsive` ويُخرج `@media` للتابلت ثم الموبايل،
+  ويضيف قاعدة `img, svg { max-width: 100%; height: auto; }`.
+- `tests/engine/web-builder/responsive.test.ts`: 8/8 ✅ — والمجموع `web-builder + dom-css` **90/90** ✅.
+- `bun run check:vue` ✅ و`bun run test:dupes` (0 نسخ) ✅.
+
 ## مثال سلوكي
 ثلاثة كروت في صف (Flex row) على Desktop. تجاوز Mobile: Direction=Column + Width=Full.
 النتيجة: على Mobile تتراص عمودياً بعرض الشاشة، وDesktop يبقى صفاً واحداً — بلا أي تخمين.

@@ -13,9 +13,30 @@
 التصميم الكامل: `DataBase/Responsive_Phase5_Architecture.md`.
 
 ### المنجز (كود)
-- (قيد العمل)
+- وحدة نقية جديدة `src/app/web-builder/responsive.ts`: `readResponsive(layout)` (يقرأ `responsive`
+  ويحوّل الحقول القديمة `tabletDirection`/`mobileDirection`) و`responsiveDeclarations(overrides)`.
+- مكوّن جديد `ResponsiveSection.vue`: أزرار Desktop/Tablet/Mobile، ولكل مقاس صرّح بـ
+  Direction / Hidden / Width / Justify / Align / Gap / Grid Columns (الفارغ = Inherit).
+- `LayoutTab.vue`: حُذفت صفوف Tablet dir / Mobile dir القديمة، وأصبحت كتاباته تحفظ `responsive`.
+- `WebBuilderPanel.vue`: `buildExportHtml` يُخرج تجاوزات Tablet/Mobile المُصرَّح بها فقط داخل
+  `@media (max-width: ...)` (الموبايل بعد التابلت)، ويُضيف صنف `wb-<id>` لأي عنصر له تجاوز.
+  قاعدة أمان: `img, svg { max-width: 100%; height: auto; }`.
+
+### التحقق
+- `tests/engine/web-builder/responsive.test.ts`: 8/8 ✅ (قراءة/ترحيل/تصريحات).
+- `bun test ./tests/engine/web-builder ./tests/engine/dom-css`: **90/90** ✅ (لا انحدار).
+- `bun run check:vue`: نجح (exit 0) ✅.
+- `bun run test:dupes`: 0 نسخ ✅.
+
+### الاختبار البصري المطلوب من المصمم (المرحلة 5)
+1. صمّم حاوية Flex فيها 3 كروت (Desktop: صف واحد).
+2. تبويب Layout ← قسم **Responsive** ← Tablet: Direction=Column؛ Mobile: Direction=Column + Width=Full.
+3. تبويب Export ← **Preview**: صغّر نافذة المتصفح — يجب أن تتراص الكروت عمودياً بعرض الشاشة.
+4. جرّب Hidden=On لأحد العناصر على Mobile للتأكد من اختفائه.
+5. سلّم لقطة للإقرار.
 
 ### نقطة التوقف
+- المرحلة 5 كودها مكتمل ومُتحقَّق؛ المتبقّي: الاختبار البصري من المصمم.
 - لم يُدفع شيء إلى الريموت.
 
 ---

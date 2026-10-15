@@ -2,6 +2,7 @@
 import { ref, computed, watch } from 'vue'
 import { useSelectionState } from '@open-pencil/vue'
 import { useEditorStore } from '@/app/editor/active-store'
+import type { ResponsiveMap } from '@/app/web-builder/responsive'
 
 import PanelSection from '@/components/ui/panel/PanelSection.vue'
 
@@ -17,8 +18,7 @@ interface LayoutData {
   flexWrap?: boolean
   gridTemplateColumns?: string
   gridTemplateRows?: string
-  tabletDirection?: 'inherit' | 'row' | 'column'
-  mobileDirection?: 'inherit' | 'row' | 'column'
+  responsive?: ResponsiveMap
   childFlexGrow?: number
   childFlexShrink?: number
   childFlexBasis?: string
@@ -42,14 +42,6 @@ const childFlexGrow = ref(0)
 const childFlexShrink = ref(1)
 const childFlexBasis = ref('auto')
 const childAlignSelf = ref('auto')
-
-const tabletDirection = ref<'inherit' | 'row' | 'column'>('inherit')
-const mobileDirection = ref<'inherit' | 'row' | 'column'>('inherit')
-const directionOverrideOptions = [
-  { value: 'inherit', label: 'Inherit' },
-  { value: 'row', label: 'Row' },
-  { value: 'column', label: 'Column' }
-]
 
 const hasChildren = computed(() => {
   if (!node.value) return false
@@ -128,8 +120,6 @@ function syncFromNode() {
   childFlexShrink.value = data.childFlexShrink ?? 1
   childFlexBasis.value = data.childFlexBasis || 'auto'
   childAlignSelf.value = data.childAlignSelf || 'auto'
-  tabletDirection.value = data.tabletDirection || 'inherit'
-  mobileDirection.value = data.mobileDirection || 'inherit'
 }
 
 function syncToNode() {
@@ -142,9 +132,7 @@ function syncToNode() {
           justifyContent: justifyContent.value,
           alignItems: alignItems.value,
           gap: `${gap.value}px`,
-          flexWrap: flexWrap.value,
-          ...(tabletDirection.value !== 'inherit' ? { tabletDirection: tabletDirection.value } : {}),
-          ...(mobileDirection.value !== 'inherit' ? { mobileDirection: mobileDirection.value } : {})
+          flexWrap: flexWrap.value
         }
       : {}),
     ...(layoutType.value === 'grid'
@@ -153,6 +141,7 @@ function syncToNode() {
           gridTemplateRows: gridTemplateRows.value
         }
       : {}),
+    ...(existing?.responsive ? { responsive: existing.responsive } : {}),
     ...(existing?.childFlexGrow !== undefined ? { childFlexGrow: existing.childFlexGrow } : {}),
     ...(existing?.childFlexShrink !== undefined ? { childFlexShrink: existing.childFlexShrink } : {}),
     ...(existing?.childFlexBasis ? { childFlexBasis: existing.childFlexBasis } : {}),
@@ -174,13 +163,7 @@ function saveChildLayout() {
           justifyContent: existing.justifyContent,
           alignItems: existing.alignItems,
           gap: existing.gap,
-          flexWrap: existing.flexWrap,
-          ...(existing.tabletDirection && existing.tabletDirection !== 'inherit'
-            ? { tabletDirection: existing.tabletDirection }
-            : {}),
-          ...(existing.mobileDirection && existing.mobileDirection !== 'inherit'
-            ? { mobileDirection: existing.mobileDirection }
-            : {})
+          flexWrap: existing.flexWrap
         }
       : {}),
     ...(existing?.type === 'grid'
@@ -189,6 +172,7 @@ function saveChildLayout() {
           gridTemplateRows: existing.gridTemplateRows
         }
       : {}),
+    ...(existing?.responsive ? { responsive: existing.responsive } : {}),
     childFlexGrow: childFlexGrow.value,
     childFlexShrink: childFlexShrink.value,
     childFlexBasis: childFlexBasis.value,
@@ -360,40 +344,6 @@ watch(node, syncFromNode, { immediate: true })
           >
             {{ flexWrap ? 'On' : 'Off' }}
           </button>
-        </div>
-
-        <div class="control-row">
-          <label>Tablet dir</label>
-          <select
-            v-model="tabletDirection"
-            class="control-select"
-            @change="syncToNode()"
-          >
-            <option
-              v-for="opt in directionOverrideOptions"
-              :key="opt.value"
-              :value="opt.value"
-            >
-              {{ opt.label }}
-            </option>
-          </select>
-        </div>
-
-        <div class="control-row">
-          <label>Mobile dir</label>
-          <select
-            v-model="mobileDirection"
-            class="control-select"
-            @change="syncToNode()"
-          >
-            <option
-              v-for="opt in directionOverrideOptions"
-              :key="opt.value"
-              :value="opt.value"
-            >
-              {{ opt.label }}
-            </option>
-          </select>
         </div>
       </div>
     </PanelSection>
