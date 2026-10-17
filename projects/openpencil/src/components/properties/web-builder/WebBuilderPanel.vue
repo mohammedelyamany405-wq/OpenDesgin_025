@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, watch } from 'vue'
+import type { PluginDataEntry } from '@open-pencil/scene-graph'
 import { zipSync } from 'fflate'
 import { useSelectionState } from '@open-pencil/vue'
 import { useEditorStore } from '@/app/editor/active-store'
@@ -21,9 +22,19 @@ import {
   type PageInput,
   type ProjectContext
 } from '@/app/web-builder/project'
-import { visualStyleDeclarations } from '@/app/web-builder/export-style'
+import { visualStyleDeclarations, visualOnlyDeclarations } from '@/app/web-builder/export-style'
 import { PAGE_LINK_KEY } from '@/app/web-builder/tag-attrs'
 import { readResponsive, responsiveDeclarations } from '@/app/web-builder/responsive'
+import { catalogClassCSS, catalogClassNames } from '@/app/web-builder/class-catalog'
+import { createRuleClassRegistry, cssClassSlug } from '@/app/web-builder/class-names'
+import {
+  readStyleClasses,
+  removeStyleClass,
+  styleClassCSS,
+  upsertStyleClass,
+  STYLE_CLASSES_KEY,
+  type StyleClass
+} from '@/app/web-builder/style-classes'
 import { encodeBase64 } from '@open-pencil/core/bytes'
 import { detectImageMime } from '@open-pencil/core/io/formats/svg'
 
@@ -32,6 +43,7 @@ import DOMTreeTab from './DOMTreeTab.vue'
 import PagesTab from './PagesTab.vue'
 import LayoutTab from './LayoutTab.vue'
 import ResponsiveSection from './ResponsiveSection.vue'
+import ClassesTab from './ClassesTab.vue'
 import ValidateTab from './ValidateTab.vue'
 import TagsTab from './TagsTab.vue'
 
@@ -39,6 +51,7 @@ import TagsTab from './TagsTab.vue'
 const activeTab = ref('tags')
 const classes = ref<any>({})
 const layouts = ref<any>({})
+const styleClasses = ref<StyleClass[]>([])
 const exportHtml = ref('')
 const exportStatus = ref('')
 const exportConfirmed = ref(false)
@@ -100,41 +113,6 @@ const tabs = [
   { id: 'export', label: 'Export', icon: 'icon-lucide-external-link' }
 ]
 
-// CSS Classes catalog
-const classCategories = [
-  { category: 'Layout', items: [
-    { name: 'container', css: 'max-width: 1200px; margin: 0 auto; padding: 0 20px' },
-    { name: 'flex-center', css: 'display: flex; justify-content: center; align-items: center' },
-    { name: 'grid-2', css: 'display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px' },
-    { name: 'grid-3', css: 'display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px' }
-  ]},
-  { category: 'Text', items: [
-    { name: 'heading-1', css: 'font-size: 32px; font-weight: bold; line-height: 1.2' },
-    { name: 'heading-2', css: 'font-size: 24px; font-weight: bold; line-height: 1.3' },
-    { name: 'body-text', css: 'font-size: 16px; line-height: 1.6' },
-    { name: 'small-text', css: 'font-size: 14px; color: #666' }
-  ]},
-  { category: 'Spacing', items: [
-    { name: 'p-1', css: 'padding: 8px' },
-    { name: 'p-2', css: 'padding: 16px' },
-    { name: 'p-3', css: 'padding: 24px' },
-    { name: 'm-1', css: 'margin: 8px' },
-    { name: 'm-2', css: 'margin: 16px' }
-  ]},
-  { category: 'Colors', items: [
-    { name: 'bg-primary', css: 'background-color: #3b82f6' },
-    { name: 'bg-secondary', css: 'background-color: #6b7280' },
-    { name: 'text-white', css: 'color: #ffffff' },
-    { name: 'text-dark', css: 'color: #1f2937' }
-  ]},
-  { category: 'Effects', items: [
-    { name: 'shadow-sm', css: 'box-shadow: 0 1px 2px rgba(0,0,0,0.05)' },
-    { name: 'shadow-md', css: 'box-shadow: 0 4px 6px rgba(0,0,0,0.1)' },
-    { name: 'rounded', css: 'border-radius: 8px' },
-    { name: 'rounded-full', css: 'border-radius: 9999px' }
-  ]}
-]
-
 // Load data from pluginData
 function loadPluginData() {
   const n = node.value
@@ -186,6 +164,27 @@ function savePluginData(key: string, data: any) {
   editor.updateNodeWithUndo(n.id, { pluginData }, `Set ${key}`)
 }
 
+// Page-level reusable style classes
+function loadStyleClasses() {
+  const page = editor.graph.getNode(editor.state.currentPageId)
+  styleClasses.value = readStyleClasses(page)
+}
+
+function persistStyleClasses(entries: StyleClass[]) {
+  const pageId = editor.state.currentPageId
+  const page = editor.graph.getNode(pageId)
+  if (!page) return
+  const pluginData = page.pluginData.filter(
+    (e: PluginDataEntry) => !(e.pluginId === 'open-pencil' && e.key === STYLE_CLASSES_KEY)
+  )
+  pluginData.push({
+    pluginId: 'open-pencil',
+    key: STYLE_CLASSES_KEY,
+    value: JSON.stringify(entries)
+  })
+  editor.updateNodeWithUndo(pageId, { pluginData }, 'Set style classes')
+}
+
 // Classes functions
 const currentNodeClasses = computed(() => {
   if (!node.value) return []
@@ -203,6 +202,30 @@ function toggleClass(className: string) {
   }
   classes.value[node.value.id] = [...current]
   savePluginData('web-builder-classes', current)
+}
+
+function saveStyleClass(name: string) {
+  const n = node.value
+  if (!n) return
+  const base = cssClassSlug(name)
+  if (!base) return
+  // Reusable classes capture visual styling only; images stay on the node so a
+  // single bitmap is not duplicated into page storage as a data URL.
+  const declarations = visualOnlyDeclarations(n)
+  if (declarations.length === 0) return
+  const finalName = catalogClassNames().includes(base) ? `${base}-custom` : base
+  const next = upsertStyleClass(styleClasses.value, { name: finalName, declarations })
+  styleClasses.value = next
+  persistStyleClasses(next)
+  const saved = next.find((entry) => entry.name === finalName)
+  if (saved && !currentNodeClasses.value.includes(saved.name)) toggleClass(saved.name)
+}
+
+function removeStyleClassEntry(name: string) {
+  const next = removeStyleClass(styleClasses.value, name)
+  styleClasses.value = next
+  persistStyleClasses(next)
+  if (currentNodeClasses.value.includes(name)) toggleClass(name)
 }
 
 function readNodeMeta(n: any): { tag: string; classes: string[]; layout: any; decorative: boolean; attrs: Record<string, any>; text: string; pageLink: string } {
@@ -356,24 +379,13 @@ function buildPageTree(pageId: string): any {
   return {
     name: page.name,
     breakpoints: readPageBreakpoints(page),
+    styleClasses: readStyleClasses(page),
     children: pageChildren.map((child: any) => buildNode(child.id)).filter(Boolean) || []
   }
 }
 
 // DOM Tree - current page only (reactive)
 const domTreeData = computed(() => buildPageTree(editor.state.currentPageId))
-
-function cssForClass(className: string): string {
-  for (const cat of classCategories) {
-    const found = cat.items.find((i) => i.name === className)
-    if (found) return found.css
-  }
-  return ''
-}
-
-function sanitizeId(id: string): string {
-  return String(id).replace(/[^a-zA-Z0-9_-]/g, '-')
-}
 
 function cssForLayout(layout: any): string[] {
   if (!layout || (layout.type !== 'flex' && layout.type !== 'grid')) return []
@@ -456,10 +468,31 @@ interface BuildOptions {
 // Builds the HTML/CSS purely from the tree — no validation gate. Callers decide the gate.
 function buildExportHtml(tree: any, options: BuildOptions): string {
   const usedClasses = new Map<string, string>()
+  const usedCustomClasses = new Set<string>()
   const layoutRules: string[] = []
   const tabletRules: string[] = []
   const mobileRules: string[] = []
   const bp = tree.breakpoints || { tablet: 768, mobile: 375 }
+  const customDeclarations = styleClassCSS(tree.styleClasses || [])
+  const classRegistry = createRuleClassRegistry([
+    ...catalogClassNames(),
+    ...customDeclarations.keys()
+  ])
+
+  function collectClasses(node: { classes?: string[] }): string[] {
+    const cls: string[] = []
+    for (const c of node.classes || []) {
+      const catalogDeclarations = catalogClassCSS(c)
+      if (catalogDeclarations) {
+        if (!usedClasses.has(c)) usedClasses.set(c, catalogDeclarations)
+        cls.push(c)
+      } else if (customDeclarations.has(c)) {
+        usedCustomClasses.add(c)
+        cls.push(c)
+      }
+    }
+    return cls
+  }
 
   function nodeToHtml(node: any, indent: number = 0, absolute: boolean = false): string {
     const spaces = '  '.repeat(indent)
@@ -473,13 +506,7 @@ function buildExportHtml(tree: any, options: BuildOptions): string {
     }
     const extraAttrs = decorative ? '' : attrsToString(nodeAttrs)
 
-    const cls: string[] = [...(node.classes || [])]
-    for (const c of node.classes || []) {
-      if (!usedClasses.has(c)) {
-        const css = cssForClass(c)
-        if (css) usedClasses.set(c, css)
-      }
-    }
+    const cls: string[] = collectClasses(node)
 
     const visualRules: string[] = node.style || []
     const rules = cssForLayout(node.layout)
@@ -499,11 +526,15 @@ function buildExportHtml(tree: any, options: BuildOptions): string {
     const tabletDecls = responsiveDeclarations(responsive.tablet)
     const mobileDecls = responsiveDeclarations(responsive.mobile)
     if (styleRules.length > 0 || tabletDecls.length > 0 || mobileDecls.length > 0) {
-      const wbClass = `wb-${sanitizeId(node.id)}`
-      cls.push(wbClass)
-      if (styleRules.length > 0) layoutRules.push(`.${wbClass} { ${styleRules.join('; ')} }`)
-      if (tabletDecls.length > 0) tabletRules.push(`.${wbClass} { ${tabletDecls.join('; ')} }`)
-      if (mobileDecls.length > 0) mobileRules.push(`.${wbClass} { ${mobileDecls.join('; ')} }`)
+      const ruleKey = JSON.stringify([styleRules, tabletDecls, mobileDecls])
+      const assignment = classRegistry.assign(ruleKey, node.name, `el-${node.id}`)
+      const wbClass = assignment.className
+      if (assignment.created) {
+        if (styleRules.length > 0) layoutRules.push(`.${wbClass} { ${styleRules.join('; ')} }`)
+        if (tabletDecls.length > 0) tabletRules.push(`.${wbClass} { ${tabletDecls.join('; ')} }`)
+        if (mobileDecls.length > 0) mobileRules.push(`.${wbClass} { ${mobileDecls.join('; ')} }`)
+      }
+      if (!cls.includes(wbClass)) cls.push(wbClass)
     }
 
     const classAttr = cls.length > 0 ? ` class="${cls.join(' ')}"` : ''
@@ -537,6 +568,10 @@ function buildExportHtml(tree: any, options: BuildOptions): string {
     css += `.${name} { ${def} }\n`
   })
   if (layoutRules.length > 0) css += layoutRules.join('\n') + '\n'
+  usedCustomClasses.forEach((name) => {
+    const def = customDeclarations.get(name)
+    if (def) css += `.${name} { ${def} }\n`
+  })
   if (tabletRules.length > 0) {
     css += `@media (max-width: ${bp.tablet}px) {\n  ${tabletRules.join('\n  ')}\n}\n`
   }
@@ -685,15 +720,18 @@ function copyToClipboard() {
 
 onMounted(() => {
   loadPluginData()
+  loadStyleClasses()
   loadPageSettings()
 })
 
 watch(node, () => {
   loadPluginData()
+  loadStyleClasses()
 })
 
 watch(activeTab, (tab) => {
   if (tab === 'export') loadPageSettings()
+  if (tab === 'classes') loadStyleClasses()
 })
 </script>
 
@@ -733,34 +771,14 @@ watch(activeTab, (tab) => {
       
       <!-- ==================== CLASSES TAB ==================== -->
       <div v-if="activeTab === 'classes'" class="tab-panel">
-        <PanelSection label="CSS Classes">
-          <div v-if="currentNodeClasses.length > 0" class="applied-classes">
-            <div class="section-label">Applied:</div>
-            <div class="class-tags">
-              <span v-for="cls in currentNodeClasses" :key="cls" class="class-tag">
-                {{ cls }}
-                <button class="remove-btn" @click="toggleClass(cls)">×</button>
-              </span>
-            </div>
-          </div>
-          
-          <div class="class-categories">
-            <div v-for="cat in classCategories" :key="cat.category" class="class-group">
-              <div class="group-label">{{ cat.category }}</div>
-              <div class="class-items">
-                <button
-                  v-for="item in cat.items"
-                  :key="item.name"
-                  :class="['class-btn', { active: currentNodeClasses.includes(item.name) }]"
-                  @click="toggleClass(item.name)"
-                  :title="item.css"
-                >
-                  {{ item.name }}
-                </button>
-              </div>
-            </div>
-          </div>
-        </PanelSection>
+        <ClassesTab
+          :applied="currentNodeClasses"
+          :style-classes="styleClasses"
+          :can-save="!!node"
+          @toggle="toggleClass"
+          @save="saveStyleClass"
+          @remove="removeStyleClassEntry"
+        />
       </div>
       
       <!-- ==================== LAYOUT TAB ==================== -->
@@ -1015,46 +1033,12 @@ watch(activeTab, (tab) => {
   font-size: 10px;
 }
 
-/* Classes */
-.applied-classes {
-  margin-bottom: 12px;
-  padding: 8px;
-  background: var(--bg-secondary);
-  border-radius: 4px;
-}
-
+/* Section labels */
 .section-label {
   font-size: 10px;
   font-weight: 600;
   color: var(--text-secondary);
   margin-bottom: 6px;
-}
-
-.class-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-}
-
-.class-tag {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding: 2px 8px;
-  background: var(--accent-color);
-  color: white;
-  border-radius: 12px;
-  font-size: 11px;
-}
-
-.remove-btn {
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  padding: 0;
-  font-size: 14px;
-  line-height: 1;
 }
 
 /* Layout */

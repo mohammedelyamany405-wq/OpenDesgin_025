@@ -65,7 +65,8 @@ function firstVisible<T extends { visible?: boolean }>(
 function sizeDeclarations(node: NodeStyleSource): string[] {
   if (node.type === 'TEXT' && node.textAutoResize === 'WIDTH_AND_HEIGHT') return []
   const declarations: string[] = []
-  if (typeof node.width === 'number' && node.width > 0) declarations.push(`width: ${round(node.width)}px`)
+  if (typeof node.width === 'number' && node.width > 0)
+    declarations.push(`width: ${round(node.width)}px`)
   if (typeof node.height === 'number' && node.height > 0)
     declarations.push(`height: ${round(node.height)}px`)
   if (declarations.length > 0) declarations.push('box-sizing: border-box')
@@ -84,7 +85,10 @@ function normalizeDeg(deg: number): number {
 function gradientStopList(fill: Fill): string {
   return [...(fill.gradientStops ?? [])]
     .sort((a, b) => a.position - b.position)
-    .map((stop) => `${colorToCSS(withOpacity(stop.color, fill.opacity))} ${round(stop.position * 100, 2)}%`)
+    .map(
+      (stop) =>
+        `${colorToCSS(withOpacity(stop.color, fill.opacity))} ${round(stop.position * 100, 2)}%`
+    )
     .join(', ')
 }
 
@@ -243,8 +247,7 @@ function radiusDeclaration(node: NodeStyleSource): string | null {
 function shadowDeclaration(node: NodeStyleSource): string | null {
   const shadows = (node.effects ?? []).filter(
     (effect) =>
-      effect.visible !== false &&
-      (effect.type === 'DROP_SHADOW' || effect.type === 'INNER_SHADOW')
+      effect.visible !== false && (effect.type === 'DROP_SHADOW' || effect.type === 'INNER_SHADOW')
   )
   if (shadows.length === 0) return null
   const parts = shadows.map((effect) => {
@@ -262,7 +265,8 @@ function blurDeclarations(node: NodeStyleSource): string[] {
   const layerBlur = (node.effects ?? []).find(
     (effect) => effect.visible !== false && effect.type === 'LAYER_BLUR'
   )
-  if (layerBlur && layerBlur.radius > 0) declarations.push(`filter: blur(${round(layerBlur.radius)}px)`)
+  if (layerBlur && layerBlur.radius > 0)
+    declarations.push(`filter: blur(${round(layerBlur.radius)}px)`)
   const backgroundBlur = (node.effects ?? []).find(
     (effect) => effect.visible !== false && effect.type === 'BACKGROUND_BLUR'
   )
@@ -340,16 +344,14 @@ function textDeclarations(node: NodeStyleSource): string[] {
 }
 
 /**
- * Converts a node's declared visual properties into CSS declarations.
- * Only explicit values are emitted ("no guessing"). Solid, gradient, and
- * image fills are supported; anything else is intentionally skipped.
+ * Converts a node's visual properties into CSS declarations, excluding the box
+ * size. This is the reusable part used when saving a style class.
  */
-export function visualStyleDeclarations(
+export function visualOnlyDeclarations(
   node: NodeStyleSource,
   resolveImage?: ImageResolver
 ): string[] {
   const declarations: string[] = []
-  declarations.push(...sizeDeclarations(node))
   declarations.push(...fillDeclarations(node, resolveImage))
   const stroke = strokeDeclaration(node)
   if (stroke) declarations.push(stroke)
@@ -361,5 +363,20 @@ export function visualStyleDeclarations(
   const opacity = opacityDeclaration(node)
   if (opacity) declarations.push(opacity)
   declarations.push(...textDeclarations(node))
+  return declarations
+}
+
+/**
+ * Converts a node's declared visual properties into CSS declarations.
+ * Only explicit values are emitted ("no guessing"). Solid, gradient, and
+ * image fills are supported; anything else is intentionally skipped.
+ */
+export function visualStyleDeclarations(
+  node: NodeStyleSource,
+  resolveImage?: ImageResolver
+): string[] {
+  const declarations: string[] = []
+  declarations.push(...sizeDeclarations(node))
+  declarations.push(...visualOnlyDeclarations(node, resolveImage))
   return declarations
 }

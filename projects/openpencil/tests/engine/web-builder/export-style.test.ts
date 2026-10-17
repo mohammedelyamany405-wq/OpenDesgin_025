@@ -1,7 +1,12 @@
 import { describe, expect, test } from 'bun:test'
+
 import type { Effect, Fill, Stroke } from '@open-pencil/scene-graph'
 
-import { visualStyleDeclarations, type NodeStyleSource } from '@/app/web-builder/export-style'
+import {
+  visualOnlyDeclarations,
+  visualStyleDeclarations,
+  type NodeStyleSource
+} from '@/app/web-builder/export-style'
 
 function solid(r: number, g: number, b: number, a = 1, opacity = 1): Fill {
   return { type: 'SOLID', color: { r, g, b, a }, opacity, visible: true }
@@ -72,7 +77,9 @@ describe('web-builder export style', () => {
   })
 
   test('auto-sized text exports no fixed box', () => {
-    expect(style({ type: 'TEXT', textAutoResize: 'WIDTH_AND_HEIGHT', width: 120, height: 30 })).toBe('')
+    expect(
+      style({ type: 'TEXT', textAutoResize: 'WIDTH_AND_HEIGHT', width: 120, height: 30 })
+    ).toBe('')
   })
 
   test('solid fill becomes background-color on non-text nodes', () => {
@@ -144,7 +151,10 @@ describe('web-builder export style', () => {
   test('image fill becomes a background image with its scale mode', () => {
     const resolve = () => 'data:image/png;base64,AAAA'
     const fill = imageFill({ imageScaleMode: 'FILL' })
-    const result = visualStyleDeclarations({ width: 200, height: 100, fills: [fill] }, resolve).join('; ')
+    const result = visualStyleDeclarations(
+      { width: 200, height: 100, fills: [fill] },
+      resolve
+    ).join('; ')
     expect(result).toContain('background-image: url("data:image/png;base64,AAAA")')
     expect(result).toContain('background-size: cover')
     expect(result).toContain('background-repeat: no-repeat')
@@ -167,15 +177,17 @@ describe('web-builder export style', () => {
 
   test('stroke becomes a border, dashed when a dash pattern is set', () => {
     expect(style({ strokes: [stroke({ weight: 2 })] })).toContain('border: 2px solid rgb(0, 0, 0)')
-    expect(style({ strokes: [stroke({ dashPattern: [4, 2] })] })).toContain('border: 1px dashed rgb(0, 0, 0)')
+    expect(style({ strokes: [stroke({ dashPattern: [4, 2] })] })).toContain(
+      'border: 1px dashed rgb(0, 0, 0)'
+    )
   })
 
   test('corner radius handles uniform and independent corners', () => {
     expect(style({ cornerRadius: 8 })).toBe('border-radius: 8px')
     expect(style({ cornerRadius: 0 })).toBe('')
-    expect(
-      style({ independentCorners: true, topLeftRadius: 4, bottomRightRadius: 6 })
-    ).toBe('border-radius: 4px 0px 6px 0px')
+    expect(style({ independentCorners: true, topLeftRadius: 4, bottomRightRadius: 6 })).toBe(
+      'border-radius: 4px 0px 6px 0px'
+    )
   })
 
   test('drop and inner shadows combine into one box-shadow', () => {
@@ -228,5 +240,18 @@ describe('web-builder export style', () => {
 
   test('typography is not emitted for non-text nodes', () => {
     expect(style({ fontSize: 24, fontFamily: 'Arial' })).toBe('')
+  })
+
+  test('visual-only declarations omit the box size', () => {
+    const result = visualOnlyDeclarations({
+      width: 100,
+      height: 50,
+      fills: [solid(1, 0, 0)],
+      cornerRadius: 8
+    }).join('; ')
+    expect(result).not.toContain('width:')
+    expect(result).not.toContain('height:')
+    expect(result).toContain('background-color:')
+    expect(result).toContain('border-radius: 8px')
   })
 })
