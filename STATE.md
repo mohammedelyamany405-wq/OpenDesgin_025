@@ -43,6 +43,14 @@
 - الكود مكتمل ومُتحقَّق؛ بانتظار إقرار المصمم.
 - بعد الإقرار: تحويل `/sample` إلى ملف `.fig` ثابت، ثم الرفع وإرسال رابط المعاينة.
 
+### النموذج الثابت `/sample` (2026-10-19)
+- وُلِّد `public/web-builder-sample.fig` (115KB) من النموذج الحالي عبر زر Download .fig.
+- `WorkspaceView.vue` صار يحمّل الملف عبر `fetch('/web-builder-sample.fig')` ثم `store.openFigFile`،
+  ويحدّد صفحتي Home/About للتنقل. لم يبقَ البناء البرمجي هو المسار الافتراضي.
+- للإبقاء على إمكانية إعادة التوليد: `/sample?build=1` يبني النموذج من الكود، ثم Download .fig
+  لاستبدال الملف في `public/`.
+- تحقق حيّ: طلب الملف 200، صفحتا Home/About تعملان، تنزيل `.fig` من جديد = 115KB، بلا أخطاء صفحة.
+
 ---
 
 ## النموذج التجريبي `/sample` (2026-10-19) — جاهز للمراجعة البصرية
@@ -51,7 +59,7 @@
 نموذج واقعي يُظهر كل قدرات Web Builder على صفحتين (Home/About) بدل الأشكال المجرّدة:
 وسوم دلالية، Flex، أصناف قابلة لإعادة الاستخدام، تجاوزات صريحة للتابلت/الموبايل،
 روابط صفحات، وتنزيل ملف `.fig` جاهز للمتابعة. لا يغيّر الإقلاع الافتراضي؛ يُحمَّل فقط
-عبر المسار المخصص `/sample`.
+عبر المسار المخصص `/sample`، ومن ملف `public/web-builder-sample.fig` الثابت (وليس بناءً برمجياً).
 
 ### المنجز
 - `src/app/demo/sample/palette.ts`: ألوان النموذج + تعبئات/حدود/ظلال مشتركة.
@@ -63,7 +71,8 @@
 - `src/app/demo/sample/shared.ts`: هياكل الأقسام/المحتوى/الكروت، والتصريحات المتجاوبة.
 - `src/app/demo/sample/document.ts`: بناء الصفحتين + الميتاداتا + الأصناف + `computeAllLayouts`.
 - `src/router.ts`: مسار `/sample` (`meta.sample`).
-- `src/views/WorkspaceView.vue`: تحميل النموذج + شريط Home/About/Download .fig.
+- `src/views/WorkspaceView.vue`: تحميل `web-builder-sample.fig` + شريط Home/About/Download .fig
+  (`?build=1` يعيد البناء من الكود لتوليد نسخة جديدة).
 - `tests/engine/web-builder/sample.test.ts`: 8 اختبارات (بنية/ميتاداتا/أصناف/روابط/تجاوب).
 
 ### قرارات

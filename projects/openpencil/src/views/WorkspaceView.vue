@@ -43,13 +43,34 @@ if (createdInitialTab && route.meta.demo && !('test' in params)) {
   void createDemoShapes(firstTab.store)
 }
 
-const sampleIds = ref<SampleIds | null>(null)
-if (createdInitialTab && route.meta.sample && !('test' in params)) {
-  sampleIds.value = createSampleDocument(firstTab.store)
+const samplePageIds = ref<SampleIds | null>(null)
+const useBuiltSample = 'build' in params
+
+if (createdInitialTab && route.meta.sample && !('test' in params) && useBuiltSample) {
+  samplePageIds.value = createSampleDocument(firstTab.store)
+}
+
+async function loadSampleDocument(): Promise<void> {
+  const store = firstTab?.store
+  if (!store) return
+  try {
+    const response = await fetch('/web-builder-sample.fig', { cache: 'no-store' })
+    if (!response.ok) throw new Error(`HTTP ${response.status}`)
+    const file = new File([await response.arrayBuffer()], 'web-builder-sample.fig', {
+      type: 'application/octet-stream'
+    })
+    await store.openFigFile(file)
+    const pages = store.graph.getPages()
+    const home = pages.find((page) => page.name === 'Home')
+    const about = pages.find((page) => page.name === 'About')
+    if (home && about) samplePageIds.value = { homeId: home.id, aboutId: about.id }
+  } catch (error) {
+    console.error('[Sample]', error)
+  }
 }
 
 function switchSamplePage(page: 'home' | 'about'): void {
-  const ids = sampleIds.value
+  const ids = samplePageIds.value
   const store = activeTab.value?.store
   if (!ids || !store) return
   void store
@@ -106,6 +127,8 @@ async function bindAssociatedFileOpen(): Promise<void> {
 }
 
 onMounted(async () => {
+  if (createdInitialTab && route.meta.sample && !('test' in params) && !useBuiltSample)
+    void loadSampleDocument()
   await startMCPRuntime(getActiveStore)
 
   try {
