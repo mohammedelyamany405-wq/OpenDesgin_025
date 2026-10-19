@@ -5,9 +5,15 @@ import { useEditor, useEditorEvent } from '@open-pencil/vue'
 
 import { loadFont, requestLocalFontAccess } from '@/app/editor/fonts'
 
+const revision = ref(0)
+
+/** Recompute the document font report after fonts finish resolving outside page events. */
+export function refreshDocumentFontStatus(): void {
+  revision.value++
+}
+
 export function useDocumentFontStatus() {
   const editor = useEditor()
-  const revision = ref(0)
   const retrying = ref(false)
 
   const refresh = () => {

@@ -1,5 +1,5 @@
 import type { Editor } from '@open-pencil/core/editor'
-import { readFigFile } from '@open-pencil/core/io/formats/fig'
+import { readFigFile, type ParseFigFileOptions } from '@open-pencil/core/io/formats/fig'
 import type { FigPageManifestEntry } from '@open-pencil/kiwi/fig'
 import { SceneGraph } from '@open-pencil/scene-graph'
 
@@ -21,9 +21,10 @@ function showFigPageManifest(editor: Editor, pages: readonly FigPageManifestEntr
   editor.state.loading = true
 }
 
-export function readFigDocument(file: File, editor: Editor) {
+export function readFigDocument(file: File, editor: Editor, options: ParseFigFileOptions = {}) {
   return readFigFile(file, {
     populate: 'first-page',
+    ...options,
     onPages: (pages) => showFigPageManifest(editor, pages)
   })
 }

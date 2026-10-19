@@ -1,4 +1,5 @@
 import type { Editor, EditorState } from '@open-pencil/core/editor'
+import type { ParseFigFileOptions } from '@open-pencil/core/io/formats/fig'
 import { computeAllLayouts } from '@open-pencil/core/layout'
 
 import { describeDiagnosticError, recordDocumentFailure } from '@/app/diagnostics'
@@ -43,11 +44,16 @@ export function createOpenActions({
   setDocumentSource,
   fitCurrentPageToViewport
 }: OpenFigFileOptions) {
-  async function openFigFile(file: File, handle?: FileSystemFileHandle, path?: string) {
+  async function openFigFile(
+    file: File,
+    handle?: FileSystemFileHandle,
+    path?: string,
+    options?: ParseFigFileOptions
+  ) {
     try {
       state.loading = true
       await yieldToUI()
-      const imported = await readFigDocument(file, editor)
+      const imported = await readFigDocument(file, editor, options)
       await yieldToUI()
       await applyImportedDocument(editor, imported)
       state.documentName = file.name.replace(/\.fig$/i, '')

@@ -12,6 +12,8 @@ import { registerFigPopulationWorker } from '#core/kiwi/fig/population/client'
 export interface ParseFigFileOptions {
   populate?: 'all' | 'first-page' | 'none'
   onPages?: (pages: readonly FigPageManifestEntry[]) => void
+  /** Parse off the main thread when available. Disable for small documents when worker startup dominates. */
+  worker?: boolean
 }
 
 function parseFigFileSync(buffer: ArrayBuffer, options: ParseFigFileOptions = {}): SceneGraph {
@@ -82,7 +84,7 @@ export async function parseFigFile(
   buffer: ArrayBuffer,
   options: ParseFigFileOptions = {}
 ): Promise<SceneGraph> {
-  if (typeof Worker !== 'undefined' && IS_BROWSER) {
+  if (options.worker !== false && typeof Worker !== 'undefined' && IS_BROWSER) {
     const copy = buffer.slice(0)
     try {
       return await parseViaWorker(buffer, options)
