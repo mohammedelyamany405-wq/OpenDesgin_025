@@ -23,6 +23,16 @@ import {
   type ProjectContext
 } from '@/app/web-builder/project'
 import { visualStyleDeclarations, visualOnlyDeclarations } from '@/app/web-builder/export-style'
+import {
+  ExportAssetStore,
+  externalImageResolver,
+  fontFaceCSS,
+  inlineImageResolver,
+  loadExportFonts,
+  pageNodeIds,
+  rewriteImageAttrs,
+  type ExportAssetMode
+} from '@/app/web-builder/export-assets'
 import { PAGE_LINK_KEY } from '@/app/web-builder/tag-attrs'
 import { readResponsive, responsiveDeclarations } from '@/app/web-builder/responsive'
 import { catalogClassCSS, catalogClassNames } from '@/app/web-builder/class-catalog'
@@ -35,8 +45,6 @@ import {
   STYLE_CLASSES_KEY,
   type StyleClass
 } from '@/app/web-builder/style-classes'
-import { encodeBase64 } from '@open-pencil/core/bytes'
-import { detectImageMime } from '@open-pencil/core/io/formats/svg'
 
 import PanelSection from '@/components/ui/panel/PanelSection.vue'
 import DOMTreeTab from './DOMTreeTab.vue'
@@ -117,7 +125,7 @@ const tabs = [
 function loadPluginData() {
   const n = node.value
   if (!n) return
-  
+
   // Load classes
   const classEntry = n.pluginData.find(
     (e: any) => e.pluginId === 'open-pencil' && e.key === 'web-builder-classes'
@@ -131,7 +139,7 @@ function loadPluginData() {
   } else {
     classes.value[n.id] = []
   }
-  
+
   // Load layout
   const layoutEntry = n.pluginData.find(
     (e: any) => e.pluginId === 'open-pencil' && e.key === 'web-builder-layout'
@@ -145,20 +153,19 @@ function loadPluginData() {
   } else {
     layouts.value[n.id] = null
   }
-
 }
 
 // Save to pluginData
 function savePluginData(key: string, data: any) {
   const n = node.value
   if (!n) return
-  
+
   const pluginData = n.pluginData.filter(
     (e: any) => !(e.pluginId === 'open-pencil' && e.key === key)
   )
-  pluginData.push({ 
-    pluginId: 'open-pencil', 
-    key: key, 
+  pluginData.push({
+    pluginId: 'open-pencil',
+    key: key,
     value: typeof data === 'string' ? data : JSON.stringify(data)
   })
   editor.updateNodeWithUndo(n.id, { pluginData }, `Set ${key}`)
@@ -228,7 +235,15 @@ function removeStyleClassEntry(name: string) {
   if (currentNodeClasses.value.includes(name)) toggleClass(name)
 }
 
-function readNodeMeta(n: any): { tag: string; classes: string[]; layout: any; decorative: boolean; attrs: Record<string, any>; text: string; pageLink: string } {
+function readNodeMeta(n: any): {
+  tag: string
+  classes: string[]
+  layout: any
+  decorative: boolean
+  attrs: Record<string, any>
+  text: string
+  pageLink: string
+} {
   const tagEntry = n.pluginData?.find(
     (e: any) => e.pluginId === 'open-pencil' && e.key === 'web-builder-tag'
   )
@@ -250,11 +265,15 @@ function readNodeMeta(n: any): { tag: string; classes: string[]; layout: any; de
       const parsed = JSON.parse(classEntry.value)
       if (Array.isArray(parsed)) cls = parsed
     }
-  } catch { cls = [] }
+  } catch {
+    cls = []
+  }
   let layout: any = null
   try {
     if (layoutEntry) layout = JSON.parse(layoutEntry.value)
-  } catch { layout = null }
+  } catch {
+    layout = null
+  }
   const attrsEntry = n.pluginData?.find(
     (e: any) => e.pluginId === 'open-pencil' && e.key === 'web-builder-attrs'
   )
@@ -264,7 +283,9 @@ function readNodeMeta(n: any): { tag: string; classes: string[]; layout: any; de
       const parsed = JSON.parse(attrsEntry.value)
       if (parsed && typeof parsed === 'object') attrs = parsed
     }
-  } catch { attrs = {} }
+  } catch {
+    attrs = {}
+  }
   return {
     tag: tagEntry?.value || 'div',
     classes: cls,
@@ -337,15 +358,29 @@ function readAllPagesMeta(): PageInput[] {
   return editor.graph.getPages().map((p: any) => readPageMeta(p))
 }
 
-// Resolve a bitmap hash to an inline data URL so image fills survive in a
-// single self-contained HTML file (preview) and inside the exported project.
-function resolveImageDataUrl(imageHash: string): string | undefined {
-  const bytes = editor.graph.images.get(imageHash)
-  if (!bytes) return undefined
-  return `data:${detectImageMime(bytes)};base64,${encodeBase64(bytes)}`
+interface TreeAssets {
+  mode: ExportAssetMode
+  store: ExportAssetStore
+  resolveImage: (hash: string) => string | undefined
 }
 
-function buildNode(id: string): any {
+function inlineAssets(): TreeAssets {
+  return {
+    mode: 'inline',
+    store: new ExportAssetStore(),
+    resolveImage: inlineImageResolver(editor.graph)
+  }
+}
+
+function externalAssets(store: ExportAssetStore): TreeAssets {
+  return {
+    mode: 'external',
+    store,
+    resolveImage: externalImageResolver(editor.graph, store)
+  }
+}
+
+function buildNode(id: string, assets: TreeAssets): any {
   const n = editor.graph.getNode(id)
   if (!n) return null
 
@@ -362,16 +397,16 @@ function buildNode(id: string): any {
     classes: meta.classes,
     layout: meta.layout,
     decorative: meta.decorative,
-    attrs: meta.attrs,
+    attrs: rewriteImageAttrs(meta.attrs, assets.mode, assets.store),
     text: meta.text,
     pageLink: meta.pageLink,
-    style: visualStyleDeclarations(n, resolveImageDataUrl),
-    children: children.map((child: any) => buildNode(child.id)).filter(Boolean) || []
+    style: visualStyleDeclarations(n, assets.resolveImage),
+    children: children.map((child: any) => buildNode(child.id, assets)).filter(Boolean) || []
   }
 }
 
 // Build the DOM tree for any page (fresh pluginData for every node).
-function buildPageTree(pageId: string): any {
+function buildPageTree(pageId: string, assets: TreeAssets = inlineAssets()): any {
   if (!editor?.graph) return null
   const page = editor.graph.getNode(pageId)
   if (!page) return null
@@ -380,12 +415,9 @@ function buildPageTree(pageId: string): any {
     name: page.name,
     breakpoints: readPageBreakpoints(page),
     styleClasses: readStyleClasses(page),
-    children: pageChildren.map((child: any) => buildNode(child.id)).filter(Boolean) || []
+    children: pageChildren.map((child: any) => buildNode(child.id, assets)).filter(Boolean) || []
   }
 }
-
-// DOM Tree - current page only (reactive)
-const domTreeData = computed(() => buildPageTree(editor.state.currentPageId))
 
 function cssForLayout(layout: any): string[] {
   if (!layout || (layout.type !== 'flex' && layout.type !== 'grid')) return []
@@ -403,16 +435,17 @@ function cssForLayout(layout: any): string[] {
     rules.push('display: grid;')
     if (layout.gridTemplateColumns)
       rules.push(`grid-template-columns: ${layout.gridTemplateColumns};`)
-    if (layout.gridTemplateRows)
-      rules.push(`grid-template-rows: ${layout.gridTemplateRows};`)
+    if (layout.gridTemplateRows) rules.push(`grid-template-rows: ${layout.gridTemplateRows};`)
     if (layout.gap && layout.gap !== '0px') rules.push(`gap: ${layout.gap};`)
   }
   return rules
 }
 
 // Export
-function generateExport(): string {
-  const tree = domTreeData.value
+async function generateExport(): Promise<string> {
+  const pageId = editor.state.currentPageId
+  const assets = inlineAssets()
+  const tree = pageId ? buildPageTree(pageId, assets) : null
   if (!tree) {
     exportStatus.value = 'No data to export'
     return ''
@@ -447,14 +480,22 @@ function generateExport(): string {
 
   loadPageSettings()
   const ctx = buildProjectContext(readAllPagesMeta())
+  const { fonts, missing } = await loadExportFonts(
+    editor.graph,
+    pageNodeIds(editor.graph, [pageId])
+  )
   const html = buildExportHtml(tree, {
     title: pageTitle.value,
     lang: pageLang.value,
     description: pageDescription.value,
-    ctx
+    ctx,
+    fontCSS: fontFaceCSS(fonts, 'inline')
   })
   exportHtml.value = html
-  exportStatus.value = 'HTML generated!'
+  exportStatus.value =
+    missing.length > 0
+      ? `HTML generated! ${missing.length} font face(s) unavailable: ${missing.join(', ')}`
+      : `HTML generated! ${fonts.length} font face(s) embedded.`
   return html
 }
 
@@ -463,6 +504,7 @@ interface BuildOptions {
   lang: string
   description: string
   ctx?: ProjectContext
+  fontCSS?: string
 }
 
 // Builds the HTML/CSS purely from the tree — no validation gate. Callers decide the gate.
@@ -562,7 +604,9 @@ function buildExportHtml(tree: any, options: BuildOptions): string {
     body += nodeToHtml(child, 1, false) + '\n'
   })
 
-  let css = 'body { margin: 0; position: relative; }\n'
+  let css = ''
+  if (options.fontCSS) css += `${options.fontCSS}\n`
+  css += 'body { margin: 0; position: relative; }\n'
   css += 'img, svg { max-width: 100%; height: auto; }\n'
   usedClasses.forEach((def, name) => {
     css += `.${name} { ${def} }\n`
@@ -596,19 +640,22 @@ function buildExportHtml(tree: any, options: BuildOptions): string {
   return html
 }
 
-function previewExport() {
-  const tree = domTreeData.value
+async function previewExport() {
+  const pageId = editor.state.currentPageId
+  const tree = pageId ? buildPageTree(pageId, inlineAssets()) : null
   if (!tree || !hasExportableContent(tree)) {
     exportStatus.value = 'Nothing to preview — page has no elements'
     return
   }
   loadPageSettings()
   const ctx = buildProjectContext(readAllPagesMeta())
+  const { fonts } = await loadExportFonts(editor.graph, pageNodeIds(editor.graph, [pageId]))
   const html = buildExportHtml(tree, {
     title: pageTitle.value,
     lang: pageLang.value,
     description: pageDescription.value,
-    ctx
+    ctx,
+    fontCSS: fontFaceCSS(fonts, 'inline')
   })
   const blob = new Blob([html], { type: 'text/html' })
   const url = URL.createObjectURL(blob)
@@ -624,17 +671,26 @@ function previewExport() {
 
 interface ProjectFile {
   name: string
-  html: string
+  content: string | Uint8Array
 }
 
-function collectProjectFiles(): { files: ProjectFile[]; errors: string[] } {
+async function collectProjectFiles(): Promise<{ files: ProjectFile[]; errors: string[] }> {
   const pages = editor.graph.getPages()
   const ctx = buildProjectContext(readAllPagesMeta())
   const files: ProjectFile[] = []
   const errors: string[] = []
+  const store = new ExportAssetStore()
+  const { fonts } = await loadExportFonts(
+    editor.graph,
+    pageNodeIds(
+      editor.graph,
+      pages.map((page) => page.id)
+    )
+  )
+  const fontCSS = fontFaceCSS(fonts, 'external', store)
 
   for (const page of pages) {
-    const tree = buildPageTree(page.id)
+    const tree = buildPageTree(page.id, externalAssets(store))
     if (!tree || !hasExportableContent(tree)) continue
     const critical = collectCriticalErrors(tree)
     if (critical.length > 0) {
@@ -645,13 +701,18 @@ function collectProjectFiles(): { files: ProjectFile[]; errors: string[] } {
     const name = ctx.fileNameById.get(page.id) || `${slugify(page.name)}.html`
     files.push({
       name,
-      html: buildExportHtml(tree, {
+      content: buildExportHtml(tree, {
         title: meta.title,
         lang: meta.lang,
         description: meta.description,
-        ctx
+        ctx,
+        fontCSS
       })
     })
+  }
+
+  for (const asset of store.files()) {
+    files.push({ name: asset.path, content: asset.bytes })
   }
   return { files, errors }
 }
@@ -659,7 +720,10 @@ function collectProjectFiles(): { files: ProjectFile[]; errors: string[] } {
 function downloadZip(files: ProjectFile[]) {
   const entries: Record<string, Uint8Array> = {}
   const encoder = new TextEncoder()
-  for (const file of files) entries[file.name] = encoder.encode(file.html)
+  for (const file of files) {
+    entries[file.name] =
+      typeof file.content === 'string' ? encoder.encode(file.content) : file.content
+  }
   const zipped = zipSync(entries)
   const blob = new Blob([zipped], { type: 'application/zip' })
   const url = URL.createObjectURL(blob)
@@ -670,8 +734,24 @@ function downloadZip(files: ProjectFile[]) {
   setTimeout(() => URL.revokeObjectURL(url), 60_000)
 }
 
+async function writeProjectFile(
+  root: FileSystemDirectoryHandle,
+  path: string,
+  content: string | Uint8Array
+): Promise<void> {
+  const parts = path.split('/').filter(Boolean)
+  const fileName = parts.pop()
+  if (!fileName) return
+  let dir = root
+  for (const part of parts) dir = await dir.getDirectoryHandle(part, { create: true })
+  const handle = await dir.getFileHandle(fileName, { create: true })
+  const writable = await handle.createWritable()
+  await writable.write(content)
+  await writable.close()
+}
+
 async function createProject() {
-  const { files, errors } = collectProjectFiles()
+  const { files, errors } = await collectProjectFiles()
   if (files.length === 0) {
     exportStatus.value =
       errors.length > 0
@@ -680,16 +760,14 @@ async function createProject() {
     return
   }
 
+  const pageCount = files.filter((file) => typeof file.content === 'string').length
+  const assetCount = files.length - pageCount
+
   if (window.showDirectoryPicker) {
     try {
       const dir = await window.showDirectoryPicker({ mode: 'readwrite' })
-      for (const file of files) {
-        const handle = await dir.getFileHandle(file.name, { create: true })
-        const writable = await handle.createWritable()
-        await writable.write(file.html)
-        await writable.close()
-      }
-      exportStatus.value = `Wrote ${files.length} file(s) to the chosen folder.${
+      for (const file of files) await writeProjectFile(dir, file.name, file.content)
+      exportStatus.value = `Wrote ${pageCount} page(s) and ${assetCount} asset(s) to the chosen folder.${
         errors.length ? ` Skipped ${errors.length} blocked page(s).` : ''
       }`
       return
@@ -702,14 +780,14 @@ async function createProject() {
   }
 
   downloadZip(files)
-  exportStatus.value = `Downloaded ${files.length} file(s) as a ZIP (folder picker unavailable).${
+  exportStatus.value = `Downloaded ${pageCount} page(s) and ${assetCount} asset(s) as a ZIP (folder picker unavailable).${
     errors.length ? ` Skipped ${errors.length} blocked page(s).` : ''
   }`
 }
 
 function proceedWithWarnings() {
   exportConfirmed.value = true
-  generateExport()
+  void generateExport()
 }
 
 // Copy to clipboard
@@ -750,25 +828,24 @@ watch(activeTab, (tab) => {
         <span class="tab-label">{{ tab.label }}</span>
       </button>
     </div>
-    
+
     <!-- Tab Content -->
     <div class="tab-content">
-      
       <!-- ==================== TAGS TAB ==================== -->
       <div v-if="activeTab === 'tags'" class="tab-panel">
         <TagsTab />
       </div>
-      
+
       <!-- ==================== DOM TREE TAB ==================== -->
       <div v-if="activeTab === 'tree'" class="tab-panel">
         <DOMTreeTab />
       </div>
-      
+
       <!-- ==================== PAGES TAB ==================== -->
       <div v-if="activeTab === 'pages'" class="tab-panel">
         <PagesTab />
       </div>
-      
+
       <!-- ==================== CLASSES TAB ==================== -->
       <div v-if="activeTab === 'classes'" class="tab-panel">
         <ClassesTab
@@ -780,25 +857,30 @@ watch(activeTab, (tab) => {
           @remove="removeStyleClassEntry"
         />
       </div>
-      
+
       <!-- ==================== LAYOUT TAB ==================== -->
       <div v-if="activeTab === 'layout'" class="tab-panel">
         <LayoutTab />
         <ResponsiveSection />
       </div>
-      
+
       <!-- ==================== VALIDATE TAB ==================== -->
       <div v-if="activeTab === 'validate'" class="tab-panel">
         <ValidateTab />
       </div>
-      
+
       <!-- ==================== EXPORT TAB ==================== -->
       <div v-if="activeTab === 'export'" class="tab-panel">
         <PanelSection label="Page Settings">
           <div class="page-settings">
             <div class="ps-row">
               <label>Title</label>
-              <input v-model="pageTitle" class="attr-input" type="text" @change="savePageSettings" />
+              <input
+                v-model="pageTitle"
+                class="attr-input"
+                type="text"
+                @change="savePageSettings"
+              />
             </div>
             <div class="ps-row">
               <label>Lang</label>
@@ -806,11 +888,23 @@ watch(activeTab, (tab) => {
             </div>
             <div class="ps-row">
               <label>Description</label>
-              <input v-model="pageDescription" class="attr-input" type="text" placeholder="Meta description" @change="savePageSettings" />
+              <input
+                v-model="pageDescription"
+                class="attr-input"
+                type="text"
+                placeholder="Meta description"
+                @change="savePageSettings"
+              />
             </div>
             <div class="ps-row">
               <label>File slug</label>
-              <input v-model="pageSlug" class="attr-input" type="text" placeholder="page-slug" @change="savePageSettings" />
+              <input
+                v-model="pageSlug"
+                class="attr-input"
+                type="text"
+                placeholder="page-slug"
+                @change="savePageSettings"
+              />
             </div>
             <div class="ps-row">
               <label>Home page</label>
@@ -819,16 +913,10 @@ watch(activeTab, (tab) => {
           </div>
         </PanelSection>
         <PanelSection label="Export HTML/CSS">
-          <button class="export-btn" @click="generateExport">
-            Generate HTML
-          </button>
-          <button class="export-btn" @click="previewExport">
-            Preview
-          </button>
-          <button class="export-btn" @click="createProject">
-            Create Project
-          </button>
-          
+          <button class="export-btn" @click="generateExport">Generate HTML</button>
+          <button class="export-btn" @click="previewExport">Preview</button>
+          <button class="export-btn" @click="createProject">Create Project</button>
+
           <div v-if="exportStatus" class="export-status">
             {{ exportStatus }}
             <button
@@ -853,7 +941,7 @@ watch(activeTab, (tab) => {
               <button class="copy-btn" @click="activeTab = 'validate'">Fix first</button>
             </div>
           </div>
-          
+
           <div v-if="exportHtml" class="export-preview">
             <div class="preview-header">
               <span>HTML Output</span>
@@ -863,7 +951,6 @@ watch(activeTab, (tab) => {
           </div>
         </PanelSection>
       </div>
-      
     </div>
   </div>
 </template>
@@ -987,7 +1074,9 @@ watch(activeTab, (tab) => {
   gap: 4px;
 }
 
-.tag-btn, .class-btn, .layout-btn {
+.tag-btn,
+.class-btn,
+.layout-btn {
   padding: 4px 8px;
   border: 1px solid var(--border-color);
   border-radius: 4px;
@@ -997,11 +1086,14 @@ watch(activeTab, (tab) => {
   transition: all 0.2s;
 }
 
-.tag-btn:hover, .class-btn:hover, .layout-btn:hover {
+.tag-btn:hover,
+.class-btn:hover,
+.layout-btn:hover {
   background: var(--bg-tertiary);
 }
 
-.tag-btn.active, .class-btn.active {
+.tag-btn.active,
+.class-btn.active {
   background: var(--accent-color);
   color: white;
   border-color: var(--accent-color);
@@ -1067,7 +1159,8 @@ watch(activeTab, (tab) => {
 }
 
 /* Validation */
-.validate-btn, .export-btn {
+.validate-btn,
+.export-btn {
   width: 100%;
   padding: 8px;
   border: none;
@@ -1079,7 +1172,8 @@ watch(activeTab, (tab) => {
   margin-bottom: 12px;
 }
 
-.validate-btn:hover, .export-btn:hover {
+.validate-btn:hover,
+.export-btn:hover {
   opacity: 0.9;
 }
 
