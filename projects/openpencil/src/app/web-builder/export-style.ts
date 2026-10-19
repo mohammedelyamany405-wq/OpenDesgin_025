@@ -67,7 +67,10 @@ function sizeDeclarations(node: NodeStyleSource): string[] {
   const declarations: string[] = []
   if (typeof node.width === 'number' && node.width > 0)
     declarations.push(`width: ${round(node.width)}px`)
-  if (typeof node.height === 'number' && node.height > 0)
+  // Text with auto height is re-measured by the browser; exporting the canvas
+  // measurement would freeze it and clip wrapped lines at smaller breakpoints.
+  const autoHeight = node.type === 'TEXT' && node.textAutoResize === 'HEIGHT'
+  if (!autoHeight && typeof node.height === 'number' && node.height > 0)
     declarations.push(`height: ${round(node.height)}px`)
   if (declarations.length > 0) declarations.push('box-sizing: border-box')
   if (node.clipsContent) declarations.push('overflow: hidden')
@@ -284,6 +287,15 @@ function quoteFamily(family: string): string {
   return family.includes(' ') && !family.includes(',') ? `'${family}'` : family
 }
 
+/**
+ * Keeps the designer's family first but adds a safe generic fallback, so an
+ * exported page never drops to an unexpected serif when the font is missing.
+ */
+function fontStack(family: string): string {
+  const quoted = quoteFamily(family)
+  return quoted.includes(',') ? quoted : `${quoted}, system-ui, sans-serif`
+}
+
 function mapAlign(value: string | undefined): string | null {
   switch (value) {
     case 'LEFT':
@@ -326,7 +338,7 @@ function mapDecoration(value: string | undefined): string | null {
 function textDeclarations(node: NodeStyleSource): string[] {
   if (node.type !== 'TEXT') return []
   const declarations: string[] = []
-  if (node.fontFamily) declarations.push(`font-family: ${quoteFamily(node.fontFamily)}`)
+  if (node.fontFamily) declarations.push(`font-family: ${fontStack(node.fontFamily)}`)
   if (typeof node.fontSize === 'number' && node.fontSize > 0)
     declarations.push(`font-size: ${round(node.fontSize)}px`)
   if (node.fontWeight) declarations.push(`font-weight: ${node.fontWeight}`)

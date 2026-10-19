@@ -39,6 +39,11 @@ const widthOptions = [
   { value: 'full', label: 'Full width' }
 ]
 
+const heightOptions = [
+  { value: '', label: 'Inherit' },
+  { value: 'auto', label: 'Auto height' }
+]
+
 const justifyOptions = [
   { value: '', label: 'Inherit' },
   { value: 'flex-start', label: 'Start' },
@@ -58,8 +63,8 @@ const alignOptions = [
   { value: 'baseline', label: 'Baseline' }
 ]
 
-const currentDevice = computed<ResponsiveDevice>(
-  () => (activeDevice.value === 'mobile' ? 'mobile' : 'tablet')
+const currentDevice = computed<ResponsiveDevice>(() =>
+  activeDevice.value === 'mobile' ? 'mobile' : 'tablet'
 )
 const current = computed<ResponsiveOverrides>(() => overrides.value[currentDevice.value])
 
@@ -69,12 +74,16 @@ function findLayoutEntry() {
   return n.pluginData.find((e) => e.pluginId === PLUGIN_ID && e.key === LAYOUT_KEY)
 }
 
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value)
+}
+
 function readLayout(): Record<string, unknown> {
   const entry = findLayoutEntry()
   if (!entry) return {}
   try {
-    const parsed = JSON.parse(entry.value)
-    return parsed && typeof parsed === 'object' ? (parsed as Record<string, unknown>) : {}
+    const parsed: unknown = JSON.parse(entry.value)
+    return isRecord(parsed) ? parsed : {}
   } catch {
     return {}
   }
@@ -85,6 +94,8 @@ function normalize(source: ResponsiveOverrides | undefined): ResponsiveOverrides
     direction: source?.direction,
     hidden: source?.hidden ?? false,
     width: source?.width,
+    height: source?.height,
+    padding: source?.padding ?? '',
     justifyContent: source?.justifyContent ?? '',
     alignItems: source?.alignItems ?? '',
     gap: source?.gap ?? '',
@@ -97,6 +108,8 @@ function clean(source: ResponsiveOverrides): ResponsiveOverrides {
   if (source.direction) result.direction = source.direction
   if (source.hidden) result.hidden = true
   if (source.width) result.width = source.width
+  if (source.height) result.height = source.height
+  if (source.padding) result.padding = source.padding
   if (source.justifyContent) result.justifyContent = source.justifyContent
   if (source.alignItems) result.alignItems = source.alignItems
   if (source.gap) result.gap = source.gap
@@ -124,9 +137,7 @@ function save() {
   delete layout.mobileDirection
   if (Object.keys(responsive).length > 0) layout.responsive = responsive
 
-  const pluginData = n.pluginData.filter(
-    (e) => !(e.pluginId === PLUGIN_ID && e.key === LAYOUT_KEY)
-  )
+  const pluginData = n.pluginData.filter((e) => !(e.pluginId === PLUGIN_ID && e.key === LAYOUT_KEY))
   pluginData.push({ pluginId: PLUGIN_ID, key: LAYOUT_KEY, value: JSON.stringify(layout) })
   editor.updateNodeWithUndo(n.id, { pluginData }, 'Set responsive overrides')
 }
@@ -166,8 +177,8 @@ watch(activeDevice, syncFromNode)
       </div>
 
       <p v-if="activeDevice === 'desktop'" class="hint">
-        Desktop هو التصميم الأساسي. عدّله من أقسام Layout أعلاه، ثم صرّح بتجاوزات
-        Tablet و Mobile هنا.
+        Desktop هو التصميم الأساسي. عدّله من أقسام Layout أعلاه، ثم صرّح بتجاوزات Tablet و Mobile
+        هنا.
       </p>
 
       <div v-else class="control-group">
@@ -182,10 +193,7 @@ watch(activeDevice, syncFromNode)
 
         <div class="control-row">
           <label>Hidden</label>
-          <button
-            :class="['toggle-btn', { active: current.hidden }]"
-            @click="toggleHidden"
-          >
+          <button :class="['toggle-btn', { active: current.hidden }]" @click="toggleHidden">
             {{ current.hidden ? 'On' : 'Off' }}
           </button>
         </div>
@@ -197,6 +205,26 @@ watch(activeDevice, syncFromNode)
               {{ opt.label }}
             </option>
           </select>
+        </div>
+
+        <div class="control-row">
+          <label>Height</label>
+          <select v-model="current.height" class="control-select" @change="save">
+            <option v-for="opt in heightOptions" :key="opt.value" :value="opt.value">
+              {{ opt.label }}
+            </option>
+          </select>
+        </div>
+
+        <div class="control-row">
+          <label>Padding</label>
+          <input
+            type="text"
+            :value="current.padding"
+            class="control-input"
+            placeholder="inherit (e.g. 72px 0)"
+            @change="save"
+          />
         </div>
 
         <div class="control-row">
@@ -242,9 +270,7 @@ watch(activeDevice, syncFromNode)
           />
         </div>
 
-        <p class="hint">
-          القيم الفارغة (Inherit) ترث إعدادات Desktop بلا تغيير.
-        </p>
+        <p class="hint">القيم الفارغة (Inherit) ترث إعدادات Desktop بلا تغيير.</p>
       </div>
     </div>
   </PanelSection>

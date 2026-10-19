@@ -8,6 +8,7 @@ const router = createRouter({
     { path: '/', component: WorkspaceView },
     { path: '/storage', redirect: '/' },
     { path: '/demo', component: WorkspaceView, meta: { demo: true } },
+    { path: '/sample', component: WorkspaceView, meta: { sample: true } },
     { path: '/share/:roomId', component: WorkspaceView }
   ]
 })

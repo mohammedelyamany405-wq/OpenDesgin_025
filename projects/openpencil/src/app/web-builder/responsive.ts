@@ -11,6 +11,8 @@ export interface ResponsiveOverrides {
   direction?: 'row' | 'column'
   hidden?: boolean
   width?: 'auto' | 'full'
+  height?: 'auto'
+  padding?: string
   justifyContent?: string
   alignItems?: string
   gap?: string
@@ -65,6 +67,8 @@ export function responsiveDeclarations(overrides: ResponsiveOverrides | undefine
   if (overrides.hidden) declarations.push('display: none')
   if (overrides.width === 'full') declarations.push('width: 100%')
   else if (overrides.width === 'auto') declarations.push('width: auto')
+  if (overrides.height === 'auto') declarations.push('height: auto')
+  if (overrides.padding) declarations.push(`padding: ${overrides.padding}`)
   if (overrides.justifyContent) declarations.push(`justify-content: ${overrides.justifyContent}`)
   if (overrides.alignItems) declarations.push(`align-items: ${overrides.alignItems}`)
   if (overrides.gap) declarations.push(`gap: ${overrides.gap}`)

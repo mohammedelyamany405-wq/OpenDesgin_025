@@ -8,6 +8,8 @@ import { exposeCollaborationActions } from '@/app/browser-bridge'
 import { startMCPRuntime, stopMCPRuntime } from '@/app/automation/mcp/runtime'
 import { COLLAB_KEY, useCollab } from '@/app/collab/use'
 import { createDemoShapes } from '@/app/demo/document'
+import { createSampleDocument } from '@/app/demo/sample/document'
+import type { SampleIds } from '@/app/demo/sample/document'
 import { useKeyboard } from '@/app/shell/keyboard/use'
 import { openFileFromPath, useEditorMenu } from '@/app/shell/menu/use'
 import {
@@ -41,7 +43,31 @@ if (createdInitialTab && route.meta.demo && !('test' in params)) {
   void createDemoShapes(firstTab.store)
 }
 
-useHead({ title: route.meta.demo ? 'Demo' : undefined })
+const sampleIds = ref<SampleIds | null>(null)
+if (createdInitialTab && route.meta.sample && !('test' in params)) {
+  sampleIds.value = createSampleDocument(firstTab.store)
+}
+
+function switchSamplePage(page: 'home' | 'about'): void {
+  const ids = sampleIds.value
+  const store = activeTab.value?.store
+  if (!ids || !store) return
+  void store
+    .switchPage(page === 'home' ? ids.homeId : ids.aboutId)
+    .then(() => store.fitCurrentPageToViewport())
+}
+
+function downloadSample(): void {
+  void activeTab.value?.store.saveFigFileAs()
+}
+
+function documentTitle(): string | undefined {
+  if (route.meta.demo) return 'Demo'
+  if (route.meta.sample) return 'Sample'
+  return undefined
+}
+
+useHead({ title: documentTitle() })
 useKeyboard()
 useEditorMenu()
 
@@ -103,5 +129,29 @@ onUnmounted(() => {
     <TabBar />
     <HomeWorkspace v-show="activeTab?.kind === 'home'" @new-document="createDocumentInCurrentTab" />
     <EditorWorkspace v-if="activeTab?.kind !== 'home'" />
+    <div
+      v-if="route.meta.sample"
+      class="fixed bottom-4 right-4 z-50 flex flex-wrap items-center gap-2 rounded-xl border border-slate-200 bg-white/95 px-3 py-2 text-xs shadow-lg"
+    >
+      <span class="font-semibold text-slate-700">Web Builder sample</span>
+      <button
+        class="rounded-md px-2 py-1 text-slate-600 hover:bg-slate-100"
+        @click="switchSamplePage('home')"
+      >
+        Home
+      </button>
+      <button
+        class="rounded-md px-2 py-1 text-slate-600 hover:bg-slate-100"
+        @click="switchSamplePage('about')"
+      >
+        About
+      </button>
+      <button
+        class="rounded-md bg-blue-600 px-2 py-1 font-semibold text-white hover:bg-blue-700"
+        @click="downloadSample"
+      >
+        Download .fig
+      </button>
+    </div>
   </div>
 </template>

@@ -80,6 +80,12 @@ describe('web-builder export style', () => {
     expect(
       style({ type: 'TEXT', textAutoResize: 'WIDTH_AND_HEIGHT', width: 120, height: 30 })
     ).toBe('')
+    expect(
+      style({ type: 'TEXT', textAutoResize: 'HEIGHT', width: 320, height: 90 })
+    ).toBe('width: 320px; box-sizing: border-box')
+    expect(style({ type: 'TEXT', textAutoResize: 'NONE', width: 320, height: 90 })).toBe(
+      'width: 320px; height: 90px; box-sizing: border-box'
+    )
   })
 
   test('solid fill becomes background-color on non-text nodes', () => {
@@ -227,7 +233,7 @@ describe('web-builder export style', () => {
       textCase: 'UPPER',
       textDecoration: 'UNDERLINE'
     })
-    expect(result).toContain("font-family: 'Helvetica Neue'")
+    expect(result).toContain('font-family: \'Helvetica Neue\', system-ui, sans-serif')
     expect(result).toContain('font-size: 24px')
     expect(result).toContain('font-weight: 700')
     expect(result).toContain('font-style: italic')

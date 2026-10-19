@@ -39,6 +39,8 @@ describe('web-builder responsive', () => {
       direction: 'column',
       hidden: true,
       width: 'full',
+      height: 'auto',
+      padding: '72px 0',
       justifyContent: 'center',
       alignItems: 'center',
       gap: '12px',
@@ -48,6 +50,8 @@ describe('web-builder responsive', () => {
       'flex-direction: column',
       'display: none',
       'width: 100%',
+      'height: auto',
+      'padding: 72px 0',
       'justify-content: center',
       'align-items: center',
       'gap: 12px',
@@ -58,6 +62,14 @@ describe('web-builder responsive', () => {
   test('width auto and width full map distinctly', () => {
     expect(responsiveDeclarations({ width: 'auto' })).toEqual(['width: auto'])
     expect(responsiveDeclarations({ width: 'full' })).toEqual(['width: 100%'])
+  })
+
+  test('height auto releases fixed canvas heights', () => {
+    expect(responsiveDeclarations({ height: 'auto' })).toEqual(['height: auto'])
+  })
+
+  test('padding overrides spacing at a breakpoint', () => {
+    expect(responsiveDeclarations({ padding: '72px 0' })).toEqual(['padding: 72px 0'])
   })
 
   test('hidden false emits nothing', () => {

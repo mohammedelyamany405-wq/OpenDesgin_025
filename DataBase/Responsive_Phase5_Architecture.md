@@ -25,6 +25,8 @@ interface ResponsiveOverrides {
   direction?: 'row' | 'column'        // flex-direction
   hidden?: boolean                    // display: none عند true
   width?: 'auto' | 'full'             // width: auto | 100%
+  height?: 'auto'                     // height: auto (يُحرّر ارتفاع الكانفاس الثابت)
+  padding?: string                    // padding (مثال "72px 0")
   justifyContent?: string             // justify-content
   alignItems?: string                 // align-items
   gap?: string                        // gap (مثال "12px")
@@ -55,7 +57,11 @@ interface LayoutData {
 مكوّن مستقل جديد `ResponsiveSection.vue` يُضاف أسفل تبويب Layout (لكل العناصر، لا للحاويات فقط):
 - أزرار تبديل المقاس: **Desktop / Tablet / Mobile** (عرض نفس الحقول).
 - لكل مقاس، صفوف التحكم: Direction، Hidden (زر On/Off)، Width (Inherit/Auto/Full)،
-  Justify، Align، Gap (px)، Grid Columns — لكلٍّ خيار **Inherit** افتراضي.
+  Height (Inherit/Auto)، Padding (نص، مثال `72px 0`)، Justify، Align، Gap (px)،
+  Grid Columns — لكلٍّ خيار **Inherit** افتراضي.
+- `height: auto` ضروري عندما يتمدّد المحتوى على المقاس الأصغر أكثر من ارتفاع الكانفاس
+  الثابت؛ بدونه يتداخل القسم مع ما يليه. و`padding` يعيد الهامش الرأسي الذي كان يأتي
+  من الارتفاع الثابت.
 - التبديل بين المقاسات يحمّل/يحفظ كل مقاس على حدة في `web-builder-layout`.
 
 ## التصدير
@@ -65,6 +71,7 @@ interface LayoutData {
 3. تُضاف قواعد `.wb-<id>` **فقط عند وجود تصريح** إلى:
    - `@media (max-width: Tablet)`
    - `@media (max-width: Mobile)` — يُكتب **بعد** التابلت ليفوز عند التداخل.
+   - تدعم التصريحات أيضاً `height: auto` و`padding` لتحرير الأقسام ذات الارتفاع الثابت.
 4. العنصر الذي لا base style له لكن له تجاوز متجاوب يحصل على صنف `wb-<id>` أيضاً.
 5. **قاعدة الأمان (تلقائية، لا تخمين):** في CSS الأساسي:
    `img, svg { max-width: 100%; height: auto; }` — الصور لا تتجاوز الشاشة.
@@ -84,9 +91,15 @@ interface LayoutData {
 - `LayoutTab.vue`: حُذفت صفوف Tablet/Mobile dir القديمة، وكتاباته تحفظ `responsive`.
 - `WebBuilderPanel.vue`: التصدير يقرأ `readResponsive` ويُخرج `@media` للتابلت ثم الموبايل،
   ويضيف قاعدة `img, svg { max-width: 100%; height: auto; }`.
-- `tests/engine/web-builder/responsive.test.ts`: 8/8 ✅ — والمجموع `web-builder + dom-css` **90/90** ✅.
+- `tests/engine/web-builder/responsive.test.ts`: 10/10 ✅ — والمجموع `web-builder` **90/90** ✅.
 - `bun run check:vue` ✅ و`bun run test:dupes` (0 نسخ) ✅.
 
 ## مثال سلوكي
 ثلاثة كروت في صف (Flex row) على Desktop. تجاوز Mobile: Direction=Column + Width=Full.
 النتيجة: على Mobile تتراص عمودياً بعرض الشاشة، وDesktop يبقى صفاً واحداً — بلا أي تخمين.
+
+## إضافة لاحقة ضمن نموذج `/sample` (2026-10-19)
+أثناء بناء النموذج التجريبي ظهر قصّ بصري على الموبايل لأن الأقسام و`main` تحمل ارتفاعات
+كانفاس ثابتة. أُضيف الحقلان `height` و`padding` أعلاه، وطُبّقا في النموذج على جميع
+الأقسام (`height: auto` + `padding: 72px 0`) وعلى `main`/المحتوى (`height: auto`).
+النتيجة: لا تداخل بين الأقسام ولا قصّ للكروت، مع بقاء Desktop كما هو.
