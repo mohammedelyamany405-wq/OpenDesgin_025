@@ -54,11 +54,22 @@ function tagNameForNode(node: SceneNode): string {
 
 1. بوابة الأخطاء الحرجة → منع + زر Go to Validate.
 2. التحذيرات → حوار Proceed anyway / Fix first.
-3. بناء HTML بالوسوم + `aria-hidden` للزخرفي.
+3. بناء HTML عبر `renderExport()` في `src/app/web-builder/html-render.ts`.
 4. بناء `<style>`:
-   - تعريفات الكلاسات المستخدمة فقط (من كتالوج `classCategories`).
+   - تعريفات الكلاسات المستخدمة فقط (من كتالوج `CLASS_CATEGORIES`).
    - `.wb-<id>` لكل عنصر له layout معلن (flex/grid).
    - `@media (max-width)` فقط للتجاوزات المصرحة (tablet/mobile direction).
+
+### تصدير النص (مُصلح 2026-11-03)
+
+`buildNode` ينسخ `node.text` عندما `n.type === 'TEXT'`.
+`renderExport` يضع النص داخل الوسم مع هروب `& < >`:
+
+- ورقة نص: `<h1>Hello</h1>`
+- حاوية بأبناء ونص: النص سطر قبل الأبناء
+- عنصر بلا نص: وسم فارغ كما كان
+
+اختبارات: `tests/engine/app/web-builder/html-render.test.ts`
 
 ## 5. القيود والملاحظات الهامة
 

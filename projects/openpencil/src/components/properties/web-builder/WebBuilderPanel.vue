@@ -4,6 +4,11 @@ import { useSelectionState } from '@open-pencil/vue'
 import { useEditorStore } from '@/app/editor/active-store'
 
 import PanelSection from '@/components/ui/panel/PanelSection.vue'
+import {
+  CLASS_CATEGORIES,
+  escapeAttrValue,
+  renderExport
+} from '@/app/web-builder/html-render'
 import DOMTreeTab from './DOMTreeTab.vue'
 import PagesTab from './PagesTab.vue'
 import LayoutTab from './LayoutTab.vue'
@@ -82,40 +87,8 @@ const tabs = [
   { id: 'export', label: 'Export', icon: 'icon-lucide-external-link' }
 ]
 
-// CSS Classes catalog
-const classCategories = [
-  { category: 'Layout', items: [
-    { name: 'container', css: 'max-width: 1200px; margin: 0 auto; padding: 0 20px' },
-    { name: 'flex-center', css: 'display: flex; justify-content: center; align-items: center' },
-    { name: 'grid-2', css: 'display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px' },
-    { name: 'grid-3', css: 'display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px' }
-  ]},
-  { category: 'Text', items: [
-    { name: 'heading-1', css: 'font-size: 32px; font-weight: bold; line-height: 1.2' },
-    { name: 'heading-2', css: 'font-size: 24px; font-weight: bold; line-height: 1.3' },
-    { name: 'body-text', css: 'font-size: 16px; line-height: 1.6' },
-    { name: 'small-text', css: 'font-size: 14px; color: #666' }
-  ]},
-  { category: 'Spacing', items: [
-    { name: 'p-1', css: 'padding: 8px' },
-    { name: 'p-2', css: 'padding: 16px' },
-    { name: 'p-3', css: 'padding: 24px' },
-    { name: 'm-1', css: 'margin: 8px' },
-    { name: 'm-2', css: 'margin: 16px' }
-  ]},
-  { category: 'Colors', items: [
-    { name: 'bg-primary', css: 'background-color: #3b82f6' },
-    { name: 'bg-secondary', css: 'background-color: #6b7280' },
-    { name: 'text-white', css: 'color: #ffffff' },
-    { name: 'text-dark', css: 'color: #1f2937' }
-  ]},
-  { category: 'Effects', items: [
-    { name: 'shadow-sm', css: 'box-shadow: 0 1px 2px rgba(0,0,0,0.05)' },
-    { name: 'shadow-md', css: 'box-shadow: 0 4px 6px rgba(0,0,0,0.1)' },
-    { name: 'rounded', css: 'border-radius: 8px' },
-    { name: 'rounded-full', css: 'border-radius: 9999px' }
-  ]}
-]
+// CSS Classes catalog (shared with the export renderer)
+const classCategories = CLASS_CATEGORIES
 
 // Load data from pluginData
 function loadPluginData() {
@@ -230,27 +203,6 @@ function readNodeMeta(n: any): { tag: string; classes: string[]; layout: any; de
   }
 }
 
-function escapeAttrValue(value: string): string {
-  return String(value)
-    .replaceAll('&', '&amp;')
-    .replaceAll('"', '&quot;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-}
-
-function attrsToString(attrs: Record<string, any>): string {
-  const parts: string[] = []
-  for (const [name, value] of Object.entries(attrs)) {
-    if (value === '' || value === null || value === undefined || value === false) continue
-    if (value === true) {
-      parts.push(name)
-    } else {
-      parts.push(`${name}="${escapeAttrValue(String(value))}"`)
-    }
-  }
-  return parts.length > 0 ? ' ' + parts.join(' ') : ''
-}
-
 function readPageBreakpoints(page: any): { tablet: number; mobile: number } {
   const entry = page.pluginData?.find(
     (e: any) => e.pluginId === 'open-pencil' && e.key === BREAKPOINTS_KEY
@@ -286,6 +238,7 @@ const domTreeData = computed(() => {
       layout: meta.layout,
       decorative: meta.decorative,
       attrs: meta.attrs,
+      text: n.type === 'TEXT' ? n.text : '',
       children: children.map((child: any) => buildNode(child.id)).filter(Boolean) || []
     }
   }
@@ -331,41 +284,6 @@ function collectCriticalErrors(tree: any): string[] {
     }
   }
   return errors
-}
-
-function cssForClass(className: string): string {
-  for (const cat of classCategories) {
-    const found = cat.items.find((i) => i.name === className)
-    if (found) return found.css
-  }
-  return ''
-}
-
-function sanitizeId(id: string): string {
-  return String(id).replace(/[^a-zA-Z0-9_-]/g, '-')
-}
-
-function cssForLayout(layout: any): string[] {
-  if (!layout || (layout.type !== 'flex' && layout.type !== 'grid')) return []
-  const rules: string[] = []
-  if (layout.type === 'flex') {
-    rules.push('display: flex;')
-    rules.push(`flex-direction: ${layout.direction || 'row'};`)
-    if (layout.justifyContent && layout.justifyContent !== 'flex-start')
-      rules.push(`justify-content: ${layout.justifyContent};`)
-    if (layout.alignItems && layout.alignItems !== 'stretch')
-      rules.push(`align-items: ${layout.alignItems};`)
-    if (layout.gap && layout.gap !== '0px') rules.push(`gap: ${layout.gap};`)
-    if (layout.flexWrap) rules.push('flex-wrap: wrap;')
-  } else {
-    rules.push('display: grid;')
-    if (layout.gridTemplateColumns)
-      rules.push(`grid-template-columns: ${layout.gridTemplateColumns};`)
-    if (layout.gridTemplateRows)
-      rules.push(`grid-template-rows: ${layout.gridTemplateRows};`)
-    if (layout.gap && layout.gap !== '0px') rules.push(`gap: ${layout.gap};`)
-  }
-  return rules
 }
 
 function collectWarnings(tree: any): string[] {
@@ -426,66 +344,7 @@ function generateExport() {
   pendingWarnings.value = []
   exportConfirmed.value = false
 
-  const usedClasses = new Map<string, string>()
-  const layoutRules: string[] = []
-  const tabletRules: string[] = []
-  const mobileRules: string[] = []
-  const bp = tree.breakpoints || { tablet: 768, mobile: 375 }
-
-  function nodeToHtml(node: any, indent: number = 0): string {
-    const spaces = '  '.repeat(indent)
-    const decorative = !!node.decorative
-    const tag = decorative ? 'div' : node.tag || 'div'
-    const aria = decorative ? ' aria-hidden="true"' : ''
-    const extraAttrs = decorative ? '' : attrsToString(node.attrs || {})
-
-    const cls: string[] = [...(node.classes || [])]
-    for (const c of node.classes || []) {
-      if (!usedClasses.has(c)) {
-        const css = cssForClass(c)
-        if (css) usedClasses.set(c, css)
-      }
-    }
-
-    const rules = cssForLayout(node.layout)
-    if (rules.length > 0) {
-      const wbClass = `wb-${sanitizeId(node.id)}`
-      cls.push(wbClass)
-      layoutRules.push(`.${wbClass} { ${rules.join(' ')} }`)
-      if (node.layout.tabletDirection && node.layout.tabletDirection !== 'inherit') {
-        tabletRules.push(`.${wbClass} { flex-direction: ${node.layout.tabletDirection}; }`)
-      }
-      if (node.layout.mobileDirection && node.layout.mobileDirection !== 'inherit') {
-        mobileRules.push(`.${wbClass} { flex-direction: ${node.layout.mobileDirection}; }`)
-      }
-    }
-
-    const classAttr = cls.length > 0 ? ` class="${cls.join(' ')}"` : ''
-
-    if (node.children?.length > 0) {
-      const childrenHtml = node.children.map((c: any) => nodeToHtml(c, indent + 1)).join('\n')
-      return `${spaces}<${tag}${classAttr}${aria}${extraAttrs}>\n${childrenHtml}\n${spaces}</${tag}>`
-    } else {
-      return `${spaces}<${tag}${classAttr}${aria}${extraAttrs}></${tag}>`
-    }
-  }
-
-  let body = ''
-  tree.children?.forEach((child: any) => {
-    body += nodeToHtml(child, 1) + '\n'
-  })
-
-  let css = ''
-  usedClasses.forEach((def, name) => {
-    css += `.${name} { ${def} }\n`
-  })
-  if (layoutRules.length > 0) css += layoutRules.join('\n') + '\n'
-  if (tabletRules.length > 0) {
-    css += `@media (max-width: ${bp.tablet}px) {\n  ${tabletRules.join('\n  ')}\n}\n`
-  }
-  if (mobileRules.length > 0) {
-    css += `@media (max-width: ${bp.mobile}px) {\n  ${mobileRules.join('\n  ')}\n}\n`
-  }
+  const { body, css } = renderExport(tree.children || [], tree.breakpoints)
 
   loadPageSettings()
   const escTitle = escapeAttrValue(pageTitle.value || 'Exported Page')
