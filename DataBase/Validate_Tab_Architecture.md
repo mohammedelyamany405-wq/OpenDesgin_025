@@ -49,15 +49,19 @@ const layout = JSON.parse(entry.value).type // none | flex | grid
 
 | الملف | الدور |
 |-------|-------|
-| `src/components/properties/web-builder/ValidateTab.vue` | المكون الجديد الكامل |
-| `src/components/properties/web-builder/WebBuilderPanel.vue` | استيراد `ValidateTab` وحذف `runValidation` القديم و `validationResult` |
+| `src/app/web-builder/validate.ts` | مصدر القواعد الوحيد (`validateExportTree`) |
+| `src/components/properties/web-builder/ValidateTab.vue` | واجهة الفحص — يحوّل SceneNode ثم يستدعي المحرك |
+| `src/components/properties/web-builder/WebBuilderPanel.vue` | بوابة التصدير عبر `collectCriticalErrors` / `collectWarnings` |
+| `tests/engine/app/web-builder/validate.test.ts` | اختبارات المحرك المشترك |
 
 ## 6. بوابة التصدير (Export Gate)
 
-- `generateExport` في `WebBuilderPanel` يفحص الأخطاء الحرجة أولا عبر `collectCriticalErrors`.
-- نفس قواعد Validate الحرجة: غياب `header/main/footer`، تكرار `h1`، `img` له أبناء.
+- `generateExport` يفحص الأخطاء الحرجة أولا عبر `collectCriticalErrors` من المحرك المشترك.
+- نفس قواعد Validate بالضبط: غياب `header/main/footer`، تكرار `h1`، `img` له أبناء.
+- العقد الزخرفية لا تُحسب في الوسوم الأساسية ولا تُنتج أخطاء `img`.
+- العقد `internalOnly` تُستبعد من الشجرة قبل الفحص والتصدير.
 - عند وجود خطأ حرج: يمسح `exportHtml` ويعرض رسالة منع + زر `Go to Validate`.
-- التحذيرات (warnings) لا تمنع التصدير.
+- التحذيرات (warnings) لا تمنع التصدير إلا بعد حوار Proceed anyway.
 
 ## 7. ملاحظات (v0.0 مكتملة)
 

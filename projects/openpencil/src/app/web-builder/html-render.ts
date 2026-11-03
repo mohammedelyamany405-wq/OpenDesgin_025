@@ -78,6 +78,7 @@ export interface ExportNode {
   decorative?: boolean
   attrs?: Record<string, unknown>
   text?: string
+  hasImageFill?: boolean
   children?: ExportNode[]
 }
 

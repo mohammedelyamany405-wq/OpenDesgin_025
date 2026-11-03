@@ -2,57 +2,58 @@
 import { ref, onMounted, onUnmounted, watch } from 'vue'
 import { useEditorStore } from '@/app/editor/active-store'
 import type { SceneNode } from '@open-pencil/scene-graph'
+import type { ExportNode } from '@/app/web-builder/html-render'
+import { validateExportTree, type ValidationIssue } from '@/app/web-builder/validate'
 
 import PanelSection from '@/components/ui/panel/PanelSection.vue'
 
 const PLUGIN_ID = 'open-pencil'
 const TAG_KEY = 'web-builder-tag'
 const LAYOUT_KEY = 'web-builder-layout'
-
-interface Issue {
-  type: 'error' | 'warning'
-  message: string
-  nodeId?: string
-  nodeName?: string
-}
+const ATTRS_KEY = 'web-builder-attrs'
+const DECORATIVE_KEY = 'web-builder-decorative'
 
 const editor = useEditorStore()
-const issues = ref<Issue[]>([])
+const issues = ref<ValidationIssue[]>([])
 const status = ref<'idle' | 'success' | 'error'>('idle')
 const lastRun = ref('')
 
+function pluginValue(node: SceneNode, key: string): string | undefined {
+  return node.pluginData.find((e) => e.pluginId === PLUGIN_ID && e.key === key)?.value
+}
+
 function getTag(node: SceneNode): string {
-  const entry = node.pluginData.find(
-    (e) => e.pluginId === PLUGIN_ID && e.key === TAG_KEY
-  )
-  return entry?.value || 'div'
+  return pluginValue(node, TAG_KEY) || 'div'
 }
 
 function isDecorative(node: SceneNode): boolean {
-  return node.pluginData.some(
-    (e) => e.pluginId === PLUGIN_ID && e.key === 'web-builder-decorative' && e.value === 'true'
-  )
+  return pluginValue(node, DECORATIVE_KEY) === 'true'
 }
 
-function selectUntagged() {
-  const pageId = editor.state.currentPageId
-  if (!pageId) return
-  const ids = collectAllNodes(pageId)
-    .filter((n) => !isDecorative(n) && getTag(n) === 'div' && n.childIds.length === 0)
-    .map((n) => n.id)
-  if (ids.length > 0) editor.select(ids)
-}
-
-function getLayoutType(node: SceneNode): string {
-  const entry = node.pluginData.find(
-    (e) => e.pluginId === PLUGIN_ID && e.key === LAYOUT_KEY
-  )
-  if (!entry) return 'none'
+function parseJson<T>(raw: string | undefined, fallback: T): T {
+  if (!raw) return fallback
   try {
-    const data = JSON.parse(entry.value)
-    return data.type || 'none'
+    return JSON.parse(raw) as T
   } catch {
-    return 'none'
+    return fallback
+  }
+}
+
+function sceneToExport(node: SceneNode): ExportNode {
+  const children = node.childIds
+    .map((id) => editor.graph.getNode(id))
+    .filter((child): child is SceneNode => !!child && !child.internalOnly)
+    .map(sceneToExport)
+  const layout = parseJson<{ type?: 'none' | 'flex' | 'grid' }>(pluginValue(node, LAYOUT_KEY), {})
+  return {
+    id: node.id,
+    name: node.name,
+    tag: getTag(node),
+    decorative: isDecorative(node),
+    attrs: parseJson<Record<string, unknown>>(pluginValue(node, ATTRS_KEY), {}),
+    layout,
+    hasImageFill: node.fills.some((f) => f.type === 'IMAGE'),
+    children
   }
 }
 
@@ -72,8 +73,16 @@ function collectAllNodes(pageId: string): SceneNode[] {
   return result
 }
 
+function selectUntagged() {
+  const pageId = editor.state.currentPageId
+  if (!pageId) return
+  const ids = collectAllNodes(pageId)
+    .filter((n) => !isDecorative(n) && getTag(n) === 'div' && n.childIds.length === 0)
+    .map((n) => n.id)
+  if (ids.length > 0) editor.select(ids)
+}
+
 function runValidation() {
-  const found: Issue[] = []
   const pageId = editor.state.currentPageId
   if (!pageId) {
     issues.value = [{ type: 'error', message: 'No active page' }]
@@ -81,98 +90,26 @@ function runValidation() {
     return
   }
 
-  const nodes = collectAllNodes(pageId)
-  if (nodes.length === 0) {
+  const page = editor.graph.getNode(pageId)
+  if (!page) {
+    issues.value = [{ type: 'error', message: 'No active page' }]
+    status.value = 'error'
+    return
+  }
+
+  const tree = page.childIds
+    .map((id) => editor.graph.getNode(id))
+    .filter((child): child is SceneNode => !!child && !child.internalOnly)
+    .map(sceneToExport)
+
+  if (tree.length === 0) {
     issues.value = [{ type: 'warning', message: 'Page is empty — nothing to validate' }]
     status.value = 'success'
     lastRun.value = new Date().toLocaleTimeString()
     return
   }
 
-  const tags = nodes.map(getTag)
-
-  // 1. Essential semantic tags
-  for (const essential of ['header', 'main', 'footer']) {
-    if (!tags.includes(essential)) {
-      found.push({ type: 'error', message: `Missing essential tag: <${essential}>` })
-    }
-  }
-
-  // 2. Only one h1 per page
-  const h1Count = tags.filter((t) => t === 'h1').length
-  if (h1Count > 1) {
-    found.push({ type: 'error', message: `Multiple <h1> tags found (${h1Count}) — keep only one per page` })
-  }
-
-  // 3. Per-node checks (decorative nodes are skipped entirely)
-  const defaultNames = /^(rectangle|ellipse|frame|group|text)/i
-  for (const node of nodes) {
-    if (isDecorative(node)) continue
-    const tag = getTag(node)
-    const layout = getLayoutType(node)
-    const hasChildren = node.childIds.length > 0
-
-    // Untagged leaf
-    if (tag === 'div' && !hasChildren) {
-      found.push({
-        type: 'warning',
-        message: `Element "${node.name}" has no specific tag (defaults to <div>)`,
-        nodeId: node.id,
-        nodeName: node.name
-      })
-    }
-
-    // Container without declared layout
-    if (hasChildren && layout === 'none' && ['div', 'section', 'main', 'header', 'footer', 'nav', 'article', 'aside'].includes(tag)) {
-      found.push({
-        type: 'warning',
-        message: `Container "${node.name}" <${tag}> has children but no Flex/Grid declared`,
-        nodeId: node.id,
-        nodeName: node.name
-      })
-    }
-
-    // img cannot have children
-    if (tag === 'img' && hasChildren) {
-      found.push({
-        type: 'error',
-        message: `Element "${node.name}" is <img> but has children — <img> must be a leaf`,
-        nodeId: node.id,
-        nodeName: node.name
-      })
-    }
-
-    // Interactive elements should be renamed
-    if ((tag === 'button' || tag === 'a') && defaultNames.test(node.name)) {
-      found.push({
-        type: 'warning',
-        message: `Element <${tag}> still has default name "${node.name}" — rename it for clarity`,
-        nodeId: node.id,
-        nodeName: node.name
-      })
-    }
-
-    // img without src
-    if (tag === 'img' && !hasChildren) {
-      const entry = node.pluginData.find(
-        (e) => e.pluginId === PLUGIN_ID && e.key === 'web-builder-attrs'
-      )
-      let src = ''
-      try {
-        src = entry ? String(JSON.parse(entry.value).src || '') : ''
-      } catch { src = '' }
-      const hasImageFill = node.fills.some((f: any) => f.type === 'IMAGE')
-      if (!src && !hasImageFill) {
-        found.push({
-          type: 'warning',
-          message: `Image "${node.name}" has no src — pick a file or URL in Tags tab`,
-          nodeId: node.id,
-          nodeName: node.name
-        })
-      }
-    }
-  }
-
+  const found = validateExportTree(tree)
   issues.value = found
   status.value = found.some((i) => i.type === 'error') ? 'error' : 'success'
   lastRun.value = new Date().toLocaleTimeString()

@@ -9,6 +9,7 @@ import {
   escapeAttrValue,
   renderExport
 } from '@/app/web-builder/html-render'
+import { collectCriticalErrors, collectWarnings } from '@/app/web-builder/validate'
 import DOMTreeTab from './DOMTreeTab.vue'
 import PagesTab from './PagesTab.vue'
 import LayoutTab from './LayoutTab.vue'
@@ -222,7 +223,7 @@ const domTreeData = computed(() => {
 
   function buildNode(id: string): any {
     const n = editor.graph.getNode(id)
-    if (!n) return null
+    if (!n || n.internalOnly) return null
 
     const meta = readNodeMeta(n)
 
@@ -239,6 +240,7 @@ const domTreeData = computed(() => {
       decorative: meta.decorative,
       attrs: meta.attrs,
       text: n.type === 'TEXT' ? n.text : '',
+      hasImageFill: n.fills?.some((f: { type: string }) => f.type === 'IMAGE') ?? false,
       children: children.map((child: any) => buildNode(child.id)).filter(Boolean) || []
     }
   }
@@ -258,64 +260,6 @@ const domTreeData = computed(() => {
   }
 })
 
-// Export gate: critical errors block export (same rules as ValidateTab)
-function collectCriticalErrors(tree: any): string[] {
-  const errors: string[] = []
-  const allNodes: any[] = []
-  function collect(node: any) {
-    allNodes.push(node)
-    node.children?.forEach(collect)
-  }
-  tree.children?.forEach(collect)
-
-  const tags = allNodes.map((n) => n.tag || 'div')
-  for (const essential of ['header', 'main', 'footer']) {
-    if (!tags.includes(essential)) {
-      errors.push(`Missing essential tag: <${essential}>`)
-    }
-  }
-  const h1Count = tags.filter((t) => t === 'h1').length
-  if (h1Count > 1) {
-    errors.push(`Multiple <h1> tags found (${h1Count}) — keep only one per page`)
-  }
-  for (const n of allNodes) {
-    if ((n.tag || 'div') === 'img' && n.children?.length > 0) {
-      errors.push(`Element "${n.name}" is <img> but has children`)
-    }
-  }
-  return errors
-}
-
-function collectWarnings(tree: any): string[] {
-  const warnings: string[] = []
-  const defaultNames = /^(rectangle|ellipse|frame|group|text)/i
-  function check(node: any) {
-    if (!node.decorative) {
-      const tag = node.tag || 'div'
-      const hasChildren = node.children?.length > 0
-      if (tag === 'div' && !hasChildren) {
-        warnings.push(`Element "${node.name}" has no specific tag`)
-      }
-      if (
-        hasChildren &&
-        (!node.layout || node.layout.type === 'none') &&
-        ['div', 'section', 'main', 'header', 'footer', 'nav', 'article', 'aside'].includes(tag)
-      ) {
-        warnings.push(`Container "${node.name}" has children but no Flex/Grid declared`)
-      }
-      if ((tag === 'button' || tag === 'a') && defaultNames.test(node.name)) {
-        warnings.push(`Element <${tag}> still has default name "${node.name}"`)
-      }
-      if (tag === 'img' && !node.attrs?.src) {
-        warnings.push(`Image "${node.name}" has no src — pick a file or URL in Tags tab`)
-      }
-    }
-    node.children?.forEach(check)
-  }
-  tree.children?.forEach(check)
-  return warnings
-}
-
 // Export
 function generateExport() {
   const tree = domTreeData.value
@@ -324,7 +268,7 @@ function generateExport() {
     return
   }
 
-  const critical = collectCriticalErrors(tree)
+  const critical = collectCriticalErrors(tree.children || [])
   if (critical.length > 0) {
     exportHtml.value = ''
     exportConfirmed.value = false
@@ -334,7 +278,7 @@ function generateExport() {
   }
 
   if (!exportConfirmed.value) {
-    const warnings = collectWarnings(tree)
+    const warnings = collectWarnings(tree.children || [])
     if (warnings.length > 0) {
       pendingWarnings.value = warnings
       exportStatus.value = `${warnings.length} warning(s) found. Proceed or fix them first.`

@@ -1,14 +1,15 @@
 # STATE — مصنع التعديلات المحلية
 آخر تحديث: 2026-11-03
-المرحلة الحالية: إصلاح تصدير النص — تم (بانتظار اختبار المصمم)
+المرحلة الحالية: توحيد Validate مع بوابة التصدير — تم
 
   ── تحليل المشروع (2026-11-03) ──
   ✓ تقرير محفوظ: DataBase/Project_Analysis_2026-11-01.md
-  ✓ أول إصلاح: النص يُصدَّر داخل الوسم (html-render.ts + buildNode)
+  ✓ إصلاح 1: النص يُصدَّر داخل الوسم (html-render.ts + buildNode)
   ✓ bun test html-render.test.ts ✅ (4 اختبارات)
+  ✓ إصلاح 2: محرك فحص مشترك validate.ts — الزخرفي لا يمنع التصدير
+  ✓ bun test validate.test.ts ✅ (6 اختبارات)
 
   الإصلاحات المتبقية من التقرير:
-  2. توحيد قواعد Validate مع بوابة التصدير (الزخرفي / internalOnly / visible)
   3. حذف الكود الميت (WebBuilderSection.vue + elements.ts)
   4. تنظيف console.log في DOMTreeTab و PagesTab
 
