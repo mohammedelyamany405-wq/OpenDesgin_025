@@ -1,6 +1,6 @@
 # STATE — مصنع التعديلات المحلية
 آخر تحديث: 2026-11-03
-المرحلة الحالية: توحيد Validate مع بوابة التصدير — تم
+المرحلة الحالية: حذف الكود الميت — تم
 
   ── تحليل المشروع (2026-11-03) ──
   ✓ تقرير محفوظ: DataBase/Project_Analysis_2026-11-01.md
@@ -8,9 +8,9 @@
   ✓ bun test html-render.test.ts ✅ (4 اختبارات)
   ✓ إصلاح 2: محرك فحص مشترك validate.ts — الزخرفي لا يمنع التصدير
   ✓ bun test validate.test.ts ✅ (6 اختبارات)
+  ✓ إصلاح 3: حذف WebBuilderSection.vue + elements.ts (كتالوج قديم غير مستورد)
 
   الإصلاحات المتبقية من التقرير:
-  3. حذف الكود الميت (WebBuilderSection.vue + elements.ts)
   4. تنظيف console.log في DOMTreeTab و PagesTab
 
 نقطة الرجوع السابقة: tag `web-builder-v0.0` على commit `6faba6e` في projects/openpencil
