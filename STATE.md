@@ -1,6 +1,6 @@
 # STATE — مصنع التعديلات المحلية
 آخر تحديث: 2026-11-03
-المرحلة الحالية: حذف الكود الميت — تم
+المرحلة الحالية: إصلاحات التقرير الأربع — تمت
 
   ── تحليل المشروع (2026-11-03) ──
   ✓ تقرير محفوظ: DataBase/Project_Analysis_2026-11-01.md
@@ -9,9 +9,11 @@
   ✓ إصلاح 2: محرك فحص مشترك validate.ts — الزخرفي لا يمنع التصدير
   ✓ bun test validate.test.ts ✅ (6 اختبارات)
   ✓ إصلاح 3: حذف WebBuilderSection.vue + elements.ts (كتالوج قديم غير مستورد)
+  ✓ إصلاح 4: حذف console.log من DOMTreeTab و PagesTab
 
-  الإصلاحات المتبقية من التقرير:
-  4. تنظيف console.log في DOMTreeTab و PagesTab
+  التالي (تنظيف متوسط، ليس حاجز إصدار):
+  - خصائص الأبناء في Layout تُكتب ولا تُصدَّر
+  - تفكيك WebBuilderPanel / اختبارات أوسع / sidecar JSON القديم
 
 نقطة الرجوع السابقة: tag `web-builder-v0.0` على commit `6faba6e` في projects/openpencil
 التسجيل الكامل: snapshots/web-builder-v0.0/RESTORE.md

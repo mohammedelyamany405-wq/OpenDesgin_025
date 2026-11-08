@@ -32,16 +32,10 @@ const expandedNodes = ref<Set<string>>(new Set())
 
 // قراءة الوسم من pluginData
 function getTagFromNode(node: SceneNode): string {
-  console.log('🔍 [DOM Tree] getTagFromNode:', node.name, 'pluginData:', node.pluginData)
-  
   const entry = node.pluginData.find(
     (e) => e.pluginId === PLUGIN_ID && e.key === TAG_KEY
   )
-  if (!entry) {
-    console.log('🔍 [DOM Tree] No tag entry found, returning div')
-    return 'div'
-  }
-  console.log('🔍 [DOM Tree] Found tag:', entry.value)
+  if (!entry) return 'div'
   return entry.value || 'div'
 }
 
@@ -83,31 +77,18 @@ function buildNodeTree(nodeId: string): TreeNode[] {
 
 // بناء الشجرة الكاملة لجميع الصفحات
 function rebuildTree() {
-  console.log('🔍 [DOM Tree] rebuildTree called')
-  
-  // 1. الحصول على جميع الصفحات
   const pages = editor.graph.getPages()
-  console.log('🔍 [DOM Tree] Pages found:', pages.length)
-  
   if (!pages || pages.length === 0) {
-    console.log('🔍 [DOM Tree] No pages found, returning empty')
     pagesData.value = []
     return
   }
-  
-  // 2. لكل صفحة، بناء شجرتها
+
   const newPagesData: PageTree[] = pages.map(page => {
-    console.log('🔍 [DOM Tree] Processing page:', page.name, 'ID:', page.id)
-    
-    // الحصول على عناصر الصفحة (Layers)
     const pageChildren = editor.graph.getChildren(page.id)
-    console.log('🔍 [DOM Tree] Page', page.name, 'Layers:', pageChildren.length)
-    
-    // بناء شجرة العناصر بشكل تكراري
     const children: TreeNode[] = []
     for (const child of pageChildren) {
       if (child.internalOnly) continue
-      
+
       const treeNode: TreeNode = {
         id: child.id,
         name: child.name,
@@ -117,18 +98,14 @@ function rebuildTree() {
         children: [],
         isExpanded: expandedNodes.value.has(child.id)
       }
-      
-      // بناء الأبناء بشكل تكراري
+
       if (child.childIds.length > 0) {
         treeNode.children = buildNodeTree(child.id)
-        console.log('🔍 [DOM Tree]', child.name, 'Children:', treeNode.children.length)
       }
-      
+
       children.push(treeNode)
     }
-    
-    console.log('🔍 [DOM Tree] Page', page.name, 'Tree built:', children.length, 'items')
-    
+
     return {
       id: page.id,
       name: page.name,
@@ -136,9 +113,8 @@ function rebuildTree() {
       isExpanded: expandedNodes.value.has(page.id)
     }
   })
-  
+
   pagesData.value = newPagesData
-  console.log('🔍 [DOM Tree] Total pages:', newPagesData.length)
 }
 
 // توسيع/طي العقدة
@@ -187,10 +163,6 @@ function selectNode(nodeId: string) {
 let unsubscribers: (() => void)[] = []
 
 onMounted(() => {
-  console.log('🔍 [DOM Tree] Component mounted')
-  console.log('🔍 [DOM Tree] Editor:', editor)
-  console.log('🔍 [DOM Tree] Graph:', editor?.graph)
-  
   rebuildTree()
   
   // الاستماع للأحداث لتحديث الشجرة

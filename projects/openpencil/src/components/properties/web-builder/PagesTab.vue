@@ -16,16 +16,10 @@ function loadPages() {
   const allPages = editor.graph.getPages()
   pages.value = allPages
   currentPageId.value = editor.state.currentPageId
-  
-  console.log('📄 [Pages Tab] Loaded pages:', allPages.length)
-  allPages.forEach(p => {
-    console.log('📄 [Pages Tab] -', p.name, '(ID:', p.id, ')')
-  })
 }
 
 // تحديد صفحة نشطة
 function selectPage(pageId: string) {
-  console.log('🔄 [Pages Tab] Switching to page:', pageId)
   editor.switchPage(pageId)
   currentPageId.value = pageId
 }
@@ -33,31 +27,19 @@ function selectPage(pageId: string) {
 // إضافة صفحة جديدة
 function addPage() {
   const newName = `Page ${pages.value.length + 1}`
-  console.log('➕ [Pages Tab] Adding page:', newName)
-  
-  const newPageId = editor.addPage(newName)
-  console.log('✅ [Pages Tab] Page added with ID:', newPageId)
-  
+  editor.addPage(newName)
   loadPages()
 }
 
 // حذف صفحة
 function deletePage(pageId: string) {
-  if (pages.value.length <= 1) {
-    console.log('⚠️ [Pages Tab] Cannot delete last page')
-    return
-  }
-  
-  const page = pages.value.find(p => p.id === pageId)
-  console.log('🗑️ [Pages Tab] Deleting page:', page?.name)
-  
+  if (pages.value.length <= 1) return
   editor.deletePage(pageId)
   loadPages()
 }
 
 // بدء إعادة التسمية
 function startRename(page: SceneNode) {
-  console.log('✏️ [Pages Tab] Start renaming:', page.name)
   editingPageId.value = page.id
   editName.value = page.name
 }
@@ -69,8 +51,7 @@ function savePageName(pageId: string) {
     editingPageId.value = null
     return
   }
-  
-  console.log('✏️ [Pages Tab] Renaming to:', newName)
+
   editor.renamePage(pageId, newName)
   
   editingPageId.value = null
@@ -126,12 +107,10 @@ function saveBreakpoints() {
 let unsubscribers: (() => void)[] = []
 
 onMounted(() => {
-  console.log('✅ [Pages Tab] Component loaded')
   loadPages()
-  
+
   unsubscribers = [
     editor.onEditorEvent('page:changed', () => {
-      console.log('📄 [Pages Tab] Page changed event')
       loadPages()
       loadBreakpoints()
     }),
